@@ -12,22 +12,29 @@
 ## Getting Started
 
 ```java
+        // clint initialization
         ApiClient client = new ApiClient();
         client.setBasePath("https://api.docstudio.com");
-        client.setDebugging(true);
+        client.setDebugging(false);
         client.setReadTimeout(120000);
         client.setWriteTimeout(120000);
         client.setUserAgent("Example");
+        
+        //Login and set access token
         AuthenticationControllerApi authenticationControllerApi = new AuthenticationControllerApi(client);
         LoginDTO loginDTO = new LoginDTO();
         loginDTO.setLogin("my@email.com");
         loginDTO.setPassword("password");
         client.setAccessToken(authenticationControllerApi.login(loginDTO).getToken());
 
+        //get user mailboxes and store first mailbox UUID
         MailboxControllerApi mailboxControllerApi = new MailboxControllerApi(client);
         UUID mailboxUuid = mailboxControllerApi.getAllForUser().get(0).getMailboxUuid();
 
+        
         EnvelopeControllerApi envelopeControllerApi = new EnvelopeControllerApi(client);
+        
+        //Preparing quick send parameters: subject and message, participants
         QuickSendDTO quickSendDTO = new QuickSendDTO();
         quickSendDTO.setSubject("Test envelope");
         quickSendDTO.setMessage("Test envelope message");
@@ -41,15 +48,21 @@
         recipientDTO.setSigner(true);
         recipientDTO.setEInkSignature(true);
         quickSendDTO.addRecipientsItem(recipientDTO);
+        
+        //Open file for envelope
         File document = new File("sample.pdf");
         List<File> files = new ArrayList<>();
         files.add(document);
+        
+        //sending envelope
         UUID envelopeUuid = envelopeControllerApi.quickSendExternalDocuments(files, quickSendDTO, mailboxUuid).getUuid();
+        
+        //reading envelope
         EnvelopeWithTemplateDTO envelope = envelopeControllerApi.getEnvelopeByUuid(envelopeUuid, mailboxUuid);
 ```
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -584,3 +597,50 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 
 
+## Howto if you want to create client from the scratch
+1. Copy swagger json from https://api.docsudio.com/swagger-ui/index.html
+2. Generate code at https://editor.swagger.io/
+3. Change version to 1.8
+4. Add annotation dependency to pom.xml
+    ```xml
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+   ```
+5. Remove `empty` property from src/main/java/io/swagger/client/model/DataMap.java
+6. Change ApiClient.buildRequestBodyMultipart:
+   ```java
+       public RequestBody buildRequestBodyMultipart(Map<String, Object> formParams) {
+           MultipartBuilder mpBuilder = new MultipartBuilder().type(MultipartBuilder.FORM);
+           for (Entry<String, Object> param : formParams.entrySet()) {
+               if (param.getValue() instanceof Collection) {
+                   ((Collection) param.getValue()).forEach(value -> {
+                       processMultipartFormParam(mpBuilder, param.getKey(), value);
+                   });
+               } else {
+                   processMultipartFormParam(mpBuilder, param.getKey(), param.getValue());
+               }
+           }
+           return mpBuilder.build();
+       }
+      
+       private void processMultipartFormParam(MultipartBuilder mpBuilder, String key, Object value) {
+           if (value instanceof File) {
+               File file = (File) value;
+               Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + key + "\"; filename=\"" + file.getName() + "\"");
+               MediaType mediaType = MediaType.parse(guessContentTypeFromFile(file));
+               mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, file));
+           } else {
+               Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + key + "\"");
+               if (value.getClass().isPrimitive()) {
+                   mpBuilder.addPart(partHeaders, RequestBody.create(null, parameterToString(value)));
+               } else {
+                   mpBuilder.addPart(partHeaders, RequestBody.create(MediaType.parse("application/json"), json.serialize(value)));
+               }
+      
+           }
+       }
+   ```
+7. Build with `mvn clean package`
