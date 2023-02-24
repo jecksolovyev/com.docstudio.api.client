@@ -12,7 +12,7 @@
 ## Getting Started
 
 ```java
-        // clint initialization
+        // client initialization
         ApiClient client = new ApiClient();
         client.setBasePath("https://api.docstudio.com");
         client.setDebugging(false);
