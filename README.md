@@ -597,7 +597,7 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 
 
-## Howto if you want to create client from the scratch
+## How to create a client from scratch
 1. Copy swagger json from https://api.docsudio.com/swagger-ui/index.html
 2. Generate code at https://editor.swagger.io/
 3. Change version to 1.8
