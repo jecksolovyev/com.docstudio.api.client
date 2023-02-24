@@ -13,7 +13,7 @@
 
 ```java
         ApiClient client = new ApiClient();
-        client.setBasePath("https://api.centredo.com");
+        client.setBasePath("https://api.docstudio.com");
         client.setDebugging(true);
         client.setReadTimeout(120000);
         client.setWriteTimeout(120000);
