@@ -25,7 +25,7 @@ Then manually install the following JARs:
 
 ## Getting Started
 
-Please follow the [installation](#building--using) instruction and execute the following Java code:
+Please follow the [Building & using](#building--using) instruction and execute the following Java code:
 
 ```java
 import com.docstudio.client.ApiClient;
@@ -630,6 +630,5 @@ Class | Method | HTTP request | Description
 
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
-## Author
 
 
