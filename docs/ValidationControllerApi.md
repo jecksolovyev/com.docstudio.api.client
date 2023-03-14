@@ -1,6 +1,6 @@
 # ValidationControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,11 +16,11 @@ Get invitation info by already registered user
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ValidationControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ValidationControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -64,8 +64,8 @@ Get invitation info by not authenticated user
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ValidationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.ValidationControllerApi;
 
 
 ValidationControllerApi apiInstance = new ValidationControllerApi();

@@ -1,6 +1,6 @@
 # EnvelopeControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -61,11 +61,11 @@ Accept user&#x27;s pending invitations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -110,11 +110,11 @@ Add envelopes into chain
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -161,11 +161,11 @@ Archive envelopes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -212,11 +212,11 @@ Cancel envelope approval
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -263,11 +263,11 @@ Cancel envelope delegation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -312,11 +312,11 @@ Cancel envelopes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -361,11 +361,11 @@ Check an envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -411,11 +411,11 @@ Check user has pending invitations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -454,11 +454,11 @@ Clone an existing attachment
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -504,11 +504,11 @@ Accept/confirm invitations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -551,11 +551,11 @@ Continue scenario flow with step
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -603,11 +603,11 @@ Convert attachment to PDF
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -653,11 +653,11 @@ Create/upload new attachment
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -707,11 +707,11 @@ Create draft envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -757,11 +757,11 @@ Create envelope comment thread
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -809,11 +809,11 @@ Delegate envelopes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -858,11 +858,11 @@ Delete draft envelopes
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -907,11 +907,11 @@ Delete envelope comment in thread or the whole thread
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -961,11 +961,11 @@ Download envelope attachment
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1013,11 +1013,11 @@ Approve or Reject envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1066,11 +1066,11 @@ Get approval history
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1116,11 +1116,11 @@ Fill envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1165,11 +1165,11 @@ Get active roles by Envelope UUID
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1215,11 +1215,11 @@ Get envelope approval
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1267,11 +1267,11 @@ Get chain envelopes list
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1317,11 +1317,11 @@ Get document PDF for printing
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1369,11 +1369,11 @@ PDFs and XMLs for signing
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1421,11 +1421,11 @@ Retrieve envelope by UUID
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1471,11 +1471,11 @@ Get envelope comments for each document
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1521,11 +1521,11 @@ Get information about envelope by the invitation code (by already registered use
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1569,8 +1569,8 @@ Get information about envelope by the invitation code (by unauthenticated user)
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 
 EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
@@ -1612,11 +1612,11 @@ Get shared zip archive
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1660,11 +1660,11 @@ Get envelope or document zip archive
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1714,11 +1714,11 @@ Get user&#x27;s pending invitations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1764,11 +1764,11 @@ Merge envelopes into chain
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1814,11 +1814,11 @@ Quick send envelope with external documents only
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1866,11 +1866,11 @@ Remove envelope from chain
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1915,11 +1915,11 @@ Resend notifications for active roles
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1964,11 +1964,11 @@ Set Resolved Flag for comment thread
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2015,11 +2015,11 @@ Send envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2065,8 +2065,8 @@ Send envelope by template code
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 
 EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
@@ -2108,11 +2108,11 @@ Send envelope for approval
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2157,11 +2157,11 @@ Share envelopes by email
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2206,11 +2206,11 @@ Sign envelope documents
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2257,11 +2257,11 @@ Update draft envelope
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2306,11 +2306,11 @@ Add/Update envelope comment in thread
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -2358,11 +2358,11 @@ Update envelope comment thread access level
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.EnvelopeControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

@@ -1,6 +1,6 @@
 # DictionaryControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,11 +33,11 @@ Archive dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -82,11 +82,11 @@ Check dictionary column. Check access, existence, etc.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -134,11 +134,11 @@ Check dictionary. Check access, existence, etc.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,11 +184,11 @@ Create dictionary column
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -236,11 +236,11 @@ Create empty dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -284,11 +284,11 @@ Create record(s)
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -336,11 +336,11 @@ Delete column. Will return deleted column UUID
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -388,11 +388,11 @@ Delete record(s). Will return deleted records UUID(s)
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -440,11 +440,11 @@ Download the dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -492,11 +492,11 @@ Download the dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -544,11 +544,11 @@ Retrieve column value for specific record
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -598,11 +598,11 @@ Retrieve column values from dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -656,11 +656,11 @@ Retrieve record
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -708,11 +708,11 @@ Get dictionary records
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -764,11 +764,11 @@ Update dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -816,11 +816,11 @@ Update record column values
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -869,11 +869,11 @@ Read/get dictionary
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -923,11 +923,11 @@ Get paged dictionary list
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -981,11 +981,11 @@ Update dictionary column
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DictionaryControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

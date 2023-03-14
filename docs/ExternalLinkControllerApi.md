@@ -1,6 +1,6 @@
 # ExternalLinkControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,11 +19,11 @@ Create external link
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ExternalLinkControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ExternalLinkControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -69,11 +69,11 @@ Delete external link
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ExternalLinkControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ExternalLinkControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -118,11 +118,11 @@ Get account external links
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ExternalLinkControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ExternalLinkControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -166,11 +166,11 @@ Get mailbox visible link list
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ExternalLinkControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ExternalLinkControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -214,11 +214,11 @@ Update external link
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.ExternalLinkControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.ExternalLinkControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

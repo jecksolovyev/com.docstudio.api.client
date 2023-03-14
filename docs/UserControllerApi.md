@@ -1,6 +1,6 @@
 # UserControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,11 +27,11 @@ Accept invite
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -74,11 +74,11 @@ Update user&#x27;s password
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -121,11 +121,11 @@ Update user&#x27;s eink signature in base64 format
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -168,11 +168,11 @@ Create invitation to join account or mailbox with defined permissions.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -216,11 +216,11 @@ Decline invite
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -263,11 +263,11 @@ Delete user himself
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -312,11 +312,11 @@ Find user
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -362,11 +362,11 @@ Retrieve user avatar
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -412,11 +412,11 @@ Get paged invites list
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -462,11 +462,11 @@ Retrieve users info
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -510,11 +510,11 @@ Retrieve user profile
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -554,11 +554,11 @@ Update invitation by userUuid.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -603,11 +603,11 @@ Update user&#x27;s profile
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.UserControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.UserControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

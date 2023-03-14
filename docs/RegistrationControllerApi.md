@@ -1,6 +1,6 @@
 # RegistrationControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,8 +21,8 @@ Get user password policy
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -64,8 +64,8 @@ Register a user with validation code
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -111,8 +111,8 @@ Renew user&#x27;s password
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -153,8 +153,8 @@ Send email validation code
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -196,8 +196,8 @@ Request password reset
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -239,8 +239,8 @@ Reset password
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();
@@ -281,8 +281,8 @@ Validate user code from email
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.RegistrationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.RegistrationControllerApi;
 
 
 RegistrationControllerApi apiInstance = new RegistrationControllerApi();

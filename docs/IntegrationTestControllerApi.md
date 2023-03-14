@@ -1,6 +1,6 @@
 # IntegrationTestControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,8 +15,8 @@ Method | HTTP request | Description
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.IntegrationTestControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.IntegrationTestControllerApi;
 
 
 IntegrationTestControllerApi apiInstance = new IntegrationTestControllerApi();

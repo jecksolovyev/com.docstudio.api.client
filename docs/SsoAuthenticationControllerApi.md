@@ -1,6 +1,6 @@
 # SsoAuthenticationControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,8 +18,8 @@ Returns EntityID by domain
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SsoAuthenticationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.SsoAuthenticationControllerApi;
 
 
 SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
@@ -61,8 +61,8 @@ Login with SSO, redirect to UI after login
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SsoAuthenticationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.SsoAuthenticationControllerApi;
 
 
 SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
@@ -103,8 +103,8 @@ Login with SSO, token is in response
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SsoAuthenticationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.SsoAuthenticationControllerApi;
 
 
 SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
@@ -142,8 +142,8 @@ Logout
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.SsoAuthenticationControllerApi;
+//import com.docstudio.client.ApiException;
+//import api.com.docstudio.client.SsoAuthenticationControllerApi;
 
 
 SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();

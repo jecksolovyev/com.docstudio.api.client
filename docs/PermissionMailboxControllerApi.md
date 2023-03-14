@@ -1,6 +1,6 @@
 # PermissionMailboxControllerApi
 
-All URIs are relative to *https://api.centredo.com*
+All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,11 +19,11 @@ Delete all permissions and roles for selected user-to-mailbox relation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PermissionMailboxControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.PermissionMailboxControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -68,11 +68,11 @@ Delete permission for specific user-to-mailbox relation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PermissionMailboxControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.PermissionMailboxControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -119,11 +119,11 @@ Delete role
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PermissionMailboxControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.PermissionMailboxControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -170,11 +170,11 @@ Add exact permissions/roles leaving existing as is. Ignore if already present.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PermissionMailboxControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.PermissionMailboxControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -221,11 +221,11 @@ Replace all permissions for selected user-to-mailbox relation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PermissionMailboxControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.PermissionMailboxControllerApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

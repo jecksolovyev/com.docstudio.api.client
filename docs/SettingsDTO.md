@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **buildVersion** | **String** | The version of the build |  [optional]
 **applicationName** | **String** | The name of the platform |  [optional]
 **theme** | **String** | The name of the UI theme |  [optional]
+**podName** | **String** | Kubernetes Pod Name |  [optional]
 **links** | [**AppLinks**](AppLinks.md) |  |  [optional]
 **locales** | [**AppLocales**](AppLocales.md) |  |  [optional]
 **testMode** | **Boolean** | Is Test Mode enabled? |  [optional]

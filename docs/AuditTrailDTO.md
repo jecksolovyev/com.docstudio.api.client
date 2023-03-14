@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **os** | **String** |  |  [optional]
 **geolocation** | [**GeolocationInfoDTO**](GeolocationInfoDTO.md) |  |  [optional]
 **description** | **String** |  |  [optional]
-**longitude** | **Float** |  |  [optional]
 **latitude** | **Float** |  |  [optional]
+**longitude** | **Float** |  |  [optional]
 
 <a name="OperationEnum"></a>
 ## Enum: OperationEnum
