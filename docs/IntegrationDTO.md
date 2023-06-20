@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 ## Enum: ProtocolEnum
 Name | Value
 ---- | -----
-SFTP | &quot;sftp&quot;
+FTPS | &quot;ftps&quot;
 SOAP | &quot;soap&quot;
 AS2 | &quot;as2&quot;

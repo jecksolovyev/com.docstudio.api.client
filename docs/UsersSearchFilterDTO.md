@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **domains** | **List&lt;String&gt;** | Domains |  [optional]
 **roleUuids** | [**List&lt;UUID&gt;**](UUID.md) | UUIDs of Roles |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) | User status |  [optional]
+**createdFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Created date from |  [optional]
+**createdTo** | [**OffsetDateTime**](OffsetDateTime.md) | Created date to |  [optional]
 **sort** | [**SortEnum**](#SortEnum) | Sort order by creation date, asc or desc |  [optional]
 
 <a name="StatusEnum"></a>

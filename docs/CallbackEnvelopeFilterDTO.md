@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **label** | **List&lt;String&gt;** |  |  [optional]
 **status** | [**List&lt;StatusEnum&gt;**](#List&lt;StatusEnum&gt;) |  |  [optional]
 **subject** | **String** | Envelope subject |  [optional]
+**createDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Creation date from |  [optional]
+**createDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Creation date to |  [optional]
 **receiveDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Receive date from |  [optional]
 **receiveDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Receive date to |  [optional]
 **expireDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Expire date from |  [optional]

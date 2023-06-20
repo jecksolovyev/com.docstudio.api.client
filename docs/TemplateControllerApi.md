@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**create**](TemplateControllerApi.md#create) | **POST** /api/v1/template | Create new template
 [**deleteShareCode**](TemplateControllerApi.md#deleteShareCode) | **DELETE** /api/v1/template/{uuid}/share-code | Delete share code for template
 [**downloadTemplateImage**](TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image
+[**downloadTemplatePdf**](TemplateControllerApi.md#downloadTemplatePdf) | **GET** /api/v1/template/{uuid}/pdf | Download template PDF
 [**getRecentlyUsedTemplates**](TemplateControllerApi.md#getRecentlyUsedTemplates) | **GET** /api/v1/template/recently-used | Get up to 10 recently used templates
 [**getRecommendedTemplates**](TemplateControllerApi.md#getRecommendedTemplates) | **GET** /api/v1/template/recommended | Get up to 4 recommended templates
 [**getShareCode**](TemplateControllerApi.md#getShareCode) | **GET** /api/v1/template/{uuid}/share-code | Retrieve share code for template
@@ -21,6 +22,7 @@ Method | HTTP request | Description
 [**updateCategories**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template.
 [**updateName**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template.
 [**uploadImage**](TemplateControllerApi.md#uploadImage) | **POST** /api/v1/template/image | Upload new image
+[**uploadPdf**](TemplateControllerApi.md#uploadPdf) | **POST** /api/v1/template/pdf | Upload new PDF
 [**validateTemplate**](TemplateControllerApi.md#validateTemplate) | **GET** /api/v1/template/validate | Validate template by UUID or version
 
 <a name="archiveTemplate"></a>
@@ -308,6 +310,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**UUID**](.md)| Template UUID |
  **imageUuid** | [**UUID**](.md)| Image UUID |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **envelopeUuid** | [**UUID**](.md)| Envelope UUID | [optional]
+
+### Return type
+
+**List&lt;byte[]&gt;**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+<a name="downloadTemplatePdf"></a>
+# **downloadTemplatePdf**
+> List&lt;byte[]&gt; downloadTemplatePdf(uuid, pdfUuid, mailbox, envelopeUuid)
+
+Download template PDF
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+UUID uuid = new UUID(); // UUID | Template UUID
+UUID pdfUuid = new UUID(); // UUID | Pdf UUID
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
+try {
+    List<byte[]> result = apiInstance.downloadTemplatePdf(uuid, pdfUuid, mailbox, envelopeUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#downloadTemplatePdf");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**UUID**](.md)| Template UUID |
+ **pdfUuid** | [**UUID**](.md)| Pdf UUID |
  **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelopeUuid** | [**UUID**](.md)| Envelope UUID | [optional]
 
@@ -878,6 +934,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UploadedImageDTO**](UploadedImageDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+<a name="uploadPdf"></a>
+# **uploadPdf**
+> UploadedPdfDTO uploadPdf(mailbox, file)
+
+Upload new PDF
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+File file = new File("file_example"); // File | 
+try {
+    UploadedPdfDTO result = apiInstance.uploadPdf(mailbox, file);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#uploadPdf");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **file** | **File**|  | [optional]
+
+### Return type
+
+[**UploadedPdfDTO**](UploadedPdfDTO.md)
 
 ### Authorization
 

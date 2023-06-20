@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **smartIdClientPrefix** | **String** |  |  [optional]
 **signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) |  |  [optional]
 **stampSupported** | **Boolean** |  |  [optional]
+**ocspProxy** | **String** |  |  [optional]
+**alwaysUseOcspProxy** | **Boolean** |  |  [optional]
 
 <a name="SignatureContainerEnum"></a>
 ## Enum: SignatureContainerEnum

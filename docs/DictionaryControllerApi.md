@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**getColumnValue**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record
 [**getColumnValues**](DictionaryControllerApi.md#getColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary
 [**getDictionaryRecord**](DictionaryControllerApi.md#getDictionaryRecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record
+[**getDictionaryRecordUuids**](DictionaryControllerApi.md#getDictionaryRecordUuids) | **POST** /api/v1/dictionary/{dictionaryUuid}/record-uuids | Get dictionary record uuids by values
 [**getDictionaryRecords**](DictionaryControllerApi.md#getDictionaryRecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records
 [**patchDictionary**](DictionaryControllerApi.md#patchDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid} | Update dictionary
 [**patchRecord**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values
@@ -697,6 +698,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDictionaryRecordUuids"></a>
+# **getDictionaryRecordUuids**
+> Map&lt;String, UUID&gt; getDictionaryRecordUuids(body, mailbox, dictionaryUuid)
+
+Get dictionary record uuids by values
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.DictionaryControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+DictionaryControllerApi apiInstance = new DictionaryControllerApi();
+DictionaryRecordsRequestDTO body = new DictionaryRecordsRequestDTO(); // DictionaryRecordsRequestDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
+try {
+    Map<String, UUID> result = apiInstance.getDictionaryRecordUuids(body, mailbox, dictionaryUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecordUuids");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DictionaryRecordsRequestDTO**](DictionaryRecordsRequestDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
+
+### Return type
+
+[**Map&lt;String, UUID&gt;**](UUID.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getDictionaryRecords"></a>

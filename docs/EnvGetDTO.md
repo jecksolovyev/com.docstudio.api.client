@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | [**UUID**](UUID.md) | UUID of envelope |  [optional]
 **data** | **String** | Envelope XML |  [optional]
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | Envelope creation date |  [optional]
 **receivedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date of receiving the envelope by the mailbox |  [optional]
 **labels** | [**List&lt;UUID&gt;**](UUID.md) |  |  [optional]
 **total** | **Integer** | Total number of participants |  [optional]
@@ -14,6 +15,7 @@ Name | Type | Description | Notes
 **approvalFlowUuid** | [**UUID**](UUID.md) | Approval flow UUID |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) | Calculated status for mailbox |  [optional]
 **sender** | [**EnvelopeSenderDTO**](EnvelopeSenderDTO.md) |  |  [optional]
+**deleted** | **Boolean** | Is envelope in recycle bin? |  [optional]
 
 <a name="StatusEnum"></a>
 ## Enum: StatusEnum

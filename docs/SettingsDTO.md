@@ -22,3 +22,4 @@ Name | Type | Description | Notes
 **sso** | [**SsoProperties**](SsoProperties.md) |  |  [optional]
 **geolocation** | [**GeolocationProperties**](GeolocationProperties.md) |  |  [optional]
 **googleMapsApiKey** | **String** | Google maps api key |  [optional]
+**pdf** | [**PdfPropertiesDTO**](PdfPropertiesDTO.md) |  |  [optional]

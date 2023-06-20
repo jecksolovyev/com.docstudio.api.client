@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**deleteDrafts**](EnvelopeControllerApi.md#deleteDrafts) | **DELETE** /api/v1/envelope | Delete draft envelopes
 [**deleteEnvelopeComment**](EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{envelopeUuid}/comment | Delete envelope comment in thread or the whole thread
 [**downloadEnvelopeAttachment**](EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/{envelopeUuid}/attachment | Download envelope attachment
+[**downloadFinalPdf**](EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{envelopeUuid}/download-final-pdf | Download final PDF
 [**envelopeApproval**](EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Approve or Reject envelope
 [**envelopeApprovalHistory**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{envelopeUuid}/approval-history | Get approval history
 [**fill**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope
@@ -40,6 +41,7 @@ Method | HTTP request | Description
 [**getUserPendingInvitations**](EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#x27;s pending invitations
 [**mergeEnvelopesIntoChain**](EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain
 [**quickSendExternalDocuments**](EnvelopeControllerApi.md#quickSendExternalDocuments) | **POST** /api/v1/envelope/quick-send | Quick send envelope with external documents only
+[**recycleBin**](EnvelopeControllerApi.md#recycleBin) | **PATCH** /api/v1/envelope/recycle-bin/{flag} | Archive envelopes
 [**removeEnvelopeFromChain**](EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{envelopeUuid}/chain | Remove envelope from chain
 [**resendNotifications**](EnvelopeControllerApi.md#resendNotifications) | **POST** /api/v1/envelope/notify | Resend notifications for active roles
 [**resolvedEnvelopeComment**](EnvelopeControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/resolve-comment | Set Resolved Flag for comment thread
@@ -1004,6 +1006,58 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: */*
 
+<a name="downloadFinalPdf"></a>
+# **downloadFinalPdf**
+> File downloadFinalPdf(envelopeUuid, documentId, mailbox)
+
+Download final PDF
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
+UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
+String documentId = "documentId_example"; // String | Document id
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    File result = apiInstance.downloadFinalPdf(envelopeUuid, documentId, mailbox);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#downloadFinalPdf");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **envelopeUuid** | [**UUID**](.md)| Envelope UUID |
+ **documentId** | **String**| Document id |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
+
 <a name="envelopeApproval"></a>
 # **envelopeApproval**
 > envelopeApproval(body, mailbox, envelopeUuid, flowUuid)
@@ -1856,6 +1910,57 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json
+
+<a name="recycleBin"></a>
+# **recycleBin**
+> recycleBin(body, mailbox, flag)
+
+Archive envelopes
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
+BulkEnvelopeActionDTO body = new BulkEnvelopeActionDTO(); // BulkEnvelopeActionDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+Boolean flag = true; // Boolean | 
+try {
+    apiInstance.recycleBin(body, mailbox, flag);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#recycleBin");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BulkEnvelopeActionDTO**](BulkEnvelopeActionDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **flag** | **Boolean**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 <a name="removeEnvelopeFromChain"></a>
 # **removeEnvelopeFromChain**

@@ -140,7 +140,7 @@ null (empty response body)
 
 <a name="userExistsByCode"></a>
 # **userExistsByCode**
-> LoginCheckResponseDTO userExistsByCode(theInvitationCode)
+> LoginCheckResponseDTO userExistsByCode()
 
 Check login ability with the code from email (for non-existing user)
 
@@ -152,9 +152,8 @@ Check login ability with the code from email (for non-existing user)
 
 
 AuthenticationControllerApi apiInstance = new AuthenticationControllerApi();
-String theInvitationCode = "theInvitationCode_example"; // String | 
 try {
-    LoginCheckResponseDTO result = apiInstance.userExistsByCode(theInvitationCode);
+    LoginCheckResponseDTO result = apiInstance.userExistsByCode();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticationControllerApi#userExistsByCode");
@@ -163,10 +162,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **theInvitationCode** | **String**|  |
+This endpoint does not need any parameter.
 
 ### Return type
 

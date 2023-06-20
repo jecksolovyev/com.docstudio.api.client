@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 
 <a name="searchMailboxes"></a>
 # **searchMailboxes**
-> List&lt;MailboxSearchResultDTO&gt; searchMailboxes(mailbox, q)
+> List&lt;MailboxSearchResultDTO&gt; searchMailboxes(mailbox, q, type)
 
 Search mailboxes by name, contact, alias, user
 
@@ -591,8 +591,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 MailboxControllerApi apiInstance = new MailboxControllerApi();
 UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
 String q = ""; // String | String to search by alias, contact, user email, mailbox name or UUID
+String type = "type_example"; // String | Search type: name, alias or uuid. Default - all values
 try {
-    List<MailboxSearchResultDTO> result = apiInstance.searchMailboxes(mailbox, q);
+    List<MailboxSearchResultDTO> result = apiInstance.searchMailboxes(mailbox, q, type);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailboxControllerApi#searchMailboxes");
@@ -606,6 +607,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **q** | **String**| String to search by alias, contact, user email, mailbox name or UUID | [optional]
+ **type** | **String**| Search type: name, alias or uuid. Default - all values | [optional] [enum: ALIAS, UUID]
 
 ### Return type
 

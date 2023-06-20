@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **number** | **Double** | Field number value |  [optional]
 **from** | [**OffsetDateTime**](OffsetDateTime.md) | Field date from value |  [optional]
 **to** | [**OffsetDateTime**](OffsetDateTime.md) | Field date to value |  [optional]
+**checked** | **Boolean** | Field checked or not |  [optional]

@@ -23,3 +23,5 @@ LOOKUP | &quot;lookup&quot;
 DUPLICATE | &quot;duplicate&quot;
 ATTACHMENT | &quot;attachment&quot;
 FORMULA | &quot;formula&quot;
+AUTONUMBER | &quot;autonumber&quot;
+CHECKBOX | &quot;checkbox&quot;
