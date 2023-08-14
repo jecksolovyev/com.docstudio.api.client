@@ -9,4 +9,3 @@ Name | Type | Description | Notes
 **accountUuid** | [**UUID**](UUID.md) |  |  [optional]
 **accountName** | **String** |  |  [optional]
 **authorization** | [**UserAuthorizationDTO**](UserAuthorizationDTO.md) |  |  [optional]
-**roles** | [**List&lt;RoleShortDTO&gt;**](RoleShortDTO.md) |  |  [optional]

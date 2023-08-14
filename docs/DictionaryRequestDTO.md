@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** | Dictionary name | 
 **description** | **String** | Dictionary description |  [optional]
 **access** | [**AccessEnum**](#AccessEnum) | Dictionary access level | 
+**filteredAccessOnly** | **Boolean** | Dictionary filtered access only | 
 
 <a name="AccessEnum"></a>
 ## Enum: AccessEnum

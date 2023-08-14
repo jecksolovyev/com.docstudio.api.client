@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**download**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary
 [**downloadStatus**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary
 [**getColumnValue**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record
-[**getColumnValues**](DictionaryControllerApi.md#getColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary
+[**getColumnValues**](DictionaryControllerApi.md#getColumnValues) | **POST** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary
 [**getDictionaryRecord**](DictionaryControllerApi.md#getDictionaryRecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record
 [**getDictionaryRecordUuids**](DictionaryControllerApi.md#getDictionaryRecordUuids) | **POST** /api/v1/dictionary/{dictionaryUuid}/record-uuids | Get dictionary record uuids by values
 [**getDictionaryRecords**](DictionaryControllerApi.md#getDictionaryRecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 <a name="getColumnValues"></a>
 # **getColumnValues**
-> PageDTODictionaryColumnValueResponseDTO getColumnValues(dictionaryUuid, columnUuid, mailbox, offset, limit, keyword)
+> PageDTODictionaryColumnValueResponseDTO getColumnValues(body, mailbox, dictionaryUuid, columnUuid, offset, limit)
 
 Retrieve column values from dictionary
 
@@ -609,14 +609,14 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 DictionaryControllerApi apiInstance = new DictionaryControllerApi();
+DictionaryColumnValueSearchDTO body = new DictionaryColumnValueSearchDTO(); // DictionaryColumnValueSearchDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
 UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
 UUID columnUuid = new UUID(); // UUID | Column UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
 Integer offset = 0; // Integer | Offset records
 Integer limit = 25; // Integer | Limit records, max is 1000
-String keyword = "keyword_example"; // String | Keyword to search by
 try {
-    PageDTODictionaryColumnValueResponseDTO result = apiInstance.getColumnValues(dictionaryUuid, columnUuid, mailbox, offset, limit, keyword);
+    PageDTODictionaryColumnValueResponseDTO result = apiInstance.getColumnValues(body, mailbox, dictionaryUuid, columnUuid, offset, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DictionaryControllerApi#getColumnValues");
@@ -628,12 +628,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**DictionaryColumnValueSearchDTO**](DictionaryColumnValueSearchDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
  **columnUuid** | [**UUID**](.md)| Column UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **offset** | **Integer**| Offset records | [optional] [default to 0]
  **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25]
- **keyword** | **String**| Keyword to search by | [optional]
 
 ### Return type
 
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getDictionaryRecord"></a>

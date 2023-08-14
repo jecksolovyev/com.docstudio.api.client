@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **mailbox** | [**UUID**](UUID.md) | Template creator&#x27;s mailbox |  [optional]
 **archive** | **Boolean** | Template archived |  [optional]
 **newEnvelopeCanBeCreated** | **Boolean** | Returns a flag whether a new envelope can be created using this template |  [optional]
+**defaultDownloadOptions** | **Boolean** | Returns a flag whether default download options should appear or only custom one |  [optional]
 **categories** | **List&lt;Long&gt;** | Template categories ids. Empty array if not within any category. |  [optional]
 **sharedCategories** | **List&lt;Long&gt;** | Template shared categories ids. Absent if not within any shared category. |  [optional]
 **sharedTo** | [**List&lt;UUID&gt;**](UUID.md) | Mailboxes to which template is shared to |  [optional]

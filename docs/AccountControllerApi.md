@@ -677,7 +677,7 @@ Name | Type | Description  | Notes
 
 <a name="getCryptoConfigs"></a>
 # **getCryptoConfigs**
-> List&lt;CryptoConfigDTO&gt; getCryptoConfigs(accountUuid)
+> List&lt;CryptoConfigDTO&gt; getCryptoConfigs(accountUuid, mailbox)
 
 Get crypto configs
 
@@ -695,8 +695,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 AccountControllerApi apiInstance = new AccountControllerApi();
 UUID accountUuid = new UUID(); // UUID | Account UUID
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
 try {
-    List<CryptoConfigDTO> result = apiInstance.getCryptoConfigs(accountUuid);
+    List<CryptoConfigDTO> result = apiInstance.getCryptoConfigs(accountUuid, mailbox);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccountControllerApi#getCryptoConfigs");
@@ -709,6 +710,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountUuid** | [**UUID**](.md)| Account UUID |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 

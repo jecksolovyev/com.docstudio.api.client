@@ -4,19 +4,23 @@ All URIs are relative to *https://api.docstudio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addZipStructure**](TemplateControllerApi.md#addZipStructure) | **PUT** /api/v1/template/{uuid}/zip-structure | Add new files structure for zip archive
 [**archiveTemplate**](TemplateControllerApi.md#archiveTemplate) | **PATCH** /api/v1/template/{uuid}/archive | Make template archived
 [**checkTemplateExistsByUuid**](TemplateControllerApi.md#checkTemplateExistsByUuid) | **HEAD** /api/v1/template/{uuid} | Check template exists by UUID
 [**clone**](TemplateControllerApi.md#clone) | **POST** /api/v1/template/{uuid}/clone | Clone template
 [**create**](TemplateControllerApi.md#create) | **POST** /api/v1/template | Create new template
 [**deleteShareCode**](TemplateControllerApi.md#deleteShareCode) | **DELETE** /api/v1/template/{uuid}/share-code | Delete share code for template
+[**deleteZipStructure**](TemplateControllerApi.md#deleteZipStructure) | **DELETE** /api/v1/template/{uuid}/zip-structure/{title} | Delete structure for zip archive
 [**downloadTemplateImage**](TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image
 [**downloadTemplatePdf**](TemplateControllerApi.md#downloadTemplatePdf) | **GET** /api/v1/template/{uuid}/pdf | Download template PDF
 [**getRecentlyUsedTemplates**](TemplateControllerApi.md#getRecentlyUsedTemplates) | **GET** /api/v1/template/recently-used | Get up to 10 recently used templates
 [**getRecommendedTemplates**](TemplateControllerApi.md#getRecommendedTemplates) | **GET** /api/v1/template/recommended | Get up to 4 recommended templates
+[**getSavedZipStructureNames**](TemplateControllerApi.md#getSavedZipStructureNames) | **GET** /api/v1/template/{uuid}/zip-structure-titles | Get saved structure titles for zip archive
 [**getShareCode**](TemplateControllerApi.md#getShareCode) | **GET** /api/v1/template/{uuid}/share-code | Retrieve share code for template
 [**getTemplateByShareCode**](TemplateControllerApi.md#getTemplateByShareCode) | **GET** /api/v1/template/by-share-code/{code} | Retrieve template by share code
 [**getTemplateByUuid**](TemplateControllerApi.md#getTemplateByUuid) | **GET** /api/v1/template/{uuid} | Retrieve template by UUID
 [**getTemplateVersionsByUuid**](TemplateControllerApi.md#getTemplateVersionsByUuid) | **GET** /api/v1/template/{uuid}/versions | Retrieve template versions by UUID
+[**getZipStructure**](TemplateControllerApi.md#getZipStructure) | **GET** /api/v1/template/{uuid}/zip-structure | Get structure with all files for zip archive
 [**searchTemplates**](TemplateControllerApi.md#searchTemplates) | **GET** /api/v1/template | Get paged templates list
 [**update**](TemplateControllerApi.md#update) | **PUT** /api/v1/template/{uuid} | Update template in DB. Category in template could be null.
 [**updateCategories**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template.
@@ -24,6 +28,59 @@ Method | HTTP request | Description
 [**uploadImage**](TemplateControllerApi.md#uploadImage) | **POST** /api/v1/template/image | Upload new image
 [**uploadPdf**](TemplateControllerApi.md#uploadPdf) | **POST** /api/v1/template/pdf | Upload new PDF
 [**validateTemplate**](TemplateControllerApi.md#validateTemplate) | **GET** /api/v1/template/validate | Validate template by UUID or version
+
+<a name="addZipStructure"></a>
+# **addZipStructure**
+> addZipStructure(body, mailbox, uuid, templateVersion)
+
+Add new files structure for zip archive
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+NewTemplateZipStructureDTO body = new NewTemplateZipStructureDTO(); // NewTemplateZipStructureDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID uuid = new UUID(); // UUID | UUID of template
+UUID templateVersion = new UUID(); // UUID | UUID of version
+try {
+    apiInstance.addZipStructure(body, mailbox, uuid, templateVersion);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#addZipStructure");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NewTemplateZipStructureDTO**](NewTemplateZipStructureDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **uuid** | [**UUID**](.md)| UUID of template |
+ **templateVersion** | [**UUID**](.md)| UUID of version | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 <a name="archiveTemplate"></a>
 # **archiveTemplate**
@@ -272,6 +329,59 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+<a name="deleteZipStructure"></a>
+# **deleteZipStructure**
+> deleteZipStructure(uuid, title, mailbox, templateVersion)
+
+Delete structure for zip archive
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+UUID uuid = new UUID(); // UUID | UUID of template
+String title = "title_example"; // String | Title of zip structure
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID templateVersion = new UUID(); // UUID | UUID of version
+try {
+    apiInstance.deleteZipStructure(uuid, title, mailbox, templateVersion);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#deleteZipStructure");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**UUID**](.md)| UUID of template |
+ **title** | **String**| Title of zip structure |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **templateVersion** | [**UUID**](.md)| UUID of version | [optional]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="downloadTemplateImage"></a>
 # **downloadTemplateImage**
 > List&lt;byte[]&gt; downloadTemplateImage(uuid, imageUuid, mailbox, envelopeUuid)
@@ -462,6 +572,58 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;RecommendedTemplateResponseDTO&gt;**](RecommendedTemplateResponseDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSavedZipStructureNames"></a>
+# **getSavedZipStructureNames**
+> TemplateZipStructureTitlesDTO getSavedZipStructureNames(uuid, mailbox, templateVersion)
+
+Get saved structure titles for zip archive
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+UUID uuid = new UUID(); // UUID | UUID of template
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID templateVersion = new UUID(); // UUID | UUID of version
+try {
+    TemplateZipStructureTitlesDTO result = apiInstance.getSavedZipStructureNames(uuid, mailbox, templateVersion);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#getSavedZipStructureNames");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**UUID**](.md)| UUID of template |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **templateVersion** | [**UUID**](.md)| UUID of version | [optional]
+
+### Return type
+
+[**TemplateZipStructureTitlesDTO**](TemplateZipStructureTitlesDTO.md)
 
 ### Authorization
 
@@ -670,6 +832,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PageDTODataMap**](PageDTODataMap.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getZipStructure"></a>
+# **getZipStructure**
+> TemplateZipStructureDTO getZipStructure(uuid, mailbox, templateVersion, title)
+
+Get structure with all files for zip archive
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.TemplateControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+TemplateControllerApi apiInstance = new TemplateControllerApi();
+UUID uuid = new UUID(); // UUID | UUID of template
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID templateVersion = new UUID(); // UUID | UUID of version
+String title = "title_example"; // String | Title of zip structure (to mark files as selected)
+try {
+    TemplateZipStructureDTO result = apiInstance.getZipStructure(uuid, mailbox, templateVersion, title);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TemplateControllerApi#getZipStructure");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**UUID**](.md)| UUID of template |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **templateVersion** | [**UUID**](.md)| UUID of version | [optional]
+ **title** | **String**| Title of zip structure (to mark files as selected) | [optional]
+
+### Return type
+
+[**TemplateZipStructureDTO**](TemplateZipStructureDTO.md)
 
 ### Authorization
 

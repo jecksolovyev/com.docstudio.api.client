@@ -4,10 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **envelopeUuid** | [**UUID**](UUID.md) |  |  [optional]
-**subject** | **String** |  |  [optional]
-**message** | **String** |  |  [optional]
-**archived** | **Boolean** |  |  [optional]
-**deleted** | **Boolean** |  |  [optional]
+**subject** | **String** | Subject of the envelope |  [optional]
+**message** | **String** | Message of the envelope |  [optional]
+**archived** | **Boolean** | Is envelope archived? |  [optional]
+**deleted** | **Boolean** | Is envelope in recycle bin? |  [optional]
+**shared** | **Boolean** | Is envelope shared to the mailbox? (if the mailbox is not in the main flow) |  [optional]
 **sentByMe** | **Boolean** | Flag meaning &#x27;outbox&#x27;. Probably not necessary on UI |  [optional]
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | Envelope creation date |  [optional]
 **receivedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date of receiving the envelope by the mailbox |  [optional]
@@ -22,6 +23,7 @@ Name | Type | Description | Notes
 **completed** | **Integer** | Number of participants processed |  [optional]
 **labels** | [**List&lt;UUID&gt;**](UUID.md) |  |  [optional]
 **templateUuid** | [**UUID**](UUID.md) | Envelope template UUID |  [optional]
+**templateVersion** | [**UUID**](UUID.md) | Envelope template version |  [optional]
 **templateName** | **String** | Envelope template name |  [optional]
 **invitationCode** | **String** | Invitation code, if acceptable |  [optional]
 **chainUuid** | [**UUID**](UUID.md) | Envelope chain UUID |  [optional]

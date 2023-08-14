@@ -5,11 +5,15 @@ All URIs are relative to *https://api.docstudio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createMailbox**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox
+[**customizeDashboard**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard
 [**deleteMailbox**](MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header.
 [**deleteMailboxUsers**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester
-[**getAccountLogo**](MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/logo/{mailboxUuid} | Retrieve mailbox account logo
+[**getAccountLogo**](MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo
 [**getActivityLog**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox
 [**getAllForUser**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox | Retrieve user&#x27;s mailboxes list
+[**getCustomizedDashboard**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard
+[**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html
+[**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials
 [**getMailboxesByAccount**](MailboxControllerApi.md#getMailboxesByAccount) | **GET** /api/v1/mailbox/account/{uuid} | Read list of mailboxes
 [**getMailboxesInfoMailbox**](MailboxControllerApi.md#getMailboxesInfoMailbox) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info
 [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope
@@ -71,6 +75,55 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+<a name="customizeDashboard"></a>
+# **customizeDashboard**
+> customizeDashboard(body, mailboxUuid)
+
+Customize mailbox dashboard
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.MailboxControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MailboxControllerApi apiInstance = new MailboxControllerApi();
+MailboxDashboardDTO body = new MailboxDashboardDTO(); // MailboxDashboardDTO | 
+UUID mailboxUuid = new UUID(); // UUID | 
+try {
+    apiInstance.customizeDashboard(body, mailboxUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MailboxControllerApi#customizeDashboard");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MailboxDashboardDTO**](MailboxDashboardDTO.md)|  |
+ **mailboxUuid** | [**UUID**](.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 <a name="deleteMailbox"></a>
 # **deleteMailbox**
@@ -308,6 +361,150 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;User2MailboxDTO&gt;**](User2MailboxDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCustomizedDashboard"></a>
+# **getCustomizedDashboard**
+> MailboxDashboardDTO getCustomizedDashboard(mailboxUuid)
+
+Get mailbox dashboard
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.MailboxControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MailboxControllerApi apiInstance = new MailboxControllerApi();
+UUID mailboxUuid = new UUID(); // UUID | 
+try {
+    MailboxDashboardDTO result = apiInstance.getCustomizedDashboard(mailboxUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MailboxControllerApi#getCustomizedDashboard");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailboxUuid** | [**UUID**](.md)|  |
+
+### Return type
+
+[**MailboxDashboardDTO**](MailboxDashboardDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCustomizedDashboardHtml"></a>
+# **getCustomizedDashboardHtml**
+> String getCustomizedDashboardHtml(mailbox)
+
+Get mailbox dashboard html
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.MailboxControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MailboxControllerApi apiInstance = new MailboxControllerApi();
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    String result = apiInstance.getCustomizedDashboardHtml(mailbox);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MailboxControllerApi#getCustomizedDashboardHtml");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/html
+
+<a name="getMailboxEssentials"></a>
+# **getMailboxEssentials**
+> MailboxEssentialsDTO getMailboxEssentials(mailbox)
+
+Get mailbox essentials
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.MailboxControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MailboxControllerApi apiInstance = new MailboxControllerApi();
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    MailboxEssentialsDTO result = apiInstance.getMailboxEssentials(mailbox);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MailboxControllerApi#getMailboxEssentials");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+
+### Return type
+
+[**MailboxEssentialsDTO**](MailboxEssentialsDTO.md)
 
 ### Authorization
 

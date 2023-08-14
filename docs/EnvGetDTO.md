@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **status** | [**StatusEnum**](#StatusEnum) | Calculated status for mailbox |  [optional]
 **sender** | [**EnvelopeSenderDTO**](EnvelopeSenderDTO.md) |  |  [optional]
 **deleted** | **Boolean** | Is envelope in recycle bin? |  [optional]
+**archived** | **Boolean** | Is envelope archived? |  [optional]
+**shared** | **Boolean** | Is envelope shared to the mailbox? (if the mailbox is not in the main flow) |  [optional]
+**sharedTo** | [**List&lt;EnvSharedToDTO&gt;**](EnvSharedToDTO.md) | Mailboxes the envelope shared with |  [optional]
 
 <a name="StatusEnum"></a>
 ## Enum: StatusEnum

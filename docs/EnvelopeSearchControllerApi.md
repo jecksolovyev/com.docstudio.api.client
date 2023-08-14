@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**addNewColumn**](EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display
 [**createReport**](EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report
 [**deleteColumn**](EnvelopeSearchControllerApi.md#deleteColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying
+[**getMailboxFolders**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox
 [**getSearchFields**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields
 [**getTemplateRoles**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles
 [**searchEnvelopes**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes
@@ -160,6 +161,56 @@ null (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+<a name="getMailboxFolders"></a>
+# **getMailboxFolders**
+> List&lt;String&gt; getMailboxFolders(mailbox, body)
+
+Retrieve all available folders for mailbox
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeSearchControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+List<String> body = Arrays.asList("body_example"); // List<String> | 
+try {
+    List<String> result = apiInstance.getMailboxFolders(mailbox, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeSearchControllerApi#getMailboxFolders");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **body** | [**List&lt;String&gt;**](String.md)|  | [optional]
+
+### Return type
+
+**List&lt;String&gt;**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="getSearchFields"></a>
 # **getSearchFields**

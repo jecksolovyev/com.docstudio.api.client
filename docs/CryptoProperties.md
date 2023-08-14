@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **smartIdClientPrefix** | **String** |  |  [optional]
 **signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) |  |  [optional]
 **stampSupported** | **Boolean** |  |  [optional]
+**einkSupported** | **Boolean** |  |  [optional]
 **ocspProxy** | **String** |  |  [optional]
 **alwaysUseOcspProxy** | **Boolean** |  |  [optional]
 

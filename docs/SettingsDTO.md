@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **buildVersion** | **String** | The version of the build |  [optional]
 **applicationName** | **String** | The name of the platform |  [optional]
 **theme** | **String** | The name of the UI theme |  [optional]
+**hideUnauthorizedFunctions** | **Boolean** | Hide or disable unauthorized functions |  [optional]
 **podName** | **String** | Kubernetes Pod Name |  [optional]
 **links** | [**AppLinks**](AppLinks.md) |  |  [optional]
 **locales** | [**AppLocales**](AppLocales.md) |  |  [optional]
@@ -23,3 +24,4 @@ Name | Type | Description | Notes
 **geolocation** | [**GeolocationProperties**](GeolocationProperties.md) |  |  [optional]
 **googleMapsApiKey** | **String** | Google maps api key |  [optional]
 **pdf** | [**PdfPropertiesDTO**](PdfPropertiesDTO.md) |  |  [optional]
+**mailbox** | [**MailboxProperties**](MailboxProperties.md) |  |  [optional]

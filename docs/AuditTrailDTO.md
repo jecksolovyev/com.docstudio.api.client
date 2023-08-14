@@ -43,3 +43,4 @@ RESTORE | &quot;RESTORE&quot;
 INFO | &quot;INFO&quot;
 ARCHIVE_SHARE | &quot;ARCHIVE_SHARE&quot;
 ARCHIVE_DOWNLOAD | &quot;ARCHIVE_DOWNLOAD&quot;
+COPY_SHARED | &quot;COPY_SHARED&quot;

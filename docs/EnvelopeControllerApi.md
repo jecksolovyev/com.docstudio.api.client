@@ -45,10 +45,12 @@ Method | HTTP request | Description
 [**removeEnvelopeFromChain**](EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{envelopeUuid}/chain | Remove envelope from chain
 [**resendNotifications**](EnvelopeControllerApi.md#resendNotifications) | **POST** /api/v1/envelope/notify | Resend notifications for active roles
 [**resolvedEnvelopeComment**](EnvelopeControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/resolve-comment | Set Resolved Flag for comment thread
+[**revokeEnvelopeSharing**](EnvelopeControllerApi.md#revokeEnvelopeSharing) | **DELETE** /api/v1/envelope/share-copy | Revoke sharing an envelope copy
 [**send**](EnvelopeControllerApi.md#send) | **POST** /api/v1/envelope/send | Send envelope
 [**sendByTemplateCode**](EnvelopeControllerApi.md#sendByTemplateCode) | **POST** /api/v1/envelope/send-by-share-code | Send envelope by template code
 [**sendForApproval**](EnvelopeControllerApi.md#sendForApproval) | **PUT** /api/v1/envelope/send-for-approval | Send envelope for approval
-[**shareEnvelopesByEmail**](EnvelopeControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share | Share envelopes by email
+[**shareEnvelopesByEmail**](EnvelopeControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share-archive | Share envelopes by email
+[**shareEnvelopesCopy**](EnvelopeControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies
 [**sign**](EnvelopeControllerApi.md#sign) | **PUT** /api/v1/envelope/{envelopeUuid}/sign | Sign envelope documents
 [**updateEnvelope**](EnvelopeControllerApi.md#updateEnvelope) | **PUT** /api/v1/envelope | Update draft envelope
 [**updateEnvelopeComment**](EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{envelopeUuid}/comment | Add/Update envelope comment in thread
@@ -1707,7 +1709,7 @@ Name | Type | Description  | Notes
 
 <a name="getEnvelopeZip"></a>
 # **getEnvelopeZip**
-> File getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles)
+> File getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles, zipStructureName)
 
 Get envelope or document zip archive
 
@@ -1728,8 +1730,9 @@ UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
 UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
 String documentId = "documentId_example"; // String | Document id
 String excludeFiles = "excludeFiles_example"; // String | Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail
+String zipStructureName = "zipStructureName_example"; // String | The name of pre-saved zip structure in the template
 try {
-    File result = apiInstance.getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles);
+    File result = apiInstance.getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles, zipStructureName);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EnvelopeControllerApi#getEnvelopeZip");
@@ -1745,6 +1748,7 @@ Name | Type | Description  | Notes
  **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **documentId** | **String**| Document id | [optional]
  **excludeFiles** | **String**| Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail | [optional]
+ **zipStructureName** | **String**| The name of pre-saved zip structure in the template | [optional]
 
 ### Return type
 
@@ -2111,6 +2115,55 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
+<a name="revokeEnvelopeSharing"></a>
+# **revokeEnvelopeSharing**
+> revokeEnvelopeSharing(body, mailbox)
+
+Revoke sharing an envelope copy
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
+EnvelopeSharedCopyRequestDTO body = new EnvelopeSharedCopyRequestDTO(); // EnvelopeSharedCopyRequestDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    apiInstance.revokeEnvelopeSharing(body, mailbox);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#revokeEnvelopeSharing");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EnvelopeSharedCopyRequestDTO**](EnvelopeSharedCopyRequestDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
 <a name="send"></a>
 # **send**
 > SingleUuidDTO send(body, mailbox)
@@ -2302,6 +2355,55 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
+<a name="shareEnvelopesCopy"></a>
+# **shareEnvelopesCopy**
+> shareEnvelopesCopy(body, mailbox)
+
+Share envelopes copies
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
+EnvelopeSharedCopyRequestDTO body = new EnvelopeSharedCopyRequestDTO(); // EnvelopeSharedCopyRequestDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    apiInstance.shareEnvelopesCopy(body, mailbox);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#shareEnvelopesCopy");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EnvelopeSharedCopyRequestDTO**](EnvelopeSharedCopyRequestDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
 <a name="sign"></a>
 # **sign**
 > sign(body, mailbox, envelopeUuid)
@@ -2421,88 +2523,4 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
-CommentPutDTO body = new CommentPutDTO(); // CommentPutDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
-try {
-    CommentThreadDTO result = apiInstance.updateEnvelopeComment(body, mailbox, envelopeUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeComment");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CommentPutDTO**](CommentPutDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **envelopeUuid** | [**UUID**](.md)| Envelope UUID |
-
-### Return type
-
-[**CommentThreadDTO**](CommentThreadDTO.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="updateEnvelopeCommentAccess"></a>
-# **updateEnvelopeCommentAccess**
-> CommentThreadDTO updateEnvelopeCommentAccess(body, mailbox, envelopeUuid)
-
-Update envelope comment thread access level
-
-### Example
-```java
-// Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.EnvelopeControllerApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
-CommentAccessDTO body = new CommentAccessDTO(); // CommentAccessDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
-try {
-    CommentThreadDTO result = apiInstance.updateEnvelopeCommentAccess(body, mailbox, envelopeUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeCommentAccess");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CommentAccessDTO**](CommentAccessDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **envelopeUuid** | [**UUID**](.md)| Envelope UUID |
-
-### Return type
-
-[**CommentThreadDTO**](CommentThreadDTO.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
+CommentPutDTO body 

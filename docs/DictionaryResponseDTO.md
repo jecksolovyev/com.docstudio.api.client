@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **archive** | **Boolean** | Dictionary archived flag | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | Dictionary created date | 
 **editable** | **Boolean** | Dictionary can be edited | 
+**filteredAccessOnly** | **Boolean** | Dictionary can be used only with filtering | 
 **recordsCount** | **Long** | Dictionary records count |  [optional]
 **columns** | [**List&lt;DictionaryColumnResponseDTO&gt;**](DictionaryColumnResponseDTO.md) |  |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) | Dictionary availability status |  [optional]

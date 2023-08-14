@@ -7,3 +7,4 @@ Name | Type | Description | Notes
 **name** | **String** | Mailbox name | 
 **accountName** | **String** | Mailbox account name |  [optional]
 **accountITN** | **String** | Mailbox account ITN |  [optional]
+**deleted** | **Boolean** |  |  [optional]

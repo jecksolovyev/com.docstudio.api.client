@@ -5,7 +5,7 @@ All URIs are relative to *https://api.docstudio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createToken**](ApplicationTokenControllerApi.md#createToken) | **POST** /api/v1/token | Create application token
-[**createTokenApplicationToken**](ApplicationTokenControllerApi.md#createTokenApplicationToken) | **GET** /api/v1/token | List application tokens
+[**getUserTokens**](ApplicationTokenControllerApi.md#getUserTokens) | **GET** /api/v1/token | List application tokens
 [**revokeToken**](ApplicationTokenControllerApi.md#revokeToken) | **DELETE** /api/v1/token/{id} | Revoke application token
 
 <a name="createToken"></a>
@@ -56,9 +56,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="createTokenApplicationToken"></a>
-# **createTokenApplicationToken**
-> List&lt;AppTokenDTO&gt; createTokenApplicationToken()
+<a name="getUserTokens"></a>
+# **getUserTokens**
+> List&lt;AppTokenDTO&gt; getUserTokens()
 
 List application tokens
 
@@ -76,10 +76,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 ApplicationTokenControllerApi apiInstance = new ApplicationTokenControllerApi();
 try {
-    List<AppTokenDTO> result = apiInstance.createTokenApplicationToken();
+    List<AppTokenDTO> result = apiInstance.getUserTokens();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ApplicationTokenControllerApi#createTokenApplicationToken");
+    System.err.println("Exception when calling ApplicationTokenControllerApi#getUserTokens");
     e.printStackTrace();
 }
 ```
@@ -145,5 +145,5 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

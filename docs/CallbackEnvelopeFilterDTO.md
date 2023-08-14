@@ -35,3 +35,4 @@ Name | Value
 INBOX | &quot;inbox&quot;
 OUTBOX | &quot;outbox&quot;
 DRAFT | &quot;draft&quot;
+SHARED | &quot;shared&quot;
