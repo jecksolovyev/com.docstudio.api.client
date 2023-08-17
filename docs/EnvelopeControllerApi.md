@@ -2523,4 +2523,88 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
-CommentPutDTO body 
+CommentPutDTO body = new CommentPutDTO(); // CommentPutDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
+try {
+    CommentThreadDTO result = apiInstance.updateEnvelopeComment(body, mailbox, envelopeUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeComment");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CommentPutDTO**](CommentPutDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **envelopeUuid** | [**UUID**](.md)| Envelope UUID |
+
+### Return type
+
+[**CommentThreadDTO**](CommentThreadDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateEnvelopeCommentAccess"></a>
+# **updateEnvelopeCommentAccess**
+> CommentThreadDTO updateEnvelopeCommentAccess(body, mailbox, envelopeUuid)
+
+Update envelope comment thread access level
+
+### Example
+```java
+// Import classes:
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import api.com.docstudio.client.EnvelopeControllerApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+EnvelopeControllerApi apiInstance = new EnvelopeControllerApi();
+CommentAccessDTO body = new CommentAccessDTO(); // CommentAccessDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+UUID envelopeUuid = new UUID(); // UUID | Envelope UUID
+try {
+    CommentThreadDTO result = apiInstance.updateEnvelopeCommentAccess(body, mailbox, envelopeUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeCommentAccess");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CommentAccessDTO**](CommentAccessDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **envelopeUuid** | [**UUID**](.md)| Envelope UUID |
+
+### Return type
+
+[**CommentThreadDTO**](CommentThreadDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+

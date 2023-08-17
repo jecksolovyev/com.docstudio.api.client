@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **from** | [**OffsetDateTime**](OffsetDateTime.md) | Field date from value |  [optional]
 **to** | [**OffsetDateTime**](OffsetDateTime.md) | Field date to value |  [optional]
 **checked** | **Boolean** | Field checked or not |  [optional]
+**type** | **String** | Ignored if not &#x27;strict&#x27; |  [optional]

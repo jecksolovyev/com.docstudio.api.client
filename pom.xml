@@ -5,7 +5,7 @@
   <artifactId>docstudio-api-client</artifactId>
   <packaging>jar</packaging>
   <name>docstudio-api-client</name>
-  <version>R86.31</version>
+  <version>R86.33</version>
   <url>https://api.docstudio.com/</url>
   <description>DocStudio API Client</description>
   <prerequisites>
