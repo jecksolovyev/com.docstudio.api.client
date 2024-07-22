@@ -1,7 +1,15 @@
+
+
 # EnvSharedToDTO
 
+Mailboxes the envelope shared with
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**sharedBy** | [**UUID**](UUID.md) |  |  [optional]
-**mailboxUuid** | [**UUID**](UUID.md) |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**sharedBy** | **UUID** |  |  [optional] |
+|**mailboxUuid** | **UUID** |  |  [optional] |
+
+
+

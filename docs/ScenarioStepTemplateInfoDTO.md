@@ -1,7 +1,15 @@
+
+
 # ScenarioStepTemplateInfoDTO
 
+Scenario step destination template info
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**templateUuid** | [**UUID**](UUID.md) | Scenario step template uuid | 
-**templateVersionUuid** | [**UUID**](UUID.md) | Scenario step template version | 
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**templateUuid** | **UUID** | Scenario step template uuid |  |
+|**templateVersionUuid** | **UUID** | Scenario step template version |  |
+
+
+

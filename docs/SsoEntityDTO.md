@@ -1,6 +1,13 @@
+
+
 # SsoEntityDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**entityID** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**registrationId** | **String** |  |  [optional] |
+
+
+

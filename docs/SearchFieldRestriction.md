@@ -1,6 +1,13 @@
+
+
 # SearchFieldRestriction
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**autocompleteLimit** | **Integer** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**autocompleteLimit** | **Integer** |  |  [optional] |
+
+
+

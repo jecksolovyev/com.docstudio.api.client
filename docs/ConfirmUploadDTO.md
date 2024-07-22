@@ -1,7 +1,14 @@
+
+
 # ConfirmUploadDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**headerFirstRow** | **Boolean** |  |  [optional]
-**replace** | **Boolean** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**headerFirstRow** | **Boolean** |  |  [optional] |
+|**replace** | **Boolean** |  |  [optional] |
+
+
+

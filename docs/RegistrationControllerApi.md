@@ -2,17 +2,18 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getUserPasswordPolicy**](RegistrationControllerApi.md#getUserPasswordPolicy) | **GET** /registration/passwordPolicy | Get user password policy
-[**register**](RegistrationControllerApi.md#register) | **POST** /registration | Register a user with validation code
-[**renewPassword**](RegistrationControllerApi.md#renewPassword) | **POST** /registration/renewPassword | Renew user&#x27;s password
-[**requestResendValidationCode**](RegistrationControllerApi.md#requestResendValidationCode) | **POST** /registration/sendRegistrationCode | Send email validation code
-[**requestResetPassword**](RegistrationControllerApi.md#requestResetPassword) | **POST** /registration/requestPasswordReset | Request password reset
-[**resetPassword**](RegistrationControllerApi.md#resetPassword) | **POST** /registration/resetPassword | Reset password
-[**validation**](RegistrationControllerApi.md#validation) | **GET** /registration/validate | Validate user code from email
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getUserPasswordPolicy**](RegistrationControllerApi.md#getUserPasswordPolicy) | **GET** /registration/passwordPolicy | Get user password policy |
+| [**register**](RegistrationControllerApi.md#register) | **POST** /registration | Register a user with validation code |
+| [**renewPassword**](RegistrationControllerApi.md#renewPassword) | **POST** /registration/renewPassword | Renew user&#39;s password |
+| [**requestResendValidationCode**](RegistrationControllerApi.md#requestResendValidationCode) | **POST** /registration/sendRegistrationCode | Send email validation code |
+| [**requestResetPassword**](RegistrationControllerApi.md#requestResetPassword) | **POST** /registration/requestPasswordReset | Request password reset |
+| [**resetPassword**](RegistrationControllerApi.md#resetPassword) | **POST** /registration/resetPassword | Reset password |
+| [**validation**](RegistrationControllerApi.md#validation) | **GET** /registration/validate | Validate user code from email |
 
-<a name="getUserPasswordPolicy"></a>
+
+<a id="getUserPasswordPolicy"></a>
 # **getUserPasswordPolicy**
 > PasswordPolicy getUserPasswordPolicy(email)
 
@@ -21,26 +22,38 @@ Get user password policy
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-String email = "email_example"; // String | Email of user
-try {
-    PasswordPolicy result = apiInstance.getUserPasswordPolicy(email);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#getUserPasswordPolicy");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    String email = "email_example"; // String | Email of user
+    try {
+      PasswordPolicy result = apiInstance.getUserPasswordPolicy(email);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#getUserPasswordPolicy");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **email** | **String**| Email of user |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **email** | **String**| Email of user | |
 
 ### Return type
 
@@ -55,39 +68,56 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="register"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="register"></a>
 # **register**
-> LoginResponseDTO register(body, code, codeType)
+> LoginResponseDTO register(code, userCreateDTO, codeType)
 
 Register a user with validation code
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-UserCreateDTO body = new UserCreateDTO(); // UserCreateDTO | 
-String code = "code_example"; // String | Validation code
-String codeType = "codeType_example"; // String | Type of code
-try {
-    LoginResponseDTO result = apiInstance.register(body, code, codeType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#register");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    String code = "code_example"; // String | Validation code
+    UserCreateDTO userCreateDTO = new UserCreateDTO(); // UserCreateDTO | 
+    String codeType = "envelopeInvite"; // String | Type of code
+    try {
+      LoginResponseDTO result = apiInstance.register(code, userCreateDTO, codeType);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#register");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**UserCreateDTO**](UserCreateDTO.md)|  |
- **code** | **String**| Validation code |
- **codeType** | **String**| Type of code | [optional] [enum: envelopeInvite, accountInvite, emailValidation, sharedByEmail]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **code** | **String**| Validation code | |
+| **userCreateDTO** | [**UserCreateDTO**](UserCreateDTO.md)|  | |
+| **codeType** | **String**| Type of code | [optional] [enum: envelopeInvite, accountInvite, emailValidation, sharedByEmail, externalAuth] |
 
 ### Return type
 
@@ -102,34 +132,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="renewPassword"></a>
-# **renewPassword**
-> renewPassword(body)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
-Renew user&#x27;s password
+<a id="renewPassword"></a>
+# **renewPassword**
+> renewPassword(renewPasswordDTO)
+
+Renew user&#39;s password
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-RenewPasswordDTO body = new RenewPasswordDTO(); // RenewPasswordDTO | 
-try {
-    apiInstance.renewPassword(body);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#renewPassword");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    RenewPasswordDTO renewPasswordDTO = new RenewPasswordDTO(); // RenewPasswordDTO | 
+    try {
+      apiInstance.renewPassword(renewPasswordDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#renewPassword");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RenewPasswordDTO**](RenewPasswordDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **renewPasswordDTO** | [**RenewPasswordDTO**](RenewPasswordDTO.md)|  | |
 
 ### Return type
 
@@ -144,35 +192,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="requestResendValidationCode"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="requestResendValidationCode"></a>
 # **requestResendValidationCode**
-> Object requestResendValidationCode(body)
+> Object requestResendValidationCode(requestValCodeDTO)
 
 Send email validation code
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-RequestValCodeDTO body = new RequestValCodeDTO(); // RequestValCodeDTO | 
-try {
-    Object result = apiInstance.requestResendValidationCode(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#requestResendValidationCode");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    RequestValCodeDTO requestValCodeDTO = new RequestValCodeDTO(); // RequestValCodeDTO | 
+    try {
+      Object result = apiInstance.requestResendValidationCode(requestValCodeDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#requestResendValidationCode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RequestValCodeDTO**](RequestValCodeDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestValCodeDTO** | [**RequestValCodeDTO**](RequestValCodeDTO.md)|  | |
 
 ### Return type
 
@@ -187,35 +252,53 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="requestResetPassword"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
+
+<a id="requestResetPassword"></a>
 # **requestResetPassword**
-> Object requestResetPassword(body)
+> Object requestResetPassword(requestValCodeDTO)
 
 Request password reset
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-RequestValCodeDTO body = new RequestValCodeDTO(); // RequestValCodeDTO | 
-try {
-    Object result = apiInstance.requestResetPassword(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#requestResetPassword");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    RequestValCodeDTO requestValCodeDTO = new RequestValCodeDTO(); // RequestValCodeDTO | 
+    try {
+      Object result = apiInstance.requestResetPassword(requestValCodeDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#requestResetPassword");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**RequestValCodeDTO**](RequestValCodeDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestValCodeDTO** | [**RequestValCodeDTO**](RequestValCodeDTO.md)|  | |
 
 ### Return type
 
@@ -230,34 +313,51 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="resetPassword"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="resetPassword"></a>
 # **resetPassword**
-> resetPassword(body)
+> resetPassword(resetPasswordDTO)
 
 Reset password
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-ResetPasswordDTO body = new ResetPasswordDTO(); // ResetPasswordDTO | 
-try {
-    apiInstance.resetPassword(body);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#resetPassword");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    ResetPasswordDTO resetPasswordDTO = new ResetPasswordDTO(); // ResetPasswordDTO | 
+    try {
+      apiInstance.resetPassword(resetPasswordDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#resetPassword");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ResetPasswordDTO**](ResetPasswordDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **resetPasswordDTO** | [**ResetPasswordDTO**](ResetPasswordDTO.md)|  | |
 
 ### Return type
 
@@ -272,40 +372,58 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="validation"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="validation"></a>
 # **validation**
-> validation(code, type)
+> Object validation(code, type)
 
 Validate user code from email
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.RegistrationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.RegistrationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-RegistrationControllerApi apiInstance = new RegistrationControllerApi();
-String code = "code_example"; // String | Validation code from email
-String type = "type_example"; // String | Verification type
-try {
-    apiInstance.validation(code, type);
-} catch (ApiException e) {
-    System.err.println("Exception when calling RegistrationControllerApi#validation");
-    e.printStackTrace();
+    RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
+    String code = "code_example"; // String | Validation code from email
+    String type = "validation"; // String | Verification type
+    try {
+      Object result = apiInstance.validation(code, type);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RegistrationControllerApi#validation");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **code** | **String**| Validation code from email |
- **type** | **String**| Verification type | [enum: validation, resetPassword, corporateNewPassword, newPassword]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **code** | **String**| Validation code from email | |
+| **type** | **String**| Verification type | [enum: validation, resetPassword, corporateNewPassword, newPassword, externalAuthentication, changeEmail] |
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -314,5 +432,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

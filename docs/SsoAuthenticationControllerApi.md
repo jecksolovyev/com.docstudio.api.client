@@ -2,42 +2,169 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**idpByDomain**](SsoAuthenticationControllerApi.md#idpByDomain) | **GET** /saml/findIdp | Returns EntityID by domain
-[**loginGetSso**](SsoAuthenticationControllerApi.md#loginGetSso) | **GET** /saml/login | Login with SSO, redirect to UI after login
-[**loginPostSso**](SsoAuthenticationControllerApi.md#loginPostSso) | **POST** /saml/login | Login with SSO, token is in response
-[**logout**](SsoAuthenticationControllerApi.md#logout) | **POST** /saml/logout | Logout
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**loginGetSso**](SsoAuthenticationControllerApi.md#loginGetSso) | **GET** /saml2/authenticate/{registrationId} | Login with SSO, redirects to UI after login |
+| [**samlMetadata**](SsoAuthenticationControllerApi.md#samlMetadata) | **GET** /saml/metadata | Returns SAML Metadata |
+| [**samlRegistrationIdByDomain**](SsoAuthenticationControllerApi.md#samlRegistrationIdByDomain) | **GET** /saml/registrationId | Returns EntityID by domain |
 
-<a name="idpByDomain"></a>
-# **idpByDomain**
-> SsoEntityDTO idpByDomain(domain)
+
+<a id="loginGetSso"></a>
+# **loginGetSso**
+> loginGetSso(registrationId)
+
+Login with SSO, redirects to UI after login
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.SsoAuthenticationControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+
+    SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi(defaultClient);
+    String registrationId = "registrationId_example"; // String | 
+    try {
+      apiInstance.loginGetSso(registrationId);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SsoAuthenticationControllerApi#loginGetSso");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **registrationId** | **String**|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **302** | Found |  -  |
+
+<a id="samlMetadata"></a>
+# **samlMetadata**
+> String samlMetadata()
+
+Returns SAML Metadata
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.SsoAuthenticationControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+
+    SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi(defaultClient);
+    try {
+      String result = apiInstance.samlMetadata();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SsoAuthenticationControllerApi#samlMetadata");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="samlRegistrationIdByDomain"></a>
+# **samlRegistrationIdByDomain**
+> SsoEntityDTO samlRegistrationIdByDomain(domain)
 
 Returns EntityID by domain
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.SsoAuthenticationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.SsoAuthenticationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
-String domain = "domain_example"; // String | 
-try {
-    SsoEntityDTO result = apiInstance.idpByDomain(domain);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SsoAuthenticationControllerApi#idpByDomain");
-    e.printStackTrace();
+    SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi(defaultClient);
+    String domain = "domain_example"; // String | 
+    try {
+      SsoEntityDTO result = apiInstance.samlRegistrationIdByDomain(domain);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SsoAuthenticationControllerApi#samlRegistrationIdByDomain");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **domain** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domain** | **String**|  | |
 
 ### Return type
 
@@ -52,122 +179,8 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="loginGetSso"></a>
-# **loginGetSso**
-> loginGetSso(idp)
-
-Login with SSO, redirect to UI after login
-
-### Example
-```java
-// Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.SsoAuthenticationControllerApi;
-
-
-SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
-String idp = "idp_example"; // String | 
-try {
-    apiInstance.loginGetSso(idp);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SsoAuthenticationControllerApi#loginGetSso");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **idp** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="loginPostSso"></a>
-# **loginPostSso**
-> LoginResponseDTO loginPostSso()
-
-Login with SSO, token is in response
-
-### Example
-```java
-// Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.SsoAuthenticationControllerApi;
-
-
-SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
-try {
-    LoginResponseDTO result = apiInstance.loginPostSso();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SsoAuthenticationControllerApi#loginPostSso");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**LoginResponseDTO**](LoginResponseDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="logout"></a>
-# **logout**
-> logout()
-
-Logout
-
-### Example
-```java
-// Import classes:
-//import com.docstudio.client.ApiException;
-//import api.com.docstudio.client.SsoAuthenticationControllerApi;
-
-
-SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi();
-try {
-    apiInstance.logout();
-} catch (ApiException e) {
-    System.err.println("Exception when calling SsoAuthenticationControllerApi#logout");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

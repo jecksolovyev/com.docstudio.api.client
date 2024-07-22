@@ -1,6 +1,13 @@
+
+
 # SharedCodeDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**code** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**code** | **String** |  |  [optional] |
+
+
+

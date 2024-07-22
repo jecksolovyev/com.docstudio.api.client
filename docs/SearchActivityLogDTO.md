@@ -1,17 +1,24 @@
+
+
 # SearchActivityLogDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**accountUuid** | [**UUID**](UUID.md) |  | 
-**mailboxUuid** | [**UUID**](UUID.md) |  |  [optional]
-**action** | [**ActivityLogAction**](ActivityLogAction.md) |  |  [optional]
-**objectName** | **String** |  |  [optional]
-**objectType** | [**ActivityLogObjectType**](ActivityLogObjectType.md) |  |  [optional]
-**objectId** | [**UUID**](UUID.md) |  |  [optional]
-**operatorId** | [**UUID**](UUID.md) |  |  [optional]
-**source** | [**OperationSource**](OperationSource.md) |  |  [optional]
-**ip** | **String** |  |  [optional]
-**errorCode** | **Integer** |  |  [optional]
-**dateFrom** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**dateTo** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**accountUuid** | **UUID** |  |  |
+|**mailboxUuid** | **UUID** |  |  [optional] |
+|**action** | **ActivityLogAction** |  |  [optional] |
+|**objectName** | **String** |  |  [optional] |
+|**objectType** | **ActivityLogObjectType** |  |  [optional] |
+|**objectId** | **UUID** |  |  [optional] |
+|**operatorId** | **UUID** |  |  [optional] |
+|**source** | **OperationSource** |  |  [optional] |
+|**ip** | **String** |  |  [optional] |
+|**errorCode** | **Integer** |  |  [optional] |
+|**dateFrom** | **OffsetDateTime** |  |  [optional] |
+|**dateTo** | **OffsetDateTime** |  |  [optional] |
+
+
+

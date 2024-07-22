@@ -1,11 +1,19 @@
+
+
 # CommentMessageDTO
 
+All messages in the thread
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **Integer** |  |  [optional]
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**createdBy** | [**UUID**](UUID.md) |  |  [optional]
-**createdByName** | **String** |  |  [optional]
-**modifiedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**text** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**id** | **Integer** |  |  [optional] |
+|**createdAt** | **OffsetDateTime** |  |  [optional] |
+|**createdBy** | **UUID** |  |  [optional] |
+|**createdByName** | **String** |  |  [optional] |
+|**modifiedAt** | **OffsetDateTime** |  |  [optional] |
+|**text** | **String** |  |  [optional] |
+
+
+

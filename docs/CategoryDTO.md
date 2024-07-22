@@ -1,20 +1,30 @@
+
+
 # CategoryDTO
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **Long** | Identifier in DB. Shouldn&#x27;t be set for creation. |  [optional]
-**parentId** | **Long** | id of parent category |  [optional]
-**name** | **String** |  |  [optional]
-**description** | **String** |  |  [optional]
-**access** | [**AccessEnum**](#AccessEnum) | Access level |  [optional]
+Category to save
 
-<a name="AccessEnum"></a>
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**id** | **UUID** | Identifier in DB. Shouldn&#39;t be set for creation. |  [optional] |
+|**parentId** | **UUID** | Id of parent category |  [optional] |
+|**name** | **String** |  |  |
+|**description** | **String** |  |  [optional] |
+|**access** | [**AccessEnum**](#AccessEnum) | Access level |  [optional] |
+
+
+
 ## Enum: AccessEnum
-Name | Value
----- | -----
-MAILBOX | &quot;mailbox&quot;
-ACCOUNT | &quot;account&quot;
-PUB | &quot;pub&quot;
-OFFICIAL | &quot;official&quot;
-SHARED | &quot;shared&quot;
+
+| Name | Value |
+|---- | -----|
+| MAILBOX | &quot;mailbox&quot; |
+| ACCOUNT | &quot;account&quot; |
+| PUB | &quot;pub&quot; |
+| OFFICIAL | &quot;official&quot; |
+| SHARED | &quot;shared&quot; |
+
+
+

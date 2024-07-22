@@ -2,30 +2,31 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**archiveDictionary**](DictionaryControllerApi.md#archiveDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary
-[**checkColumnValues**](DictionaryControllerApi.md#checkColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc.
-[**checkDictionary**](DictionaryControllerApi.md#checkDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid}/check | Check dictionary. Check access, existence, etc.
-[**createColumn**](DictionaryControllerApi.md#createColumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column
-[**createDictionary**](DictionaryControllerApi.md#createDictionary) | **POST** /api/v1/dictionary | Create empty dictionary
-[**createRecord**](DictionaryControllerApi.md#createRecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s)
-[**deleteColumnDictionary**](DictionaryControllerApi.md#deleteColumnDictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID
-[**deleteRecords**](DictionaryControllerApi.md#deleteRecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s)
-[**download**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary
-[**downloadStatus**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary
-[**getColumnValue**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record
-[**getColumnValues**](DictionaryControllerApi.md#getColumnValues) | **POST** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary
-[**getDictionaryRecord**](DictionaryControllerApi.md#getDictionaryRecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record
-[**getDictionaryRecordUuids**](DictionaryControllerApi.md#getDictionaryRecordUuids) | **POST** /api/v1/dictionary/{dictionaryUuid}/record-uuids | Get dictionary record uuids by values
-[**getDictionaryRecords**](DictionaryControllerApi.md#getDictionaryRecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records
-[**patchDictionary**](DictionaryControllerApi.md#patchDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid} | Update dictionary
-[**patchRecord**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values
-[**readDictionary**](DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary
-[**searchDictionaries**](DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list
-[**updateColumnDictionary**](DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**archiveDictionary**](DictionaryControllerApi.md#archiveDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary |
+| [**checkColumnValues**](DictionaryControllerApi.md#checkColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc. |
+| [**checkDictionary**](DictionaryControllerApi.md#checkDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid}/check | Check dictionary. Check access, existence, etc. |
+| [**createColumn**](DictionaryControllerApi.md#createColumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column |
+| [**createDictionary**](DictionaryControllerApi.md#createDictionary) | **POST** /api/v1/dictionary | Create empty dictionary |
+| [**createRecord**](DictionaryControllerApi.md#createRecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s) |
+| [**deleteColumnDictionary**](DictionaryControllerApi.md#deleteColumnDictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
+| [**deleteRecords**](DictionaryControllerApi.md#deleteRecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s) |
+| [**download**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary |
+| [**downloadStatus**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary |
+| [**getColumnValue**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record |
+| [**getColumnValues**](DictionaryControllerApi.md#getColumnValues) | **POST** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary |
+| [**getDictionaryRecord**](DictionaryControllerApi.md#getDictionaryRecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record |
+| [**getDictionaryRecordUuids**](DictionaryControllerApi.md#getDictionaryRecordUuids) | **POST** /api/v1/dictionary/{dictionaryUuid}/record-uuids | Get dictionary record uuids by values |
+| [**getDictionaryRecords**](DictionaryControllerApi.md#getDictionaryRecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records |
+| [**patchDictionary**](DictionaryControllerApi.md#patchDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid} | Update dictionary |
+| [**patchRecord**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values |
+| [**readDictionary**](DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary |
+| [**searchDictionaries**](DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list |
+| [**updateColumnDictionary**](DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
 
-<a name="archiveDictionary"></a>
+
+<a id="archiveDictionary"></a>
 # **archiveDictionary**
 > archiveDictionary(dictionaryUuid, mailbox)
 
@@ -34,32 +35,39 @@ Archive dictionary
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    apiInstance.archiveDictionary(dictionaryUuid, mailbox);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#archiveDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      apiInstance.archiveDictionary(dictionaryUuid, mailbox);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#archiveDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -67,14 +75,19 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="checkColumnValues"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="checkColumnValues"></a>
 # **checkColumnValues**
 > DictionaryCheckResponseDTO checkColumnValues(dictionaryUuid, columnUuid, mailbox)
 
@@ -83,35 +96,42 @@ Check dictionary column. Check access, existence, etc.
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID columnUuid = new UUID(); // UUID | Column UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    DictionaryCheckResponseDTO result = apiInstance.checkColumnValues(dictionaryUuid, columnUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#checkColumnValues");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      DictionaryCheckResponseDTO result = apiInstance.checkColumnValues(dictionaryUuid, columnUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#checkColumnValues");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **columnUuid** | [**UUID**](.md)| Column UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **columnUuid** | **UUID**| Column UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -119,14 +139,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="checkDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="checkDictionary"></a>
 # **checkDictionary**
 > DictionaryCheckResponseDTO checkDictionary(dictionaryUuid, mailbox)
 
@@ -135,33 +160,40 @@ Check dictionary. Check access, existence, etc.
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    DictionaryCheckResponseDTO result = apiInstance.checkDictionary(dictionaryUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#checkDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      DictionaryCheckResponseDTO result = apiInstance.checkDictionary(dictionaryUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#checkDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -169,51 +201,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="createColumn"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="createColumn"></a>
 # **createColumn**
-> SingleUuidDTO createColumn(body, mailbox, dictionaryUuid)
+> SingleUuidDTO createColumn(dictionaryUuid, mailbox, dictionaryColumnRequestDTO)
 
 Create dictionary column
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryColumnRequestDTO body = new DictionaryColumnRequestDTO(); // DictionaryColumnRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-try {
-    SingleUuidDTO result = apiInstance.createColumn(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#createColumn");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryColumnRequestDTO dictionaryColumnRequestDTO = new DictionaryColumnRequestDTO(); // DictionaryColumnRequestDTO | 
+    try {
+      SingleUuidDTO result = apiInstance.createColumn(dictionaryUuid, mailbox, dictionaryColumnRequestDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#createColumn");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryColumnRequestDTO**](DictionaryColumnRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryColumnRequestDTO** | [**DictionaryColumnRequestDTO**](DictionaryColumnRequestDTO.md)|  | |
 
 ### Return type
 
@@ -221,14 +265,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="createDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="createDictionary"></a>
 # **createDictionary**
 > SingleUuidDTO createDictionary(mailbox)
 
@@ -237,31 +286,38 @@ Create empty dictionary
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    SingleUuidDTO result = apiInstance.createDictionary(mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#createDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      SingleUuidDTO result = apiInstance.createDictionary(mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#createDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -269,51 +325,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="createRecord"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="createRecord"></a>
 # **createRecord**
-> CreateRecordsResponseDTO createRecord(body, mailbox, dictionaryUuid)
+> CreateRecordsResponseDTO createRecord(dictionaryUuid, mailbox, dictionaryColumnValueRequestDTO)
 
 Create record(s)
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-List<List<DictionaryColumnValueRequestDTO>> body = Arrays.asList(new List()); // List<List<DictionaryColumnValueRequestDTO>> | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-try {
-    CreateRecordsResponseDTO result = apiInstance.createRecord(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#createRecord");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    List<List<DictionaryColumnValueRequestDTO>> dictionaryColumnValueRequestDTO = Arrays.asList(new ArrayList<>()); // List<List<DictionaryColumnValueRequestDTO>> | 
+    try {
+      CreateRecordsResponseDTO result = apiInstance.createRecord(dictionaryUuid, mailbox, dictionaryColumnValueRequestDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#createRecord");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**List&lt;List&lt;DictionaryColumnValueRequestDTO&gt;&gt;**](List.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryColumnValueRequestDTO** | [**List&lt;List&lt;DictionaryColumnValueRequestDTO&gt;&gt;**](List.md)|  | |
 
 ### Return type
 
@@ -321,14 +389,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deleteColumnDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="deleteColumnDictionary"></a>
 # **deleteColumnDictionary**
 > SingleUuidDTO deleteColumnDictionary(dictionaryUuid, columnUuid, mailbox)
 
@@ -337,35 +410,42 @@ Delete column. Will return deleted column UUID
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID columnUuid = new UUID(); // UUID | Column UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    SingleUuidDTO result = apiInstance.deleteColumnDictionary(dictionaryUuid, columnUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#deleteColumnDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      SingleUuidDTO result = apiInstance.deleteColumnDictionary(dictionaryUuid, columnUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#deleteColumnDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **columnUuid** | [**UUID**](.md)| Column UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **columnUuid** | **UUID**| Column UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -373,51 +453,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="deleteRecords"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+
+<a id="deleteRecords"></a>
 # **deleteRecords**
-> List&lt;SingleUuidDTO&gt; deleteRecords(body, mailbox, dictionaryUuid)
+> List&lt;SingleUuidDTO&gt; deleteRecords(dictionaryUuid, mailbox, singleUuidDTO)
 
 Delete record(s). Will return deleted records UUID(s)
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-List<SingleUuidDTO> body = Arrays.asList(new SingleUuidDTO()); // List<SingleUuidDTO> | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-try {
-    List<SingleUuidDTO> result = apiInstance.deleteRecords(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#deleteRecords");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    List<SingleUuidDTO> singleUuidDTO = Arrays.asList(); // List<SingleUuidDTO> | 
+    try {
+      List<SingleUuidDTO> result = apiInstance.deleteRecords(dictionaryUuid, mailbox, singleUuidDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#deleteRecords");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**List&lt;SingleUuidDTO&gt;**](SingleUuidDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **singleUuidDTO** | [**List&lt;SingleUuidDTO&gt;**](SingleUuidDTO.md)|  | |
 
 ### Return type
 
@@ -425,51 +517,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="download"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+
+<a id="download"></a>
 # **download**
-> ExportTaskStatusDTO download(body, mailbox, dictionaryUuid)
+> ExportTaskStatusDTO download(dictionaryUuid, mailbox, dictionaryDownloadParamsDTO)
 
 Download the dictionary
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryDownloadParamsDTO body = new DictionaryDownloadParamsDTO(); // DictionaryDownloadParamsDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-try {
-    ExportTaskStatusDTO result = apiInstance.download(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#download");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryDownloadParamsDTO dictionaryDownloadParamsDTO = new DictionaryDownloadParamsDTO(); // DictionaryDownloadParamsDTO | 
+    try {
+      ExportTaskStatusDTO result = apiInstance.download(dictionaryUuid, mailbox, dictionaryDownloadParamsDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#download");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryDownloadParamsDTO**](DictionaryDownloadParamsDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryDownloadParamsDTO** | [**DictionaryDownloadParamsDTO**](DictionaryDownloadParamsDTO.md)|  | |
 
 ### Return type
 
@@ -477,14 +581,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="downloadStatus"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="downloadStatus"></a>
 # **downloadStatus**
 > ExportTaskStatusDTO downloadStatus(dictionaryUuid, taskUuid, mailbox)
 
@@ -493,35 +602,42 @@ Download the dictionary
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-UUID taskUuid = new UUID(); // UUID | UUID of task
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    ExportTaskStatusDTO result = apiInstance.downloadStatus(dictionaryUuid, taskUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#downloadStatus");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID taskUuid = UUID.randomUUID(); // UUID | UUID of task
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      ExportTaskStatusDTO result = apiInstance.downloadStatus(dictionaryUuid, taskUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#downloadStatus");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
- **taskUuid** | [**UUID**](.md)| UUID of task |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **taskUuid** | **UUID**| UUID of task | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -529,14 +645,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getColumnValue"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getColumnValue"></a>
 # **getColumnValue**
 > DictionaryColumnValueResponseDTO getColumnValue(dictionaryUuid, recordUuid, columnUuid, mailbox)
 
@@ -545,37 +666,49 @@ Retrieve column value for specific record
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID recordUuid = new UUID(); // UUID | Record UUID
-UUID columnUuid = new UUID(); // UUID | Column UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    DictionaryColumnValueResponseDTO result = apiInstance.getColumnValue(dictionaryUuid, recordUuid, columnUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#getColumnValue");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID recordUuid = UUID.randomUUID(); // UUID | Record UUID
+    UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      DictionaryColumnValueResponseDTO result = apiInstance.getColumnValue(dictionaryUuid, recordUuid, columnUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#getColumnValue");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **recordUuid** | [**UUID**](.md)| Record UUID |
- **columnUuid** | [**UUID**](.md)| Column UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **recordUuid** | **UUID**| Record UUID | |
+| **columnUuid** | **UUID**| Column UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -590,50 +723,67 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getColumnValues"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getColumnValues"></a>
 # **getColumnValues**
-> PageDTODictionaryColumnValueResponseDTO getColumnValues(body, mailbox, dictionaryUuid, columnUuid, offset, limit)
+> PageDTODictionaryColumnValueResponseDTO getColumnValues(dictionaryUuid, columnUuid, dictionaryColumnValueSearchDTO, offset, limit, mailbox)
 
 Retrieve column values from dictionary
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryColumnValueSearchDTO body = new DictionaryColumnValueSearchDTO(); // DictionaryColumnValueSearchDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID columnUuid = new UUID(); // UUID | Column UUID
-Integer offset = 0; // Integer | Offset records
-Integer limit = 25; // Integer | Limit records, max is 1000
-try {
-    PageDTODictionaryColumnValueResponseDTO result = apiInstance.getColumnValues(body, mailbox, dictionaryUuid, columnUuid, offset, limit);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#getColumnValues");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
+    DictionaryColumnValueSearchDTO dictionaryColumnValueSearchDTO = new DictionaryColumnValueSearchDTO(); // DictionaryColumnValueSearchDTO | 
+    Integer offset = 0; // Integer | Offset records
+    Integer limit = 25; // Integer | Limit records, max is 1000
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      PageDTODictionaryColumnValueResponseDTO result = apiInstance.getColumnValues(dictionaryUuid, columnUuid, dictionaryColumnValueSearchDTO, offset, limit, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#getColumnValues");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryColumnValueSearchDTO**](DictionaryColumnValueSearchDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **columnUuid** | [**UUID**](.md)| Column UUID |
- **offset** | **Integer**| Offset records | [optional] [default to 0]
- **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **columnUuid** | **UUID**| Column UUID | |
+| **dictionaryColumnValueSearchDTO** | [**DictionaryColumnValueSearchDTO**](DictionaryColumnValueSearchDTO.md)|  | |
+| **offset** | **Integer**| Offset records | [optional] [default to 0] |
+| **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -648,7 +798,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getDictionaryRecord"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getDictionaryRecord"></a>
 # **getDictionaryRecord**
 > DictionaryRecordValuesResponseDTO getDictionaryRecord(dictionaryUuid, recordUuid, mailbox)
 
@@ -657,35 +812,47 @@ Retrieve record
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID recordUuid = new UUID(); // UUID | Record UUID
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    DictionaryRecordValuesResponseDTO result = apiInstance.getDictionaryRecord(dictionaryUuid, recordUuid, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecord");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID recordUuid = UUID.randomUUID(); // UUID | Record UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      DictionaryRecordValuesResponseDTO result = apiInstance.getDictionaryRecord(dictionaryUuid, recordUuid, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecord");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **recordUuid** | [**UUID**](.md)| Record UUID |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **recordUuid** | **UUID**| Record UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -700,44 +867,56 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getDictionaryRecordUuids"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getDictionaryRecordUuids"></a>
 # **getDictionaryRecordUuids**
-> Map&lt;String, UUID&gt; getDictionaryRecordUuids(body, mailbox, dictionaryUuid)
+> Map&lt;String, UUID&gt; getDictionaryRecordUuids(dictionaryUuid, mailbox, dictionaryRecordsRequestDTO)
 
 Get dictionary record uuids by values
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryRecordsRequestDTO body = new DictionaryRecordsRequestDTO(); // DictionaryRecordsRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-try {
-    Map<String, UUID> result = apiInstance.getDictionaryRecordUuids(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecordUuids");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryRecordsRequestDTO dictionaryRecordsRequestDTO = new DictionaryRecordsRequestDTO(); // DictionaryRecordsRequestDTO | 
+    try {
+      Map<String, UUID> result = apiInstance.getDictionaryRecordUuids(dictionaryUuid, mailbox, dictionaryRecordsRequestDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecordUuids");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryRecordsRequestDTO**](DictionaryRecordsRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryRecordsRequestDTO** | [**DictionaryRecordsRequestDTO**](DictionaryRecordsRequestDTO.md)|  | |
 
 ### Return type
 
@@ -745,55 +924,67 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getDictionaryRecords"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getDictionaryRecords"></a>
 # **getDictionaryRecords**
-> PageDTODictionaryRecordValuesResponseDTO getDictionaryRecords(body, mailbox, dictionaryUuid, offset, limit)
+> PageDTODictionaryRecordValuesResponseDTO getDictionaryRecords(dictionaryUuid, mailbox, dictionaryFiltersRequestDTO, offset, limit)
 
 Get dictionary records
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryFiltersRequestDTO body = new DictionaryFiltersRequestDTO(); // DictionaryFiltersRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-Integer offset = 0; // Integer | Offset records
-Integer limit = 25; // Integer | Limit records, max is 1000
-try {
-    PageDTODictionaryRecordValuesResponseDTO result = apiInstance.getDictionaryRecords(body, mailbox, dictionaryUuid, offset, limit);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecords");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryFiltersRequestDTO dictionaryFiltersRequestDTO = new DictionaryFiltersRequestDTO(); // DictionaryFiltersRequestDTO | 
+    Integer offset = 0; // Integer | Offset records
+    Integer limit = 25; // Integer | Limit records, max is 1000
+    try {
+      PageDTODictionaryRecordValuesResponseDTO result = apiInstance.getDictionaryRecords(dictionaryUuid, mailbox, dictionaryFiltersRequestDTO, offset, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#getDictionaryRecords");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryFiltersRequestDTO**](DictionaryFiltersRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
- **offset** | **Integer**| Offset records | [optional] [default to 0]
- **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryFiltersRequestDTO** | [**DictionaryFiltersRequestDTO**](DictionaryFiltersRequestDTO.md)|  | |
+| **offset** | **Integer**| Offset records | [optional] [default to 0] |
+| **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -801,51 +992,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="patchDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="patchDictionary"></a>
 # **patchDictionary**
-> DictionaryResponseDTO patchDictionary(body, mailbox, dictionaryUuid)
+> DictionaryResponseDTO patchDictionary(dictionaryUuid, mailbox, dictionaryRequestDTO)
 
 Update dictionary
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryRequestDTO body = new DictionaryRequestDTO(); // DictionaryRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-try {
-    DictionaryResponseDTO result = apiInstance.patchDictionary(body, mailbox, dictionaryUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#patchDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryRequestDTO dictionaryRequestDTO = new DictionaryRequestDTO(); // DictionaryRequestDTO | 
+    try {
+      DictionaryResponseDTO result = apiInstance.patchDictionary(dictionaryUuid, mailbox, dictionaryRequestDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#patchDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryRequestDTO**](DictionaryRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryRequestDTO** | [**DictionaryRequestDTO**](DictionaryRequestDTO.md)|  | |
 
 ### Return type
 
@@ -853,52 +1056,64 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="patchRecord"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="patchRecord"></a>
 # **patchRecord**
-> patchRecord(body, mailbox, dictionaryUuid, recordUuid)
+> patchRecord(dictionaryUuid, recordUuid, mailbox, dictionaryColumnValueRequestDTO)
 
 Update record column values
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-List<DictionaryColumnValueRequestDTO> body = Arrays.asList(new DictionaryColumnValueRequestDTO()); // List<DictionaryColumnValueRequestDTO> | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID recordUuid = new UUID(); // UUID | Record UUID
-try {
-    apiInstance.patchRecord(body, mailbox, dictionaryUuid, recordUuid);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#patchRecord");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID recordUuid = UUID.randomUUID(); // UUID | Record UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    List<DictionaryColumnValueRequestDTO> dictionaryColumnValueRequestDTO = Arrays.asList(); // List<DictionaryColumnValueRequestDTO> | 
+    try {
+      apiInstance.patchRecord(dictionaryUuid, recordUuid, mailbox, dictionaryColumnValueRequestDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#patchRecord");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**List&lt;DictionaryColumnValueRequestDTO&gt;**](DictionaryColumnValueRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **recordUuid** | [**UUID**](.md)| Record UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **recordUuid** | **UUID**| Record UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryColumnValueRequestDTO** | [**List&lt;DictionaryColumnValueRequestDTO&gt;**](DictionaryColumnValueRequestDTO.md)|  | |
 
 ### Return type
 
@@ -906,14 +1121,19 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="readDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="readDictionary"></a>
 # **readDictionary**
 > DictionaryResponseDTO readDictionary(dictionaryUuid, mailbox, withColumns, withRecordsCount)
 
@@ -922,37 +1142,44 @@ Read/get dictionary
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID dictionaryUuid = new UUID(); // UUID | UUID of dictionary
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-Boolean withColumns = false; // Boolean | Add columns description to each dictionary
-Boolean withRecordsCount = false; // Boolean | Add records count value to each dictionary
-try {
-    DictionaryResponseDTO result = apiInstance.readDictionary(dictionaryUuid, mailbox, withColumns, withRecordsCount);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#readDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | UUID of dictionary
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Boolean withColumns = false; // Boolean | Add columns description to each dictionary
+    Boolean withRecordsCount = false; // Boolean | Add records count value to each dictionary
+    try {
+      DictionaryResponseDTO result = apiInstance.readDictionary(dictionaryUuid, mailbox, withColumns, withRecordsCount);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#readDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionaryUuid** | [**UUID**](.md)| UUID of dictionary |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **withColumns** | **Boolean**| Add columns description to each dictionary | [optional] [default to false]
- **withRecordsCount** | **Boolean**| Add records count value to each dictionary | [optional] [default to false]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| UUID of dictionary | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **withColumns** | **Boolean**| Add columns description to each dictionary | [optional] [default to false] |
+| **withRecordsCount** | **Boolean**| Add records count value to each dictionary | [optional] [default to false] |
 
 ### Return type
 
@@ -960,14 +1187,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="searchDictionaries"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="searchDictionaries"></a>
 # **searchDictionaries**
 > PageDTODictionaryResponseDTO searchDictionaries(mailbox, level, keyword, withColumns, offset, limit)
 
@@ -976,41 +1208,48 @@ Get paged dictionary list
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-String level = "pub"; // String | Dictionary access level, 'pub' by default.
-String keyword = "keyword_example"; // String | Keyword to search dictionary by or dictionary UUID
-Boolean withColumns = false; // Boolean | Add columns description to each dictionary
-Integer offset = 0; // Integer | Offset records
-Integer limit = 25; // Integer | Limit records, max is 1000
-try {
-    PageDTODictionaryResponseDTO result = apiInstance.searchDictionaries(mailbox, level, keyword, withColumns, offset, limit);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#searchDictionaries");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    String level = "mailbox"; // String | Dictionary access level, 'pub' by default.
+    String keyword = "keyword_example"; // String | Keyword to search dictionary by or dictionary UUID
+    Boolean withColumns = false; // Boolean | Add columns description to each dictionary
+    Integer offset = 0; // Integer | Offset records
+    Integer limit = 25; // Integer | Limit records, max is 1000
+    try {
+      PageDTODictionaryResponseDTO result = apiInstance.searchDictionaries(mailbox, level, keyword, withColumns, offset, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#searchDictionaries");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **level** | **String**| Dictionary access level, &#x27;pub&#x27; by default. | [optional] [default to pub] [enum: mailbox, account, pub, official, shared]
- **keyword** | **String**| Keyword to search dictionary by or dictionary UUID | [optional]
- **withColumns** | **Boolean**| Add columns description to each dictionary | [optional] [default to false]
- **offset** | **Integer**| Offset records | [optional] [default to 0]
- **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **level** | **String**| Dictionary access level, &#39;pub&#39; by default. | [optional] [default to pub] [enum: mailbox, account, pub, official, shared] |
+| **keyword** | **String**| Keyword to search dictionary by or dictionary UUID | [optional] |
+| **withColumns** | **Boolean**| Add columns description to each dictionary | [optional] [default to false] |
+| **offset** | **Integer**| Offset records | [optional] [default to 0] |
+| **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -1018,53 +1257,65 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="updateColumnDictionary"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateColumnDictionary"></a>
 # **updateColumnDictionary**
-> DictionaryColumnResponseDTO updateColumnDictionary(body, mailbox, dictionaryUuid, columnUuid)
+> DictionaryColumnResponseDTO updateColumnDictionary(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO)
 
 Update dictionary column
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.DictionaryControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.DictionaryControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-DictionaryControllerApi apiInstance = new DictionaryControllerApi();
-DictionaryColumnRequestDTO body = new DictionaryColumnRequestDTO(); // DictionaryColumnRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID dictionaryUuid = new UUID(); // UUID | Dictionary UUID
-UUID columnUuid = new UUID(); // UUID | Column UUID
-try {
-    DictionaryColumnResponseDTO result = apiInstance.updateColumnDictionary(body, mailbox, dictionaryUuid, columnUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DictionaryControllerApi#updateColumnDictionary");
-    e.printStackTrace();
+    DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
+    UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
+    UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DictionaryColumnRequestDTO dictionaryColumnRequestDTO = new DictionaryColumnRequestDTO(); // DictionaryColumnRequestDTO | 
+    try {
+      DictionaryColumnResponseDTO result = apiInstance.updateColumnDictionary(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DictionaryControllerApi#updateColumnDictionary");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DictionaryColumnRequestDTO**](DictionaryColumnRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionaryUuid** | [**UUID**](.md)| Dictionary UUID |
- **columnUuid** | [**UUID**](.md)| Column UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dictionaryUuid** | **UUID**| Dictionary UUID | |
+| **columnUuid** | **UUID**| Column UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionaryColumnRequestDTO** | [**DictionaryColumnRequestDTO**](DictionaryColumnRequestDTO.md)|  | |
 
 ### Return type
 
@@ -1072,10 +1323,15 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

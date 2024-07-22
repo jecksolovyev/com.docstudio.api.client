@@ -102,14 +102,14 @@ All URIs are relative to *https://api.docstudio.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountBillingControllerApi* | [**checkEventAbility**](docs/AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} | 
-*AccountBillingControllerApi* | [**downloadInvoice**](docs/AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf | 
-*AccountBillingControllerApi* | [**getAccount**](docs/AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing | 
-*AccountBillingControllerApi* | [**getInvoiceStatus**](docs/AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} | 
-*AccountBillingControllerApi* | [**getInvoices**](docs/AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice | 
-*AccountBillingControllerApi* | [**getTariffs**](docs/AccountBillingControllerApi.md#getTariffs) | **GET** /api/v1/account/{accountUuid}/tariff | 
-*AccountBillingControllerApi* | [**makeInvoicePayment**](docs/AccountBillingControllerApi.md#makeInvoicePayment) | **POST** /api/v1/account/{accountUuid}/billing-payment | 
-*AccountBillingControllerApi* | [**replaceAccountTariff**](docs/AccountBillingControllerApi.md#replaceAccountTariff) | **POST** /api/v1/account/{accountUuid}/tariff | 
+*AccountBillingControllerApi* | [**checkEventAbility**](docs/AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} |
+*AccountBillingControllerApi* | [**downloadInvoice**](docs/AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf |
+*AccountBillingControllerApi* | [**getAccount**](docs/AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing |
+*AccountBillingControllerApi* | [**getInvoiceStatus**](docs/AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} |
+*AccountBillingControllerApi* | [**getInvoices**](docs/AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice |
+*AccountBillingControllerApi* | [**getTariffs**](docs/AccountBillingControllerApi.md#getTariffs) | **GET** /api/v1/account/{accountUuid}/tariff |
+*AccountBillingControllerApi* | [**makeInvoicePayment**](docs/AccountBillingControllerApi.md#makeInvoicePayment) | **POST** /api/v1/account/{accountUuid}/billing-payment |
+*AccountBillingControllerApi* | [**replaceAccountTariff**](docs/AccountBillingControllerApi.md#replaceAccountTariff) | **POST** /api/v1/account/{accountUuid}/tariff |
 *AccountControllerApi* | [**addNewCryptoConfigs**](docs/AccountControllerApi.md#addNewCryptoConfigs) | **PUT** /api/v1/account/{accountUuid}/crypto-configs | Add crypto configs
 *AccountControllerApi* | [**blockUsers**](docs/AccountControllerApi.md#blockUsers) | **PATCH** /api/v1/account/{accountUuid}/block-users/{flag} | Block/Unblock corporate users
 *AccountControllerApi* | [**createAccount**](docs/AccountControllerApi.md#createAccount) | **POST** /api/v1/account | Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
@@ -120,7 +120,7 @@ Class | Method | HTTP request | Description
 *AccountControllerApi* | [**deleteCryptoConfigs**](docs/AccountControllerApi.md#deleteCryptoConfigs) | **DELETE** /api/v1/account/{accountUuid}/crypto-configs | Delete crypto configs
 *AccountControllerApi* | [**getAccountBillingAddress**](docs/AccountControllerApi.md#getAccountBillingAddress) | **GET** /api/v1/account/{accountUuid}/billing/address | Get account billing address
 *AccountControllerApi* | [**getAccountBrandLogo**](docs/AccountControllerApi.md#getAccountBrandLogo) | **GET** /api/v1/account/brand-logo/{accountUuid} | Retrieve account brand logo
-*AccountControllerApi* | [**getAccountDetails**](docs/AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{uuid} | 
+*AccountControllerApi* | [**getAccountDetails**](docs/AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{uuid} |
 *AccountControllerApi* | [**getAccountLogoAccount**](docs/AccountControllerApi.md#getAccountLogoAccount) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo
 *AccountControllerApi* | [**getAccountUsersImportFileExample**](docs/AccountControllerApi.md#getAccountUsersImportFileExample) | **GET** /api/v1/account/{accountUuid}/users/example | Get account users import file example
 *AccountControllerApi* | [**getCryptoConfigs**](docs/AccountControllerApi.md#getCryptoConfigs) | **GET** /api/v1/account/{accountUuid}/crypto-configs | Get crypto configs
@@ -132,7 +132,7 @@ Class | Method | HTTP request | Description
 *AccountControllerApi* | [**saveUserPolicies**](docs/AccountControllerApi.md#saveUserPolicies) | **POST** /api/v1/account/{accountUuid}/user-policies | Save user password/session policies
 *AccountControllerApi* | [**searchMailboxesAccount**](docs/AccountControllerApi.md#searchMailboxesAccount) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list
 *AccountControllerApi* | [**updateAccountBillingAddress**](docs/AccountControllerApi.md#updateAccountBillingAddress) | **POST** /api/v1/account/{accountUuid}/billing/address | Create/update account billing address
-*AccountControllerApi* | [**updateAccountDetails**](docs/AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{uuid} | 
+*AccountControllerApi* | [**updateAccountDetails**](docs/AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{uuid} |
 *AccountControllerApi* | [**usersReport**](docs/AccountControllerApi.md#usersReport) | **POST** /api/v1/account/{accountUuid}/users/report | Generate account users report
 *AccountDomainControllerApi* | [**actionAccountDomain**](docs/AccountDomainControllerApi.md#actionAccountDomain) | **PATCH** /api/v1/account/{accountUuid}/domain/{domainUuid}/{action} | Change account domain status
 *AccountDomainControllerApi* | [**createAccountDomain**](docs/AccountDomainControllerApi.md#createAccountDomain) | **POST** /api/v1/account/{accountUuid}/domain | Create account domain
@@ -147,7 +147,8 @@ Class | Method | HTTP request | Description
 *AccountDomainControllerApi* | [**updateAccountSsoIdp**](docs/AccountDomainControllerApi.md#updateAccountSsoIdp) | **PUT** /api/v1/account/{accountUuid}/idp/{idpUuid} | Update account SSO Identity Provider
 *AliasControllerApi* | [**createAlias**](docs/AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox
 *AliasControllerApi* | [**deleteAlias**](docs/AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias
-*AliasControllerApi* | [**getAllByMailbox**](docs/AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox
+*AliasControllerApi* | [**getAllByMailbox**](docs/AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID
+*AliasControllerApi* | [**getAllByMailboxAlias**](docs/AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox
 *ApplicationTokenControllerApi* | [**createToken**](docs/ApplicationTokenControllerApi.md#createToken) | **POST** /api/v1/token | Create application token
 *ApplicationTokenControllerApi* | [**getUserTokens**](docs/ApplicationTokenControllerApi.md#getUserTokens) | **GET** /api/v1/token | List application tokens
 *ApplicationTokenControllerApi* | [**revokeToken**](docs/ApplicationTokenControllerApi.md#revokeToken) | **DELETE** /api/v1/token/{id} | Revoke application token
@@ -156,20 +157,20 @@ Class | Method | HTTP request | Description
 *ApprovalFlowControllerApi* | [**retrieve**](docs/ApprovalFlowControllerApi.md#retrieve) | **GET** /api/v1/approvalFlow/{flowUuid} | Retrieve approval flow
 *ApprovalFlowControllerApi* | [**search**](docs/ApprovalFlowControllerApi.md#search) | **GET** /api/v1/approvalFlow | Retrieve approval flows
 *ApprovalFlowControllerApi* | [**updateApprovalFlow**](docs/ApprovalFlowControllerApi.md#updateApprovalFlow) | **PUT** /api/v1/approvalFlow/{flowUuid} | Update approval flow
-*AuditTrailControllerApi* | [**addAuditTrailRecord**](docs/AuditTrailControllerApi.md#addAuditTrailRecord) | **PUT** /api/v1/audittrail/envelope/{uuid} | 
+*AuditTrailControllerApi* | [**addAuditTrailRecord**](docs/AuditTrailControllerApi.md#addAuditTrailRecord) | **PUT** /api/v1/audittrail/envelope/{uuid} |
 *AuditTrailControllerApi* | [**generateAuditTrailPdf**](docs/AuditTrailControllerApi.md#generateAuditTrailPdf) | **GET** /api/v1/audittrail/pdf/{uuid} | Download audit trail pdf for envelope
-*AuditTrailControllerApi* | [**getAuditTrailByEnvelope**](docs/AuditTrailControllerApi.md#getAuditTrailByEnvelope) | **GET** /api/v1/audittrail/envelope/{uuid} | 
+*AuditTrailControllerApi* | [**getAuditTrailByEnvelope**](docs/AuditTrailControllerApi.md#getAuditTrailByEnvelope) | **GET** /api/v1/audittrail/envelope/{uuid} |
 *AuthenticationControllerApi* | [**login**](docs/AuthenticationControllerApi.md#login) | **POST** /api/login | Login with email/password
 *AuthenticationControllerApi* | [**loginByCode**](docs/AuthenticationControllerApi.md#loginByCode) | **POST** /api/login/by-code | Login with the code from email (for non-existing user)
-*AuthenticationControllerApi* | [**logoutAuthentication**](docs/AuthenticationControllerApi.md#logoutAuthentication) | **POST** /api/logout | Logout
+*AuthenticationControllerApi* | [**logout**](docs/AuthenticationControllerApi.md#logout) | **POST** /api/logout | Logout
 *AuthenticationControllerApi* | [**userExistsByCode**](docs/AuthenticationControllerApi.md#userExistsByCode) | **GET** /api/login/check-by-code/{code} | Check login ability with the code from email (for non-existing user)
 *CategoryControllerApi* | [**createCategory**](docs/CategoryControllerApi.md#createCategory) | **POST** /api/v1/category | Save a category in DB
 *CategoryControllerApi* | [**deleteCategory**](docs/CategoryControllerApi.md#deleteCategory) | **DELETE** /api/v1/category/{id} | Delete category by Id
-*CategoryControllerApi* | [**getAllByType**](docs/CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#x27;access&#x27; type
+*CategoryControllerApi* | [**getAllByType**](docs/CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#39;access&#39; type
 *CategoryControllerApi* | [**updateCategory**](docs/CategoryControllerApi.md#updateCategory) | **PUT** /api/v1/category/{id} | Update the category in DB
 *ContactControllerApi* | [**createContact**](docs/ContactControllerApi.md#createContact) | **POST** /api/v1/contact | Save a contact in DB
 *ContactControllerApi* | [**deleteContact**](docs/ContactControllerApi.md#deleteContact) | **DELETE** /api/v1/contact/{uuid} | Delete contact by Id
-*ContactControllerApi* | [**searchOrList**](docs/ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#x27;access&#x27; type and name
+*ContactControllerApi* | [**searchOrList**](docs/ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#39;access&#39; type and name
 *ContactControllerApi* | [**updateContact**](docs/ContactControllerApi.md#updateContact) | **PUT** /api/v1/contact/{uuid} | Update the contact in DB
 *DictionaryControllerApi* | [**archiveDictionary**](docs/DictionaryControllerApi.md#archiveDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary
 *DictionaryControllerApi* | [**checkColumnValues**](docs/DictionaryControllerApi.md#checkColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc.
@@ -191,45 +192,53 @@ Class | Method | HTTP request | Description
 *DictionaryControllerApi* | [**readDictionary**](docs/DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary
 *DictionaryControllerApi* | [**searchDictionaries**](docs/DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list
 *DictionaryControllerApi* | [**updateColumnDictionary**](docs/DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column
+*EnvelopeCallbackControllerApi* | [**checkCallback**](docs/EnvelopeCallbackControllerApi.md#checkCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/check | Check callback with certain envelope
 *EnvelopeCallbackControllerApi* | [**createCallback**](docs/EnvelopeCallbackControllerApi.md#createCallback) | **POST** /api/v1/envelope/callback/add | Add new callback
 *EnvelopeCallbackControllerApi* | [**listCallbacks**](docs/EnvelopeCallbackControllerApi.md#listCallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks
 *EnvelopeCallbackControllerApi* | [**removeCallback**](docs/EnvelopeCallbackControllerApi.md#removeCallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback
-*EnvelopeControllerApi* | [**acceptUserPendingInvitations**](docs/EnvelopeControllerApi.md#acceptUserPendingInvitations) | **POST** /api/v1/envelope/invitations | Accept user&#x27;s pending invitations
+*EnvelopeCallbackControllerApi* | [**sendCallback**](docs/EnvelopeCallbackControllerApi.md#sendCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/send | Send callback with certain envelope
+*EnvelopeControllerApi* | [**acceptUserPendingInvitations**](docs/EnvelopeControllerApi.md#acceptUserPendingInvitations) | **POST** /api/v1/envelope/invitations | Accept user&#39;s pending invitations
 *EnvelopeControllerApi* | [**addEnvelopesIntoChain**](docs/EnvelopeControllerApi.md#addEnvelopesIntoChain) | **PUT** /api/v1/envelope/chain/{chainUuid} | Add envelopes into chain
 *EnvelopeControllerApi* | [**archive**](docs/EnvelopeControllerApi.md#archive) | **PATCH** /api/v1/envelope/archive/{flag} | Archive envelopes
 *EnvelopeControllerApi* | [**cancelApprovalFlow**](docs/EnvelopeControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Cancel envelope approval
 *EnvelopeControllerApi* | [**cancelEnvelopeDelegation**](docs/EnvelopeControllerApi.md#cancelEnvelopeDelegation) | **DELETE** /api/v1/envelope/delegate | Cancel envelope delegation
 *EnvelopeControllerApi* | [**cancelEnvelopes**](docs/EnvelopeControllerApi.md#cancelEnvelopes) | **DELETE** /api/v1/envelope/cancel | Cancel envelopes
 *EnvelopeControllerApi* | [**check**](docs/EnvelopeControllerApi.md#check) | **POST** /api/v1/envelope/check | Check an envelope
+*EnvelopeControllerApi* | [**checkEnvelopeHasActiveRole**](docs/EnvelopeControllerApi.md#checkEnvelopeHasActiveRole) | **HEAD** /api/v1/envelope/{envelopeUuid}/has-active-role | Check envelope has active role
 *EnvelopeControllerApi* | [**checkUserHasInvitations**](docs/EnvelopeControllerApi.md#checkUserHasInvitations) | **HEAD** /api/v1/envelope/invitations | Check user has pending invitations
 *EnvelopeControllerApi* | [**cloneAttachment**](docs/EnvelopeControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment
 *EnvelopeControllerApi* | [**confirmInvite**](docs/EnvelopeControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations
 *EnvelopeControllerApi* | [**continueScenarioStep**](docs/EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{envelopeUuid}/scenario/{stepId} | Continue scenario flow with step
-*EnvelopeControllerApi* | [**convertAttachmentToPdf**](docs/EnvelopeControllerApi.md#convertAttachmentToPdf) | **GET** /api/v1/envelope/attachment-as-pdf/{attachmentUuid} | Convert attachment to PDF
 *EnvelopeControllerApi* | [**createAttachment**](docs/EnvelopeControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment
 *EnvelopeControllerApi* | [**createEnvelope**](docs/EnvelopeControllerApi.md#createEnvelope) | **POST** /api/v1/envelope | Create draft envelope
 *EnvelopeControllerApi* | [**createEnvelopeComment**](docs/EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/comment | Create envelope comment thread
+*EnvelopeControllerApi* | [**createPdfAttachment**](docs/EnvelopeControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment
 *EnvelopeControllerApi* | [**delegateEnvelopes**](docs/EnvelopeControllerApi.md#delegateEnvelopes) | **POST** /api/v1/envelope/delegate | Delegate envelopes
 *EnvelopeControllerApi* | [**deleteDrafts**](docs/EnvelopeControllerApi.md#deleteDrafts) | **DELETE** /api/v1/envelope | Delete draft envelopes
 *EnvelopeControllerApi* | [**deleteEnvelopeComment**](docs/EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{envelopeUuid}/comment | Delete envelope comment in thread or the whole thread
-*EnvelopeControllerApi* | [**downloadEnvelopeAttachment**](docs/EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/{envelopeUuid}/attachment | Download envelope attachment
+*EnvelopeControllerApi* | [**downloadEnvelopeAttachment**](docs/EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw
 *EnvelopeControllerApi* | [**downloadFinalPdf**](docs/EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{envelopeUuid}/download-final-pdf | Download final PDF
 *EnvelopeControllerApi* | [**envelopeApproval**](docs/EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Approve or Reject envelope
 *EnvelopeControllerApi* | [**envelopeApprovalHistory**](docs/EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{envelopeUuid}/approval-history | Get approval history
 *EnvelopeControllerApi* | [**fill**](docs/EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope
+*EnvelopeControllerApi* | [**generateStamp**](docs/EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate
 *EnvelopeControllerApi* | [**getActiveRoles**](docs/EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{uuid}/activeRoles | Get active roles by Envelope UUID
 *EnvelopeControllerApi* | [**getApprovalFlow**](docs/EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Get envelope approval
+*EnvelopeControllerApi* | [**getAttachmentPageSizes**](docs/EnvelopeControllerApi.md#getAttachmentPageSizes) | **GET** /api/v1/envelope/attachment/page-sizes | Get attachment page sizes
 *EnvelopeControllerApi* | [**getChainEnvelopes**](docs/EnvelopeControllerApi.md#getChainEnvelopes) | **GET** /api/v1/envelope/chain/{chainUuid} | Get chain envelopes list
+*EnvelopeControllerApi* | [**getDocumentFileForSign**](docs/EnvelopeControllerApi.md#getDocumentFileForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-sign-file | Get BINARY or XML for signing
+*EnvelopeControllerApi* | [**getDocumentForSign**](docs/EnvelopeControllerApi.md#getDocumentForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-single-sign | BINARY and XML for signing
 *EnvelopeControllerApi* | [**getDocumentPrintVersion**](docs/EnvelopeControllerApi.md#getDocumentPrintVersion) | **GET** /api/v1/envelope/{envelopeUuid}/for-print | Get document PDF for printing
-*EnvelopeControllerApi* | [**getDocumentsForSign**](docs/EnvelopeControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-sign | PDFs and XMLs for signing
-*EnvelopeControllerApi* | [**getEnvelopeByUuid**](docs/EnvelopeControllerApi.md#getEnvelopeByUuid) | **GET** /api/v1/envelope/{uuid} | Retrieve envelope by UUID
+*EnvelopeControllerApi* | [**getDocumentsForSign**](docs/EnvelopeControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-sign | BINARYs and XMLs for signing
+*EnvelopeControllerApi* | [**getEnvelopeByUuid**](docs/EnvelopeControllerApi.md#getEnvelopeByUuid) | **GET** /api/v1/envelope/{envelopeUuid} | Retrieve envelope by UUID
 *EnvelopeControllerApi* | [**getEnvelopeComments**](docs/EnvelopeControllerApi.md#getEnvelopeComments) | **GET** /api/v1/envelope/{envelopeUuid}/comment | Get envelope comments for each document
 *EnvelopeControllerApi* | [**getEnvelopeInviteAuthorized**](docs/EnvelopeControllerApi.md#getEnvelopeInviteAuthorized) | **GET** /api/v1/envelope/invite-authorized-info | Get information about envelope by the invitation code (by already registered user)
 *EnvelopeControllerApi* | [**getEnvelopeInviteUnauthorized**](docs/EnvelopeControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user)
 *EnvelopeControllerApi* | [**getEnvelopeSharedZip**](docs/EnvelopeControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive
 *EnvelopeControllerApi* | [**getEnvelopeZip**](docs/EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{envelopeUuid}/zip | Get envelope or document zip archive
-*EnvelopeControllerApi* | [**getUserPendingInvitations**](docs/EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#x27;s pending invitations
+*EnvelopeControllerApi* | [**getUserPendingInvitations**](docs/EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations
 *EnvelopeControllerApi* | [**mergeEnvelopesIntoChain**](docs/EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain
+*EnvelopeControllerApi* | [**oneTimeSend**](docs/EnvelopeControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted)
 *EnvelopeControllerApi* | [**quickSendExternalDocuments**](docs/EnvelopeControllerApi.md#quickSendExternalDocuments) | **POST** /api/v1/envelope/quick-send | Quick send envelope with external documents only
 *EnvelopeControllerApi* | [**recycleBin**](docs/EnvelopeControllerApi.md#recycleBin) | **PATCH** /api/v1/envelope/recycle-bin/{flag} | Archive envelopes
 *EnvelopeControllerApi* | [**removeEnvelopeFromChain**](docs/EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{envelopeUuid}/chain | Remove envelope from chain
@@ -242,6 +251,7 @@ Class | Method | HTTP request | Description
 *EnvelopeControllerApi* | [**shareEnvelopesByEmail**](docs/EnvelopeControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share-archive | Share envelopes by email
 *EnvelopeControllerApi* | [**shareEnvelopesCopy**](docs/EnvelopeControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies
 *EnvelopeControllerApi* | [**sign**](docs/EnvelopeControllerApi.md#sign) | **PUT** /api/v1/envelope/{envelopeUuid}/sign | Sign envelope documents
+*EnvelopeControllerApi* | [**signSES**](docs/EnvelopeControllerApi.md#signSES) | **POST** /api/v1/envelope/{envelopeUuid}/sign-ses | Sign envelope with SES
 *EnvelopeControllerApi* | [**updateEnvelope**](docs/EnvelopeControllerApi.md#updateEnvelope) | **PUT** /api/v1/envelope | Update draft envelope
 *EnvelopeControllerApi* | [**updateEnvelopeComment**](docs/EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{envelopeUuid}/comment | Add/Update envelope comment in thread
 *EnvelopeControllerApi* | [**updateEnvelopeCommentAccess**](docs/EnvelopeControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{envelopeUuid}/comment-access | Update envelope comment thread access level
@@ -265,16 +275,17 @@ Class | Method | HTTP request | Description
 *FilterSettingsControllerApi* | [**getByUuid**](docs/FilterSettingsControllerApi.md#getByUuid) | **GET** /api/v1/filterSettings/{uuid} | Get by UUID
 *FilterSettingsControllerApi* | [**updateFilterSettings**](docs/FilterSettingsControllerApi.md#updateFilterSettings) | **PUT** /api/v1/filterSettings/{uuid} | Update FilterSettings for mailbox
 *IntegrationControllerApi* | [**convertBinaryToXML**](docs/IntegrationControllerApi.md#convertBinaryToXML) | **POST** /api/v1/integration/convert-binary | Convert incoming file to XML view
-*IntegrationControllerApi* | [**createMailboxIntegrationRule**](docs/IntegrationControllerApi.md#createMailboxIntegrationRule) | **POST** /api/v1/integration/rule/{mailboxUuid} | Create Mailbox integration rule
-*IntegrationControllerApi* | [**deleteMailboxIntegrationRule**](docs/IntegrationControllerApi.md#deleteMailboxIntegrationRule) | **DELETE** /api/v1/integration/rule/{integrationRuleUuid} | Delete Mailbox integration rule
+*IntegrationControllerApi* | [**createIntegrationRule**](docs/IntegrationControllerApi.md#createIntegrationRule) | **POST** /api/v1/integration/rule | Create integration rule
+*IntegrationControllerApi* | [**deleteIntegrationRule**](docs/IntegrationControllerApi.md#deleteIntegrationRule) | **DELETE** /api/v1/integration/rule/{integrationRuleUuid} | Delete integration rule
 *IntegrationControllerApi* | [**execute**](docs/IntegrationControllerApi.md#execute) | **POST** /api/v1/integration/rule/execute | Execute conversion map and generate file name (if pattern rule defined)
 *IntegrationControllerApi* | [**generate**](docs/IntegrationControllerApi.md#generate) | **GET** /api/v1/integration/source/{templateUuid}/{mailboxUuid} | Generate envelope XML by template
+*IntegrationControllerApi* | [**getExchangeCertificate**](docs/IntegrationControllerApi.md#getExchangeCertificate) | **GET** /api/v1/integration/exchange-certificate | Get public exchange certificate
+*IntegrationControllerApi* | [**getIntegrationRule**](docs/IntegrationControllerApi.md#getIntegrationRule) | **GET** /api/v1/integration/rule/{integrationRuleUuid} | Get integration rule
+*IntegrationControllerApi* | [**getIntegrationRules**](docs/IntegrationControllerApi.md#getIntegrationRules) | **GET** /api/v1/integration/rules/{accountUuid} | Get account integration rules
 *IntegrationControllerApi* | [**getMailboxIntegration**](docs/IntegrationControllerApi.md#getMailboxIntegration) | **GET** /api/v1/integration/{mailboxUuid} | Get Mailbox integration
-*IntegrationControllerApi* | [**getMailboxIntegrationRule**](docs/IntegrationControllerApi.md#getMailboxIntegrationRule) | **GET** /api/v1/integration/rule/{integrationRuleUuid} | Get Mailbox integration rule
-*IntegrationControllerApi* | [**getMailboxIntegrationRules**](docs/IntegrationControllerApi.md#getMailboxIntegrationRules) | **GET** /api/v1/integration/rules/{mailboxUuid} | Get Mailbox integration rules
 *IntegrationControllerApi* | [**newPassword**](docs/IntegrationControllerApi.md#newPassword) | **POST** /api/v1/integration/new-password/{mailboxUuid} | Generate and save new password
 *IntegrationControllerApi* | [**saveMailboxIntegration**](docs/IntegrationControllerApi.md#saveMailboxIntegration) | **POST** /api/v1/integration/{mailboxUuid} | Create/update Mailbox integration
-*IntegrationControllerApi* | [**updateMailboxIntegrationRule**](docs/IntegrationControllerApi.md#updateMailboxIntegrationRule) | **PUT** /api/v1/integration/rule/{integrationRuleUuid} | Update Mailbox integration rule
+*IntegrationControllerApi* | [**updateIntegrationRule**](docs/IntegrationControllerApi.md#updateIntegrationRule) | **PUT** /api/v1/integration/rule/{integrationRuleUuid} | Update integration rule
 *LabelControllerApi* | [**assignments**](docs/LabelControllerApi.md#assignments) | **POST** /api/v1/label/assignments | Assign label to envelopes
 *LabelControllerApi* | [**createLabel**](docs/LabelControllerApi.md#createLabel) | **POST** /api/v1/label | Save label to DB
 *LabelControllerApi* | [**deAssignments**](docs/LabelControllerApi.md#deAssignments) | **DELETE** /api/v1/label/assignments | Unassign label from envelopes
@@ -287,23 +298,36 @@ Class | Method | HTTP request | Description
 *MailboxControllerApi* | [**deleteMailboxUsers**](docs/MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester
 *MailboxControllerApi* | [**getAccountLogo**](docs/MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo
 *MailboxControllerApi* | [**getActivityLog**](docs/MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox
-*MailboxControllerApi* | [**getAllForUser**](docs/MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox | Retrieve user&#x27;s mailboxes list
+*MailboxControllerApi* | [**getAllForUser**](docs/MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailboxes list
+*MailboxControllerApi* | [**getAutoDelegation**](docs/MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings
 *MailboxControllerApi* | [**getCustomizedDashboard**](docs/MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard
 *MailboxControllerApi* | [**getCustomizedDashboardHtml**](docs/MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html
 *MailboxControllerApi* | [**getMailboxEssentials**](docs/MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials
-*MailboxControllerApi* | [**getMailboxesByAccount**](docs/MailboxControllerApi.md#getMailboxesByAccount) | **GET** /api/v1/mailbox/account/{uuid} | Read list of mailboxes
+*MailboxControllerApi* | [**getMailboxesByAccount**](docs/MailboxControllerApi.md#getMailboxesByAccount) | **GET** /api/v1/mailbox/account/{uuid} | Read list of account mailboxes
 *MailboxControllerApi* | [**getMailboxesInfoMailbox**](docs/MailboxControllerApi.md#getMailboxesInfoMailbox) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info
 *MailboxControllerApi* | [**getStat**](docs/MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope
 *MailboxControllerApi* | [**getUsedTemplates**](docs/MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates
 *MailboxControllerApi* | [**patchMailbox**](docs/MailboxControllerApi.md#patchMailbox) | **PATCH** /api/v1/mailbox/{mailboxUuid} | Patch mailbox, return patched mailbox w/o users count
 *MailboxControllerApi* | [**searchMailboxes**](docs/MailboxControllerApi.md#searchMailboxes) | **GET** /api/v1/mailbox/search | Search mailboxes by name, contact, alias, user
+*MailboxControllerApi* | [**searchMailboxesAsParticipants**](docs/MailboxControllerApi.md#searchMailboxesAsParticipants) | **GET** /api/v1/mailbox/search-participants | Search mailboxes by name, contact, alias, user
+*MailboxControllerApi* | [**updateAutoDelegation**](docs/MailboxControllerApi.md#updateAutoDelegation) | **PUT** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Update auto delegation settings
 *MailboxControllerApi* | [**updateMailbox**](docs/MailboxControllerApi.md#updateMailbox) | **PUT** /api/v1/mailbox/{mailboxUuid} | Update mailbox
-*MiscControllerApi* | [**appSettings**](docs/MiscControllerApi.md#appSettings) | **GET** /api/v1/settings | 
+*MailboxGroupControllerApi* | [**addMailboxesToGroup**](docs/MailboxGroupControllerApi.md#addMailboxesToGroup) | **POST** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid}/mailbox | Add mailboxes to group
+*MailboxGroupControllerApi* | [**createMailboxGroup**](docs/MailboxGroupControllerApi.md#createMailboxGroup) | **POST** /api/v1/account/{accountUuid}/mailbox-group | Create mailbox group
+*MailboxGroupControllerApi* | [**getMailboxGroup**](docs/MailboxGroupControllerApi.md#getMailboxGroup) | **GET** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Get mailbox group
+*MailboxGroupControllerApi* | [**getMailboxGroupsNames**](docs/MailboxGroupControllerApi.md#getMailboxGroupsNames) | **POST** /api/v1/account/{accountUuid}/mailbox-group/info | Get groups names
+*MailboxGroupControllerApi* | [**removeMailboxesFromGroup**](docs/MailboxGroupControllerApi.md#removeMailboxesFromGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid}/mailbox | Remove mailboxes from group
+*MailboxGroupControllerApi* | [**searchGroups**](docs/MailboxGroupControllerApi.md#searchGroups) | **GET** /api/v1/account/{accountUuid}/mailbox-group | List/search groups
+*MailboxGroupControllerApi* | [**updateMailboxGroup**](docs/MailboxGroupControllerApi.md#updateMailboxGroup) | **PATCH** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Update mailbox group
+*MailboxGroupControllerApi* | [**updateMailboxGroupMailboxGroup**](docs/MailboxGroupControllerApi.md#updateMailboxGroupMailboxGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Delete mailbox group
+*MiscControllerApi* | [**appSettings**](docs/MiscControllerApi.md#appSettings) | **GET** /api/v1/settings |
 *MiscControllerApi* | [**auditLog**](docs/MiscControllerApi.md#auditLog) | **POST** /api/v1/audit | Audit log
 *MiscControllerApi* | [**calculateFormula**](docs/MiscControllerApi.md#calculateFormula) | **POST** /api/v1/formula | Calculate excel formulas for documents
 *MiscControllerApi* | [**createAuditReport**](docs/MiscControllerApi.md#createAuditReport) | **POST** /api/v1/audit/report | Request audit report
-*MiscControllerApi* | [**detectCountry**](docs/MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country | 
+*MiscControllerApi* | [**detectCountry**](docs/MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country |
+*MiscControllerApi* | [**getBarcode**](docs/MiscControllerApi.md#getBarcode) | **GET** /api/v1/barcode |
 *MiscControllerApi* | [**recalculateMailboxStat**](docs/MiscControllerApi.md#recalculateMailboxStat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters
+*MiscControllerApi* | [**returnNoFavicon**](docs/MiscControllerApi.md#returnNoFavicon) | **GET** /favicon.ico |
 *NotificationControllerApi* | [**getAccountPreferences**](docs/NotificationControllerApi.md#getAccountPreferences) | **GET** /api/v1/notification/account-preferences | Get account related notification preferences
 *NotificationControllerApi* | [**getMailboxPreferences**](docs/NotificationControllerApi.md#getMailboxPreferences) | **GET** /api/v1/notification/mailbox-preferences | Get mailbox related notification preferences
 *NotificationControllerApi* | [**getUnreadNotifications**](docs/NotificationControllerApi.md#getUnreadNotifications) | **GET** /api/v1/notification | Get unread notifications
@@ -312,7 +336,7 @@ Class | Method | HTTP request | Description
 *NotificationControllerApi* | [**saveAccountPreferences**](docs/NotificationControllerApi.md#saveAccountPreferences) | **POST** /api/v1/notification/account-preferences | Save account related notification preferences
 *NotificationControllerApi* | [**saveMailboxPreferences**](docs/NotificationControllerApi.md#saveMailboxPreferences) | **POST** /api/v1/notification/mailbox-preferences | Save mailbox related notification preferences
 *PermissionAccountControllerApi* | [**deleteAccAllPermissions**](docs/PermissionAccountControllerApi.md#deleteAccAllPermissions) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid} | Delete user from account totally
-*PermissionAccountControllerApi* | [**deleteAccPermission**](docs/PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#x27;user-to-account&#x27; relation
+*PermissionAccountControllerApi* | [**deleteAccPermission**](docs/PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#39;user-to-account&#39; relation
 *PermissionAccountControllerApi* | [**deleteAccRole**](docs/PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role
 *PermissionAccountControllerApi* | [**getUserAccountPermissions**](docs/PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions
 *PermissionAccountControllerApi* | [**patchMbPermissionsPermissionAccount**](docs/PermissionAccountControllerApi.md#patchMbPermissionsPermissionAccount) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
@@ -327,13 +351,13 @@ Class | Method | HTTP request | Description
 *PermissionMailboxControllerApi* | [**replaceAllPermissions**](docs/PermissionMailboxControllerApi.md#replaceAllPermissions) | **PUT** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Replace all permissions for selected user-to-mailbox relation
 *RegistrationControllerApi* | [**getUserPasswordPolicy**](docs/RegistrationControllerApi.md#getUserPasswordPolicy) | **GET** /registration/passwordPolicy | Get user password policy
 *RegistrationControllerApi* | [**register**](docs/RegistrationControllerApi.md#register) | **POST** /registration | Register a user with validation code
-*RegistrationControllerApi* | [**renewPassword**](docs/RegistrationControllerApi.md#renewPassword) | **POST** /registration/renewPassword | Renew user&#x27;s password
+*RegistrationControllerApi* | [**renewPassword**](docs/RegistrationControllerApi.md#renewPassword) | **POST** /registration/renewPassword | Renew user&#39;s password
 *RegistrationControllerApi* | [**requestResendValidationCode**](docs/RegistrationControllerApi.md#requestResendValidationCode) | **POST** /registration/sendRegistrationCode | Send email validation code
 *RegistrationControllerApi* | [**requestResetPassword**](docs/RegistrationControllerApi.md#requestResetPassword) | **POST** /registration/requestPasswordReset | Request password reset
 *RegistrationControllerApi* | [**resetPassword**](docs/RegistrationControllerApi.md#resetPassword) | **POST** /registration/resetPassword | Reset password
 *RegistrationControllerApi* | [**validation**](docs/RegistrationControllerApi.md#validation) | **GET** /registration/validate | Validate user code from email
 *RoleControllerApi* | [**createRole**](docs/RoleControllerApi.md#createRole) | **POST** /api/v1/permission/role | Create a role
-*RoleControllerApi* | [**delete**](docs/RoleControllerApi.md#delete) | **DELETE** /api/v1/permission/role/{uuid} | 
+*RoleControllerApi* | [**delete**](docs/RoleControllerApi.md#delete) | **DELETE** /api/v1/permission/role/{uuid} |
 *RoleControllerApi* | [**read**](docs/RoleControllerApi.md#read) | **GET** /api/v1/permission/role/{uuid} | Read role by UUID
 *RoleControllerApi* | [**readAll**](docs/RoleControllerApi.md#readAll) | **GET** /api/v1/permission/role | Read all system roles
 *RoleControllerApi* | [**readAllWithAccount**](docs/RoleControllerApi.md#readAllWithAccount) | **GET** /api/v1/permission/role/account/{uuid} | Read all roles for account including system predefined
@@ -345,10 +369,9 @@ Class | Method | HTTP request | Description
 *ScenarioControllerApi* | [**runScenario**](docs/ScenarioControllerApi.md#runScenario) | **POST** /api/v1/scenario/{scenarioUuid} | Run scenario
 *ScenarioControllerApi* | [**searchScenarios**](docs/ScenarioControllerApi.md#searchScenarios) | **GET** /api/v1/scenario | Get paged scenario list
 *ScenarioControllerApi* | [**updateScenario**](docs/ScenarioControllerApi.md#updateScenario) | **PUT** /api/v1/scenario/{scenarioUuid} | Update scenario
-*SsoAuthenticationControllerApi* | [**idpByDomain**](docs/SsoAuthenticationControllerApi.md#idpByDomain) | **GET** /saml/findIdp | Returns EntityID by domain
-*SsoAuthenticationControllerApi* | [**loginGetSso**](docs/SsoAuthenticationControllerApi.md#loginGetSso) | **GET** /saml/login | Login with SSO, redirect to UI after login
-*SsoAuthenticationControllerApi* | [**loginPostSso**](docs/SsoAuthenticationControllerApi.md#loginPostSso) | **POST** /saml/login | Login with SSO, token is in response
-*SsoAuthenticationControllerApi* | [**logout**](docs/SsoAuthenticationControllerApi.md#logout) | **POST** /saml/logout | Logout
+*SsoAuthenticationControllerApi* | [**loginGetSso**](docs/SsoAuthenticationControllerApi.md#loginGetSso) | **GET** /saml2/authenticate/{registrationId} | Login with SSO, redirects to UI after login
+*SsoAuthenticationControllerApi* | [**samlMetadata**](docs/SsoAuthenticationControllerApi.md#samlMetadata) | **GET** /saml/metadata | Returns SAML Metadata
+*SsoAuthenticationControllerApi* | [**samlRegistrationIdByDomain**](docs/SsoAuthenticationControllerApi.md#samlRegistrationIdByDomain) | **GET** /saml/registrationId | Returns EntityID by domain
 *TemplateControllerApi* | [**addZipStructure**](docs/TemplateControllerApi.md#addZipStructure) | **PUT** /api/v1/template/{uuid}/zip-structure | Add new files structure for zip archive
 *TemplateControllerApi* | [**archiveTemplate**](docs/TemplateControllerApi.md#archiveTemplate) | **PATCH** /api/v1/template/{uuid}/archive | Make template archived
 *TemplateControllerApi* | [**checkTemplateExistsByUuid**](docs/TemplateControllerApi.md#checkTemplateExistsByUuid) | **HEAD** /api/v1/template/{uuid} | Check template exists by UUID
@@ -358,6 +381,7 @@ Class | Method | HTTP request | Description
 *TemplateControllerApi* | [**deleteZipStructure**](docs/TemplateControllerApi.md#deleteZipStructure) | **DELETE** /api/v1/template/{uuid}/zip-structure/{title} | Delete structure for zip archive
 *TemplateControllerApi* | [**downloadTemplateImage**](docs/TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image
 *TemplateControllerApi* | [**downloadTemplatePdf**](docs/TemplateControllerApi.md#downloadTemplatePdf) | **GET** /api/v1/template/{uuid}/pdf | Download template PDF
+*TemplateControllerApi* | [**getPdfPageSizes**](docs/TemplateControllerApi.md#getPdfPageSizes) | **GET** /api/v1/template/{uuid}/pdf-page-sizes | Get PDF page sizes
 *TemplateControllerApi* | [**getRecentlyUsedTemplates**](docs/TemplateControllerApi.md#getRecentlyUsedTemplates) | **GET** /api/v1/template/recently-used | Get up to 10 recently used templates
 *TemplateControllerApi* | [**getRecommendedTemplates**](docs/TemplateControllerApi.md#getRecommendedTemplates) | **GET** /api/v1/template/recommended | Get up to 4 recommended templates
 *TemplateControllerApi* | [**getSavedZipStructureNames**](docs/TemplateControllerApi.md#getSavedZipStructureNames) | **GET** /api/v1/template/{uuid}/zip-structure-titles | Get saved structure titles for zip archive
@@ -378,8 +402,8 @@ Class | Method | HTTP request | Description
 *UploadControllerApi* | [**getImportTask**](docs/UploadControllerApi.md#getImportTask) | **GET** /api/v1/upload/{uploadUuid} | Get import processing task
 *UploadControllerApi* | [**uploadDictionary**](docs/UploadControllerApi.md#uploadDictionary) | **POST** /api/v1/upload/dictionary/{dictionaryUuid} | Upload dictionary file for importing
 *UserControllerApi* | [**acceptInvite**](docs/UserControllerApi.md#acceptInvite) | **POST** /api/v1/user/invite/accept/{inviteCode} | Accept invite
-*UserControllerApi* | [**changePassword**](docs/UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#x27;s password
-*UserControllerApi* | [**changeSignature**](docs/UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#x27;s eink signature in base64 format
+*UserControllerApi* | [**changePassword**](docs/UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#39;s password
+*UserControllerApi* | [**changeSignature**](docs/UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#39;s eink signature in base64 format
 *UserControllerApi* | [**createInvitation**](docs/UserControllerApi.md#createInvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions.
 *UserControllerApi* | [**declineInvite**](docs/UserControllerApi.md#declineInvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite
 *UserControllerApi* | [**deleteUser**](docs/UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself
@@ -389,278 +413,288 @@ Class | Method | HTTP request | Description
 *UserControllerApi* | [**getMailboxesInfo**](docs/UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info
 *UserControllerApi* | [**getProfile**](docs/UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve user profile
 *UserControllerApi* | [**updateInvitation**](docs/UserControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid.
-*UserControllerApi* | [**updateProfile**](docs/UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update user&#x27;s profile
+*UserControllerApi* | [**updateProfile**](docs/UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update user&#39;s profile
 *ValidationControllerApi* | [**getEnvelopeInvite**](docs/ValidationControllerApi.md#getEnvelopeInvite) | **GET** /api/v1/validation/envelope-authorized-invite | Get invitation info by already registered user
 *ValidationControllerApi* | [**getEnvelopeInviteNotRegistered**](docs/ValidationControllerApi.md#getEnvelopeInviteNotRegistered) | **GET** /api/v1/validation/envelope-invite | Get invitation info by not authenticated user
 
+
 ## Documentation for Models
 
- - [AccountAddressDTO](docs/AccountAddressDTO.md)
- - [AccountBillingCounterValueDTO](docs/AccountBillingCounterValueDTO.md)
- - [AccountBillingEventDTO](docs/AccountBillingEventDTO.md)
- - [AccountBillingInfoDTO](docs/AccountBillingInfoDTO.md)
- - [AccountBillingTariffInfoDTO](docs/AccountBillingTariffInfoDTO.md)
- - [AccountCreateDTO](docs/AccountCreateDTO.md)
- - [AccountDTO](docs/AccountDTO.md)
- - [AccountDomainCreateDTO](docs/AccountDomainCreateDTO.md)
- - [AccountDomainDTO](docs/AccountDomainDTO.md)
- - [AccountDomainUpdateDTO](docs/AccountDomainUpdateDTO.md)
- - [AccountDomainVerifyInfo](docs/AccountDomainVerifyInfo.md)
- - [AccountMailboxInfoDTO](docs/AccountMailboxInfoDTO.md)
- - [AccountPermissionsDTO](docs/AccountPermissionsDTO.md)
- - [AccountPoliciesDTO](docs/AccountPoliciesDTO.md)
- - [AccountSsoIdProviderDTO](docs/AccountSsoIdProviderDTO.md)
- - [AccountSsoIdProviderShortDTO](docs/AccountSsoIdProviderShortDTO.md)
- - [AccountSsoIdProviderUpdateDTO](docs/AccountSsoIdProviderUpdateDTO.md)
- - [AccountUserDTO](docs/AccountUserDTO.md)
- - [AccountUuidCreateusersBody](docs/AccountUuidCreateusersBody.md)
- - [ActivityLogAction](docs/ActivityLogAction.md)
- - [ActivityLogObjectType](docs/ActivityLogObjectType.md)
- - [ActivityLogRecordDTO](docs/ActivityLogRecordDTO.md)
- - [AliasDTO](docs/AliasDTO.md)
- - [AliasNameDTO](docs/AliasNameDTO.md)
- - [AppLinks](docs/AppLinks.md)
- - [AppLocales](docs/AppLocales.md)
- - [AppPageScripts](docs/AppPageScripts.md)
- - [AppTokenDTO](docs/AppTokenDTO.md)
- - [ApprovalStatusDTO](docs/ApprovalStatusDTO.md)
- - [ApproverDetailsDTO](docs/ApproverDetailsDTO.md)
- - [AttachmentFileAllowance](docs/AttachmentFileAllowance.md)
- - [AttachmentRestriction](docs/AttachmentRestriction.md)
- - [AttributeInfoDTO](docs/AttributeInfoDTO.md)
- - [AuditTrailDTO](docs/AuditTrailDTO.md)
- - [AuditTrailInfoRecordDTO](docs/AuditTrailInfoRecordDTO.md)
- - [BasePermissionsDTO](docs/BasePermissionsDTO.md)
- - [BillingEventType](docs/BillingEventType.md)
- - [BillingInvoiceStatusDTO](docs/BillingInvoiceStatusDTO.md)
- - [BillingPaymentDTO](docs/BillingPaymentDTO.md)
- - [BillingProperties](docs/BillingProperties.md)
- - [BillingRedirectDTO](docs/BillingRedirectDTO.md)
- - [BulkEnvelopeActionDTO](docs/BulkEnvelopeActionDTO.md)
- - [CallbackEnvelopeFilterDTO](docs/CallbackEnvelopeFilterDTO.md)
- - [CategoryDTO](docs/CategoryDTO.md)
- - [ChainEnvelopeDTO](docs/ChainEnvelopeDTO.md)
- - [ChangeDomainStatusDTO](docs/ChangeDomainStatusDTO.md)
- - [ChunkUploadProps](docs/ChunkUploadProps.md)
- - [CommentAccessDTO](docs/CommentAccessDTO.md)
- - [CommentMessageDTO](docs/CommentMessageDTO.md)
- - [CommentPostDTO](docs/CommentPostDTO.md)
- - [CommentPutDTO](docs/CommentPutDTO.md)
- - [CommentThreadDTO](docs/CommentThreadDTO.md)
- - [ConfirmUploadDTO](docs/ConfirmUploadDTO.md)
- - [ContactDTO](docs/ContactDTO.md)
- - [ContactResponseDTO](docs/ContactResponseDTO.md)
- - [CorporateUserCreateDTO](docs/CorporateUserCreateDTO.md)
- - [CounterInfoDTO](docs/CounterInfoDTO.md)
- - [CreateAppTokenDTO](docs/CreateAppTokenDTO.md)
- - [CreateEnvelopeCallbackDTO](docs/CreateEnvelopeCallbackDTO.md)
- - [CreateRecordsResponseDTO](docs/CreateRecordsResponseDTO.md)
- - [CryptoConfigDTO](docs/CryptoConfigDTO.md)
- - [CryptoProperties](docs/CryptoProperties.md)
- - [DataMap](docs/DataMap.md)
- - [DeleteEnvColumnDTO](docs/DeleteEnvColumnDTO.md)
- - [DetailedTariffInfoDTO](docs/DetailedTariffInfoDTO.md)
- - [DetectedCountryDTO](docs/DetectedCountryDTO.md)
- - [DictionaryCheckResponseDTO](docs/DictionaryCheckResponseDTO.md)
- - [DictionaryColumnRequestDTO](docs/DictionaryColumnRequestDTO.md)
- - [DictionaryColumnResponseDTO](docs/DictionaryColumnResponseDTO.md)
- - [DictionaryColumnValueRequestDTO](docs/DictionaryColumnValueRequestDTO.md)
- - [DictionaryColumnValueResponseDTO](docs/DictionaryColumnValueResponseDTO.md)
- - [DictionaryColumnValueSearchDTO](docs/DictionaryColumnValueSearchDTO.md)
- - [DictionaryDictionaryUuidBody](docs/DictionaryDictionaryUuidBody.md)
- - [DictionaryDownloadParamsDTO](docs/DictionaryDownloadParamsDTO.md)
- - [DictionaryFiltersRequestDTO](docs/DictionaryFiltersRequestDTO.md)
- - [DictionaryRecordValuesResponseDTO](docs/DictionaryRecordValuesResponseDTO.md)
- - [DictionaryRecordsRequestDTO](docs/DictionaryRecordsRequestDTO.md)
- - [DictionaryRequestDTO](docs/DictionaryRequestDTO.md)
- - [DictionaryResponseDTO](docs/DictionaryResponseDTO.md)
- - [DocFormulaRequestDTO](docs/DocFormulaRequestDTO.md)
- - [DocStampDTO](docs/DocStampDTO.md)
- - [DocumentCommentsDTO](docs/DocumentCommentsDTO.md)
- - [DocumentForSigningDTO](docs/DocumentForSigningDTO.md)
- - [DocumentPageSizeDTO](docs/DocumentPageSizeDTO.md)
- - [DocumentsForSignRequestDTO](docs/DocumentsForSignRequestDTO.md)
- - [EinkSignRestriction](docs/EinkSignRestriction.md)
- - [EmailProperties](docs/EmailProperties.md)
- - [EnvApprovalSearchResultDTO](docs/EnvApprovalSearchResultDTO.md)
- - [EnvCancelDelegationDTO](docs/EnvCancelDelegationDTO.md)
- - [EnvCancellationRequestDTO](docs/EnvCancellationRequestDTO.md)
- - [EnvDTO](docs/EnvDTO.md)
- - [EnvDelegationDTO](docs/EnvDelegationDTO.md)
- - [EnvGetDTO](docs/EnvGetDTO.md)
- - [EnvPostDTO](docs/EnvPostDTO.md)
- - [EnvSharedToDTO](docs/EnvSharedToDTO.md)
- - [EnvTableRestriction](docs/EnvTableRestriction.md)
- - [EnvelopeApprovalHistoryDTO](docs/EnvelopeApprovalHistoryDTO.md)
- - [EnvelopeApprovalPageDTO](docs/EnvelopeApprovalPageDTO.md)
- - [EnvelopeApprovalRequestDTO](docs/EnvelopeApprovalRequestDTO.md)
- - [EnvelopeApproverDTO](docs/EnvelopeApproverDTO.md)
- - [EnvelopeApproverGetDTO](docs/EnvelopeApproverGetDTO.md)
- - [EnvelopeAttachmentBody](docs/EnvelopeAttachmentBody.md)
- - [EnvelopeCallbackDTO](docs/EnvelopeCallbackDTO.md)
- - [EnvelopeConfirmInviteDTO](docs/EnvelopeConfirmInviteDTO.md)
- - [EnvelopeConfirmInviteRoleDTO](docs/EnvelopeConfirmInviteRoleDTO.md)
- - [EnvelopeDocumentSignatureDTO](docs/EnvelopeDocumentSignatureDTO.md)
- - [EnvelopeDocumentSignaturesDTO](docs/EnvelopeDocumentSignaturesDTO.md)
- - [EnvelopeExtraFieldDTO](docs/EnvelopeExtraFieldDTO.md)
- - [EnvelopeFlowInfoDTO](docs/EnvelopeFlowInfoDTO.md)
- - [EnvelopePageDTO](docs/EnvelopePageDTO.md)
- - [EnvelopeQuicksendBody](docs/EnvelopeQuicksendBody.md)
- - [EnvelopeRestrictions](docs/EnvelopeRestrictions.md)
- - [EnvelopeScenarioDTO](docs/EnvelopeScenarioDTO.md)
- - [EnvelopeSearchField](docs/EnvelopeSearchField.md)
- - [EnvelopeSenderDTO](docs/EnvelopeSenderDTO.md)
- - [EnvelopeSharedArchiveRequestDTO](docs/EnvelopeSharedArchiveRequestDTO.md)
- - [EnvelopeSharedCopyRequestDTO](docs/EnvelopeSharedCopyRequestDTO.md)
- - [EnvelopeTemplateInfoDTO](docs/EnvelopeTemplateInfoDTO.md)
- - [EnvelopeToMailboxDTO](docs/EnvelopeToMailboxDTO.md)
- - [EnvelopeValidationError](docs/EnvelopeValidationError.md)
- - [EnvelopeViewColumn](docs/EnvelopeViewColumn.md)
- - [EnvelopeWithTemplateDTO](docs/EnvelopeWithTemplateDTO.md)
- - [ExportTaskStatusDTO](docs/ExportTaskStatusDTO.md)
- - [ExternalLinkRequestDTO](docs/ExternalLinkRequestDTO.md)
- - [ExternalLinkResponseDTO](docs/ExternalLinkResponseDTO.md)
- - [ExternalLinkShortResponseDTO](docs/ExternalLinkShortResponseDTO.md)
- - [FieldRestriction](docs/FieldRestriction.md)
- - [FilterDTO](docs/FilterDTO.md)
- - [FilterSettingsCreateDTO](docs/FilterSettingsCreateDTO.md)
- - [FilterSettingsDTO](docs/FilterSettingsDTO.md)
- - [FullTemplateResponseDTO](docs/FullTemplateResponseDTO.md)
- - [GeolocationInfoDTO](docs/GeolocationInfoDTO.md)
- - [GeolocationProperties](docs/GeolocationProperties.md)
- - [GetEnvelopeInviteInfoDTO](docs/GetEnvelopeInviteInfoDTO.md)
- - [ImageRestriction](docs/ImageRestriction.md)
- - [ImportTaskDTO](docs/ImportTaskDTO.md)
- - [IntegrationConvertbinaryBody](docs/IntegrationConvertbinaryBody.md)
- - [IntegrationDTO](docs/IntegrationDTO.md)
- - [IntegrationDefaultRuleDTO](docs/IntegrationDefaultRuleDTO.md)
- - [IntegrationProtocolSettingsDTO](docs/IntegrationProtocolSettingsDTO.md)
- - [IntegrationRuleDTO](docs/IntegrationRuleDTO.md)
- - [IntegrationRuleRequestDTO](docs/IntegrationRuleRequestDTO.md)
- - [IntegrationRuleResponseDTO](docs/IntegrationRuleResponseDTO.md)
- - [InvitationPostDTO](docs/InvitationPostDTO.md)
- - [InvitationPutDTO](docs/InvitationPutDTO.md)
- - [InvitedEnvelopeInfoDTO](docs/InvitedEnvelopeInfoDTO.md)
- - [LabelAssociationDTO](docs/LabelAssociationDTO.md)
- - [LabelDTO](docs/LabelDTO.md)
- - [LocaleItemDTO](docs/LocaleItemDTO.md)
- - [LoginCheckResponseDTO](docs/LoginCheckResponseDTO.md)
- - [LoginDTO](docs/LoginDTO.md)
- - [LoginEnvelopeResponseDTO](docs/LoginEnvelopeResponseDTO.md)
- - [LoginResponseDTO](docs/LoginResponseDTO.md)
- - [LogoImageRestriction](docs/LogoImageRestriction.md)
- - [LogosProperties](docs/LogosProperties.md)
- - [MailboxAccountSimpleDTO](docs/MailboxAccountSimpleDTO.md)
- - [MailboxApprovalFlowDTO](docs/MailboxApprovalFlowDTO.md)
- - [MailboxApprovalFlowGetDTO](docs/MailboxApprovalFlowGetDTO.md)
- - [MailboxCreateDTO](docs/MailboxCreateDTO.md)
- - [MailboxDashboardDTO](docs/MailboxDashboardDTO.md)
- - [MailboxEssentialsDTO](docs/MailboxEssentialsDTO.md)
- - [MailboxInfoDTO](docs/MailboxInfoDTO.md)
- - [MailboxNameUuidDTO](docs/MailboxNameUuidDTO.md)
- - [MailboxPatchRequestDTO](docs/MailboxPatchRequestDTO.md)
- - [MailboxProfileDTO](docs/MailboxProfileDTO.md)
- - [MailboxProperties](docs/MailboxProperties.md)
- - [MailboxRolePermissionDTO](docs/MailboxRolePermissionDTO.md)
- - [MailboxSearchResultDTO](docs/MailboxSearchResultDTO.md)
- - [MailboxSimpleDTO](docs/MailboxSimpleDTO.md)
- - [MailboxUpdateRequestDTO](docs/MailboxUpdateRequestDTO.md)
- - [MailboxesSearchFilterDTO](docs/MailboxesSearchFilterDTO.md)
- - [ModifierInfoDTO](docs/ModifierInfoDTO.md)
- - [NameUuidDTO](docs/NameUuidDTO.md)
- - [NewEnvColumnDTO](docs/NewEnvColumnDTO.md)
- - [NewTemplateZipStructureDTO](docs/NewTemplateZipStructureDTO.md)
- - [OperationSource](docs/OperationSource.md)
- - [PageDTOAccountDomainDTO](docs/PageDTOAccountDomainDTO.md)
- - [PageDTOAccountMailboxInfoDTO](docs/PageDTOAccountMailboxInfoDTO.md)
- - [PageDTOActivityLogRecordDTO](docs/PageDTOActivityLogRecordDTO.md)
- - [PageDTOContactResponseDTO](docs/PageDTOContactResponseDTO.md)
- - [PageDTODataMap](docs/PageDTODataMap.md)
- - [PageDTODictionaryColumnValueResponseDTO](docs/PageDTODictionaryColumnValueResponseDTO.md)
- - [PageDTODictionaryRecordValuesResponseDTO](docs/PageDTODictionaryRecordValuesResponseDTO.md)
- - [PageDTODictionaryResponseDTO](docs/PageDTODictionaryResponseDTO.md)
- - [PageDTOEnvelopeToMailboxDTO](docs/PageDTOEnvelopeToMailboxDTO.md)
- - [PageDTOMailboxApprovalFlowGetDTO](docs/PageDTOMailboxApprovalFlowGetDTO.md)
- - [PageDTOObject](docs/PageDTOObject.md)
- - [PageDTORoleGetDTO](docs/PageDTORoleGetDTO.md)
- - [PageDTOScenarioShortDTO](docs/PageDTOScenarioShortDTO.md)
- - [PageDTOSearchTemplateDTO](docs/PageDTOSearchTemplateDTO.md)
- - [PageDTOUsedTemplateDTO](docs/PageDTOUsedTemplateDTO.md)
- - [PageDTOUserInvitationDTO](docs/PageDTOUserInvitationDTO.md)
- - [PageDTOUserMailboxPermissionsDTO](docs/PageDTOUserMailboxPermissionsDTO.md)
- - [PageDTOUserNotificationResponseDTO](docs/PageDTOUserNotificationResponseDTO.md)
- - [PasswordPolicy](docs/PasswordPolicy.md)
- - [PdfPropertiesDTO](docs/PdfPropertiesDTO.md)
- - [PermissionsDTO](docs/PermissionsDTO.md)
- - [PermissionsWithUuidDTO](docs/PermissionsWithUuidDTO.md)
- - [ProfileDTO](docs/ProfileDTO.md)
- - [QuickSendDTO](docs/QuickSendDTO.md)
- - [QuickSendRecipientDTO](docs/QuickSendRecipientDTO.md)
- - [RecentlyUsedTemplateResponseDTO](docs/RecentlyUsedTemplateResponseDTO.md)
- - [RecommendedTemplateResponseDTO](docs/RecommendedTemplateResponseDTO.md)
- - [RenewPasswordDTO](docs/RenewPasswordDTO.md)
- - [ReplaceAccountTariffDTO](docs/ReplaceAccountTariffDTO.md)
- - [ReportEnvelopeRequestDTO](docs/ReportEnvelopeRequestDTO.md)
- - [ReportMailboxesRequestDTO](docs/ReportMailboxesRequestDTO.md)
- - [ReportUsersRequestDTO](docs/ReportUsersRequestDTO.md)
- - [RequestValCodeDTO](docs/RequestValCodeDTO.md)
- - [RequiredSignatureDTO](docs/RequiredSignatureDTO.md)
- - [ResetPasswordDTO](docs/ResetPasswordDTO.md)
- - [ResolveCommentThreadDTO](docs/ResolveCommentThreadDTO.md)
- - [RoleCreateDTO](docs/RoleCreateDTO.md)
- - [RoleGetDTO](docs/RoleGetDTO.md)
- - [RoleShortDTO](docs/RoleShortDTO.md)
- - [SamlSsoProps](docs/SamlSsoProps.md)
- - [ScenarioDTO](docs/ScenarioDTO.md)
- - [ScenarioShortDTO](docs/ScenarioShortDTO.md)
- - [ScenarioShortStepDTO](docs/ScenarioShortStepDTO.md)
- - [ScenarioShortStepTemplateInfoDTO](docs/ScenarioShortStepTemplateInfoDTO.md)
- - [ScenarioStepDTO](docs/ScenarioStepDTO.md)
- - [ScenarioStepTemplateInfoDTO](docs/ScenarioStepTemplateInfoDTO.md)
- - [SearchActivityLogDTO](docs/SearchActivityLogDTO.md)
- - [SearchApprovalsDTO](docs/SearchApprovalsDTO.md)
- - [SearchEnvelopesDTO](docs/SearchEnvelopesDTO.md)
- - [SearchFieldRestriction](docs/SearchFieldRestriction.md)
- - [SearchFieldValueDTO](docs/SearchFieldValueDTO.md)
- - [SearchTemplateDTO](docs/SearchTemplateDTO.md)
- - [SendEnvByCodeDTO](docs/SendEnvByCodeDTO.md)
- - [SessionPolicy](docs/SessionPolicy.md)
- - [SettingsDTO](docs/SettingsDTO.md)
- - [SharedCodeDTO](docs/SharedCodeDTO.md)
- - [SingleUuidDTO](docs/SingleUuidDTO.md)
- - [SsoEntityDTO](docs/SsoEntityDTO.md)
- - [SsoProperties](docs/SsoProperties.md)
- - [StatDTO](docs/StatDTO.md)
- - [TableDetails](docs/TableDetails.md)
- - [TemplTableRestriction](docs/TemplTableRestriction.md)
- - [TemplateCreateDTO](docs/TemplateCreateDTO.md)
- - [TemplateImageBody](docs/TemplateImageBody.md)
- - [TemplatePdfBody](docs/TemplatePdfBody.md)
- - [TemplateRestriction](docs/TemplateRestriction.md)
- - [TemplateRolesDTO](docs/TemplateRolesDTO.md)
- - [TemplateValidateResponseDTO](docs/TemplateValidateResponseDTO.md)
- - [TemplateZipStructureDTO](docs/TemplateZipStructureDTO.md)
- - [TemplateZipStructureTitlesDTO](docs/TemplateZipStructureTitlesDTO.md)
- - [UpdateEnvColumnDTO](docs/UpdateEnvColumnDTO.md)
- - [UpdatePasswordDTO](docs/UpdatePasswordDTO.md)
- - [UpdateProfileDTO](docs/UpdateProfileDTO.md)
- - [UploadedAttachmentDTO](docs/UploadedAttachmentDTO.md)
- - [UploadedImageDTO](docs/UploadedImageDTO.md)
- - [UploadedPdfDTO](docs/UploadedPdfDTO.md)
- - [UsedTemplateDTO](docs/UsedTemplateDTO.md)
- - [User2AccountWithMailboxesDTO](docs/User2AccountWithMailboxesDTO.md)
- - [User2MailboxDTO](docs/User2MailboxDTO.md)
- - [UserAuthorizationDTO](docs/UserAuthorizationDTO.md)
- - [UserCreateByCodeDTO](docs/UserCreateByCodeDTO.md)
- - [UserCreateDTO](docs/UserCreateDTO.md)
- - [UserDTO](docs/UserDTO.md)
- - [UserInfoDTO](docs/UserInfoDTO.md)
- - [UserInvitationDTO](docs/UserInvitationDTO.md)
- - [UserMailboxPermissionsDTO](docs/UserMailboxPermissionsDTO.md)
- - [UserNotificationResponseDTO](docs/UserNotificationResponseDTO.md)
- - [UserPermissionDTO](docs/UserPermissionDTO.md)
- - [UserProperties](docs/UserProperties.md)
- - [UsersSearchFilterDTO](docs/UsersSearchFilterDTO.md)
- - [ValidationResponseDTO](docs/ValidationResponseDTO.md)
- - [ZipEntityDTO](docs/ZipEntityDTO.md)
-
+- [AccountAddressDTO](docs/AccountAddressDTO.md)
+- [AccountBillingCounterValueDTO](docs/AccountBillingCounterValueDTO.md)
+- [AccountBillingEventDTO](docs/AccountBillingEventDTO.md)
+- [AccountBillingInfoDTO](docs/AccountBillingInfoDTO.md)
+- [AccountBillingTariffInfoDTO](docs/AccountBillingTariffInfoDTO.md)
+- [AccountCreateDTO](docs/AccountCreateDTO.md)
+- [AccountDTO](docs/AccountDTO.md)
+- [AccountDomainCreateDTO](docs/AccountDomainCreateDTO.md)
+- [AccountDomainDTO](docs/AccountDomainDTO.md)
+- [AccountDomainUpdateDTO](docs/AccountDomainUpdateDTO.md)
+- [AccountDomainVerifyInfo](docs/AccountDomainVerifyInfo.md)
+- [AccountMailboxInfoDTO](docs/AccountMailboxInfoDTO.md)
+- [AccountPermissionsDTO](docs/AccountPermissionsDTO.md)
+- [AccountPoliciesDTO](docs/AccountPoliciesDTO.md)
+- [AccountSsoIdProviderDTO](docs/AccountSsoIdProviderDTO.md)
+- [AccountSsoIdProviderShortDTO](docs/AccountSsoIdProviderShortDTO.md)
+- [AccountSsoIdProviderUpdateDTO](docs/AccountSsoIdProviderUpdateDTO.md)
+- [AccountUserDTO](docs/AccountUserDTO.md)
+- [ActivityLogAction](docs/ActivityLogAction.md)
+- [ActivityLogObjectType](docs/ActivityLogObjectType.md)
+- [ActivityLogRecordDTO](docs/ActivityLogRecordDTO.md)
+- [AliasDTO](docs/AliasDTO.md)
+- [AliasNameDTO](docs/AliasNameDTO.md)
+- [AppLinks](docs/AppLinks.md)
+- [AppLocales](docs/AppLocales.md)
+- [AppPageScripts](docs/AppPageScripts.md)
+- [AppTokenDTO](docs/AppTokenDTO.md)
+- [ApprovalStatusDTO](docs/ApprovalStatusDTO.md)
+- [ApproverDetailsDTO](docs/ApproverDetailsDTO.md)
+- [AttachmentFileAllowance](docs/AttachmentFileAllowance.md)
+- [AttachmentRestriction](docs/AttachmentRestriction.md)
+- [AttributeInfoDTO](docs/AttributeInfoDTO.md)
+- [AuditTrailDTO](docs/AuditTrailDTO.md)
+- [AuditTrailInfoRecordDTO](docs/AuditTrailInfoRecordDTO.md)
+- [BasePermissionsDTO](docs/BasePermissionsDTO.md)
+- [BillingEventType](docs/BillingEventType.md)
+- [BillingInvoiceStatusDTO](docs/BillingInvoiceStatusDTO.md)
+- [BillingPaymentDTO](docs/BillingPaymentDTO.md)
+- [BillingProperties](docs/BillingProperties.md)
+- [BillingRedirectDTO](docs/BillingRedirectDTO.md)
+- [BulkEnvelopeActionDTO](docs/BulkEnvelopeActionDTO.md)
+- [CallbackEnvelopeFilterDTO](docs/CallbackEnvelopeFilterDTO.md)
+- [CategoryDTO](docs/CategoryDTO.md)
+- [ChainEnvelopeDTO](docs/ChainEnvelopeDTO.md)
+- [ChangeDomainStatusDTO](docs/ChangeDomainStatusDTO.md)
+- [ChunkUploadProps](docs/ChunkUploadProps.md)
+- [CommentAccessDTO](docs/CommentAccessDTO.md)
+- [CommentMessageDTO](docs/CommentMessageDTO.md)
+- [CommentPostDTO](docs/CommentPostDTO.md)
+- [CommentPutDTO](docs/CommentPutDTO.md)
+- [CommentThreadDTO](docs/CommentThreadDTO.md)
+- [ConfirmUploadDTO](docs/ConfirmUploadDTO.md)
+- [ContactDTO](docs/ContactDTO.md)
+- [ContactResponseDTO](docs/ContactResponseDTO.md)
+- [CorporateUserCreateDTO](docs/CorporateUserCreateDTO.md)
+- [CounterInfoDTO](docs/CounterInfoDTO.md)
+- [CreateAppTokenDTO](docs/CreateAppTokenDTO.md)
+- [CreateEnvelopeCallbackDTO](docs/CreateEnvelopeCallbackDTO.md)
+- [CreateRecordsResponseDTO](docs/CreateRecordsResponseDTO.md)
+- [CryptoConfigDTO](docs/CryptoConfigDTO.md)
+- [CryptoProperties](docs/CryptoProperties.md)
+- [DataMap](docs/DataMap.md)
+- [DeleteEnvColumnDTO](docs/DeleteEnvColumnDTO.md)
+- [DetailedTariffInfoDTO](docs/DetailedTariffInfoDTO.md)
+- [DetectedCountryDTO](docs/DetectedCountryDTO.md)
+- [DictionaryCheckResponseDTO](docs/DictionaryCheckResponseDTO.md)
+- [DictionaryColumnRequestDTO](docs/DictionaryColumnRequestDTO.md)
+- [DictionaryColumnResponseDTO](docs/DictionaryColumnResponseDTO.md)
+- [DictionaryColumnValueRequestDTO](docs/DictionaryColumnValueRequestDTO.md)
+- [DictionaryColumnValueResponseDTO](docs/DictionaryColumnValueResponseDTO.md)
+- [DictionaryColumnValueSearchDTO](docs/DictionaryColumnValueSearchDTO.md)
+- [DictionaryDownloadParamsDTO](docs/DictionaryDownloadParamsDTO.md)
+- [DictionaryFiltersRequestDTO](docs/DictionaryFiltersRequestDTO.md)
+- [DictionaryRecordValuesResponseDTO](docs/DictionaryRecordValuesResponseDTO.md)
+- [DictionaryRecordsRequestDTO](docs/DictionaryRecordsRequestDTO.md)
+- [DictionaryRequestDTO](docs/DictionaryRequestDTO.md)
+- [DictionaryResponseDTO](docs/DictionaryResponseDTO.md)
+- [DocFormulaRequestDTO](docs/DocFormulaRequestDTO.md)
+- [DocIdSignatureNameDTO](docs/DocIdSignatureNameDTO.md)
+- [DocumentCommentsDTO](docs/DocumentCommentsDTO.md)
+- [DocumentFileForSignRequestDTO](docs/DocumentFileForSignRequestDTO.md)
+- [DocumentForSigningDTO](docs/DocumentForSigningDTO.md)
+- [DocumentPageSizeDTO](docs/DocumentPageSizeDTO.md)
+- [DocumentsForSignRequestDTO](docs/DocumentsForSignRequestDTO.md)
+- [EinkSignRestriction](docs/EinkSignRestriction.md)
+- [EmailProperties](docs/EmailProperties.md)
+- [EnvApprovalSearchResultDTO](docs/EnvApprovalSearchResultDTO.md)
+- [EnvCancelDelegationDTO](docs/EnvCancelDelegationDTO.md)
+- [EnvCancellationRequestDTO](docs/EnvCancellationRequestDTO.md)
+- [EnvDTO](docs/EnvDTO.md)
+- [EnvDelegationDTO](docs/EnvDelegationDTO.md)
+- [EnvGetDTO](docs/EnvGetDTO.md)
+- [EnvPostDTO](docs/EnvPostDTO.md)
+- [EnvSharedToDTO](docs/EnvSharedToDTO.md)
+- [EnvTableRestriction](docs/EnvTableRestriction.md)
+- [EnvelopeApprovalHistoryDTO](docs/EnvelopeApprovalHistoryDTO.md)
+- [EnvelopeApprovalPageDTO](docs/EnvelopeApprovalPageDTO.md)
+- [EnvelopeApprovalRequestDTO](docs/EnvelopeApprovalRequestDTO.md)
+- [EnvelopeApproverDTO](docs/EnvelopeApproverDTO.md)
+- [EnvelopeApproverGetDTO](docs/EnvelopeApproverGetDTO.md)
+- [EnvelopeCallbackDTO](docs/EnvelopeCallbackDTO.md)
+- [EnvelopeCheckResultDTO](docs/EnvelopeCheckResultDTO.md)
+- [EnvelopeConfirmInviteDTO](docs/EnvelopeConfirmInviteDTO.md)
+- [EnvelopeConfirmInviteRoleDTO](docs/EnvelopeConfirmInviteRoleDTO.md)
+- [EnvelopeDocumentSignatureDTO](docs/EnvelopeDocumentSignatureDTO.md)
+- [EnvelopeDocumentSignaturesDTO](docs/EnvelopeDocumentSignaturesDTO.md)
+- [EnvelopeExtraFieldDTO](docs/EnvelopeExtraFieldDTO.md)
+- [EnvelopeFlowInfoDTO](docs/EnvelopeFlowInfoDTO.md)
+- [EnvelopePageDTO](docs/EnvelopePageDTO.md)
+- [EnvelopeRestrictions](docs/EnvelopeRestrictions.md)
+- [EnvelopeScenarioDTO](docs/EnvelopeScenarioDTO.md)
+- [EnvelopeSearchField](docs/EnvelopeSearchField.md)
+- [EnvelopeSendResultDTO](docs/EnvelopeSendResultDTO.md)
+- [EnvelopeSenderDTO](docs/EnvelopeSenderDTO.md)
+- [EnvelopeSharedArchiveRequestDTO](docs/EnvelopeSharedArchiveRequestDTO.md)
+- [EnvelopeSharedCopyRequestDTO](docs/EnvelopeSharedCopyRequestDTO.md)
+- [EnvelopeTemplateInfoDTO](docs/EnvelopeTemplateInfoDTO.md)
+- [EnvelopeToMailboxDTO](docs/EnvelopeToMailboxDTO.md)
+- [EnvelopeValidationError](docs/EnvelopeValidationError.md)
+- [EnvelopeViewColumn](docs/EnvelopeViewColumn.md)
+- [EnvelopeWithTemplateDTO](docs/EnvelopeWithTemplateDTO.md)
+- [ExchangeProps](docs/ExchangeProps.md)
+- [ExportTaskStatusDTO](docs/ExportTaskStatusDTO.md)
+- [ExternalLinkRequestDTO](docs/ExternalLinkRequestDTO.md)
+- [ExternalLinkResponseDTO](docs/ExternalLinkResponseDTO.md)
+- [ExternalLinkShortResponseDTO](docs/ExternalLinkShortResponseDTO.md)
+- [FailedEnvelopeCallbackFilterDTO](docs/FailedEnvelopeCallbackFilterDTO.md)
+- [FieldRestriction](docs/FieldRestriction.md)
+- [FilterDTO](docs/FilterDTO.md)
+- [FilterSettingsCreateDTO](docs/FilterSettingsCreateDTO.md)
+- [FilterSettingsDTO](docs/FilterSettingsDTO.md)
+- [FullTemplateResponseDTO](docs/FullTemplateResponseDTO.md)
+- [GeolocationInfoDTO](docs/GeolocationInfoDTO.md)
+- [GeolocationProperties](docs/GeolocationProperties.md)
+- [GetEnvelopeInviteInfoDTO](docs/GetEnvelopeInviteInfoDTO.md)
+- [GroupInfoDTO](docs/GroupInfoDTO.md)
+- [GroupListInfoDTO](docs/GroupListInfoDTO.md)
+- [ImageRestriction](docs/ImageRestriction.md)
+- [ImportTaskDTO](docs/ImportTaskDTO.md)
+- [IntegrationDTO](docs/IntegrationDTO.md)
+- [IntegrationDefaultRuleDTO](docs/IntegrationDefaultRuleDTO.md)
+- [IntegrationRuleDTO](docs/IntegrationRuleDTO.md)
+- [IntegrationRuleRequestDTO](docs/IntegrationRuleRequestDTO.md)
+- [IntegrationRuleResponseDTO](docs/IntegrationRuleResponseDTO.md)
+- [InvitationPostDTO](docs/InvitationPostDTO.md)
+- [InvitationPutDTO](docs/InvitationPutDTO.md)
+- [InvitedEnvelopeInfoDTO](docs/InvitedEnvelopeInfoDTO.md)
+- [LabelAssociationDTO](docs/LabelAssociationDTO.md)
+- [LabelDTO](docs/LabelDTO.md)
+- [LocaleItemDTO](docs/LocaleItemDTO.md)
+- [LoginCheckResponseDTO](docs/LoginCheckResponseDTO.md)
+- [LoginDTO](docs/LoginDTO.md)
+- [LoginEnvelopeResponseDTO](docs/LoginEnvelopeResponseDTO.md)
+- [LoginResponseDTO](docs/LoginResponseDTO.md)
+- [LogoImageRestriction](docs/LogoImageRestriction.md)
+- [LogosProperties](docs/LogosProperties.md)
+- [MailboxAccountSimpleDTO](docs/MailboxAccountSimpleDTO.md)
+- [MailboxApprovalFlowDTO](docs/MailboxApprovalFlowDTO.md)
+- [MailboxApprovalFlowGetDTO](docs/MailboxApprovalFlowGetDTO.md)
+- [MailboxCreateDTO](docs/MailboxCreateDTO.md)
+- [MailboxDashboardDTO](docs/MailboxDashboardDTO.md)
+- [MailboxDelegationDTO](docs/MailboxDelegationDTO.md)
+- [MailboxEssentialsDTO](docs/MailboxEssentialsDTO.md)
+- [MailboxInfoDTO](docs/MailboxInfoDTO.md)
+- [MailboxNameUuidDTO](docs/MailboxNameUuidDTO.md)
+- [MailboxPatchRequestDTO](docs/MailboxPatchRequestDTO.md)
+- [MailboxProfileDTO](docs/MailboxProfileDTO.md)
+- [MailboxProperties](docs/MailboxProperties.md)
+- [MailboxRolePermissionDTO](docs/MailboxRolePermissionDTO.md)
+- [MailboxSearchResultDTO](docs/MailboxSearchResultDTO.md)
+- [MailboxSimpleDTO](docs/MailboxSimpleDTO.md)
+- [MailboxUpdateRequestDTO](docs/MailboxUpdateRequestDTO.md)
+- [MailboxesSearchFilterDTO](docs/MailboxesSearchFilterDTO.md)
+- [ModifierInfoDTO](docs/ModifierInfoDTO.md)
+- [NameUuidDTO](docs/NameUuidDTO.md)
+- [NewEnvColumnDTO](docs/NewEnvColumnDTO.md)
+- [NewTemplateZipStructureDTO](docs/NewTemplateZipStructureDTO.md)
+- [OAuthProperties](docs/OAuthProperties.md)
+- [OneTimeSendDTO](docs/OneTimeSendDTO.md)
+- [OperationSource](docs/OperationSource.md)
+- [PageDTOAccountDomainDTO](docs/PageDTOAccountDomainDTO.md)
+- [PageDTOAccountMailboxInfoDTO](docs/PageDTOAccountMailboxInfoDTO.md)
+- [PageDTOActivityLogRecordDTO](docs/PageDTOActivityLogRecordDTO.md)
+- [PageDTOContactResponseDTO](docs/PageDTOContactResponseDTO.md)
+- [PageDTODataMap](docs/PageDTODataMap.md)
+- [PageDTODictionaryColumnValueResponseDTO](docs/PageDTODictionaryColumnValueResponseDTO.md)
+- [PageDTODictionaryRecordValuesResponseDTO](docs/PageDTODictionaryRecordValuesResponseDTO.md)
+- [PageDTODictionaryResponseDTO](docs/PageDTODictionaryResponseDTO.md)
+- [PageDTOEnvelopeToMailboxDTO](docs/PageDTOEnvelopeToMailboxDTO.md)
+- [PageDTOGroupListInfoDTO](docs/PageDTOGroupListInfoDTO.md)
+- [PageDTOMailboxApprovalFlowGetDTO](docs/PageDTOMailboxApprovalFlowGetDTO.md)
+- [PageDTOObject](docs/PageDTOObject.md)
+- [PageDTORoleGetDTO](docs/PageDTORoleGetDTO.md)
+- [PageDTOScenarioShortDTO](docs/PageDTOScenarioShortDTO.md)
+- [PageDTOSearchTemplateDTO](docs/PageDTOSearchTemplateDTO.md)
+- [PageDTOUsedTemplateDTO](docs/PageDTOUsedTemplateDTO.md)
+- [PageDTOUserInvitationDTO](docs/PageDTOUserInvitationDTO.md)
+- [PageDTOUserMailboxPermissionsDTO](docs/PageDTOUserMailboxPermissionsDTO.md)
+- [PageDTOUserNotificationResponseDTO](docs/PageDTOUserNotificationResponseDTO.md)
+- [PasswordPolicy](docs/PasswordPolicy.md)
+- [PdfPageSizes](docs/PdfPageSizes.md)
+- [PdfPropertiesDTO](docs/PdfPropertiesDTO.md)
+- [PermissionsDTO](docs/PermissionsDTO.md)
+- [PermissionsWithUuidDTO](docs/PermissionsWithUuidDTO.md)
+- [ProfileDTO](docs/ProfileDTO.md)
+- [QuickSendDTO](docs/QuickSendDTO.md)
+- [QuickSendRecipientDTO](docs/QuickSendRecipientDTO.md)
+- [RecentlyUsedTemplateResponseDTO](docs/RecentlyUsedTemplateResponseDTO.md)
+- [RecommendedTemplateResponseDTO](docs/RecommendedTemplateResponseDTO.md)
+- [RenewPasswordDTO](docs/RenewPasswordDTO.md)
+- [ReplaceAccountTariffDTO](docs/ReplaceAccountTariffDTO.md)
+- [ReportEnvelopeRequestDTO](docs/ReportEnvelopeRequestDTO.md)
+- [ReportMailboxesRequestDTO](docs/ReportMailboxesRequestDTO.md)
+- [ReportUsersRequestDTO](docs/ReportUsersRequestDTO.md)
+- [RequestValCodeDTO](docs/RequestValCodeDTO.md)
+- [RequiredSignatureDTO](docs/RequiredSignatureDTO.md)
+- [ResetPasswordDTO](docs/ResetPasswordDTO.md)
+- [ResolveCommentThreadDTO](docs/ResolveCommentThreadDTO.md)
+- [RoleCreateDTO](docs/RoleCreateDTO.md)
+- [RoleGetDTO](docs/RoleGetDTO.md)
+- [RoleShortDTO](docs/RoleShortDTO.md)
+- [SamlSsoProps](docs/SamlSsoProps.md)
+- [ScenarioDTO](docs/ScenarioDTO.md)
+- [ScenarioShortDTO](docs/ScenarioShortDTO.md)
+- [ScenarioShortStepDTO](docs/ScenarioShortStepDTO.md)
+- [ScenarioShortStepTemplateInfoDTO](docs/ScenarioShortStepTemplateInfoDTO.md)
+- [ScenarioStepDTO](docs/ScenarioStepDTO.md)
+- [ScenarioStepTemplateInfoDTO](docs/ScenarioStepTemplateInfoDTO.md)
+- [SearchActivityLogDTO](docs/SearchActivityLogDTO.md)
+- [SearchApprovalsDTO](docs/SearchApprovalsDTO.md)
+- [SearchEnvelopesDTO](docs/SearchEnvelopesDTO.md)
+- [SearchFieldRestriction](docs/SearchFieldRestriction.md)
+- [SearchFieldValueDTO](docs/SearchFieldValueDTO.md)
+- [SearchRestriction](docs/SearchRestriction.md)
+- [SearchTemplateDTO](docs/SearchTemplateDTO.md)
+- [SendEnvByCodeDTO](docs/SendEnvByCodeDTO.md)
+- [SessionPolicy](docs/SessionPolicy.md)
+- [SettingsDTO](docs/SettingsDTO.md)
+- [ShareRestriction](docs/ShareRestriction.md)
+- [SharedCodeDTO](docs/SharedCodeDTO.md)
+- [SingleDocForSignRequestDTO](docs/SingleDocForSignRequestDTO.md)
+- [SingleUuidDTO](docs/SingleUuidDTO.md)
+- [SsoEntityDTO](docs/SsoEntityDTO.md)
+- [SsoProperties](docs/SsoProperties.md)
+- [StampRequestDTO](docs/StampRequestDTO.md)
+- [StatDTO](docs/StatDTO.md)
+- [SupportedBarcodeDTO](docs/SupportedBarcodeDTO.md)
+- [TableDetails](docs/TableDetails.md)
+- [TemplTableRestriction](docs/TemplTableRestriction.md)
+- [TemplateCreateDTO](docs/TemplateCreateDTO.md)
+- [TemplateRestriction](docs/TemplateRestriction.md)
+- [TemplateRolesDTO](docs/TemplateRolesDTO.md)
+- [TemplateValidateResponseDTO](docs/TemplateValidateResponseDTO.md)
+- [TemplateZipStructureDTO](docs/TemplateZipStructureDTO.md)
+- [TemplateZipStructureTitlesDTO](docs/TemplateZipStructureTitlesDTO.md)
+- [UpdateEnvColumnDTO](docs/UpdateEnvColumnDTO.md)
+- [UpdateGroupDTO](docs/UpdateGroupDTO.md)
+- [UpdatePasswordDTO](docs/UpdatePasswordDTO.md)
+- [UpdateProfileDTO](docs/UpdateProfileDTO.md)
+- [UploadedAttachmentDTO](docs/UploadedAttachmentDTO.md)
+- [UploadedImageDTO](docs/UploadedImageDTO.md)
+- [UploadedPdfDTO](docs/UploadedPdfDTO.md)
+- [UsedTemplateDTO](docs/UsedTemplateDTO.md)
+- [User2AccountWithMailboxesDTO](docs/User2AccountWithMailboxesDTO.md)
+- [User2MailboxDTO](docs/User2MailboxDTO.md)
+- [UserAuthorizationDTO](docs/UserAuthorizationDTO.md)
+- [UserCreateByCodeDTO](docs/UserCreateByCodeDTO.md)
+- [UserCreateDTO](docs/UserCreateDTO.md)
+- [UserDTO](docs/UserDTO.md)
+- [UserInfoDTO](docs/UserInfoDTO.md)
+- [UserInvitationDTO](docs/UserInvitationDTO.md)
+- [UserMailboxPermissionsDTO](docs/UserMailboxPermissionsDTO.md)
+- [UserNotificationResponseDTO](docs/UserNotificationResponseDTO.md)
+- [UserPermissionDTO](docs/UserPermissionDTO.md)
+- [UserProperties](docs/UserProperties.md)
+- [UsersSearchFilterDTO](docs/UsersSearchFilterDTO.md)
+- [ValidationResponseDTO](docs/ValidationResponseDTO.md)
+- [ZipEntityDTO](docs/ZipEntityDTO.md)

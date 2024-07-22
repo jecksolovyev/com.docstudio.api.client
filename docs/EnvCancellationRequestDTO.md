@@ -1,7 +1,14 @@
+
+
 # EnvCancellationRequestDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**uuids** | [**List&lt;UUID&gt;**](UUID.md) |  | 
-**comment** | **String** | Reason of cancellation | 
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**uuids** | **Set&lt;UUID&gt;** |  |  |
+|**comment** | **String** | Reason of cancellation |  |
+
+
+

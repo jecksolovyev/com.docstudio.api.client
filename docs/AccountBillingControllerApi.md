@@ -2,18 +2,19 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**checkEventAbility**](AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} | 
-[**downloadInvoice**](AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf | 
-[**getAccount**](AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing | 
-[**getInvoiceStatus**](AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} | 
-[**getInvoices**](AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice | 
-[**getTariffs**](AccountBillingControllerApi.md#getTariffs) | **GET** /api/v1/account/{accountUuid}/tariff | 
-[**makeInvoicePayment**](AccountBillingControllerApi.md#makeInvoicePayment) | **POST** /api/v1/account/{accountUuid}/billing-payment | 
-[**replaceAccountTariff**](AccountBillingControllerApi.md#replaceAccountTariff) | **POST** /api/v1/account/{accountUuid}/tariff | 
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**checkEventAbility**](AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} |  |
+| [**downloadInvoice**](AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf |  |
+| [**getAccount**](AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing |  |
+| [**getInvoiceStatus**](AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} |  |
+| [**getInvoices**](AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice |  |
+| [**getTariffs**](AccountBillingControllerApi.md#getTariffs) | **GET** /api/v1/account/{accountUuid}/tariff |  |
+| [**makeInvoicePayment**](AccountBillingControllerApi.md#makeInvoicePayment) | **POST** /api/v1/account/{accountUuid}/billing-payment |  |
+| [**replaceAccountTariff**](AccountBillingControllerApi.md#replaceAccountTariff) | **POST** /api/v1/account/{accountUuid}/tariff |  |
 
-<a name="checkEventAbility"></a>
+
+<a id="checkEventAbility"></a>
 # **checkEventAbility**
 > checkEventAbility(accountUuid, type, action)
 
@@ -22,34 +23,41 @@ Method | HTTP request | Description
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | 
-BillingEventType type = new BillingEventType(); // BillingEventType | 
-String action = "action_example"; // String | 
-try {
-    apiInstance.checkEventAbility(accountUuid, type, action);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#checkEventAbility");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    BillingEventType type = BillingEventType.fromValue("new-corp-user"); // BillingEventType | 
+    String action = "create"; // String | 
+    try {
+      apiInstance.checkEventAbility(accountUuid, type, action);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#checkEventAbility");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)|  |
- **type** | [**BillingEventType**](.md)|  |
- **action** | **String**|  | [enum: create, access]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
+| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent] |
+| **action** | **String**|  | [enum: create, access] |
 
 ### Return type
 
@@ -57,14 +65,19 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="downloadInvoice"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="downloadInvoice"></a>
 # **downloadInvoice**
 > File downloadInvoice(accountUuid, invoiceId, details)
 
@@ -75,35 +88,42 @@ Download invoice
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | Account uuid
-String invoiceId = "invoiceId_example"; // String | Invoice id
-String details = "details_example"; // String | Include details
-try {
-    File result = apiInstance.downloadInvoice(accountUuid, invoiceId, details);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#downloadInvoice");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
+    String invoiceId = "invoiceId_example"; // String | Invoice id
+    String details = "withoutDetails"; // String | Include details
+    try {
+      File result = apiInstance.downloadInvoice(accountUuid, invoiceId, details);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#downloadInvoice");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)| Account uuid |
- **invoiceId** | **String**| Invoice id |
- **details** | **String**| Include details | [optional] [enum: withoutDetails, withZeroDetails, withDetails]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**| Account uuid | |
+| **invoiceId** | **String**| Invoice id | |
+| **details** | **String**| Include details | [optional] [enum: withoutDetails, withZeroDetails, withDetails] |
 
 ### Return type
 
@@ -111,14 +131,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-<a name="getAccount"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getAccount"></a>
 # **getAccount**
 > AccountBillingInfoDTO getAccount(accountUuid)
 
@@ -127,31 +152,38 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | 
-try {
-    AccountBillingInfoDTO result = apiInstance.getAccount(accountUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#getAccount");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    try {
+      AccountBillingInfoDTO result = apiInstance.getAccount(accountUuid);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
 
 ### Return type
 
@@ -159,14 +191,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getInvoiceStatus"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getInvoiceStatus"></a>
 # **getInvoiceStatus**
 > BillingInvoiceStatusDTO getInvoiceStatus(accountUuid, invoiceId)
 
@@ -175,33 +212,40 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | 
-UUID invoiceId = new UUID(); // UUID | 
-try {
-    BillingInvoiceStatusDTO result = apiInstance.getInvoiceStatus(accountUuid, invoiceId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#getInvoiceStatus");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    UUID invoiceId = UUID.randomUUID(); // UUID | 
+    try {
+      BillingInvoiceStatusDTO result = apiInstance.getInvoiceStatus(accountUuid, invoiceId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getInvoiceStatus");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)|  |
- **invoiceId** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
+| **invoiceId** | **UUID**|  | |
 
 ### Return type
 
@@ -209,14 +253,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getInvoices"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getInvoices"></a>
 # **getInvoices**
 > PageDTOObject getInvoices(accountUuid, offset, limit)
 
@@ -227,35 +276,42 @@ Get invoice list
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | Account uuid
-Integer offset = 0; // Integer | Offset, how many records to skip
-Integer limit = 25; // Integer | Limit, how many records to retrieve
-try {
-    PageDTOObject result = apiInstance.getInvoices(accountUuid, offset, limit);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#getInvoices");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
+    Integer offset = 0; // Integer | Offset, how many records to skip
+    Integer limit = 25; // Integer | Limit, how many records to retrieve
+    try {
+      PageDTOObject result = apiInstance.getInvoices(accountUuid, offset, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getInvoices");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)| Account uuid |
- **offset** | **Integer**| Offset, how many records to skip | [optional] [default to 0]
- **limit** | **Integer**| Limit, how many records to retrieve | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**| Account uuid | |
+| **offset** | **Integer**| Offset, how many records to skip | [optional] [default to 0] |
+| **limit** | **Integer**| Limit, how many records to retrieve | [optional] [default to 25] |
 
 ### Return type
 
@@ -263,14 +319,19 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getTariffs"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getTariffs"></a>
 # **getTariffs**
 > List&lt;DetailedTariffInfoDTO&gt; getTariffs(accountUuid)
 
@@ -279,31 +340,38 @@ Name | Type | Description  | Notes
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-UUID accountUuid = new UUID(); // UUID | 
-try {
-    List<DetailedTariffInfoDTO> result = apiInstance.getTariffs(accountUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#getTariffs");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    try {
+      List<DetailedTariffInfoDTO> result = apiInstance.getTariffs(accountUuid);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getTariffs");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountUuid** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
 
 ### Return type
 
@@ -311,49 +379,61 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="makeInvoicePayment"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="makeInvoicePayment"></a>
 # **makeInvoicePayment**
-> BillingRedirectDTO makeInvoicePayment(body, accountUuid)
+> BillingRedirectDTO makeInvoicePayment(accountUuid, billingPaymentDTO)
 
 
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-BillingPaymentDTO body = new BillingPaymentDTO(); // BillingPaymentDTO | 
-UUID accountUuid = new UUID(); // UUID | 
-try {
-    BillingRedirectDTO result = apiInstance.makeInvoicePayment(body, accountUuid);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#makeInvoicePayment");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    BillingPaymentDTO billingPaymentDTO = new BillingPaymentDTO(); // BillingPaymentDTO | 
+    try {
+      BillingRedirectDTO result = apiInstance.makeInvoicePayment(accountUuid, billingPaymentDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#makeInvoicePayment");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**BillingPaymentDTO**](BillingPaymentDTO.md)|  |
- **accountUuid** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
+| **billingPaymentDTO** | [**BillingPaymentDTO**](BillingPaymentDTO.md)|  | |
 
 ### Return type
 
@@ -361,48 +441,60 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="replaceAccountTariff"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="replaceAccountTariff"></a>
 # **replaceAccountTariff**
-> replaceAccountTariff(body, accountUuid)
+> replaceAccountTariff(accountUuid, replaceAccountTariffDTO)
 
 
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import api.com.docstudio.client.AccountBillingControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-
-AccountBillingControllerApi apiInstance = new AccountBillingControllerApi();
-ReplaceAccountTariffDTO body = new ReplaceAccountTariffDTO(); // ReplaceAccountTariffDTO | 
-UUID accountUuid = new UUID(); // UUID | 
-try {
-    apiInstance.replaceAccountTariff(body, accountUuid);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountBillingControllerApi#replaceAccountTariff");
-    e.printStackTrace();
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    ReplaceAccountTariffDTO replaceAccountTariffDTO = new ReplaceAccountTariffDTO(); // ReplaceAccountTariffDTO | 
+    try {
+      apiInstance.replaceAccountTariff(accountUuid, replaceAccountTariffDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#replaceAccountTariff");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ReplaceAccountTariffDTO**](ReplaceAccountTariffDTO.md)|  |
- **accountUuid** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
+| **replaceAccountTariffDTO** | [**ReplaceAccountTariffDTO**](ReplaceAccountTariffDTO.md)|  | |
 
 ### Return type
 
@@ -410,10 +502,15 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

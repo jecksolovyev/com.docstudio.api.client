@@ -1,8 +1,16 @@
+
+
 # AppPageScripts
 
+Additional JS scripts
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**head** | **String** |  |  [optional]
-**bodyFirst** | **String** |  |  [optional]
-**bodyLast** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**head** | **String** |  |  [optional] |
+|**bodyFirst** | **String** |  |  [optional] |
+|**bodyLast** | **String** |  |  [optional] |
+
+
+
