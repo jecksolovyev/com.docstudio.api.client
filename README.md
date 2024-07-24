@@ -23,6 +23,9 @@ Then manually install the following JARs:
 
 * `target/docstudio-api-client-R110.4.jar`
 
+## Download the latest release 
+[docstudio-api-client-R110.4.jar](releases/docstudio-api-client-R110.4.jar)
+
 ## Getting Started
 
 Please follow the [Building & using](#building--using) instruction and execute the following Java code:
