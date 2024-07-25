@@ -11,4 +11,4 @@ cp -rf ./generated-client/src/ .
 cp -rf ./generated-client/docs/ .
 rm openapitools.json
 rm config.json
-#rm -r generated-client
+rm -r generated-client

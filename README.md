@@ -60,7 +60,7 @@ public class TestApplication {
     LoginDTO loginDTO = new LoginDTO();
     loginDTO.setLogin("my@email.com");
     loginDTO.setPassword("password");
-    client.setAccessToken(authenticationControllerApi.login(loginDTO).getToken());
+    client.setBearerToken(authenticationControllerApi.login(loginDTO).getToken());
 
     //get user mailboxes and store first mailbox UUID
     MailboxControllerApi mailboxControllerApi = new MailboxControllerApi(client);

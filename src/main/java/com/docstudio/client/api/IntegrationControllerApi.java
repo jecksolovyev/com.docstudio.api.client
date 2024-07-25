@@ -61,7 +61,7 @@ public class IntegrationControllerApi {
      * Build call for convertBinaryToXML
      * @param filename filename, for type detection (required)
      * @param mailboxUuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param requestBody  (optional)
+     * @param body  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call convertBinaryToXMLCall(String filename, UUID mailboxUuid, List<byte[]> requestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call convertBinaryToXMLCall(String filename, UUID mailboxUuid, byte[] body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -85,7 +85,7 @@ public class IntegrationControllerApi {
             basePath = null;
         }
 
-        Object localVarPostBody = requestBody;
+        Object localVarPostBody = body;
 
         // create path and map variables
         String localVarPath = "/api/v1/integration/convert-binary";
@@ -120,12 +120,12 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call convertBinaryToXMLValidateBeforeCall(String filename, UUID mailboxUuid, List<byte[]> requestBody, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call convertBinaryToXMLValidateBeforeCall(String filename, UUID mailboxUuid, byte[] body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'filename' is set
         if (filename == null) {
             throw new ApiException("Missing the required parameter 'filename' when calling convertBinaryToXML(Async)");
@@ -136,7 +136,7 @@ public class IntegrationControllerApi {
             throw new ApiException("Missing the required parameter 'mailboxUuid' when calling convertBinaryToXML(Async)");
         }
 
-        return convertBinaryToXMLCall(filename, mailboxUuid, requestBody, _callback);
+        return convertBinaryToXMLCall(filename, mailboxUuid, body, _callback);
 
     }
 
@@ -145,7 +145,7 @@ public class IntegrationControllerApi {
      *
      * @param filename filename, for type detection (required)
      * @param mailboxUuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param requestBody  (optional)
+     * @param body  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -154,8 +154,8 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public String convertBinaryToXML(String filename, UUID mailboxUuid, List<byte[]> requestBody) throws ApiException {
-        ApiResponse<String> localVarResp = convertBinaryToXMLWithHttpInfo(filename, mailboxUuid, requestBody);
+    public String convertBinaryToXML(String filename, UUID mailboxUuid, byte[] body) throws ApiException {
+        ApiResponse<String> localVarResp = convertBinaryToXMLWithHttpInfo(filename, mailboxUuid, body);
         return localVarResp.getData();
     }
 
@@ -164,7 +164,7 @@ public class IntegrationControllerApi {
      *
      * @param filename filename, for type detection (required)
      * @param mailboxUuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param requestBody  (optional)
+     * @param body  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -173,8 +173,8 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> convertBinaryToXMLWithHttpInfo(String filename, UUID mailboxUuid, List<byte[]> requestBody) throws ApiException {
-        okhttp3.Call localVarCall = convertBinaryToXMLValidateBeforeCall(filename, mailboxUuid, requestBody, null);
+    public ApiResponse<String> convertBinaryToXMLWithHttpInfo(String filename, UUID mailboxUuid, byte[] body) throws ApiException {
+        okhttp3.Call localVarCall = convertBinaryToXMLValidateBeforeCall(filename, mailboxUuid, body, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -184,7 +184,7 @@ public class IntegrationControllerApi {
      *
      * @param filename filename, for type detection (required)
      * @param mailboxUuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param requestBody  (optional)
+     * @param body  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -194,9 +194,9 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call convertBinaryToXMLAsync(String filename, UUID mailboxUuid, List<byte[]> requestBody, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call convertBinaryToXMLAsync(String filename, UUID mailboxUuid, byte[] body, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = convertBinaryToXMLValidateBeforeCall(filename, mailboxUuid, requestBody, _callback);
+        okhttp3.Call localVarCall = convertBinaryToXMLValidateBeforeCall(filename, mailboxUuid, body, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -254,7 +254,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -376,7 +376,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -495,7 +495,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -625,7 +625,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -757,7 +757,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -770,7 +770,7 @@ public class IntegrationControllerApi {
     /**
      * Get public exchange certificate
      *
-     * @return List&lt;byte[]&gt;
+     * @return byte[]
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -778,15 +778,15 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public List<byte[]> getExchangeCertificate() throws ApiException {
-        ApiResponse<List<byte[]>> localVarResp = getExchangeCertificateWithHttpInfo();
+    public byte[] getExchangeCertificate() throws ApiException {
+        ApiResponse<byte[]> localVarResp = getExchangeCertificateWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * Get public exchange certificate
      *
-     * @return ApiResponse&lt;List&lt;byte[]&gt;&gt;
+     * @return ApiResponse&lt;byte[]&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -794,9 +794,9 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<byte[]>> getExchangeCertificateWithHttpInfo() throws ApiException {
+    public ApiResponse<byte[]> getExchangeCertificateWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getExchangeCertificateValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<List<byte[]>>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -812,10 +812,10 @@ public class IntegrationControllerApi {
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getExchangeCertificateAsync(final ApiCallback<List<byte[]>> _callback) throws ApiException {
+    public okhttp3.Call getExchangeCertificateAsync(final ApiCallback<byte[]> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getExchangeCertificateValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<List<byte[]>>(){}.getType();
+        Type localVarReturnType = new TypeToken<byte[]>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -872,7 +872,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1000,7 +1000,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1131,7 +1131,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1254,7 +1254,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1379,7 +1379,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1512,7 +1512,7 @@ public class IntegrationControllerApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
