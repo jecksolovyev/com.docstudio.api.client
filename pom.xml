@@ -20,6 +20,14 @@
     </license>
   </licenses>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client</url>
+    </repository>
+  </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
@@ -113,7 +121,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.5.0</version>
+        <version>3.4.0</version>
         <executions>
           <execution>
             <id>add_sources</id>
@@ -217,6 +225,15 @@
             <importOrder/>
 
           </java>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <repositoryId>github</repositoryId>
         </configuration>
       </plugin>
     </plugins>
