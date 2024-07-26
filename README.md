@@ -58,26 +58,26 @@ Option 2
 Option 1
 ```
 repositories {
-	mavenCentral()
-	maven { url "https://jitpack.io" }
+    mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-	implementation 'com.github.jecksolovyev:com.docstudio.api.client:{tag}'
+    implementation 'com.github.jecksolovyev:com.docstudio.api.client:{tag}'
 }
 ```
 
 Option 2
 ```
 repositories {
-	mavenCentral()
-	maven {
-		url "https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client"
-		credentials {
-			username = project.findProperty("github.user") ?: System.getenv("GITHUB_USERNAME")
-			password = project.findProperty("github.token") ?: System.getenv("GITHUB_TOKEN")
-		}
-	}
+    mavenCentral()
+    maven {
+        url "https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client"
+        credentials {
+            username = project.findProperty("github.user") ?: System.getenv("GITHUB_USERNAME")
+            password = project.findProperty("github.token") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
 }
 
 dependencies {
