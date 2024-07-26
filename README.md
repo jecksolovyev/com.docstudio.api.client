@@ -13,15 +13,77 @@ Building the API client library requires:
 1. Java 1.8+
 2. Maven
 
-## Building & using
+## Building
 
 ```shell
 mvn clean package
 ```
+## Usage with maven
 
-Then manually install the following JARs:
+Option 1
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 
-* `target/docstudio-api-client-R110.5.jar`
+<dependency>
+    <groupId>com.github.jecksolovyev</groupId>
+    <artifactId>com.docstudio.api.client</artifactId>
+    <version>{tag}</version>
+</dependency>
+```
+
+Option 2
+```
+ <repositories>
+    <repository>
+        <id>github</id>
+        <name>GitHub Packages</name>
+        <url>https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.docstudio</groupId>
+    <artifactId>docstudio-api-client</artifactId>
+    <version>{tag}</version>
+</dependency>
+```
+
+## Usage with gradle
+
+Option 1
+```
+repositories {
+	mavenCentral()
+	maven { url "https://jitpack.io" }
+}
+
+dependencies {
+	implementation 'com.github.jecksolovyev:com.docstudio.api.client:{tag}'
+}
+```
+
+Option 2
+```
+repositories {
+	mavenCentral()
+	maven {
+		url "https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client"
+		credentials {
+			username = project.findProperty("github.user") ?: System.getenv("GITHUB_USERNAME")
+			password = project.findProperty("github.token") ?: System.getenv("GITHUB_TOKEN")
+		}
+	}
+}
+
+dependencies {
+    implementation 'com.docstudio:docstudio-api-client:{tag}'
+}
+```
 
 ## Getting Started
 
