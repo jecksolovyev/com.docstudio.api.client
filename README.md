@@ -36,7 +36,7 @@ Option 1
 </dependency>
 ```
 
-Option 2
+Option 2 (requires GitHub credentials in settings.xml)
 ```
  <repositories>
     <repository>
@@ -67,7 +67,7 @@ dependencies {
 }
 ```
 
-Option 2
+Option 2 (requires GitHub credentials in gradle.properties)
 ```
 repositories {
     mavenCentral()
