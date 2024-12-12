@@ -2,18 +2,17 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**deleteAccAllPermissions**](PermissionAccountControllerApi.md#deleteAccAllPermissions) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid} | Delete user from account totally |
-| [**deleteAccPermission**](PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#39;user-to-account&#39; relation |
-| [**deleteAccRole**](PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role |
-| [**getUserAccountPermissions**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions |
-| [**patchMbPermissionsPermissionAccount**](PermissionAccountControllerApi.md#patchMbPermissionsPermissionAccount) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
-| [**replaceAllPermissionsPermissionAccount**](PermissionAccountControllerApi.md#replaceAllPermissionsPermissionAccount) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
-| [**setUserAccountPermissions**](PermissionAccountControllerApi.md#setUserAccountPermissions) | **POST** /api/v1/permission/{userUuid}/account/{accountUuid} | Write user permissions |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**deleteAccAllPermissions**](PermissionAccountControllerApi.md#deleteAccAllPermissions) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid} | Delete user from account totally
+[**deleteAccPermission**](PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#x27;user-to-account&#x27; relation
+[**deleteAccRole**](PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role
+[**getUserAccountPermissions**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions
+[**patchMbPermissionsPermissionAccount**](PermissionAccountControllerApi.md#patchMbPermissionsPermissionAccount) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
+[**replaceAllPermissionsPermissionAccount**](PermissionAccountControllerApi.md#replaceAllPermissionsPermissionAccount) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation
+[**setUserAccountPermissions**](PermissionAccountControllerApi.md#setUserAccountPermissions) | **POST** /api/v1/permission/{userUuid}/account/{accountUuid} | Write user permissions
 
-
-<a id="deleteAccAllPermissions"></a>
+<a name="deleteAccAllPermissions"></a>
 # **deleteAccAllPermissions**
 > deleteAccAllPermissions(userUuid, accountUuid)
 
@@ -22,39 +21,32 @@ Delete user from account totally
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    try {
-      apiInstance.deleteAccAllPermissions(userUuid, accountUuid);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccAllPermissions");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+try {
+    apiInstance.deleteAccAllPermissions(userUuid, accountUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccAllPermissions");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
 
 ### Return type
 
@@ -62,62 +54,50 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | No Content |  -  |
-
-<a id="deleteAccPermission"></a>
+<a name="deleteAccPermission"></a>
 # **deleteAccPermission**
 > deleteAccPermission(userUuid, accountUuid, permissionId)
 
-Delete permission for specific &#39;user-to-account&#39; relation
+Delete permission for specific &#x27;user-to-account&#x27; relation
 
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    Integer permissionId = 56; // Integer | Permission Id
-    try {
-      apiInstance.deleteAccPermission(userUuid, accountUuid, permissionId);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccPermission");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+Integer permissionId = 56; // Integer | Permission Id
+try {
+    apiInstance.deleteAccPermission(userUuid, accountUuid, permissionId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccPermission");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **permissionId** | **Integer**| Permission Id | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
+ **permissionId** | **Integer**| Permission Id |
 
 ### Return type
 
@@ -125,19 +105,14 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | No Content |  -  |
-
-<a id="deleteAccRole"></a>
+<a name="deleteAccRole"></a>
 # **deleteAccRole**
 > deleteAccRole(userUuid, accountUuid, roleUuid)
 
@@ -146,41 +121,34 @@ Delete role
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    UUID roleUuid = UUID.randomUUID(); // UUID | UUID of role
-    try {
-      apiInstance.deleteAccRole(userUuid, accountUuid, roleUuid);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccRole");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+UUID roleUuid = new UUID(); // UUID | UUID of role
+try {
+    apiInstance.deleteAccRole(userUuid, accountUuid, roleUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#deleteAccRole");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **roleUuid** | **UUID**| UUID of role | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
+ **roleUuid** | [**UUID**](.md)| UUID of role |
 
 ### Return type
 
@@ -188,19 +156,14 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | No Content |  -  |
-
-<a id="getUserAccountPermissions"></a>
+<a name="getUserAccountPermissions"></a>
 # **getUserAccountPermissions**
 > AccountPermissionsDTO getUserAccountPermissions(userUuid, accountUuid)
 
@@ -209,40 +172,33 @@ Read all user permissions
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    try {
-      AccountPermissionsDTO result = apiInstance.getUserAccountPermissions(userUuid, accountUuid);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#getUserAccountPermissions");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+try {
+    AccountPermissionsDTO result = apiInstance.getUserAccountPermissions(userUuid, accountUuid);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#getUserAccountPermissions");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
 
 ### Return type
 
@@ -250,62 +206,50 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="patchMbPermissionsPermissionAccount"></a>
+<a name="patchMbPermissionsPermissionAccount"></a>
 # **patchMbPermissionsPermissionAccount**
-> patchMbPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO)
+> patchMbPermissionsPermissionAccount(body, userUuid, accountUuid)
 
 Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
 
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
-    try {
-      apiInstance.patchMbPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#patchMbPermissionsPermissionAccount");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+PermissionsDTO body = new PermissionsDTO(); // PermissionsDTO | 
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+try {
+    apiInstance.patchMbPermissionsPermissionAccount(body, userUuid, accountUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#patchMbPermissionsPermissionAccount");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **permissionsDTO** | [**PermissionsDTO**](PermissionsDTO.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PermissionsDTO**](PermissionsDTO.md)|  |
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
 
 ### Return type
 
@@ -313,62 +257,50 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="replaceAllPermissionsPermissionAccount"></a>
+<a name="replaceAllPermissionsPermissionAccount"></a>
 # **replaceAllPermissionsPermissionAccount**
-> replaceAllPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO)
+> replaceAllPermissionsPermissionAccount(body, userUuid, accountUuid)
 
 Replace all permissions for selected user-to-account relation
 
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
-    try {
-      apiInstance.replaceAllPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllPermissionsPermissionAccount");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+PermissionsDTO body = new PermissionsDTO(); // PermissionsDTO | 
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+try {
+    apiInstance.replaceAllPermissionsPermissionAccount(body, userUuid, accountUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllPermissionsPermissionAccount");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **permissionsDTO** | [**PermissionsDTO**](PermissionsDTO.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PermissionsDTO**](PermissionsDTO.md)|  |
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
 
 ### Return type
 
@@ -376,62 +308,50 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="setUserAccountPermissions"></a>
+<a name="setUserAccountPermissions"></a>
 # **setUserAccountPermissions**
-> setUserAccountPermissions(userUuid, accountUuid, basePermissionsDTO)
+> setUserAccountPermissions(body, userUuid, accountUuid)
 
 Write user permissions
 
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.PermissionAccountControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    BasePermissionsDTO basePermissionsDTO = new BasePermissionsDTO(); // BasePermissionsDTO | 
-    try {
-      apiInstance.setUserAccountPermissions(userUuid, accountUuid, basePermissionsDTO);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#setUserAccountPermissions");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi();
+BasePermissionsDTO body = new BasePermissionsDTO(); // BasePermissionsDTO | 
+UUID userUuid = new UUID(); // UUID | UUID of User
+UUID accountUuid = new UUID(); // UUID | UUID of account
+try {
+    apiInstance.setUserAccountPermissions(body, userUuid, accountUuid);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PermissionAccountControllerApi#setUserAccountPermissions");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **basePermissionsDTO** | [**BasePermissionsDTO**](BasePermissionsDTO.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BasePermissionsDTO**](BasePermissionsDTO.md)|  |
+ **userUuid** | [**UUID**](.md)| UUID of User |
+ **accountUuid** | [**UUID**](.md)| UUID of account |
 
 ### Return type
 
@@ -439,15 +359,10 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
 

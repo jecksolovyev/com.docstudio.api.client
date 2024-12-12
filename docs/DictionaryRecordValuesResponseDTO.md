@@ -1,15 +1,7 @@
-
-
 # DictionaryRecordValuesResponseDTO
 
-Data records
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | UUID of dictionary record |  |
-|**values** | **Map&lt;String, String&gt;** | List of dictionary record values {columnUuid: fieldValue} |  |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**uuid** | [**UUID**](UUID.md) | UUID of dictionary record | 
+**values** | **Map&lt;String, String&gt;** | List of dictionary record values {columnUuid: fieldValue} | 

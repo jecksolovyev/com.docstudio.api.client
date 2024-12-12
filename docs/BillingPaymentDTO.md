@@ -1,18 +1,10 @@
-
-
 # BillingPaymentDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**invoiceId** | **UUID** |  |  |
-|**provider** | **String** |  |  |
-|**firstName** | **String** |  |  |
-|**lastName** | **String** |  |  |
-|**email** | **String** |  |  [optional] |
-|**phoneNumber** | **String** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**invoiceId** | [**UUID**](UUID.md) |  | 
+**provider** | **String** |  | 
+**firstName** | **String** |  | 
+**lastName** | **String** |  | 
+**email** | **String** |  |  [optional]

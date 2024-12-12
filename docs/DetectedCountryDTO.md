@@ -1,13 +1,6 @@
-
-
 # DetectedCountryDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**country** | **String** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**country** | **String** |  |  [optional]

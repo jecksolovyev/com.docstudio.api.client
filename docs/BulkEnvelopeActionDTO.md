@@ -1,13 +1,6 @@
-
-
 # BulkEnvelopeActionDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**uuids** | **Set&lt;UUID&gt;** |  |  |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**uuids** | [**List&lt;UUID&gt;**](UUID.md) |  | 

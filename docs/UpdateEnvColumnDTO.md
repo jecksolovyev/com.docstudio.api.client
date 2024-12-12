@@ -1,14 +1,8 @@
-
-
 # UpdateEnvColumnDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**order** | **Integer** |  |  [optional] |
-|**visible** | **Boolean** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**order** | **Integer** |  |  [optional]
+**visible** | **Boolean** |  |  [optional]
+**width** | **Integer** |  |  [optional]

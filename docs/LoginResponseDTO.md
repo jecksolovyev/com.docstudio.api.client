@@ -1,13 +1,6 @@
-
-
 # LoginResponseDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**token** | **String** | Authorization token |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**token** | **String** | Authorization token |  [optional]

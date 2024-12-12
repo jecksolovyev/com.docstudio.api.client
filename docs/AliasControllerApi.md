@@ -2,57 +2,49 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**createAlias**](AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox |
-| [**deleteAlias**](AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias |
-| [**getAllByMailbox**](AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID |
-| [**getAllByMailboxAlias**](AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createAlias**](AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox
+[**deleteAlias**](AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias
+[**getAllByMailbox**](AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID
+[**getAllByMailboxAlias**](AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox
 
-
-<a id="createAlias"></a>
+<a name="createAlias"></a>
 # **createAlias**
-> AliasDTO createAlias(mailbox, aliasDTO)
+> AliasDTO createAlias(body, mailbox)
 
 Save alias to mailbox
 
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.AliasControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.AliasControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AliasControllerApi apiInstance = new AliasControllerApi(defaultClient);
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    AliasDTO aliasDTO = new AliasDTO(); // AliasDTO | 
-    try {
-      AliasDTO result = apiInstance.createAlias(mailbox, aliasDTO);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#createAlias");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+AliasControllerApi apiInstance = new AliasControllerApi();
+AliasDTO body = new AliasDTO(); // AliasDTO | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    AliasDTO result = apiInstance.createAlias(body, mailbox);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AliasControllerApi#createAlias");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **aliasDTO** | [**AliasDTO**](AliasDTO.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AliasDTO**](AliasDTO.md)|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
@@ -60,19 +52,14 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
-
-<a id="deleteAlias"></a>
+<a name="deleteAlias"></a>
 # **deleteAlias**
 > deleteAlias(name, mailbox)
 
@@ -81,39 +68,32 @@ Delete alias
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.AliasControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.AliasControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AliasControllerApi apiInstance = new AliasControllerApi(defaultClient);
-    String name = "name_example"; // String | 
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    try {
-      apiInstance.deleteAlias(name, mailbox);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#deleteAlias");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+AliasControllerApi apiInstance = new AliasControllerApi();
+String name = "name_example"; // String | 
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+try {
+    apiInstance.deleteAlias(name, mailbox);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AliasControllerApi#deleteAlias");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **name** | **String**|  | |
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  |
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
@@ -121,19 +101,14 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | No Content |  -  |
-
-<a id="getAllByMailbox"></a>
+<a name="getAllByMailbox"></a>
 # **getAllByMailbox**
 > SingleUuidDTO getAllByMailbox(id)
 
@@ -142,38 +117,31 @@ Get mailbox UUID by qualified ID
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.AliasControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.AliasControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AliasControllerApi apiInstance = new AliasControllerApi(defaultClient);
-    String id = "id_example"; // String | 
-    try {
-      SingleUuidDTO result = apiInstance.getAllByMailbox(id);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#getAllByMailbox");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+AliasControllerApi apiInstance = new AliasControllerApi();
+String id = "id_example"; // String | 
+try {
+    SingleUuidDTO result = apiInstance.getAllByMailbox(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AliasControllerApi#getAllByMailbox");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
 
 ### Return type
 
@@ -181,19 +149,14 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="getAllByMailboxAlias"></a>
+<a name="getAllByMailboxAlias"></a>
 # **getAllByMailboxAlias**
 > List&lt;AliasDTO&gt; getAllByMailboxAlias(mailbox, qualified)
 
@@ -202,40 +165,33 @@ Get aliases by mailbox
 ### Example
 ```java
 // Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.AliasControllerApi;
+//import com.docstudio.client.ApiClient;
+//import com.docstudio.client.ApiException;
+//import com.docstudio.client.Configuration;
+//import com.docstudio.client.auth.*;
+//import com.docstudio.client.api.AliasControllerApi;
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-    AliasControllerApi apiInstance = new AliasControllerApi(defaultClient);
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    Boolean qualified = true; // Boolean | 
-    try {
-      List<AliasDTO> result = apiInstance.getAllByMailboxAlias(mailbox, qualified);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#getAllByMailboxAlias");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
+
+AliasControllerApi apiInstance = new AliasControllerApi();
+UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+Boolean qualified = true; // Boolean | 
+try {
+    List<AliasDTO> result = apiInstance.getAllByMailboxAlias(mailbox, qualified);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AliasControllerApi#getAllByMailboxAlias");
+    e.printStackTrace();
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **qualified** | **Boolean**|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+ **qualified** | **Boolean**|  | [optional]
 
 ### Return type
 
@@ -243,15 +199,10 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
 

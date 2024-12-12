@@ -1,15 +1,7 @@
-
-
 # EnvelopeTemplateInfoDTO
 
-Templates
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**templateUuid** | **UUID** | Template uuid |  [optional] |
-|**templateName** | **String** | Template name |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**templateUuid** | [**UUID**](UUID.md) | Template uuid |  [optional]
+**templateName** | **String** | Template name |  [optional]

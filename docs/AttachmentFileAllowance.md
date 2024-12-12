@@ -1,14 +1,7 @@
-
-
 # AttachmentFileAllowance
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**extensions** | **Set&lt;String&gt;** |  |  [optional] |
-|**mimeTypes** | **Set&lt;String&gt;** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**extensions** | **List&lt;String&gt;** |  |  [optional]
+**mimeTypes** | **List&lt;String&gt;** |  |  [optional]

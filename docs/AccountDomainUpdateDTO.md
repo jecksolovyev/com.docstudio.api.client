@@ -1,14 +1,6 @@
-
-
 # AccountDomainUpdateDTO
 
-Updated domain
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**ssoIdProviderUuid** | **UUID** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ssoIdProviderUuid** | [**UUID**](UUID.md) |  |  [optional]

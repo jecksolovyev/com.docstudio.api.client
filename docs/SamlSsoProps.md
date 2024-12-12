@@ -1,14 +1,7 @@
-
-
 # SamlSsoProps
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**entityId** | **String** |  |  [optional] |
-|**acsUrl** | **String** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entityId** | **String** |  |  [optional]
+**acsUrl** | **String** |  |  [optional]

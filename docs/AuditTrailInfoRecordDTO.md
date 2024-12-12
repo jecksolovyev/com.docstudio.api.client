@@ -1,13 +1,6 @@
-
-
 # AuditTrailInfoRecordDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**text** | **String** |  |  |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**text** | **String** |  | 

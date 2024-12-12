@@ -1,15 +1,7 @@
-
-
 # EnvPostDTO
 
-Envelope to send
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | UUID of envelope |  [optional] |
-|**data** | **String** | Envelope XML |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**uuid** | [**UUID**](UUID.md) | UUID of envelope |  [optional]
+**data** | **String** | Envelope XML |  [optional]

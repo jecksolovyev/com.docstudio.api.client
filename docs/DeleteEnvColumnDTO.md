@@ -1,13 +1,6 @@
-
-
 # DeleteEnvColumnDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**extraFieldUuids** | **List&lt;UUID&gt;** |  |  |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**extraFieldUuids** | [**List&lt;UUID&gt;**](UUID.md) |  | 

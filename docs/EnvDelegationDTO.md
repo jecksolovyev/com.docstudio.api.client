@@ -1,14 +1,7 @@
-
-
 # EnvDelegationDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**uuids** | **Set&lt;UUID&gt;** |  |  |
-|**delegateMailbox** | **String** | Mailbox UUID or email |  |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**uuids** | [**List&lt;UUID&gt;**](UUID.md) |  | 
+**delegateMailbox** | **String** | Mailbox UUID or email | 

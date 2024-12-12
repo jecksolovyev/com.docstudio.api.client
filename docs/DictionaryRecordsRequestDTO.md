@@ -1,14 +1,7 @@
-
-
 # DictionaryRecordsRequestDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**columnUuid** | **UUID** | Column UUID |  |
-|**values** | **Set&lt;String&gt;** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**columnUuid** | [**UUID**](UUID.md) | Column UUID | 
+**values** | **List&lt;String&gt;** |  |  [optional]

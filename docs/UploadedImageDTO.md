@@ -1,15 +1,8 @@
-
-
 # UploadedImageDTO
 
-
 ## Properties
-
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-|**imageUuid** | **UUID** |  |  [optional] |
-|**src** | **String** |  |  [optional] |
-|**hash** | **String** |  |  [optional] |
-
-
-
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**imageUuid** | [**UUID**](UUID.md) |  |  [optional]
+**src** | **String** |  |  [optional]
+**hash** | **String** |  |  [optional]
