@@ -1,6 +1,13 @@
+
+
 # BillingInvoiceStatusDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**status** | **Object** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**status** | **Object** |  |  [optional] |
+
+
+

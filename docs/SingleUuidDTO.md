@@ -1,6 +1,13 @@
+
+
 # SingleUuidDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**uuid** | [**UUID**](UUID.md) | Uuid | 
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**uuid** | **UUID** | Uuid |  |
+
+
+

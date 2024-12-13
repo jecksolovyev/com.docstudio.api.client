@@ -7,7 +7,7 @@ echo '{"invokerPackage":"com.docstudio.client",
         "artifactId":"docstudio-api-client",
         "artifactVersion": "1.0.0"}' > config.json
 npx openapi-generator-cli generate -i https://api.docstudio.com/v3/api-docs --skip-validate-spec -g java -o ./generated-client -c config.json
-cp -rf ./generated-client/src/ .
+cp -rf ./generated-client/src/main/ ./src
 cp -rf ./generated-client/docs/ .
 rm openapitools.json
 rm config.json

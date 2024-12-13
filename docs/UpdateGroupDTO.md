@@ -1,7 +1,15 @@
+
+
 # UpdateGroupDTO
 
+group info
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **String** | Name | 
-**mailboxes** | [**List&lt;UUID&gt;**](UUID.md) | Mailboxes |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**name** | **String** | Name |  |
+|**mailboxes** | **Set&lt;UUID&gt;** | Mailboxes |  [optional] |
+
+
+

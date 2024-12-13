@@ -2,42 +2,55 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**login**](AuthenticationControllerApi.md#login) | **POST** /api/login | Login with email/password
-[**loginByCode**](AuthenticationControllerApi.md#loginByCode) | **POST** /api/login/by-code | Login with the code from email (for non-existing user)
-[**logout**](AuthenticationControllerApi.md#logout) | **POST** /api/logout | Logout
-[**userExistsByCode**](AuthenticationControllerApi.md#userExistsByCode) | **GET** /api/login/check-by-code/{code} | Check login ability with the code from email (for non-existing user)
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**login**](AuthenticationControllerApi.md#login) | **POST** /api/login | Login with email/password |
+| [**loginByCode**](AuthenticationControllerApi.md#loginByCode) | **POST** /api/login/by-code | Login with the code from email (for non-existing user) |
+| [**logout**](AuthenticationControllerApi.md#logout) | **POST** /api/logout | Logout |
+| [**userExistsByCode**](AuthenticationControllerApi.md#userExistsByCode) | **GET** /api/login/check-by-code/{code} | Check login ability with the code from email (for non-existing user) |
 
-<a name="login"></a>
+
+<a id="login"></a>
 # **login**
-> LoginResponseDTO login(body)
+> LoginResponseDTO login(loginDTO)
 
 Login with email/password
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.api.AuthenticationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AuthenticationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-AuthenticationControllerApi apiInstance = new AuthenticationControllerApi();
-LoginDTO body = new LoginDTO(); // LoginDTO | 
-try {
-    LoginResponseDTO result = apiInstance.login(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AuthenticationControllerApi#login");
-    e.printStackTrace();
+    AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
+    LoginDTO loginDTO = new LoginDTO(); // LoginDTO | 
+    try {
+      LoginResponseDTO result = apiInstance.login(loginDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AuthenticationControllerApi#login");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**LoginDTO**](LoginDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **loginDTO** | [**LoginDTO**](LoginDTO.md)|  | |
 
 ### Return type
 
@@ -52,35 +65,52 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="loginByCode"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="loginByCode"></a>
 # **loginByCode**
-> LoginEnvelopeResponseDTO loginByCode(body)
+> LoginEnvelopeResponseDTO loginByCode(userCreateByCodeDTO)
 
 Login with the code from email (for non-existing user)
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.api.AuthenticationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AuthenticationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-AuthenticationControllerApi apiInstance = new AuthenticationControllerApi();
-UserCreateByCodeDTO body = new UserCreateByCodeDTO(); // UserCreateByCodeDTO | 
-try {
-    LoginEnvelopeResponseDTO result = apiInstance.loginByCode(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AuthenticationControllerApi#loginByCode");
-    e.printStackTrace();
+    AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
+    UserCreateByCodeDTO userCreateByCodeDTO = new UserCreateByCodeDTO(); // UserCreateByCodeDTO | 
+    try {
+      LoginEnvelopeResponseDTO result = apiInstance.loginByCode(userCreateByCodeDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AuthenticationControllerApi#loginByCode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**UserCreateByCodeDTO**](UserCreateByCodeDTO.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userCreateByCodeDTO** | [**UserCreateByCodeDTO**](UserCreateByCodeDTO.md)|  | |
 
 ### Return type
 
@@ -95,7 +125,12 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="logout"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="logout"></a>
 # **logout**
 > logout()
 
@@ -104,21 +139,33 @@ Logout
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.AuthenticationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AuthenticationControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-AuthenticationControllerApi apiInstance = new AuthenticationControllerApi();
-try {
-    apiInstance.logout();
-} catch (ApiException e) {
-    System.err.println("Exception when calling AuthenticationControllerApi#logout");
-    e.printStackTrace();
+    AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
+    try {
+      apiInstance.logout();
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AuthenticationControllerApi#logout");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -138,7 +185,12 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="userExistsByCode"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="userExistsByCode"></a>
 # **userExistsByCode**
 > LoginCheckResponseDTO userExistsByCode()
 
@@ -147,17 +199,29 @@ Check login ability with the code from email (for non-existing user)
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.api.AuthenticationControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AuthenticationControllerApi;
 
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
 
-AuthenticationControllerApi apiInstance = new AuthenticationControllerApi();
-try {
-    LoginCheckResponseDTO result = apiInstance.userExistsByCode();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AuthenticationControllerApi#userExistsByCode");
-    e.printStackTrace();
+    AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
+    try {
+      LoginCheckResponseDTO result = apiInstance.userExistsByCode();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AuthenticationControllerApi#userExistsByCode");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
@@ -176,4 +240,9 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

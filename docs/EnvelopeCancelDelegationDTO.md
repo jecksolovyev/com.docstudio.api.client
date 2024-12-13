@@ -1,7 +1,14 @@
+
+
 # EnvelopeCancelDelegationDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**envelopeUuid** | [**UUID**](UUID.md) |  | 
-**mailboxToCancel** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**envelopeUuid** | **UUID** |  |  |
+|**mailboxToCancel** | **String** |  |  [optional] |
+
+
+

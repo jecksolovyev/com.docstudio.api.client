@@ -1,54 +1,68 @@
+
+
 # SearchEnvelopesDTO
 
+Search parameters
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**label** | **List&lt;String&gt;** |  |  [optional]
-**scope** | [**List&lt;ScopeEnum&gt;**](#List&lt;ScopeEnum&gt;) |  |  [optional]
-**status** | [**List&lt;StatusEnum&gt;**](#List&lt;StatusEnum&gt;) |  |  [optional]
-**subject** | **String** | Envelope subject |  [optional]
-**createDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Creation date from |  [optional]
-**createDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Creation date to |  [optional]
-**receiveDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Receive date from |  [optional]
-**receiveDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Receive date to |  [optional]
-**expireDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Expire date from |  [optional]
-**expireDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Expire date to |  [optional]
-**sendDateFrom** | [**OffsetDateTime**](OffsetDateTime.md) | Envelope sending date from |  [optional]
-**sendDateTo** | [**OffsetDateTime**](OffsetDateTime.md) | Envelope sending date to |  [optional]
-**archived** | **Boolean** | Archived |  [optional]
-**deleted** | **Boolean** | Deleted to Recycle Bin |  [optional]
-**template** | [**List&lt;UUID&gt;**](UUID.md) |  |  [optional]
-**activeRole** | **List&lt;String&gt;** |  |  [optional]
-**sender** | [**List&lt;UUID&gt;**](UUID.md) |  |  [optional]
-**recipient** | [**List&lt;UUID&gt;**](UUID.md) |  |  [optional]
-**sortField** | **String** | Field for sorting (&#x27;createdAt&#x27; by default) |  [optional]
-**sort** | [**SortEnum**](#SortEnum) | Sort order, asc or desc |  [optional]
-**searchFields** | [**List&lt;SearchFieldValueDTO&gt;**](SearchFieldValueDTO.md) |  |  [optional]
 
-<a name="List<ScopeEnum>"></a>
-## Enum: List&lt;ScopeEnum&gt;
-Name | Value
----- | -----
-INBOX | &quot;inbox&quot;
-OUTBOX | &quot;outbox&quot;
-DRAFT | &quot;draft&quot;
-SHARED | &quot;shared&quot;
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**label** | **Set&lt;String&gt;** |  |  [optional] |
+|**scope** | [**Set&lt;ScopeEnum&gt;**](#Set&lt;ScopeEnum&gt;) |  |  [optional] |
+|**status** | [**Set&lt;StatusEnum&gt;**](#Set&lt;StatusEnum&gt;) |  |  [optional] |
+|**subject** | **String** | Envelope subject |  [optional] |
+|**createDateFrom** | **OffsetDateTime** | Creation date from |  [optional] |
+|**createDateTo** | **OffsetDateTime** | Creation date to |  [optional] |
+|**receiveDateFrom** | **OffsetDateTime** | Receive date from |  [optional] |
+|**receiveDateTo** | **OffsetDateTime** | Receive date to |  [optional] |
+|**expireDateFrom** | **OffsetDateTime** | Expire date from |  [optional] |
+|**expireDateTo** | **OffsetDateTime** | Expire date to |  [optional] |
+|**sendDateFrom** | **OffsetDateTime** | Envelope sending date from |  [optional] |
+|**sendDateTo** | **OffsetDateTime** | Envelope sending date to |  [optional] |
+|**archived** | **Boolean** | Archived |  [optional] |
+|**deleted** | **Boolean** | Deleted to Recycle Bin |  [optional] |
+|**template** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**activeRole** | **Set&lt;String&gt;** |  |  [optional] |
+|**sender** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**recipient** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**sortField** | **String** | Field for sorting (&#39;createdAt&#39; by default) |  [optional] |
+|**sort** | [**SortEnum**](#SortEnum) | Sort order, asc or desc |  [optional] |
+|**searchFields** | [**Set&lt;SearchFieldValueDTO&gt;**](SearchFieldValueDTO.md) |  |  [optional] |
 
-<a name="List<StatusEnum>"></a>
-## Enum: List&lt;StatusEnum&gt;
-Name | Value
----- | -----
-DRAFT | &quot;DRAFT&quot;
-SENT | &quot;SENT&quot;
-WAITING | &quot;WAITING&quot;
-COMPLETED | &quot;COMPLETED&quot;
-CANCELLED | &quot;CANCELLED&quot;
-EXPIRED | &quot;EXPIRED&quot;
-ON_APPROVAL | &quot;ON_APPROVAL&quot;
 
-<a name="SortEnum"></a>
+
+## Enum: Set&lt;ScopeEnum&gt;
+
+| Name | Value |
+|---- | -----|
+| INBOX | &quot;inbox&quot; |
+| OUTBOX | &quot;outbox&quot; |
+| DRAFT | &quot;draft&quot; |
+| SHARED | &quot;shared&quot; |
+
+
+
+## Enum: Set&lt;StatusEnum&gt;
+
+| Name | Value |
+|---- | -----|
+| DRAFT | &quot;DRAFT&quot; |
+| SENT | &quot;SENT&quot; |
+| WAITING | &quot;WAITING&quot; |
+| COMPLETED | &quot;COMPLETED&quot; |
+| CANCELLED | &quot;CANCELLED&quot; |
+| EXPIRED | &quot;EXPIRED&quot; |
+| ON_APPROVAL | &quot;ON_APPROVAL&quot; |
+
+
+
 ## Enum: SortEnum
-Name | Value
----- | -----
-DESC | &quot;desc&quot;
-ASC | &quot;asc&quot;
+
+| Name | Value |
+|---- | -----|
+| DESC | &quot;desc&quot; |
+| ASC | &quot;asc&quot; |
+
+
+

@@ -1,7 +1,15 @@
+
+
 # AccountDomainCreateDTO
 
+New domain info
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ssoIdProviderUuid** | [**UUID**](UUID.md) |  |  [optional]
-**domain** | **String** | Domain name | 
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**ssoIdProviderUuid** | **UUID** |  |  [optional] |
+|**domain** | **String** | Domain name |  |
+
+
+

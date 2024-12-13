@@ -2,55 +2,68 @@
 
 All URIs are relative to *https://api.docstudio.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**addNewColumn**](EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display
-[**createReport**](EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report
-[**deleteColumn**](EnvelopeSearchControllerApi.md#deleteColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying
-[**getMailboxFolders**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox
-[**getSearchFields**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields
-[**getTemplateRoles**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles
-[**resetColumnSettings**](EnvelopeSearchControllerApi.md#resetColumnSettings) | **POST** /api/v1/envelope/column-reset | Reset column settings
-[**searchEnvelopes**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes
-[**searchEnvelopesForApproval**](EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval
-[**updateColumn**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{uuid} | Update column to display
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**addNewColumn**](EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display |
+| [**createReport**](EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report |
+| [**deleteColumn**](EnvelopeSearchControllerApi.md#deleteColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying |
+| [**getMailboxFolders**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox |
+| [**getSearchFields**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields |
+| [**getTemplateRoles**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles |
+| [**resetColumnSettings**](EnvelopeSearchControllerApi.md#resetColumnSettings) | **POST** /api/v1/envelope/column-reset | Reset column settings |
+| [**searchEnvelopes**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes |
+| [**searchEnvelopesForApproval**](EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval |
+| [**updateColumn**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{uuid} | Update column to display |
 
-<a name="addNewColumn"></a>
+
+<a id="addNewColumn"></a>
 # **addNewColumn**
-> SingleUuidDTO addNewColumn(body, mailbox)
+> SingleUuidDTO addNewColumn(mailbox, newEnvColumnDTO)
 
 Add a new column to display
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-NewEnvColumnDTO body = new NewEnvColumnDTO(); // NewEnvColumnDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    SingleUuidDTO result = apiInstance.addNewColumn(body, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#addNewColumn");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    NewEnvColumnDTO newEnvColumnDTO = new NewEnvColumnDTO(); // NewEnvColumnDTO | 
+    try {
+      SingleUuidDTO result = apiInstance.addNewColumn(mailbox, newEnvColumnDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#addNewColumn");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**NewEnvColumnDTO**](NewEnvColumnDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **newEnvColumnDTO** | [**NewEnvColumnDTO**](NewEnvColumnDTO.md)|  | |
 
 ### Return type
 
@@ -65,41 +78,58 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="createReport"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="createReport"></a>
 # **createReport**
-> createReport(body, mailbox)
+> createReport(mailbox, reportEnvelopeRequestDTO)
 
 Request envelopes report
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-ReportEnvelopeRequestDTO body = new ReportEnvelopeRequestDTO(); // ReportEnvelopeRequestDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    apiInstance.createReport(body, mailbox);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#createReport");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    ReportEnvelopeRequestDTO reportEnvelopeRequestDTO = new ReportEnvelopeRequestDTO(); // ReportEnvelopeRequestDTO | 
+    try {
+      apiInstance.createReport(mailbox, reportEnvelopeRequestDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#createReport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ReportEnvelopeRequestDTO**](ReportEnvelopeRequestDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **reportEnvelopeRequestDTO** | [**ReportEnvelopeRequestDTO**](ReportEnvelopeRequestDTO.md)|  | |
 
 ### Return type
 
@@ -114,41 +144,58 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="deleteColumn"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
+<a id="deleteColumn"></a>
 # **deleteColumn**
-> deleteColumn(body, mailbox)
+> deleteColumn(mailbox, deleteEnvColumnDTO)
 
 Delete columns from displaying
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-DeleteEnvColumnDTO body = new DeleteEnvColumnDTO(); // DeleteEnvColumnDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    apiInstance.deleteColumn(body, mailbox);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#deleteColumn");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    DeleteEnvColumnDTO deleteEnvColumnDTO = new DeleteEnvColumnDTO(); // DeleteEnvColumnDTO | 
+    try {
+      apiInstance.deleteColumn(mailbox, deleteEnvColumnDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#deleteColumn");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DeleteEnvColumnDTO**](DeleteEnvColumnDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **deleteEnvColumnDTO** | [**DeleteEnvColumnDTO**](DeleteEnvColumnDTO.md)|  | |
 
 ### Return type
 
@@ -163,42 +210,59 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
-<a name="getMailboxFolders"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getMailboxFolders"></a>
 # **getMailboxFolders**
-> List&lt;String&gt; getMailboxFolders(mailbox, body)
+> List&lt;String&gt; getMailboxFolders(mailbox, requestBody)
 
 Retrieve all available folders for mailbox
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-List<String> body = Arrays.asList("body_example"); // List<String> | 
-try {
-    List<String> result = apiInstance.getMailboxFolders(mailbox, body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#getMailboxFolders");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Set<String> requestBody = Arrays.asList(); // Set<String> | 
+    try {
+      List<String> result = apiInstance.getMailboxFolders(mailbox, requestBody);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#getMailboxFolders");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **body** | [**List&lt;String&gt;**](String.md)|  | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **requestBody** | [**Set&lt;String&gt;**](String.md)|  | [optional] |
 
 ### Return type
 
@@ -213,44 +277,61 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getSearchFields"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getSearchFields"></a>
 # **getSearchFields**
-> List&lt;EnvelopeSearchField&gt; getSearchFields(body, mailbox, name)
+> List&lt;EnvelopeSearchField&gt; getSearchFields(name, mailbox, searchEnvelopesDTO)
 
 Get search fields
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-SearchEnvelopesDTO body = new SearchEnvelopesDTO(); // SearchEnvelopesDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-String name = "name_example"; // String | Field name term
-try {
-    List<EnvelopeSearchField> result = apiInstance.getSearchFields(body, mailbox, name);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#getSearchFields");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    String name = "name_example"; // String | Field name term
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    SearchEnvelopesDTO searchEnvelopesDTO = new SearchEnvelopesDTO(); // SearchEnvelopesDTO | 
+    try {
+      List<EnvelopeSearchField> result = apiInstance.getSearchFields(name, mailbox, searchEnvelopesDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#getSearchFields");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**SearchEnvelopesDTO**](SearchEnvelopesDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **name** | **String**| Field name term |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**| Field name term | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **searchEnvelopesDTO** | [**SearchEnvelopesDTO**](SearchEnvelopesDTO.md)|  | |
 
 ### Return type
 
@@ -265,42 +346,59 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getTemplateRoles"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getTemplateRoles"></a>
 # **getTemplateRoles**
-> TemplateRolesDTO getTemplateRoles(body, mailbox)
+> TemplateRolesDTO getTemplateRoles(mailbox, UUID)
 
 Retrieve all template roles
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-List<UUID> body = Arrays.asList(new UUID()); // List<UUID> | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    TemplateRolesDTO result = apiInstance.getTemplateRoles(body, mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#getTemplateRoles");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    try {
+      TemplateRolesDTO result = apiInstance.getTemplateRoles(mailbox, UUID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#getTemplateRoles");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**List&lt;UUID&gt;**](UUID.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **UUID** | [**Set&lt;UUID&gt;**](UUID.md)|  | |
 
 ### Return type
 
@@ -315,7 +413,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="resetColumnSettings"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="resetColumnSettings"></a>
 # **resetColumnSettings**
 > List&lt;EnvelopeViewColumn&gt; resetColumnSettings(mailbox)
 
@@ -324,31 +427,43 @@ Reset column settings
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-try {
-    List<EnvelopeViewColumn> result = apiInstance.resetColumnSettings(mailbox);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#resetColumnSettings");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      List<EnvelopeViewColumn> result = apiInstance.resetColumnSettings(mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#resetColumnSettings");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -363,48 +478,65 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="searchEnvelopes"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="searchEnvelopes"></a>
 # **searchEnvelopes**
-> EnvelopePageDTO searchEnvelopes(body, mailbox, offset, limit, uuidOnly)
+> EnvelopePageDTO searchEnvelopes(mailbox, searchEnvelopesDTO, offset, limit, uuidOnly)
 
 Search envelopes
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-SearchEnvelopesDTO body = new SearchEnvelopesDTO(); // SearchEnvelopesDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-Integer offset = 0; // Integer | Offset, how many envelopes to skip
-Integer limit = 25; // Integer | Limit, how many envelopes to retrieve
-Boolean uuidOnly = true; // Boolean | Retrieve only UUID of envelope
-try {
-    EnvelopePageDTO result = apiInstance.searchEnvelopes(body, mailbox, offset, limit, uuidOnly);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#searchEnvelopes");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    SearchEnvelopesDTO searchEnvelopesDTO = new SearchEnvelopesDTO(); // SearchEnvelopesDTO | 
+    Integer offset = 0; // Integer | Offset, how many envelopes to skip
+    Integer limit = 25; // Integer | Limit, how many envelopes to retrieve
+    Boolean uuidOnly = true; // Boolean | Retrieve only UUID of envelope
+    try {
+      EnvelopePageDTO result = apiInstance.searchEnvelopes(mailbox, searchEnvelopesDTO, offset, limit, uuidOnly);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#searchEnvelopes");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**SearchEnvelopesDTO**](SearchEnvelopesDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **offset** | **Integer**| Offset, how many envelopes to skip | [optional] [default to 0]
- **limit** | **Integer**| Limit, how many envelopes to retrieve | [optional] [default to 25]
- **uuidOnly** | **Boolean**| Retrieve only UUID of envelope | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **searchEnvelopesDTO** | [**SearchEnvelopesDTO**](SearchEnvelopesDTO.md)|  | |
+| **offset** | **Integer**| Offset, how many envelopes to skip | [optional] [default to 0] |
+| **limit** | **Integer**| Limit, how many envelopes to retrieve | [optional] [default to 25] |
+| **uuidOnly** | **Boolean**| Retrieve only UUID of envelope | [optional] |
 
 ### Return type
 
@@ -419,48 +551,65 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="searchEnvelopesForApproval"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="searchEnvelopesForApproval"></a>
 # **searchEnvelopesForApproval**
-> EnvelopeApprovalPageDTO searchEnvelopesForApproval(body, mailbox, offset, limit, uuidOnly)
+> EnvelopeApprovalPageDTO searchEnvelopesForApproval(mailbox, searchApprovalsDTO, offset, limit, uuidOnly)
 
 Search envelopes for approval
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-SearchApprovalsDTO body = new SearchApprovalsDTO(); // SearchApprovalsDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-Integer offset = 0; // Integer | Offset, how many envelopes to skip
-Integer limit = 25; // Integer | Limit, how many envelopes to retrieve
-Boolean uuidOnly = true; // Boolean | Retrieve only UUID of envelope
-try {
-    EnvelopeApprovalPageDTO result = apiInstance.searchEnvelopesForApproval(body, mailbox, offset, limit, uuidOnly);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#searchEnvelopesForApproval");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    SearchApprovalsDTO searchApprovalsDTO = new SearchApprovalsDTO(); // SearchApprovalsDTO | 
+    Integer offset = 0; // Integer | Offset, how many envelopes to skip
+    Integer limit = 25; // Integer | Limit, how many envelopes to retrieve
+    Boolean uuidOnly = true; // Boolean | Retrieve only UUID of envelope
+    try {
+      EnvelopeApprovalPageDTO result = apiInstance.searchEnvelopesForApproval(mailbox, searchApprovalsDTO, offset, limit, uuidOnly);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#searchEnvelopesForApproval");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**SearchApprovalsDTO**](SearchApprovalsDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **offset** | **Integer**| Offset, how many envelopes to skip | [optional] [default to 0]
- **limit** | **Integer**| Limit, how many envelopes to retrieve | [optional] [default to 25]
- **uuidOnly** | **Boolean**| Retrieve only UUID of envelope | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **searchApprovalsDTO** | [**SearchApprovalsDTO**](SearchApprovalsDTO.md)|  | |
+| **offset** | **Integer**| Offset, how many envelopes to skip | [optional] [default to 0] |
+| **limit** | **Integer**| Limit, how many envelopes to retrieve | [optional] [default to 25] |
+| **uuidOnly** | **Boolean**| Retrieve only UUID of envelope | [optional] |
 
 ### Return type
 
@@ -475,43 +624,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="updateColumn"></a>
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateColumn"></a>
 # **updateColumn**
-> updateColumn(body, mailbox, uuid)
+> updateColumn(uuid, mailbox, updateEnvColumnDTO)
 
 Update column to display
 
 ### Example
 ```java
 // Import classes:
-//import com.docstudio.client.ApiClient;
-//import com.docstudio.client.ApiException;
-//import com.docstudio.client.Configuration;
-//import com.docstudio.client.auth.*;
-//import com.docstudio.client.api.EnvelopeSearchControllerApi;
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeSearchControllerApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
 
-
-EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi();
-UpdateEnvColumnDTO body = new UpdateEnvColumnDTO(); // UpdateEnvColumnDTO | 
-UUID mailbox = new UUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-UUID uuid = new UUID(); // UUID | 
-try {
-    apiInstance.updateColumn(body, mailbox, uuid);
-} catch (ApiException e) {
-    System.err.println("Exception when calling EnvelopeSearchControllerApi#updateColumn");
-    e.printStackTrace();
+    EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
+    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UpdateEnvColumnDTO updateEnvColumnDTO = new UpdateEnvColumnDTO(); // UpdateEnvColumnDTO | 
+    try {
+      apiInstance.updateColumn(uuid, mailbox, updateEnvColumnDTO);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#updateColumn");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
 }
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**UpdateEnvColumnDTO**](UpdateEnvColumnDTO.md)|  |
- **mailbox** | [**UUID**](.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **uuid** | [**UUID**](.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uuid** | **UUID**|  | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **updateEnvColumnDTO** | [**UpdateEnvColumnDTO**](UpdateEnvColumnDTO.md)|  | |
 
 ### Return type
 
@@ -525,4 +691,9 @@ null (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 

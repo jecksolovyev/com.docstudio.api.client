@@ -1,8 +1,16 @@
+
+
 # AccountSsoIdProviderShortDTO
 
+SSO Identity Provider for domain
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**uuid** | [**UUID**](UUID.md) |  |  [optional]
-**name** | **String** |  |  [optional]
-**entityID** | **String** |  |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**uuid** | **UUID** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**entityID** | **String** |  |  [optional] |
+
+
+

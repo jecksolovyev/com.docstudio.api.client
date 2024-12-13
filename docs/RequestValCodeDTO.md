@@ -1,6 +1,13 @@
+
+
 # RequestValCodeDTO
 
+
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**email** | **String** | User&#x27;s email |  [optional]
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**email** | **String** | User&#39;s email |  [optional] |
+
+
+
