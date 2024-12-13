@@ -18,6 +18,21 @@ Building the API client library requires:
 ```shell
 mvn clean package
 ```
+
+## Deploying
+
+1. Update version in README and in the POM file (see https://api.docstudio.com)
+2. Generate files using command
+```shell
+./genarate.sh
+```
+3. Create git tag with current version
+4. Commit and Push changes with a new tag
+5. Deploy to GIT
+```shell
+mvn deploy
+```
+
 ## Usage with maven
 
 Option 1
