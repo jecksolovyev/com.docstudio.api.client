@@ -5,7 +5,7 @@
   <artifactId>docstudio-api-client</artifactId>
   <packaging>jar</packaging>
   <name>docstudio-api-client</name>
-  <version>R120.10</version>
+  <version>R120.11</version>
   <url>https://api.docstudio.com/</url>
   <description>DocStudio API Client</description>
   <prerequisites>
@@ -24,7 +24,7 @@
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client</url>
+        <url>https://maven.pkg.github.com/jecksolovyev/com.docstudio.api.client</url>
     </repository>
   </distributionManagement>
 
@@ -333,36 +333,14 @@
       <version>${junit-platform-runner.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>jakarta.annotation</groupId>
-      <artifactId>jakarta.annotation-api</artifactId>
-      <version>3.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.threeten</groupId>
-      <artifactId>threetenbp</artifactId>
-      <version>${threetenbp-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.squareup.okhttp</groupId>
-      <artifactId>okhttp</artifactId>
-      <version>${okhttp-version2}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.squareup.okhttp</groupId>
-      <artifactId>logging-interceptor</artifactId>
-      <version>${okhttp-version2}</version>
-    </dependency>
   </dependencies>
   <properties>
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <gson-fire-version>1.9.0</gson-fire-version>
-    <okhttp-version>4.11.0</okhttp-version>
+    <okhttp-version>4.12.0</okhttp-version>
     <gson-version>2.10.1</gson-version>
-    <okhttp-version2>2.7.5</okhttp-version2>
-    <threetenbp-version>1.3.5</threetenbp-version>
     <commons-lang3-version>3.14.0</commons-lang3-version>
     <jackson-databind-nullable-version>0.2.6</jackson-databind-nullable-version>
     <jakarta-annotation-version>1.3.5</jakarta-annotation-version>
