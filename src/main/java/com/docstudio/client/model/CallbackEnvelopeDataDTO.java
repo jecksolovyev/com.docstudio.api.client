@@ -22,30 +22,37 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.*;
 
 /**
- * ExportTaskStatusDTO
+ * This DTO is sent as a callback payload.
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-18T17:18:48.308949400+02:00[Europe/Kiev]", comments = "Generator version: 7.10.0")
-public class ExportTaskStatusDTO {
+public class CallbackEnvelopeDataDTO {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
   @javax.annotation.Nonnull
   private UUID uuid;
 
   /**
-   * Task status
+   * Status of the envelope
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    PENDING("PENDING"),
+    DRAFT("DRAFT"),
 
-    STARTED("STARTED"),
+    SENT("SENT"),
+
+    WAITING("WAITING"),
 
     COMPLETED("COMPLETED"),
 
-    CLEANED("CLEANED");
+    CANCELLED("CANCELLED"),
+
+    EXPIRED("EXPIRED"),
+
+    ON_APPROVAL("ON_APPROVAL");
 
     private String value;
 
@@ -95,21 +102,51 @@ public class ExportTaskStatusDTO {
   @javax.annotation.Nonnull
   private StatusEnum status;
 
-  public static final String SERIALIZED_NAME_FILE_URL = "fileUrl";
-  @SerializedName(SERIALIZED_NAME_FILE_URL)
-  @javax.annotation.Nullable
-  private String fileUrl;
+  public static final String SERIALIZED_NAME_SUBJECT = "subject";
+  @SerializedName(SERIALIZED_NAME_SUBJECT)
+  @javax.annotation.Nonnull
+  private String subject;
 
-  public ExportTaskStatusDTO() {
+  public static final String SERIALIZED_NAME_LABEL = "label";
+  @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
+  private Set<UUID> label = new LinkedHashSet<>();
+
+  public static final String SERIALIZED_NAME_RECEIVE_DATE = "receiveDate";
+  @SerializedName(SERIALIZED_NAME_RECEIVE_DATE)
+  @javax.annotation.Nonnull
+  private OffsetDateTime receiveDate;
+
+  public static final String SERIALIZED_NAME_EXPIRE_DATE = "expireDate";
+  @SerializedName(SERIALIZED_NAME_EXPIRE_DATE)
+  @javax.annotation.Nullable
+  private OffsetDateTime expireDate;
+
+  public static final String SERIALIZED_NAME_TEMPLATE = "template";
+  @SerializedName(SERIALIZED_NAME_TEMPLATE)
+  @javax.annotation.Nonnull
+  private UUID template;
+
+  public static final String SERIALIZED_NAME_SENDER = "sender";
+  @SerializedName(SERIALIZED_NAME_SENDER)
+  @javax.annotation.Nonnull
+  private UUID sender;
+
+  public static final String SERIALIZED_NAME_MAILBOX = "mailbox";
+  @SerializedName(SERIALIZED_NAME_MAILBOX)
+  @javax.annotation.Nonnull
+  private UUID mailbox;
+
+  public CallbackEnvelopeDataDTO() {
   }
 
-  public ExportTaskStatusDTO uuid(@javax.annotation.Nonnull UUID uuid) {
+  public CallbackEnvelopeDataDTO uuid(@javax.annotation.Nonnull UUID uuid) {
     this.uuid = uuid;
     return this;
   }
 
   /**
-   * Task uuid
+   * UUID of the envelope
    * @return uuid
    */
   @javax.annotation.Nonnull
@@ -122,13 +159,13 @@ public class ExportTaskStatusDTO {
   }
 
 
-  public ExportTaskStatusDTO status(@javax.annotation.Nonnull StatusEnum status) {
+  public CallbackEnvelopeDataDTO status(@javax.annotation.Nonnull StatusEnum status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Task status
+   * Status of the envelope
    * @return status
    */
   @javax.annotation.Nonnull
@@ -141,22 +178,144 @@ public class ExportTaskStatusDTO {
   }
 
 
-  public ExportTaskStatusDTO fileUrl(@javax.annotation.Nullable String fileUrl) {
-    this.fileUrl = fileUrl;
+  public CallbackEnvelopeDataDTO subject(@javax.annotation.Nonnull String subject) {
+    this.subject = subject;
     return this;
   }
 
   /**
-   * Exported dictionary url
-   * @return fileUrl
+   * Subject of the envelope
+   * @return subject
    */
-  @javax.annotation.Nullable
-  public String getFileUrl() {
-    return fileUrl;
+  @javax.annotation.Nonnull
+  public String getSubject() {
+    return subject;
   }
 
-  public void setFileUrl(@javax.annotation.Nullable String fileUrl) {
-    this.fileUrl = fileUrl;
+  public void setSubject(@javax.annotation.Nonnull String subject) {
+    this.subject = subject;
+  }
+
+
+  public CallbackEnvelopeDataDTO label(@javax.annotation.Nullable Set<UUID> label) {
+    this.label = label;
+    return this;
+  }
+
+  public CallbackEnvelopeDataDTO addLabelItem(UUID labelItem) {
+    if (this.label == null) {
+      this.label = new LinkedHashSet<>();
+    }
+    this.label.add(labelItem);
+    return this;
+  }
+
+  /**
+   * Get label
+   * @return label
+   */
+  @javax.annotation.Nullable
+  public Set<UUID> getLabel() {
+    return label;
+  }
+
+  public void setLabel(@javax.annotation.Nullable Set<UUID> label) {
+    this.label = label;
+  }
+
+
+  public CallbackEnvelopeDataDTO receiveDate(@javax.annotation.Nonnull OffsetDateTime receiveDate) {
+    this.receiveDate = receiveDate;
+    return this;
+  }
+
+  /**
+   * The date of the envelope was received
+   * @return receiveDate
+   */
+  @javax.annotation.Nonnull
+  public OffsetDateTime getReceiveDate() {
+    return receiveDate;
+  }
+
+  public void setReceiveDate(@javax.annotation.Nonnull OffsetDateTime receiveDate) {
+    this.receiveDate = receiveDate;
+  }
+
+
+  public CallbackEnvelopeDataDTO expireDate(@javax.annotation.Nullable OffsetDateTime expireDate) {
+    this.expireDate = expireDate;
+    return this;
+  }
+
+  /**
+   * The date of the envelope expiration
+   * @return expireDate
+   */
+  @javax.annotation.Nullable
+  public OffsetDateTime getExpireDate() {
+    return expireDate;
+  }
+
+  public void setExpireDate(@javax.annotation.Nullable OffsetDateTime expireDate) {
+    this.expireDate = expireDate;
+  }
+
+
+  public CallbackEnvelopeDataDTO template(@javax.annotation.Nonnull UUID template) {
+    this.template = template;
+    return this;
+  }
+
+  /**
+   * Template of the envelope
+   * @return template
+   */
+  @javax.annotation.Nonnull
+  public UUID getTemplate() {
+    return template;
+  }
+
+  public void setTemplate(@javax.annotation.Nonnull UUID template) {
+    this.template = template;
+  }
+
+
+  public CallbackEnvelopeDataDTO sender(@javax.annotation.Nonnull UUID sender) {
+    this.sender = sender;
+    return this;
+  }
+
+  /**
+   * Sender of the envelope
+   * @return sender
+   */
+  @javax.annotation.Nonnull
+  public UUID getSender() {
+    return sender;
+  }
+
+  public void setSender(@javax.annotation.Nonnull UUID sender) {
+    this.sender = sender;
+  }
+
+
+  public CallbackEnvelopeDataDTO mailbox(@javax.annotation.Nonnull UUID mailbox) {
+    this.mailbox = mailbox;
+    return this;
+  }
+
+  /**
+   * Mailbox of the envelope
+   * @return mailbox
+   */
+  @javax.annotation.Nonnull
+  public UUID getMailbox() {
+    return mailbox;
+  }
+
+  public void setMailbox(@javax.annotation.Nonnull UUID mailbox) {
+    this.mailbox = mailbox;
   }
 
   /**
@@ -172,9 +331,9 @@ public class ExportTaskStatusDTO {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ExportTaskStatusDTO instance itself
+   * @return the CallbackEnvelopeDataDTO instance itself
    */
-  public ExportTaskStatusDTO putAdditionalProperty(String key, Object value) {
+  public CallbackEnvelopeDataDTO putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -213,25 +372,37 @@ public class ExportTaskStatusDTO {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ExportTaskStatusDTO exportTaskStatusDTO = (ExportTaskStatusDTO) o;
-    return Objects.equals(this.uuid, exportTaskStatusDTO.uuid) &&
-        Objects.equals(this.status, exportTaskStatusDTO.status) &&
-        Objects.equals(this.fileUrl, exportTaskStatusDTO.fileUrl)&&
-        Objects.equals(this.additionalProperties, exportTaskStatusDTO.additionalProperties);
+    CallbackEnvelopeDataDTO callbackEnvelopeDataDTO = (CallbackEnvelopeDataDTO) o;
+    return Objects.equals(this.uuid, callbackEnvelopeDataDTO.uuid) &&
+        Objects.equals(this.status, callbackEnvelopeDataDTO.status) &&
+        Objects.equals(this.subject, callbackEnvelopeDataDTO.subject) &&
+        Objects.equals(this.label, callbackEnvelopeDataDTO.label) &&
+        Objects.equals(this.receiveDate, callbackEnvelopeDataDTO.receiveDate) &&
+        Objects.equals(this.expireDate, callbackEnvelopeDataDTO.expireDate) &&
+        Objects.equals(this.template, callbackEnvelopeDataDTO.template) &&
+        Objects.equals(this.sender, callbackEnvelopeDataDTO.sender) &&
+        Objects.equals(this.mailbox, callbackEnvelopeDataDTO.mailbox)&&
+        Objects.equals(this.additionalProperties, callbackEnvelopeDataDTO.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uuid, status, fileUrl, additionalProperties);
+    return Objects.hash(uuid, status, subject, label, receiveDate, expireDate, template, sender, mailbox, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ExportTaskStatusDTO {\n");
+    sb.append("class CallbackEnvelopeDataDTO {\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    fileUrl: ").append(toIndentedString(fileUrl)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    receiveDate: ").append(toIndentedString(receiveDate)).append("\n");
+    sb.append("    expireDate: ").append(toIndentedString(expireDate)).append("\n");
+    sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
+    sb.append("    mailbox: ").append(toIndentedString(mailbox)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -257,29 +428,40 @@ public class ExportTaskStatusDTO {
     openapiFields = new HashSet<String>();
     openapiFields.add("uuid");
     openapiFields.add("status");
-    openapiFields.add("fileUrl");
+    openapiFields.add("subject");
+    openapiFields.add("label");
+    openapiFields.add("receiveDate");
+    openapiFields.add("expireDate");
+    openapiFields.add("template");
+    openapiFields.add("sender");
+    openapiFields.add("mailbox");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("uuid");
     openapiRequiredFields.add("status");
+    openapiRequiredFields.add("subject");
+    openapiRequiredFields.add("receiveDate");
+    openapiRequiredFields.add("template");
+    openapiRequiredFields.add("sender");
+    openapiRequiredFields.add("mailbox");
   }
 
   /**
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ExportTaskStatusDTO
+   * @throws IOException if the JSON Element is invalid with respect to CallbackEnvelopeDataDTO
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ExportTaskStatusDTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ExportTaskStatusDTO is not found in the empty JSON string", ExportTaskStatusDTO.openapiRequiredFields.toString()));
+        if (!CallbackEnvelopeDataDTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CallbackEnvelopeDataDTO is not found in the empty JSON string", CallbackEnvelopeDataDTO.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ExportTaskStatusDTO.openapiRequiredFields) {
+      for (String requiredField : CallbackEnvelopeDataDTO.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
@@ -293,8 +475,21 @@ public class ExportTaskStatusDTO {
       }
       // validate the required field `status`
       StatusEnum.validateJsonElement(jsonObj.get("status"));
-      if ((jsonObj.get("fileUrl") != null && !jsonObj.get("fileUrl").isJsonNull()) && !jsonObj.get("fileUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fileUrl").toString()));
+      if (!jsonObj.get("subject").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `subject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subject").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull() && !jsonObj.get("label").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `label` to be an array in the JSON string but got `%s`", jsonObj.get("label").toString()));
+      }
+      if (!jsonObj.get("template").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `template` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template").toString()));
+      }
+      if (!jsonObj.get("sender").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sender").toString()));
+      }
+      if (!jsonObj.get("mailbox").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `mailbox` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mailbox").toString()));
       }
   }
 
@@ -302,16 +497,16 @@ public class ExportTaskStatusDTO {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ExportTaskStatusDTO.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ExportTaskStatusDTO' and its subtypes
+       if (!CallbackEnvelopeDataDTO.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CallbackEnvelopeDataDTO' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ExportTaskStatusDTO> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ExportTaskStatusDTO.class));
+       final TypeAdapter<CallbackEnvelopeDataDTO> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CallbackEnvelopeDataDTO.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ExportTaskStatusDTO>() {
+       return (TypeAdapter<T>) new TypeAdapter<CallbackEnvelopeDataDTO>() {
            @Override
-           public void write(JsonWriter out, ExportTaskStatusDTO value) throws IOException {
+           public void write(JsonWriter out, CallbackEnvelopeDataDTO value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -339,12 +534,12 @@ public class ExportTaskStatusDTO {
            }
 
            @Override
-           public ExportTaskStatusDTO read(JsonReader in) throws IOException {
+           public CallbackEnvelopeDataDTO read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             ExportTaskStatusDTO instance = thisAdapter.fromJsonTree(jsonObj);
+             CallbackEnvelopeDataDTO instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -371,18 +566,18 @@ public class ExportTaskStatusDTO {
   }
 
   /**
-   * Create an instance of ExportTaskStatusDTO given an JSON string
+   * Create an instance of CallbackEnvelopeDataDTO given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ExportTaskStatusDTO
-   * @throws IOException if the JSON string is invalid with respect to ExportTaskStatusDTO
+   * @return An instance of CallbackEnvelopeDataDTO
+   * @throws IOException if the JSON string is invalid with respect to CallbackEnvelopeDataDTO
    */
-  public static ExportTaskStatusDTO fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ExportTaskStatusDTO.class);
+  public static CallbackEnvelopeDataDTO fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CallbackEnvelopeDataDTO.class);
   }
 
   /**
-   * Convert an instance of ExportTaskStatusDTO to an JSON string
+   * Convert an instance of CallbackEnvelopeDataDTO to an JSON string
    *
    * @return JSON string
    */

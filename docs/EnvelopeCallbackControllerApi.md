@@ -150,7 +150,7 @@ public class Example {
 
 <a id="getCallbackRequestPayload"></a>
 # **getCallbackRequestPayload**
-> CommonExceptionDTO getCallbackRequestPayload()
+> CallbackEnvelopeDataDTO getCallbackRequestPayload()
 
 Check CallbackEnvelopeDataDTO as an example of callback payload
 
@@ -175,7 +175,7 @@ public class Example {
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     try {
-      CommonExceptionDTO result = apiInstance.getCallbackRequestPayload();
+      CallbackEnvelopeDataDTO result = apiInstance.getCallbackRequestPayload();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeCallbackControllerApi#getCallbackRequestPayload");
@@ -193,7 +193,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CommonExceptionDTO**](CommonExceptionDTO.md)
+[**CallbackEnvelopeDataDTO**](CallbackEnvelopeDataDTO.md)
 
 ### Authorization
 
@@ -207,7 +207,8 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **0** | default response |  -  |
+| **200** | OK |  -  |
+| **400** | Bad Request |  -  |
 
 <a id="listCallbacks"></a>
 # **listCallbacks**

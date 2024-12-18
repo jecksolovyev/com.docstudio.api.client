@@ -72,8 +72,8 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
 <a id="getUserTokens"></a>
 # **getUserTokens**
@@ -134,8 +134,8 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
 <a id="revokeToken"></a>
 # **revokeToken**
@@ -199,6 +199,6 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
