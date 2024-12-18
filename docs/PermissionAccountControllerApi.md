@@ -8,8 +8,8 @@ All URIs are relative to *https://api.docstudio.com*
 | [**deleteAccPermission**](PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#39;user-to-account&#39; relation |
 | [**deleteAccRole**](PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role |
 | [**getUserAccountPermissions**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions |
-| [**patchMbPermissionsPermissionAccount**](PermissionAccountControllerApi.md#patchMbPermissionsPermissionAccount) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
-| [**replaceAllPermissionsPermissionAccount**](PermissionAccountControllerApi.md#replaceAllPermissionsPermissionAccount) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
+| [**patchMbPermissions1**](PermissionAccountControllerApi.md#patchMbPermissions1) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
+| [**replaceAllPermissions1**](PermissionAccountControllerApi.md#replaceAllPermissions1) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
 | [**setUserAccountPermissions**](PermissionAccountControllerApi.md#setUserAccountPermissions) | **POST** /api/v1/permission/{userUuid}/account/{accountUuid} | Write user permissions |
 
 
@@ -282,9 +282,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="patchMbPermissionsPermissionAccount"></a>
-# **patchMbPermissionsPermissionAccount**
-> patchMbPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO)
+<a id="patchMbPermissions1"></a>
+# **patchMbPermissions1**
+> patchMbPermissions1(userUuid, accountUuid, permissionsDTO)
 
 Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
 
@@ -312,9 +312,9 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.patchMbPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO);
+      apiInstance.patchMbPermissions1(userUuid, accountUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#patchMbPermissionsPermissionAccount");
+      System.err.println("Exception when calling PermissionAccountControllerApi#patchMbPermissions1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -350,9 +350,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="replaceAllPermissionsPermissionAccount"></a>
-# **replaceAllPermissionsPermissionAccount**
-> replaceAllPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO)
+<a id="replaceAllPermissions1"></a>
+# **replaceAllPermissions1**
+> replaceAllPermissions1(userUuid, accountUuid, permissionsDTO)
 
 Replace all permissions for selected user-to-account relation
 
@@ -380,9 +380,9 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.replaceAllPermissionsPermissionAccount(userUuid, accountUuid, permissionsDTO);
+      apiInstance.replaceAllPermissions1(userUuid, accountUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllPermissionsPermissionAccount");
+      System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllPermissions1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

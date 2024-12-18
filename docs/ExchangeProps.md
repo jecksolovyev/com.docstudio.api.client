@@ -9,13 +9,13 @@ Available exchange protocols
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**enabled** | **Boolean** |  |  [optional] |
-|**host** | **String** |  |  [optional] |
-|**port** | **String** |  |  [optional] |
-|**url** | **String** |  |  [optional] |
-|**dbnaAccount** | **UUID** |  |  [optional] |
-|**ftpPassword** | **String** |  |  [optional] |
-|**encryptionAlgorithms** | **List&lt;String&gt;** |  |  [optional] |
-|**signingAlgorithms** | **List&lt;String&gt;** |  |  [optional] |
+|**host** | **String** |  |  |
+|**port** | **String** |  |  |
+|**url** | **String** |  |  |
+|**dbnaAccount** | **UUID** |  |  |
+|**ftpPassword** | **String** |  |  |
+|**encryptionAlgorithms** | **List&lt;String&gt;** |  |  |
+|**signingAlgorithms** | **List&lt;String&gt;** |  |  |
 
 
 

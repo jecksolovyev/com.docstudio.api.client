@@ -8,7 +8,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**archiveTemplate**](TemplateControllerApi.md#archiveTemplate) | **PATCH** /api/v1/template/{uuid}/archive | Make template archived |
 | [**checkTemplateExistsByUuid**](TemplateControllerApi.md#checkTemplateExistsByUuid) | **HEAD** /api/v1/template/{uuid} | Check template exists by UUID |
 | [**clone**](TemplateControllerApi.md#clone) | **POST** /api/v1/template/{uuid}/clone | Clone template |
-| [**create**](TemplateControllerApi.md#create) | **POST** /api/v1/template | Create new template |
+| [**create1**](TemplateControllerApi.md#create1) | **POST** /api/v1/template | Create new template |
 | [**deleteShareCode**](TemplateControllerApi.md#deleteShareCode) | **DELETE** /api/v1/template/{uuid}/share-code | Delete share code for template |
 | [**deleteZipStructure**](TemplateControllerApi.md#deleteZipStructure) | **DELETE** /api/v1/template/{uuid}/zip-structure/{title} | Delete structure for zip archive |
 | [**downloadTemplateImage**](TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image |
@@ -300,9 +300,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="create"></a>
-# **create**
-> FullTemplateResponseDTO create(mailbox, templateCreateDTO)
+<a id="create1"></a>
+# **create1**
+> FullTemplateResponseDTO create1(mailbox, templateCreateDTO)
 
 Create new template
 
@@ -329,10 +329,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     TemplateCreateDTO templateCreateDTO = new TemplateCreateDTO(); // TemplateCreateDTO | 
     try {
-      FullTemplateResponseDTO result = apiInstance.create(mailbox, templateCreateDTO);
+      FullTemplateResponseDTO result = apiInstance.create1(mailbox, templateCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TemplateControllerApi#create");
+      System.err.println("Exception when calling TemplateControllerApi#create1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -562,7 +562,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, */*
+ - **Accept**: */*, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -630,7 +630,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, */*
+ - **Accept**: */*, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

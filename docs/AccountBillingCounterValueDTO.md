@@ -10,6 +10,7 @@ Counters
 |------------ | ------------- | ------------- | -------------|
 |**counterName** | **String** | Name |  [optional] |
 |**counterValue** | **Long** | Value |  [optional] |
+|**headerName** | **String** | Counter header name |  [optional] |
 
 
 

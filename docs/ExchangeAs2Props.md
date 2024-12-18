@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**url** | **String** |  |  [optional] |
-|**encryptionAlgorithms** | **List&lt;String&gt;** |  |  [optional] |
-|**signingAlgorithms** | **List&lt;String&gt;** |  |  [optional] |
+|**url** | **String** |  |  |
+|**encryptionAlgorithms** | **List&lt;String&gt;** |  |  |
+|**signingAlgorithms** | **List&lt;String&gt;** |  |  |
 
 
 

@@ -6,7 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**addNewCryptoConfigs**](AccountControllerApi.md#addNewCryptoConfigs) | **PUT** /api/v1/account/{accountUuid}/crypto-configs | Add crypto configs |
 | [**blockUsers**](AccountControllerApi.md#blockUsers) | **PATCH** /api/v1/account/{accountUuid}/block-users/{flag} | Block/Unblock corporate users |
-| [**createAccount**](AccountControllerApi.md#createAccount) | **POST** /api/v1/account | Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es). |
+| [**create9**](AccountControllerApi.md#create9) | **POST** /api/v1/account | Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es). |
 | [**createCorporateUser**](AccountControllerApi.md#createCorporateUser) | **POST** /api/v1/account/{accountUuid}/user | Create corporate user |
 | [**createMassAccountUsers**](AccountControllerApi.md#createMassAccountUsers) | **POST** /api/v1/account/{accountUuid}/create-users | Mass create corporate users |
 | [**deleteAccount**](AccountControllerApi.md#deleteAccount) | **DELETE** /api/v1/account/{uuid} | Delete account |
@@ -15,7 +15,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getAccountBillingAddress**](AccountControllerApi.md#getAccountBillingAddress) | **GET** /api/v1/account/{accountUuid}/billing/address | Get account billing address |
 | [**getAccountBrandLogo**](AccountControllerApi.md#getAccountBrandLogo) | **GET** /api/v1/account/brand-logo/{accountUuid} | Retrieve account brand logo |
 | [**getAccountDetails**](AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{uuid} |  |
-| [**getAccountLogoAccount**](AccountControllerApi.md#getAccountLogoAccount) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo |
+| [**getAccountLogo1**](AccountControllerApi.md#getAccountLogo1) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo |
 | [**getAccountUsersImportFileExample**](AccountControllerApi.md#getAccountUsersImportFileExample) | **GET** /api/v1/account/{accountUuid}/users/example | Get account users import file example |
 | [**getCryptoConfigs**](AccountControllerApi.md#getCryptoConfigs) | **GET** /api/v1/account/{accountUuid}/crypto-configs | Get crypto configs |
 | [**getMailbox**](AccountControllerApi.md#getMailbox) | **GET** /api/v1/account/mailbox/{uuid} | Users and their permissions by mailbox |
@@ -24,7 +24,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**mailboxesReport**](AccountControllerApi.md#mailboxesReport) | **POST** /api/v1/account/{accountUuid}/mailbox/report | Generate account mailboxes report |
 | [**resendCorporateUserWelcomeMessage**](AccountControllerApi.md#resendCorporateUserWelcomeMessage) | **POST** /api/v1/account/{accountUuid}/user/{userUuid}/welcome | Resend corporate user welcome message |
 | [**saveUserPolicies**](AccountControllerApi.md#saveUserPolicies) | **POST** /api/v1/account/{accountUuid}/user-policies | Save user password/session policies |
-| [**searchMailboxesAccount**](AccountControllerApi.md#searchMailboxesAccount) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list |
+| [**searchMailboxes1**](AccountControllerApi.md#searchMailboxes1) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list |
 | [**updateAccountBillingAddress**](AccountControllerApi.md#updateAccountBillingAddress) | **POST** /api/v1/account/{accountUuid}/billing/address | Create/update account billing address |
 | [**updateAccountDetails**](AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{uuid} |  |
 | [**usersReport**](AccountControllerApi.md#usersReport) | **POST** /api/v1/account/{accountUuid}/users/report | Generate account users report |
@@ -164,9 +164,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="createAccount"></a>
-# **createAccount**
-> User2AccountWithMailboxesDTO createAccount(accountCreateDTO, code, codeType)
+<a id="create9"></a>
+# **create9**
+> User2AccountWithMailboxesDTO create9(accountCreateDTO, code, codeType)
 
 Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
 
@@ -194,10 +194,10 @@ public class Example {
     String code = "code_example"; // String | Invitation code from email
     String codeType = "envelopeInvite"; // String | Type of code
     try {
-      User2AccountWithMailboxesDTO result = apiInstance.createAccount(accountCreateDTO, code, codeType);
+      User2AccountWithMailboxesDTO result = apiInstance.create9(accountCreateDTO, code, codeType);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AccountControllerApi#createAccount");
+      System.err.println("Exception when calling AccountControllerApi#create9");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -766,9 +766,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getAccountLogoAccount"></a>
-# **getAccountLogoAccount**
-> File getAccountLogoAccount(accountUuid, initials)
+<a id="getAccountLogo1"></a>
+# **getAccountLogo1**
+> File getAccountLogo1(accountUuid, initials)
 
 Retrieve account logo
 
@@ -795,10 +795,10 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | 
     Boolean initials = true; // Boolean | Get default avatar
     try {
-      File result = apiInstance.getAccountLogoAccount(accountUuid, initials);
+      File result = apiInstance.getAccountLogo1(accountUuid, initials);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AccountControllerApi#getAccountLogoAccount");
+      System.err.println("Exception when calling AccountControllerApi#getAccountLogo1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1364,9 +1364,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="searchMailboxesAccount"></a>
-# **searchMailboxesAccount**
-> PageDTOAccountMailboxInfoDTO searchMailboxesAccount(accountUuid, keyword, withGroups, group, offset, limit)
+<a id="searchMailboxes1"></a>
+# **searchMailboxes1**
+> PageDTOAccountMailboxInfoDTO searchMailboxes1(accountUuid, keyword, withGroups, group, offset, limit)
 
 Get paged account mailboxes list
 
@@ -1397,10 +1397,10 @@ public class Example {
     Integer offset = 0; // Integer | Offset records
     Integer limit = 25; // Integer | Limit records, max is 1000
     try {
-      PageDTOAccountMailboxInfoDTO result = apiInstance.searchMailboxesAccount(accountUuid, keyword, withGroups, group, offset, limit);
+      PageDTOAccountMailboxInfoDTO result = apiInstance.searchMailboxes1(accountUuid, keyword, withGroups, group, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AccountControllerApi#searchMailboxesAccount");
+      System.err.println("Exception when calling AccountControllerApi#searchMailboxes1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

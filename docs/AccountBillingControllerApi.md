@@ -7,6 +7,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**checkEventAbility**](AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} |  |
 | [**downloadInvoice**](AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf |  |
 | [**getAccount**](AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing |  |
+| [**getAccountBillingStateHeader**](AccountBillingControllerApi.md#getAccountBillingStateHeader) | **GET** /api/v1/account/{accountUuid}/billing-state |  |
 | [**getCurrencyRates**](AccountBillingControllerApi.md#getCurrencyRates) | **GET** /api/v1/account/currency-rates |  |
 | [**getInvoiceStatus**](AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} |  |
 | [**getInvoices**](AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice |  |
@@ -206,6 +207,71 @@ public class Example {
 ### Return type
 
 [**AccountBillingInfoDTO**](AccountBillingInfoDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getAccountBillingStateHeader"></a>
+# **getAccountBillingStateHeader**
+> BillingHeaderState getAccountBillingStateHeader(accountUuid)
+
+
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
+
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | 
+    try {
+      BillingHeaderState result = apiInstance.getAccountBillingStateHeader(accountUuid);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getAccountBillingStateHeader");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**|  | |
+
+### Return type
+
+[**BillingHeaderState**](BillingHeaderState.md)
 
 ### Authorization
 

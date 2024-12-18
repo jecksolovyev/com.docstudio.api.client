@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**host** | **String** |  |  [optional] |
-|**port** | **String** |  |  [optional] |
+|**host** | **String** |  |  |
+|**port** | **String** |  |  |
 
 
 

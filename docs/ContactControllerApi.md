@@ -4,15 +4,15 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createContact**](ContactControllerApi.md#createContact) | **POST** /api/v1/contact | Save a contact in DB |
-| [**deleteContact**](ContactControllerApi.md#deleteContact) | **DELETE** /api/v1/contact/{uuid} | Delete contact by Id |
+| [**create5**](ContactControllerApi.md#create5) | **POST** /api/v1/contact | Save a contact in DB |
+| [**delete3**](ContactControllerApi.md#delete3) | **DELETE** /api/v1/contact/{uuid} | Delete contact by Id |
 | [**searchOrList**](ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#39;access&#39; type and name |
-| [**updateContact**](ContactControllerApi.md#updateContact) | **PUT** /api/v1/contact/{uuid} | Update the contact in DB |
+| [**update5**](ContactControllerApi.md#update5) | **PUT** /api/v1/contact/{uuid} | Update the contact in DB |
 
 
-<a id="createContact"></a>
-# **createContact**
-> ContactResponseDTO createContact(mailbox, contactDTO)
+<a id="create5"></a>
+# **create5**
+> ContactResponseDTO create5(mailbox, contactDTO)
 
 Save a contact in DB
 
@@ -39,10 +39,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     ContactDTO contactDTO = new ContactDTO(); // ContactDTO | 
     try {
-      ContactResponseDTO result = apiInstance.createContact(mailbox, contactDTO);
+      ContactResponseDTO result = apiInstance.create5(mailbox, contactDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ContactControllerApi#createContact");
+      System.err.println("Exception when calling ContactControllerApi#create5");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -77,9 +77,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="deleteContact"></a>
-# **deleteContact**
-> deleteContact(uuid, mailbox)
+<a id="delete3"></a>
+# **delete3**
+> delete3(uuid, mailbox)
 
 Delete contact by Id
 
@@ -106,9 +106,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | Contact UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.deleteContact(uuid, mailbox);
+      apiInstance.delete3(uuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ContactControllerApi#deleteContact");
+      System.err.println("Exception when calling ContactControllerApi#delete3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -214,9 +214,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateContact"></a>
-# **updateContact**
-> ContactResponseDTO updateContact(uuid, mailbox, contactDTO)
+<a id="update5"></a>
+# **update5**
+> ContactResponseDTO update5(uuid, mailbox, contactDTO)
 
 Update the contact in DB
 
@@ -244,10 +244,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     ContactDTO contactDTO = new ContactDTO(); // ContactDTO | 
     try {
-      ContactResponseDTO result = apiInstance.updateContact(uuid, mailbox, contactDTO);
+      ContactResponseDTO result = apiInstance.update5(uuid, mailbox, contactDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ContactControllerApi#updateContact");
+      System.err.println("Exception when calling ContactControllerApi#update5");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

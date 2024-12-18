@@ -4,13 +4,13 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**archiveDictionary**](DictionaryControllerApi.md#archiveDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary |
+| [**archive1**](DictionaryControllerApi.md#archive1) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary |
 | [**checkColumnValues**](DictionaryControllerApi.md#checkColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc. |
 | [**checkDictionary**](DictionaryControllerApi.md#checkDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid}/check | Check dictionary. Check access, existence, etc. |
 | [**createColumn**](DictionaryControllerApi.md#createColumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column |
 | [**createDictionary**](DictionaryControllerApi.md#createDictionary) | **POST** /api/v1/dictionary | Create empty dictionary |
 | [**createRecord**](DictionaryControllerApi.md#createRecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s) |
-| [**deleteColumnDictionary**](DictionaryControllerApi.md#deleteColumnDictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
+| [**deleteColumn**](DictionaryControllerApi.md#deleteColumn) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
 | [**deleteRecords**](DictionaryControllerApi.md#deleteRecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s) |
 | [**download**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary |
 | [**downloadStatus**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary |
@@ -23,12 +23,12 @@ All URIs are relative to *https://api.docstudio.com*
 | [**patchRecord**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values |
 | [**readDictionary**](DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary |
 | [**searchDictionaries**](DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list |
-| [**updateColumnDictionary**](DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
+| [**updateColumn1**](DictionaryControllerApi.md#updateColumn1) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
 
 
-<a id="archiveDictionary"></a>
-# **archiveDictionary**
-> archiveDictionary(dictionaryUuid, mailbox)
+<a id="archive1"></a>
+# **archive1**
+> archive1(dictionaryUuid, mailbox)
 
 Archive dictionary
 
@@ -55,9 +55,9 @@ public class Example {
     UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.archiveDictionary(dictionaryUuid, mailbox);
+      apiInstance.archive1(dictionaryUuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DictionaryControllerApi#archiveDictionary");
+      System.err.println("Exception when calling DictionaryControllerApi#archive1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -431,9 +431,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="deleteColumnDictionary"></a>
-# **deleteColumnDictionary**
-> SingleUuidDTO deleteColumnDictionary(dictionaryUuid, columnUuid, mailbox)
+<a id="deleteColumn"></a>
+# **deleteColumn**
+> SingleUuidDTO deleteColumn(dictionaryUuid, columnUuid, mailbox)
 
 Delete column. Will return deleted column UUID
 
@@ -461,10 +461,10 @@ public class Example {
     UUID columnUuid = UUID.randomUUID(); // UUID | Column UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      SingleUuidDTO result = apiInstance.deleteColumnDictionary(dictionaryUuid, columnUuid, mailbox);
+      SingleUuidDTO result = apiInstance.deleteColumn(dictionaryUuid, columnUuid, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DictionaryControllerApi#deleteColumnDictionary");
+      System.err.println("Exception when calling DictionaryControllerApi#deleteColumn");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1334,9 +1334,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateColumnDictionary"></a>
-# **updateColumnDictionary**
-> DictionaryColumnResponseDTO updateColumnDictionary(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO)
+<a id="updateColumn1"></a>
+# **updateColumn1**
+> DictionaryColumnResponseDTO updateColumn1(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO)
 
 Update dictionary column
 
@@ -1365,10 +1365,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     DictionaryColumnRequestDTO dictionaryColumnRequestDTO = new DictionaryColumnRequestDTO(); // DictionaryColumnRequestDTO | 
     try {
-      DictionaryColumnResponseDTO result = apiInstance.updateColumnDictionary(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO);
+      DictionaryColumnResponseDTO result = apiInstance.updateColumn1(dictionaryUuid, columnUuid, mailbox, dictionaryColumnRequestDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DictionaryControllerApi#updateColumnDictionary");
+      System.err.println("Exception when calling DictionaryControllerApi#updateColumn1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

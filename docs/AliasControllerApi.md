@@ -4,15 +4,15 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createAlias**](AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox |
+| [**create8**](AliasControllerApi.md#create8) | **POST** /api/v1/alias | Save alias to mailbox |
 | [**deleteAlias**](AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias |
 | [**getAllByMailbox**](AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID |
-| [**getAllByMailboxAlias**](AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
+| [**getAllByMailbox1**](AliasControllerApi.md#getAllByMailbox1) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
 
 
-<a id="createAlias"></a>
-# **createAlias**
-> AliasDTO createAlias(mailbox, aliasDTO)
+<a id="create8"></a>
+# **create8**
+> AliasDTO create8(mailbox, aliasDTO)
 
 Save alias to mailbox
 
@@ -39,10 +39,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     AliasDTO aliasDTO = new AliasDTO(); // AliasDTO | 
     try {
-      AliasDTO result = apiInstance.createAlias(mailbox, aliasDTO);
+      AliasDTO result = apiInstance.create8(mailbox, aliasDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#createAlias");
+      System.err.println("Exception when calling AliasControllerApi#create8");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -208,9 +208,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getAllByMailboxAlias"></a>
-# **getAllByMailboxAlias**
-> List&lt;AliasDTO&gt; getAllByMailboxAlias(mailbox, qualified)
+<a id="getAllByMailbox1"></a>
+# **getAllByMailbox1**
+> List&lt;AliasDTO&gt; getAllByMailbox1(mailbox, qualified)
 
 Get aliases by mailbox
 
@@ -237,10 +237,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     Boolean qualified = true; // Boolean | 
     try {
-      List<AliasDTO> result = apiInstance.getAllByMailboxAlias(mailbox, qualified);
+      List<AliasDTO> result = apiInstance.getAllByMailbox1(mailbox, qualified);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AliasControllerApi#getAllByMailboxAlias");
+      System.err.println("Exception when calling AliasControllerApi#getAllByMailbox1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

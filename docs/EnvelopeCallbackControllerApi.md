@@ -6,6 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**checkCallback**](EnvelopeCallbackControllerApi.md#checkCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/check | Check callback with certain envelope |
 | [**createCallback**](EnvelopeCallbackControllerApi.md#createCallback) | **POST** /api/v1/envelope/callback/add | Add new callback |
+| [**getCallbackRequestPayload**](EnvelopeCallbackControllerApi.md#getCallbackRequestPayload) | **GET** /api/v1/envelope/callback/callbackRequestPayload | Check CallbackEnvelopeDataDTO as an example of callback payload |
 | [**listCallbacks**](EnvelopeCallbackControllerApi.md#listCallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks |
 | [**removeCallback**](EnvelopeCallbackControllerApi.md#removeCallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback |
 | [**sendCallback**](EnvelopeCallbackControllerApi.md#sendCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/send | Send callback with certain envelope |
@@ -146,6 +147,67 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
+
+<a id="getCallbackRequestPayload"></a>
+# **getCallbackRequestPayload**
+> CallbackEnvelopeDataDTO getCallbackRequestPayload()
+
+Check CallbackEnvelopeDataDTO as an example of callback payload
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeCallbackControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
+
+    EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
+    try {
+      CallbackEnvelopeDataDTO result = apiInstance.getCallbackRequestPayload();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeCallbackControllerApi#getCallbackRequestPayload");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CallbackEnvelopeDataDTO**](CallbackEnvelopeDataDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 <a id="listCallbacks"></a>
 # **listCallbacks**

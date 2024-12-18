@@ -6,7 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**addNewColumn**](EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display |
 | [**createReport**](EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report |
-| [**deleteColumn**](EnvelopeSearchControllerApi.md#deleteColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying |
+| [**deleteColumn1**](EnvelopeSearchControllerApi.md#deleteColumn1) | **DELETE** /api/v1/envelope/column | Delete columns from displaying |
 | [**getMailboxFolders**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox |
 | [**getSearchFields**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields |
 | [**getTemplateRoles**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles |
@@ -149,9 +149,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="deleteColumn"></a>
-# **deleteColumn**
-> deleteColumn(mailbox, deleteEnvColumnDTO)
+<a id="deleteColumn1"></a>
+# **deleteColumn1**
+> deleteColumn1(mailbox, deleteEnvColumnDTO)
 
 Delete columns from displaying
 
@@ -178,9 +178,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     DeleteEnvColumnDTO deleteEnvColumnDTO = new DeleteEnvColumnDTO(); // DeleteEnvColumnDTO | 
     try {
-      apiInstance.deleteColumn(mailbox, deleteEnvColumnDTO);
+      apiInstance.deleteColumn1(mailbox, deleteEnvColumnDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling EnvelopeSearchControllerApi#deleteColumn");
+      System.err.println("Exception when calling EnvelopeSearchControllerApi#deleteColumn1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -17,8 +17,8 @@ All URIs are relative to *https://api.docstudio.com*
 | [**cloneAttachment**](EnvelopeControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment |
 | [**confirmInvite**](EnvelopeControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations |
 | [**continueScenarioStep**](EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{envelopeUuid}/scenario/{stepId} | Continue scenario flow with step |
+| [**create**](EnvelopeControllerApi.md#create) | **POST** /api/v1/envelope | Create draft envelope |
 | [**createAttachment**](EnvelopeControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment |
-| [**createEnvelope**](EnvelopeControllerApi.md#createEnvelope) | **POST** /api/v1/envelope | Create draft envelope |
 | [**createEnvelopeComment**](EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/comment | Create envelope comment thread |
 | [**createPdfAttachment**](EnvelopeControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment |
 | [**delegateEnvelopes**](EnvelopeControllerApi.md#delegateEnvelopes) | **POST** /api/v1/envelope/delegate | Delegate envelopes |
@@ -60,7 +60,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**shareEnvelopesCopy**](EnvelopeControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies |
 | [**sign**](EnvelopeControllerApi.md#sign) | **PUT** /api/v1/envelope/{envelopeUuid}/sign | Sign envelope documents |
 | [**signSES**](EnvelopeControllerApi.md#signSES) | **POST** /api/v1/envelope/{envelopeUuid}/sign-ses | Sign envelope with SES |
-| [**updateEnvelope**](EnvelopeControllerApi.md#updateEnvelope) | **PUT** /api/v1/envelope | Update draft envelope |
+| [**update4**](EnvelopeControllerApi.md#update4) | **PUT** /api/v1/envelope | Update draft envelope |
 | [**updateEnvelopeComment**](EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{envelopeUuid}/comment | Add/Update envelope comment in thread |
 | [**updateEnvelopeCommentAccess**](EnvelopeControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{envelopeUuid}/comment-access | Update envelope comment thread access level |
 
@@ -928,6 +928,73 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
+<a id="create"></a>
+# **create**
+> SingleUuidDTO create(mailbox, envPostDTO)
+
+Create draft envelope
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    EnvPostDTO envPostDTO = new EnvPostDTO(); // EnvPostDTO | 
+    try {
+      SingleUuidDTO result = apiInstance.create(mailbox, envPostDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#create");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **envPostDTO** | [**EnvPostDTO**](EnvPostDTO.md)|  | |
+
+### Return type
+
+[**SingleUuidDTO**](SingleUuidDTO.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Created |  -  |
+
 <a id="createAttachment"></a>
 # **createAttachment**
 > UploadedAttachmentDTO createAttachment(_file, type, mailbox)
@@ -985,73 +1052,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Created |  -  |
-
-<a id="createEnvelope"></a>
-# **createEnvelope**
-> SingleUuidDTO createEnvelope(mailbox, envPostDTO)
-
-Create draft envelope
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.EnvelopeControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
-
-    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    EnvPostDTO envPostDTO = new EnvPostDTO(); // EnvPostDTO | 
-    try {
-      SingleUuidDTO result = apiInstance.createEnvelope(mailbox, envPostDTO);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling EnvelopeControllerApi#createEnvelope");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **envPostDTO** | [**EnvPostDTO**](EnvPostDTO.md)|  | |
-
-### Return type
-
-[**SingleUuidDTO**](SingleUuidDTO.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -1460,7 +1460,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, */*
+ - **Accept**: */*, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3809,9 +3809,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateEnvelope"></a>
-# **updateEnvelope**
-> updateEnvelope(mailbox, envPostDTO)
+<a id="update4"></a>
+# **update4**
+> update4(mailbox, envPostDTO)
 
 Update draft envelope
 
@@ -3838,9 +3838,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     EnvPostDTO envPostDTO = new EnvPostDTO(); // EnvPostDTO | 
     try {
-      apiInstance.updateEnvelope(mailbox, envPostDTO);
+      apiInstance.update4(mailbox, envPostDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelope");
+      System.err.println("Exception when calling EnvelopeControllerApi#update4");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

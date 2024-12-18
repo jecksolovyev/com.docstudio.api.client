@@ -4,16 +4,16 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createApprovalFlow**](ApprovalFlowControllerApi.md#createApprovalFlow) | **POST** /api/v1/approvalFlow | Create approval flow |
-| [**deleteApprovalFlow**](ApprovalFlowControllerApi.md#deleteApprovalFlow) | **DELETE** /api/v1/approvalFlow | Delete approval flows |
+| [**create7**](ApprovalFlowControllerApi.md#create7) | **POST** /api/v1/approvalFlow | Create approval flow |
+| [**delete5**](ApprovalFlowControllerApi.md#delete5) | **DELETE** /api/v1/approvalFlow | Delete approval flows |
 | [**retrieve**](ApprovalFlowControllerApi.md#retrieve) | **GET** /api/v1/approvalFlow/{flowUuid} | Retrieve approval flow |
 | [**search**](ApprovalFlowControllerApi.md#search) | **GET** /api/v1/approvalFlow | Retrieve approval flows |
-| [**updateApprovalFlow**](ApprovalFlowControllerApi.md#updateApprovalFlow) | **PUT** /api/v1/approvalFlow/{flowUuid} | Update approval flow |
+| [**update7**](ApprovalFlowControllerApi.md#update7) | **PUT** /api/v1/approvalFlow/{flowUuid} | Update approval flow |
 
 
-<a id="createApprovalFlow"></a>
-# **createApprovalFlow**
-> SingleUuidDTO createApprovalFlow(mailbox, mailboxApprovalFlowDTO)
+<a id="create7"></a>
+# **create7**
+> SingleUuidDTO create7(mailbox, mailboxApprovalFlowDTO)
 
 Create approval flow
 
@@ -40,10 +40,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     MailboxApprovalFlowDTO mailboxApprovalFlowDTO = new MailboxApprovalFlowDTO(); // MailboxApprovalFlowDTO | 
     try {
-      SingleUuidDTO result = apiInstance.createApprovalFlow(mailbox, mailboxApprovalFlowDTO);
+      SingleUuidDTO result = apiInstance.create7(mailbox, mailboxApprovalFlowDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ApprovalFlowControllerApi#createApprovalFlow");
+      System.err.println("Exception when calling ApprovalFlowControllerApi#create7");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -78,9 +78,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="deleteApprovalFlow"></a>
-# **deleteApprovalFlow**
-> deleteApprovalFlow(mailbox, UUID)
+<a id="delete5"></a>
+# **delete5**
+> delete5(mailbox, UUID)
 
 Delete approval flows
 
@@ -107,9 +107,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     List<UUID> UUID = Arrays.asList(); // List<UUID> | 
     try {
-      apiInstance.deleteApprovalFlow(mailbox, UUID);
+      apiInstance.delete5(mailbox, UUID);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ApprovalFlowControllerApi#deleteApprovalFlow");
+      System.err.println("Exception when calling ApprovalFlowControllerApi#delete5");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -282,9 +282,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateApprovalFlow"></a>
-# **updateApprovalFlow**
-> updateApprovalFlow(flowUuid, mailbox, mailboxApprovalFlowDTO)
+<a id="update7"></a>
+# **update7**
+> update7(flowUuid, mailbox, mailboxApprovalFlowDTO)
 
 Update approval flow
 
@@ -312,9 +312,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     MailboxApprovalFlowDTO mailboxApprovalFlowDTO = new MailboxApprovalFlowDTO(); // MailboxApprovalFlowDTO | 
     try {
-      apiInstance.updateApprovalFlow(flowUuid, mailbox, mailboxApprovalFlowDTO);
+      apiInstance.update7(flowUuid, mailbox, mailboxApprovalFlowDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ApprovalFlowControllerApi#updateApprovalFlow");
+      System.err.println("Exception when calling ApprovalFlowControllerApi#update7");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

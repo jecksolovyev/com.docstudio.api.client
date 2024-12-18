@@ -4,16 +4,16 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createFilterSettings**](FilterSettingsControllerApi.md#createFilterSettings) | **POST** /api/v1/filterSettings | Create FilterSettings for mailbox |
-| [**deleteFilterSettings**](FilterSettingsControllerApi.md#deleteFilterSettings) | **DELETE** /api/v1/filterSettings/{uuid} | Delete FilterSettings |
-| [**getAllFilterSettings**](FilterSettingsControllerApi.md#getAllFilterSettings) | **GET** /api/v1/filterSettings | Read all by mailbox |
+| [**create4**](FilterSettingsControllerApi.md#create4) | **POST** /api/v1/filterSettings | Create FilterSettings for mailbox |
+| [**delete2**](FilterSettingsControllerApi.md#delete2) | **DELETE** /api/v1/filterSettings/{uuid} | Delete FilterSettings |
+| [**getAll1**](FilterSettingsControllerApi.md#getAll1) | **GET** /api/v1/filterSettings | Read all by mailbox |
 | [**getByUuid**](FilterSettingsControllerApi.md#getByUuid) | **GET** /api/v1/filterSettings/{uuid} | Get by UUID |
-| [**updateFilterSettings**](FilterSettingsControllerApi.md#updateFilterSettings) | **PUT** /api/v1/filterSettings/{uuid} | Update FilterSettings for mailbox |
+| [**update3**](FilterSettingsControllerApi.md#update3) | **PUT** /api/v1/filterSettings/{uuid} | Update FilterSettings for mailbox |
 
 
-<a id="createFilterSettings"></a>
-# **createFilterSettings**
-> SingleUuidDTO createFilterSettings(mailbox, filterSettingsCreateDTO)
+<a id="create4"></a>
+# **create4**
+> SingleUuidDTO create4(mailbox, filterSettingsCreateDTO)
 
 Create FilterSettings for mailbox
 
@@ -40,10 +40,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     FilterSettingsCreateDTO filterSettingsCreateDTO = new FilterSettingsCreateDTO(); // FilterSettingsCreateDTO | 
     try {
-      SingleUuidDTO result = apiInstance.createFilterSettings(mailbox, filterSettingsCreateDTO);
+      SingleUuidDTO result = apiInstance.create4(mailbox, filterSettingsCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling FilterSettingsControllerApi#createFilterSettings");
+      System.err.println("Exception when calling FilterSettingsControllerApi#create4");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -78,9 +78,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="deleteFilterSettings"></a>
-# **deleteFilterSettings**
-> deleteFilterSettings(uuid, mailbox)
+<a id="delete2"></a>
+# **delete2**
+> delete2(uuid, mailbox)
 
 Delete FilterSettings
 
@@ -107,9 +107,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | 
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.deleteFilterSettings(uuid, mailbox);
+      apiInstance.delete2(uuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling FilterSettingsControllerApi#deleteFilterSettings");
+      System.err.println("Exception when calling FilterSettingsControllerApi#delete2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -144,9 +144,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **204** | No Content |  -  |
 
-<a id="getAllFilterSettings"></a>
-# **getAllFilterSettings**
-> List&lt;FilterSettingsDTO&gt; getAllFilterSettings(mailbox)
+<a id="getAll1"></a>
+# **getAll1**
+> List&lt;FilterSettingsDTO&gt; getAll1(mailbox)
 
 Read all by mailbox
 
@@ -172,10 +172,10 @@ public class Example {
     FilterSettingsControllerApi apiInstance = new FilterSettingsControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<FilterSettingsDTO> result = apiInstance.getAllFilterSettings(mailbox);
+      List<FilterSettingsDTO> result = apiInstance.getAll1(mailbox);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling FilterSettingsControllerApi#getAllFilterSettings");
+      System.err.println("Exception when calling FilterSettingsControllerApi#getAll1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -276,9 +276,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateFilterSettings"></a>
-# **updateFilterSettings**
-> updateFilterSettings(uuid, mailbox, filterSettingsDTO)
+<a id="update3"></a>
+# **update3**
+> update3(uuid, mailbox, filterSettingsDTO)
 
 Update FilterSettings for mailbox
 
@@ -306,9 +306,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     FilterSettingsDTO filterSettingsDTO = new FilterSettingsDTO(); // FilterSettingsDTO | 
     try {
-      apiInstance.updateFilterSettings(uuid, mailbox, filterSettingsDTO);
+      apiInstance.update3(uuid, mailbox, filterSettingsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling FilterSettingsControllerApi#updateFilterSettings");
+      System.err.println("Exception when calling FilterSettingsControllerApi#update3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -5,11 +5,11 @@ All URIs are relative to *https://api.docstudio.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**assignments**](LabelControllerApi.md#assignments) | **POST** /api/v1/label/assignments | Assign label to envelopes |
-| [**createLabel**](LabelControllerApi.md#createLabel) | **POST** /api/v1/label | Save label to DB |
+| [**create3**](LabelControllerApi.md#create3) | **POST** /api/v1/label | Save label to DB |
 | [**deAssignments**](LabelControllerApi.md#deAssignments) | **DELETE** /api/v1/label/assignments | Unassign label from envelopes |
-| [**deleteLabel**](LabelControllerApi.md#deleteLabel) | **DELETE** /api/v1/label/{uuid} | Delete label |
+| [**delete1**](LabelControllerApi.md#delete1) | **DELETE** /api/v1/label/{uuid} | Delete label |
 | [**getAll**](LabelControllerApi.md#getAll) | **GET** /api/v1/label | Retrieve all labels for mailbox for authorized user |
-| [**updateLabel**](LabelControllerApi.md#updateLabel) | **PUT** /api/v1/label/{uuid} | Update label |
+| [**update2**](LabelControllerApi.md#update2) | **PUT** /api/v1/label/{uuid} | Update label |
 
 
 <a id="assignments"></a>
@@ -78,9 +78,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="createLabel"></a>
-# **createLabel**
-> LabelDTO createLabel(mailbox, labelDTO)
+<a id="create3"></a>
+# **create3**
+> LabelDTO create3(mailbox, labelDTO)
 
 Save label to DB
 
@@ -107,10 +107,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     LabelDTO labelDTO = new LabelDTO(); // LabelDTO | 
     try {
-      LabelDTO result = apiInstance.createLabel(mailbox, labelDTO);
+      LabelDTO result = apiInstance.create3(mailbox, labelDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LabelControllerApi#createLabel");
+      System.err.println("Exception when calling LabelControllerApi#create3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -211,9 +211,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="deleteLabel"></a>
-# **deleteLabel**
-> deleteLabel(uuid, mailbox)
+<a id="delete1"></a>
+# **delete1**
+> delete1(uuid, mailbox)
 
 Delete label
 
@@ -240,9 +240,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | UUID of label to delete
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.deleteLabel(uuid, mailbox);
+      apiInstance.delete1(uuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LabelControllerApi#deleteLabel");
+      System.err.println("Exception when calling LabelControllerApi#delete1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -342,9 +342,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateLabel"></a>
-# **updateLabel**
-> LabelDTO updateLabel(uuid, mailbox, labelDTO)
+<a id="update2"></a>
+# **update2**
+> LabelDTO update2(uuid, mailbox, labelDTO)
 
 Update label
 
@@ -372,10 +372,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     LabelDTO labelDTO = new LabelDTO(); // LabelDTO | 
     try {
-      LabelDTO result = apiInstance.updateLabel(uuid, mailbox, labelDTO);
+      LabelDTO result = apiInstance.update2(uuid, mailbox, labelDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LabelControllerApi#updateLabel");
+      System.err.println("Exception when calling LabelControllerApi#update2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

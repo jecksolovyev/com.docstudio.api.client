@@ -6,7 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**createMailbox**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox |
 | [**customizeDashboard**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard |
-| [**deleteMailbox**](MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
+| [**delete6**](MailboxControllerApi.md#delete6) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
 | [**deleteMailboxUsers**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester |
 | [**getAccountLogo**](MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
 | [**getActivityLog**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox |
@@ -16,7 +16,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
 | [**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
 | [**getMailboxesByAccount**](MailboxControllerApi.md#getMailboxesByAccount) | **GET** /api/v1/mailbox/account/{uuid} | Read list of account mailboxes |
-| [**getMailboxesInfoMailbox**](MailboxControllerApi.md#getMailboxesInfoMailbox) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
+| [**getMailboxesInfo1**](MailboxControllerApi.md#getMailboxesInfo1) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
 | [**leaveMailbox**](MailboxControllerApi.md#leaveMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/leave | Leave mailbox if possible |
@@ -164,9 +164,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="deleteMailbox"></a>
-# **deleteMailbox**
-> deleteMailbox(checkMessage, mailbox, moveEntitiesToMailbox)
+<a id="delete6"></a>
+# **delete6**
+> delete6(checkMessage, mailbox, moveEntitiesToMailbox)
 
 Delete mailbox by UUID in the header.
 
@@ -194,9 +194,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UUID moveEntitiesToMailbox = UUID.randomUUID(); // UUID | Move entities to chosen mailbox
     try {
-      apiInstance.deleteMailbox(checkMessage, mailbox, moveEntitiesToMailbox);
+      apiInstance.delete6(checkMessage, mailbox, moveEntitiesToMailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#deleteMailbox");
+      System.err.println("Exception when calling MailboxControllerApi#delete6");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -822,9 +822,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getMailboxesInfoMailbox"></a>
-# **getMailboxesInfoMailbox**
-> Map&lt;String, MailboxInfoDTO&gt; getMailboxesInfoMailbox(UUID, accountName, accountITN)
+<a id="getMailboxesInfo1"></a>
+# **getMailboxesInfo1**
+> Map&lt;String, MailboxInfoDTO&gt; getMailboxesInfo1(UUID, accountName, accountITN)
 
 Retrieve mailboxes info
 
@@ -852,10 +852,10 @@ public class Example {
     Boolean accountName = false; // Boolean | Including account name
     Boolean accountITN = false; // Boolean | Including account ITN
     try {
-      Map<String, MailboxInfoDTO> result = apiInstance.getMailboxesInfoMailbox(UUID, accountName, accountITN);
+      Map<String, MailboxInfoDTO> result = apiInstance.getMailboxesInfo1(UUID, accountName, accountITN);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#getMailboxesInfoMailbox");
+      System.err.println("Exception when calling MailboxControllerApi#getMailboxesInfo1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

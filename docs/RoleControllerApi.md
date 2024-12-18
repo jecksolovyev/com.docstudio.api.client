@@ -4,17 +4,17 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**createRole**](RoleControllerApi.md#createRole) | **POST** /api/v1/permission/role | Create a role |
+| [**create2**](RoleControllerApi.md#create2) | **POST** /api/v1/permission/role | Create a role |
 | [**delete**](RoleControllerApi.md#delete) | **DELETE** /api/v1/permission/role/{uuid} |  |
 | [**read**](RoleControllerApi.md#read) | **GET** /api/v1/permission/role/{uuid} | Read role by UUID |
 | [**readAll**](RoleControllerApi.md#readAll) | **GET** /api/v1/permission/role | Read all system roles |
 | [**readAllWithAccount**](RoleControllerApi.md#readAllWithAccount) | **GET** /api/v1/permission/role/account/{uuid} | Read all roles for account including system predefined |
-| [**updateRole**](RoleControllerApi.md#updateRole) | **PUT** /api/v1/permission/role/{uuid} | Update role, allow to change name and permissions |
+| [**update1**](RoleControllerApi.md#update1) | **PUT** /api/v1/permission/role/{uuid} | Update role, allow to change name and permissions |
 
 
-<a id="createRole"></a>
-# **createRole**
-> RoleGetDTO createRole(roleCreateDTO)
+<a id="create2"></a>
+# **create2**
+> RoleGetDTO create2(roleCreateDTO)
 
 Create a role
 
@@ -40,10 +40,10 @@ public class Example {
     RoleControllerApi apiInstance = new RoleControllerApi(defaultClient);
     RoleCreateDTO roleCreateDTO = new RoleCreateDTO(); // RoleCreateDTO | 
     try {
-      RoleGetDTO result = apiInstance.createRole(roleCreateDTO);
+      RoleGetDTO result = apiInstance.create2(roleCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling RoleControllerApi#createRole");
+      System.err.println("Exception when calling RoleControllerApi#create2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -348,9 +348,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateRole"></a>
-# **updateRole**
-> RoleGetDTO updateRole(uuid, roleCreateDTO)
+<a id="update1"></a>
+# **update1**
+> RoleGetDTO update1(uuid, roleCreateDTO)
 
 Update role, allow to change name and permissions
 
@@ -377,10 +377,10 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | 
     RoleCreateDTO roleCreateDTO = new RoleCreateDTO(); // RoleCreateDTO | 
     try {
-      RoleGetDTO result = apiInstance.updateRole(uuid, roleCreateDTO);
+      RoleGetDTO result = apiInstance.update1(uuid, roleCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling RoleControllerApi#updateRole");
+      System.err.println("Exception when calling RoleControllerApi#update1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
