@@ -24,130 +24,138 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * MailboxInfoDTO
+ * The DTO for exception details
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-18T16:58:44.034140700+02:00[Europe/Kiev]", comments = "Generator version: 7.10.0")
-public class MailboxInfoDTO {
-  public static final String SERIALIZED_NAME_UUID = "uuid";
-  @SerializedName(SERIALIZED_NAME_UUID)
+public class CommonExceptionDTO {
+  public static final String SERIALIZED_NAME_CODE = "code";
+  @SerializedName(SERIALIZED_NAME_CODE)
   @javax.annotation.Nonnull
-  private UUID uuid;
+  private Integer code;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String SERIALIZED_NAME_MESSAGE = "message";
+  @SerializedName(SERIALIZED_NAME_MESSAGE)
   @javax.annotation.Nonnull
-  private String name;
+  private String message;
 
-  public static final String SERIALIZED_NAME_ACCOUNT_NAME = "accountName";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_NAME)
+  public static final String SERIALIZED_NAME_MESSAGE_LOCALIZED = "messageLocalized";
+  @SerializedName(SERIALIZED_NAME_MESSAGE_LOCALIZED)
   @javax.annotation.Nullable
-  private String accountName;
+  private String messageLocalized;
 
-  public static final String SERIALIZED_NAME_ACCOUNT_I_T_N = "accountITN";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_I_T_N)
+  public static final String SERIALIZED_NAME_MESSAGE_ARGS = "messageArgs";
+  @SerializedName(SERIALIZED_NAME_MESSAGE_ARGS)
   @javax.annotation.Nullable
-  private String accountITN;
+  private List<Object> messageArgs = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_DELETED = "deleted";
-  @SerializedName(SERIALIZED_NAME_DELETED)
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
   @javax.annotation.Nullable
-  private Boolean deleted;
+  private Object data;
 
-  public MailboxInfoDTO() {
+  public CommonExceptionDTO() {
   }
 
-  public MailboxInfoDTO uuid(@javax.annotation.Nonnull UUID uuid) {
-    this.uuid = uuid;
+  public CommonExceptionDTO code(@javax.annotation.Nonnull Integer code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Mailbox uuid
-   * @return uuid
-   */
-  @javax.annotation.Nonnull
-  public UUID getUuid() {
-    return uuid;
-  }
-
-  public void setUuid(@javax.annotation.Nonnull UUID uuid) {
-    this.uuid = uuid;
-  }
-
-
-  public MailboxInfoDTO name(@javax.annotation.Nonnull String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Mailbox name
-   * @return name
+   * The code of the error
+   * @return code
    */
   @javax.annotation.Nonnull
-  public String getName() {
-    return name;
+  public Integer getCode() {
+    return code;
   }
 
-  public void setName(@javax.annotation.Nonnull String name) {
-    this.name = name;
+  public void setCode(@javax.annotation.Nonnull Integer code) {
+    this.code = code;
   }
 
 
-  public MailboxInfoDTO accountName(@javax.annotation.Nullable String accountName) {
-    this.accountName = accountName;
+  public CommonExceptionDTO message(@javax.annotation.Nonnull String message) {
+    this.message = message;
     return this;
   }
 
   /**
-   * Mailbox account name
-   * @return accountName
+   * The message of the error
+   * @return message
    */
-  @javax.annotation.Nullable
-  public String getAccountName() {
-    return accountName;
+  @javax.annotation.Nonnull
+  public String getMessage() {
+    return message;
   }
 
-  public void setAccountName(@javax.annotation.Nullable String accountName) {
-    this.accountName = accountName;
+  public void setMessage(@javax.annotation.Nonnull String message) {
+    this.message = message;
   }
 
 
-  public MailboxInfoDTO accountITN(@javax.annotation.Nullable String accountITN) {
-    this.accountITN = accountITN;
+  public CommonExceptionDTO messageLocalized(@javax.annotation.Nullable String messageLocalized) {
+    this.messageLocalized = messageLocalized;
     return this;
   }
 
   /**
-   * Mailbox account ITN
-   * @return accountITN
+   * Localized message of the error
+   * @return messageLocalized
    */
   @javax.annotation.Nullable
-  public String getAccountITN() {
-    return accountITN;
+  public String getMessageLocalized() {
+    return messageLocalized;
   }
 
-  public void setAccountITN(@javax.annotation.Nullable String accountITN) {
-    this.accountITN = accountITN;
+  public void setMessageLocalized(@javax.annotation.Nullable String messageLocalized) {
+    this.messageLocalized = messageLocalized;
   }
 
 
-  public MailboxInfoDTO deleted(@javax.annotation.Nullable Boolean deleted) {
-    this.deleted = deleted;
+  public CommonExceptionDTO messageArgs(@javax.annotation.Nullable List<Object> messageArgs) {
+    this.messageArgs = messageArgs;
+    return this;
+  }
+
+  public CommonExceptionDTO addMessageArgsItem(Object messageArgsItem) {
+    if (this.messageArgs == null) {
+      this.messageArgs = new ArrayList<>();
+    }
+    this.messageArgs.add(messageArgsItem);
     return this;
   }
 
   /**
-   * Get deleted
-   * @return deleted
+   * Get messageArgs
+   * @return messageArgs
    */
   @javax.annotation.Nullable
-  public Boolean getDeleted() {
-    return deleted;
+  public List<Object> getMessageArgs() {
+    return messageArgs;
   }
 
-  public void setDeleted(@javax.annotation.Nullable Boolean deleted) {
-    this.deleted = deleted;
+  public void setMessageArgs(@javax.annotation.Nullable List<Object> messageArgs) {
+    this.messageArgs = messageArgs;
+  }
+
+
+  public CommonExceptionDTO data(@javax.annotation.Nullable Object data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Some additional data
+   * @return data
+   */
+  @javax.annotation.Nullable
+  public Object getData() {
+    return data;
+  }
+
+  public void setData(@javax.annotation.Nullable Object data) {
+    this.data = data;
   }
 
   /**
@@ -163,9 +171,9 @@ public class MailboxInfoDTO {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the MailboxInfoDTO instance itself
+   * @return the CommonExceptionDTO instance itself
    */
-  public MailboxInfoDTO putAdditionalProperty(String key, Object value) {
+  public CommonExceptionDTO putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -204,29 +212,29 @@ public class MailboxInfoDTO {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MailboxInfoDTO mailboxInfoDTO = (MailboxInfoDTO) o;
-    return Objects.equals(this.uuid, mailboxInfoDTO.uuid) &&
-        Objects.equals(this.name, mailboxInfoDTO.name) &&
-        Objects.equals(this.accountName, mailboxInfoDTO.accountName) &&
-        Objects.equals(this.accountITN, mailboxInfoDTO.accountITN) &&
-        Objects.equals(this.deleted, mailboxInfoDTO.deleted)&&
-        Objects.equals(this.additionalProperties, mailboxInfoDTO.additionalProperties);
+    CommonExceptionDTO commonExceptionDTO = (CommonExceptionDTO) o;
+    return Objects.equals(this.code, commonExceptionDTO.code) &&
+        Objects.equals(this.message, commonExceptionDTO.message) &&
+        Objects.equals(this.messageLocalized, commonExceptionDTO.messageLocalized) &&
+        Objects.equals(this.messageArgs, commonExceptionDTO.messageArgs) &&
+        Objects.equals(this.data, commonExceptionDTO.data)&&
+        Objects.equals(this.additionalProperties, commonExceptionDTO.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uuid, name, accountName, accountITN, deleted, additionalProperties);
+    return Objects.hash(code, message, messageLocalized, messageArgs, data, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MailboxInfoDTO {\n");
-    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    accountITN: ").append(toIndentedString(accountITN)).append("\n");
-    sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
+    sb.append("class CommonExceptionDTO {\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    messageLocalized: ").append(toIndentedString(messageLocalized)).append("\n");
+    sb.append("    messageArgs: ").append(toIndentedString(messageArgs)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -250,49 +258,47 @@ public class MailboxInfoDTO {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("uuid");
-    openapiFields.add("name");
-    openapiFields.add("accountName");
-    openapiFields.add("accountITN");
-    openapiFields.add("deleted");
+    openapiFields.add("code");
+    openapiFields.add("message");
+    openapiFields.add("messageLocalized");
+    openapiFields.add("messageArgs");
+    openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("uuid");
-    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("code");
+    openapiRequiredFields.add("message");
   }
 
   /**
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to MailboxInfoDTO
+   * @throws IOException if the JSON Element is invalid with respect to CommonExceptionDTO
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!MailboxInfoDTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in MailboxInfoDTO is not found in the empty JSON string", MailboxInfoDTO.openapiRequiredFields.toString()));
+        if (!CommonExceptionDTO.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CommonExceptionDTO is not found in the empty JSON string", CommonExceptionDTO.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : MailboxInfoDTO.openapiRequiredFields) {
+      for (String requiredField : CommonExceptionDTO.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("uuid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uuid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uuid").toString()));
+      if (!jsonObj.get("message").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      if ((jsonObj.get("messageLocalized") != null && !jsonObj.get("messageLocalized").isJsonNull()) && !jsonObj.get("messageLocalized").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `messageLocalized` to be a primitive type in the JSON string but got `%s`", jsonObj.get("messageLocalized").toString()));
       }
-      if ((jsonObj.get("accountName") != null && !jsonObj.get("accountName").isJsonNull()) && !jsonObj.get("accountName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountName").toString()));
-      }
-      if ((jsonObj.get("accountITN") != null && !jsonObj.get("accountITN").isJsonNull()) && !jsonObj.get("accountITN").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountITN` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountITN").toString()));
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("messageArgs") != null && !jsonObj.get("messageArgs").isJsonNull() && !jsonObj.get("messageArgs").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `messageArgs` to be an array in the JSON string but got `%s`", jsonObj.get("messageArgs").toString()));
       }
   }
 
@@ -300,16 +306,16 @@ public class MailboxInfoDTO {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!MailboxInfoDTO.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'MailboxInfoDTO' and its subtypes
+       if (!CommonExceptionDTO.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommonExceptionDTO' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<MailboxInfoDTO> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(MailboxInfoDTO.class));
+       final TypeAdapter<CommonExceptionDTO> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommonExceptionDTO.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<MailboxInfoDTO>() {
+       return (TypeAdapter<T>) new TypeAdapter<CommonExceptionDTO>() {
            @Override
-           public void write(JsonWriter out, MailboxInfoDTO value) throws IOException {
+           public void write(JsonWriter out, CommonExceptionDTO value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -337,12 +343,12 @@ public class MailboxInfoDTO {
            }
 
            @Override
-           public MailboxInfoDTO read(JsonReader in) throws IOException {
+           public CommonExceptionDTO read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             MailboxInfoDTO instance = thisAdapter.fromJsonTree(jsonObj);
+             CommonExceptionDTO instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -369,18 +375,18 @@ public class MailboxInfoDTO {
   }
 
   /**
-   * Create an instance of MailboxInfoDTO given an JSON string
+   * Create an instance of CommonExceptionDTO given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of MailboxInfoDTO
-   * @throws IOException if the JSON string is invalid with respect to MailboxInfoDTO
+   * @return An instance of CommonExceptionDTO
+   * @throws IOException if the JSON string is invalid with respect to CommonExceptionDTO
    */
-  public static MailboxInfoDTO fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, MailboxInfoDTO.class);
+  public static CommonExceptionDTO fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CommonExceptionDTO.class);
   }
 
   /**
-   * Convert an instance of MailboxInfoDTO to an JSON string
+   * Convert an instance of CommonExceptionDTO to an JSON string
    *
    * @return JSON string
    */
