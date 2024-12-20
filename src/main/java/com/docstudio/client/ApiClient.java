@@ -21,6 +21,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.*;
 
+import javax.mail.internet.MimeUtility;
 import javax.net.ssl.*;
 import java.io.*;
 import java.lang.reflect.Type;
@@ -1019,7 +1020,7 @@ public class ApiClient {
             Pattern pattern = Pattern.compile("filename=['\"]?([^'\"\\s]+)['\"]?");
             Matcher matcher = pattern.matcher(contentDisposition);
             if (matcher.find()) {
-                filename = sanitizeFilename(matcher.group(1));
+                filename = sanitizeFilename(MimeUtility.decodeText(matcher.group(1)));
             }
         }
 
