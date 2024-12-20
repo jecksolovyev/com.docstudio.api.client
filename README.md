@@ -26,9 +26,13 @@ mvn clean package
 ```shell
 ./genarate.sh
 ```
-3. Create git tag with current version
-4. Commit and Push changes with a new tag
-5. Deploy to GIT
+3. Add MIME decoder to ApiClient (https://github.com/OpenAPITools/openapi-generator-cli/issues/853)
+```shell
+filename = sanitizeFilename(MimeUtility.decodeText(matcher.group(1)));
+```
+4. Commit and create a tag with current version
+5. Push changes with tags
+6. Deploy to GIT
 ```shell
 mvn deploy
 ```
