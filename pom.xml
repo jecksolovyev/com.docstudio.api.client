@@ -5,7 +5,7 @@
   <artifactId>docstudio-api-client</artifactId>
   <packaging>jar</packaging>
   <name>docstudio-api-client</name>
-  <version>R121.17</version>
+  <version>R121.19</version>
   <url>https://api.docstudio.com/</url>
   <description>DocStudio API Client</description>
   <prerequisites>
@@ -321,8 +321,8 @@
       <version>${javax.ws.rs-api-version}</version>
     </dependency>
     <dependency>
-      <groupId>javax.mail</groupId>
-      <artifactId>javax.mail-api</artifactId>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
       <version>1.6.2</version>
     </dependency>
     <!-- test dependencies -->

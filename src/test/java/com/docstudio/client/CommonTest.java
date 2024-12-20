@@ -5,6 +5,8 @@ import com.docstudio.client.api.MiscControllerApi;
 import com.docstudio.client.model.SettingsDTO;
 import org.junit.jupiter.api.Test;
 
+import javax.mail.internet.MimeUtility;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CommonTest {
@@ -19,5 +21,11 @@ public class CommonTest {
         MiscControllerApi miscControllerApi = new MiscControllerApi(client);
         SettingsDTO settingsDTO = miscControllerApi.appSettings();
         assertEquals("DocStudio", settingsDTO.getApplicationName());
+    }
+
+    @Test
+    void decodeMime() throws Exception {
+        String decoded = MimeUtility.decodeText("=?UTF-8?Q?Invoice_4.png?=");
+        assertEquals("Invoice 4.png", decoded);
     }
 }
