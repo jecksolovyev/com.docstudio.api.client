@@ -1,5 +1,5 @@
 #!/bin/bash
-#npm install @openapitools/openapi-generator-cli -g
+npm install @openapitools/openapi-generator-cli -g
 echo '{"invokerPackage":"com.docstudio.client",
         "apiPackage":"com.docstudio.client.api",
         "modelPackage":"com.docstudio.client.model",
