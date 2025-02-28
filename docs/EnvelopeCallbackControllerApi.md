@@ -207,8 +207,8 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **400** | Bad Request |  -  |
+| **200** | OK |  -  |
 
 <a id="listCallbacks"></a>
 # **listCallbacks**

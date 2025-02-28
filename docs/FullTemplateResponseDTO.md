@@ -16,6 +16,7 @@
 |**dataModifiedAt** | **OffsetDateTime** | Template data update date |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Template access level |  [optional] |
 |**mailbox** | **UUID** | Template creator&#39;s mailbox |  [optional] |
+|**account** | **UUID** | Template creator&#39;s account |  [optional] |
 |**archive** | **Boolean** | Template archived |  [optional] |
 |**newEnvelopeCanBeCreated** | **Boolean** | Returns a flag whether a new envelope can be created using this template |  [optional] |
 |**defaultDownloadOptions** | **Boolean** | Returns a flag whether default download options should appear or only custom one |  [optional] |

@@ -26,6 +26,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**deleteEnvelopeComment**](EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{envelopeUuid}/comment | Delete envelope comment in thread or the whole thread |
 | [**downloadEnvelopeAttachment**](EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw |
 | [**downloadFinalPdf**](EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{envelopeUuid}/download-final-pdf | Download final PDF |
+| [**downloadSharedAttachment**](EnvelopeControllerApi.md#downloadSharedAttachment) | **GET** /api/v1/envelope/shared-attachment | Download shared attachment for specific provider |
 | [**envelopeApproval**](EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/approval | Approve or Reject envelopes |
 | [**envelopeApprovalHistory**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{envelopeUuid}/approval-history | Get approval history |
 | [**fill**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope |
@@ -44,6 +45,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getEnvelopeInviteUnauthorized**](EnvelopeControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user) |
 | [**getEnvelopeSharedZip**](EnvelopeControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive |
 | [**getEnvelopeZip**](EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{envelopeUuid}/zip | Get envelope or document zip archive |
+| [**getMassSigningReport**](EnvelopeControllerApi.md#getMassSigningReport) | **GET** /api/v1/envelope/signing-report/{sessionId} | Get mass signing report |
 | [**getUserPendingInvitations**](EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations |
 | [**mergeEnvelopesIntoChain**](EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain |
 | [**oneTimeSend**](EnvelopeControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted) |
@@ -1536,6 +1538,68 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
+<a id="downloadSharedAttachment"></a>
+# **downloadSharedAttachment**
+> File downloadSharedAttachment(provider, attachmentUuid)
+
+Download shared attachment for specific provider
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    String provider = "provider_example"; // String | Sharing provider name
+    UUID attachmentUuid = UUID.randomUUID(); // UUID | Attachment UUID
+    try {
+      File result = apiInstance.downloadSharedAttachment(provider, attachmentUuid);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#downloadSharedAttachment");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **provider** | **String**| Sharing provider name | |
+| **attachmentUuid** | **UUID**| Attachment UUID | |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
 <a id="envelopeApproval"></a>
 # **envelopeApproval**
 > envelopeApproval(mailbox, approvalStatusDTO)
@@ -2145,7 +2209,7 @@ public class Example {
 
 <a id="getDocumentForSign"></a>
 # **getDocumentForSign**
-> DocumentForSigningDTO getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO)
+> DocumentForSigningDTO getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO, sessionId)
 
 BINARY and XML for signing
 
@@ -2172,8 +2236,9 @@ public class Example {
     UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     SingleDocForSignRequestDTO singleDocForSignRequestDTO = new SingleDocForSignRequestDTO(); // SingleDocForSignRequestDTO | 
+    UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      DocumentForSigningDTO result = apiInstance.getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO);
+      DocumentForSigningDTO result = apiInstance.getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO, sessionId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentForSign");
@@ -2193,6 +2258,7 @@ public class Example {
 | **envelopeUuid** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **singleDocForSignRequestDTO** | [**SingleDocForSignRequestDTO**](SingleDocForSignRequestDTO.md)|  | |
+| **sessionId** | **UUID**| Mass signing session UUID | [optional] |
 
 ### Return type
 
@@ -2283,7 +2349,7 @@ public class Example {
 
 <a id="getDocumentsForSign"></a>
 # **getDocumentsForSign**
-> List&lt;DocumentForSigningDTO&gt; getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO)
+> List&lt;DocumentForSigningDTO&gt; getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO, sessionId)
 
 BINARYs and XMLs for signing
 
@@ -2310,8 +2376,9 @@ public class Example {
     UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     DocumentsForSignRequestDTO documentsForSignRequestDTO = new DocumentsForSignRequestDTO(); // DocumentsForSignRequestDTO | 
+    UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      List<DocumentForSigningDTO> result = apiInstance.getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO);
+      List<DocumentForSigningDTO> result = apiInstance.getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO, sessionId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentsForSign");
@@ -2331,6 +2398,7 @@ public class Example {
 | **envelopeUuid** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **documentsForSignRequestDTO** | [**DocumentsForSignRequestDTO**](DocumentsForSignRequestDTO.md)|  | |
+| **sessionId** | **UUID**| Mass signing session UUID | [optional] |
 
 ### Return type
 
@@ -2723,6 +2791,73 @@ public class Example {
 | **documentId** | **String**| Document id | [optional] |
 | **excludeFiles** | **String**| Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail | [optional] |
 | **zipStructureName** | **String**| The name of pre-saved zip structure in the template | [optional] |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getMassSigningReport"></a>
+# **getMassSigningReport**
+> File getMassSigningReport(sessionId, mailbox)
+
+Get mass signing report
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: Authorization
+    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      File result = apiInstance.getMassSigningReport(sessionId, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#getMassSigningReport");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **UUID**| Mass signing session UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -3471,8 +3606,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **405** | Method disabled by configuration |  -  |
 | **201** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
 <a id="sendForApproval"></a>
 # **sendForApproval**
@@ -3675,7 +3810,7 @@ null (empty response body)
 
 <a id="sign"></a>
 # **sign**
-> sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO)
+> sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO, sessionId)
 
 Sign envelope documents
 
@@ -3702,8 +3837,9 @@ public class Example {
     UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope to update
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     List<EnvelopeDocumentSignaturesDTO> envelopeDocumentSignaturesDTO = Arrays.asList(); // List<EnvelopeDocumentSignaturesDTO> | 
+    UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      apiInstance.sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO);
+      apiInstance.sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO, sessionId);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#sign");
       System.err.println("Status code: " + e.getCode());
@@ -3722,6 +3858,7 @@ public class Example {
 | **envelopeUuid** | **UUID**| Envelope to update | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **envelopeDocumentSignaturesDTO** | [**List&lt;EnvelopeDocumentSignaturesDTO&gt;**](EnvelopeDocumentSignaturesDTO.md)|  | |
+| **sessionId** | **UUID**| Mass signing session UUID | [optional] |
 
 ### Return type
 

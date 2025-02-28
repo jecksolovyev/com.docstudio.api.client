@@ -8,6 +8,7 @@ Envelope Restrictions
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**einkFooter** | **String** |  |  [optional] |
 |**field** | [**FieldRestriction**](FieldRestriction.md) |  |  [optional] |
 |**attachment** | [**AttachmentRestriction**](AttachmentRestriction.md) |  |  [optional] |
 |**search** | [**SearchRestriction**](SearchRestriction.md) |  |  [optional] |

@@ -8,10 +8,10 @@ Signature Providers and Region
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**signatureProviders** | **List&lt;String&gt;** |  |  [optional] |
 |**region** | **String** |  |  [optional] |
-|**smartIdClientPrefix** | **String** |  |  [optional] |
+|**signatureProviders** | **List&lt;String&gt;** |  |  [optional] |
 |**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) |  |  [optional] |
+|**accountDocumentSharingProviders** | **List&lt;String&gt;** |  |  [optional] |
 |**stampSupported** | **Boolean** |  |  [optional] |
 |**einkSupported** | **Boolean** |  |  [optional] |
 |**initialsSupported** | **Boolean** |  |  [optional] |

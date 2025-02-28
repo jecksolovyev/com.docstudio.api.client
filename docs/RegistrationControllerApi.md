@@ -135,8 +135,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **405** | Method disabled by configuration |  -  |
 | **201** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
 <a id="renewPassword"></a>
 # **renewPassword**
@@ -255,8 +255,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **405** | Method disabled by configuration |  -  |
 | **200** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
 <a id="requestResetPassword"></a>
 # **requestResetPassword**

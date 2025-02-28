@@ -10,6 +10,7 @@
 |**buildVersion** | **String** | The version of the build |  [optional] |
 |**applicationName** | **String** | The name of the platform |  [optional] |
 |**theme** | **String** | The name of the UI theme |  [optional] |
+|**supportChatProvider** | **String** | Support live chat provider name |  [optional] |
 |**hideUnauthorizedFunctions** | **Boolean** | Hide or disable unauthorized functions |  [optional] |
 |**podName** | **String** | Kubernetes Pod Name |  [optional] |
 |**links** | [**AppLinks**](AppLinks.md) |  |  [optional] |

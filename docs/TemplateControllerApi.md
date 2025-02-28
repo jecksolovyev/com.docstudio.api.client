@@ -1029,7 +1029,7 @@ No authorization required
 
 <a id="getTemplateByUuid"></a>
 # **getTemplateByUuid**
-> FullTemplateResponseDTO getTemplateByUuid(uuid, mailbox, templateVersion)
+> FullTemplateResponseDTO getTemplateByUuid(uuid, mailbox, templateVersion, checkEnvelopeCreation)
 
 Retrieve template by UUID
 
@@ -1056,8 +1056,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | UUID of template to retrieve
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UUID templateVersion = UUID.randomUUID(); // UUID | UUID of version
+    Boolean checkEnvelopeCreation = true; // Boolean | Check if envelope can be created using this template
     try {
-      FullTemplateResponseDTO result = apiInstance.getTemplateByUuid(uuid, mailbox, templateVersion);
+      FullTemplateResponseDTO result = apiInstance.getTemplateByUuid(uuid, mailbox, templateVersion, checkEnvelopeCreation);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TemplateControllerApi#getTemplateByUuid");
@@ -1077,6 +1078,7 @@ public class Example {
 | **uuid** | **UUID**| UUID of template to retrieve | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **templateVersion** | **UUID**| UUID of version | [optional] |
+| **checkEnvelopeCreation** | **Boolean**| Check if envelope can be created using this template | [optional] |
 
 ### Return type
 

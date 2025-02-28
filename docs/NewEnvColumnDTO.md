@@ -21,7 +21,6 @@
 |---- | -----|
 | TEXT | &quot;text&quot; |
 | DATETIME | &quot;datetime&quot; |
-| YESNO | &quot;yesno&quot; |
 | SELECT_DICTIONARY | &quot;selectDictionary&quot; |
 | EINKSIGN | &quot;einksign&quot; |
 | INITIALS | &quot;initials&quot; |

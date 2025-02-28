@@ -16,8 +16,8 @@ Action parameters
 
 | Name | Value |
 |---- | -----|
-| TXT_RECORD | &quot;DNS_TXT_RECORD&quot; |
-| CNAME_RECORD | &quot;DNS_CNAME_RECORD&quot; |
+| DNS_TXT_RECORD | &quot;DNS_TXT_RECORD&quot; |
+| DNS_CNAME_RECORD | &quot;DNS_CNAME_RECORD&quot; |
 
 
 
