@@ -109,70 +109,71 @@ dependencies {
 Please follow the [Building](#building) instruction and execute the following Java code:
 
 ```java
+
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
-import api.com.docstudio.client.AuthenticationControllerApi;
-import api.com.docstudio.client.EnvelopeControllerApi;
-import api.com.docstudio.client.MailboxControllerApi;
-import model.com.docstudio.client.LoginDTO;
-import model.com.docstudio.client.QuickSendDTO;
-import model.com.docstudio.client.QuickSendRecipientDTO;
+import com.docstudio.client.api.AuthenticationControllerApi;
+import com.docstudio.client.api.EnvelopeControllerApi;
+import com.docstudio.client.api.MailboxControllerApi;
+import com.docstudio.client.model.LoginDTO;
+import com.docstudio.client.model.QuickSendDTO;
+import com.docstudio.client.model.QuickSendRecipientDTO;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class TestApplication {
+public class Main {
+    public static void main(String[] args) throws ApiException {
+        ApiClient client = new ApiClient();
+        client.setBasePath("https://api.docstudio.com");
+        client.setDebugging(false);
+        client.setReadTimeout(120000);
+        client.setWriteTimeout(120000);
+        client.setUserAgent("Example");
 
-  public static void main(String[] args) throws ApiException {
-    ApiClient client = new ApiClient();
-    client.setBasePath("https://api.docstudio.com");
-    client.setDebugging(false);
-    client.setReadTimeout(120000);
-    client.setWriteTimeout(120000);
-    client.setUserAgent("Example");
+        //Login and set access token
+        AuthenticationControllerApi authenticationControllerApi = new AuthenticationControllerApi(client);
+        LoginDTO loginDTO = new LoginDTO();
+        loginDTO.setLogin("user@domain.com");
+        loginDTO.setPassword("password");
+        client.setBearerToken(authenticationControllerApi.login(loginDTO).getToken());
 
-    //Login and set access token
-    AuthenticationControllerApi authenticationControllerApi = new AuthenticationControllerApi(client);
-    LoginDTO loginDTO = new LoginDTO();
-    loginDTO.setLogin("my@email.com");
-    loginDTO.setPassword("password");
-    client.setBearerToken(authenticationControllerApi.login(loginDTO).getToken());
-
-    //get user mailboxes and store first mailbox UUID
-    MailboxControllerApi mailboxControllerApi = new MailboxControllerApi(client);
-    UUID mailboxUuid = mailboxControllerApi.getAllForUser().get(0).getMailboxUuid();
+        //get user mailboxes and store first mailbox UUID
+        MailboxControllerApi mailboxControllerApi = new MailboxControllerApi(client);
+        UUID mailboxUuid = mailboxControllerApi.getAllForUser().getFirst().getMailboxUuid();
 
 
-    EnvelopeControllerApi envelopeControllerApi = new EnvelopeControllerApi(client);
+        EnvelopeControllerApi envelopeControllerApi = new EnvelopeControllerApi(client);
 
-    //Preparing quick send parameters: subject and message, participants
-    QuickSendDTO quickSendDTO = new QuickSendDTO();
-    quickSendDTO.setSubject("Test envelope");
-    quickSendDTO.setMessage("Test envelope message");
-    QuickSendRecipientDTO sender = new QuickSendRecipientDTO();
-    sender.setRecipient(mailboxUuid.toString());
-    sender.setSigner(true);
-    sender.setEInkSignature(true);
-    quickSendDTO.addRecipientsItem(sender);
-    QuickSendRecipientDTO recipientDTO = new QuickSendRecipientDTO();
-    recipientDTO.setRecipient("wife@family.com");
-    recipientDTO.setSigner(true);
-    recipientDTO.setEInkSignature(true);
-    quickSendDTO.addRecipientsItem(recipientDTO);
+        //Prepare quick send parameters: subject and message, participants
 
-    //Open file for envelope
-    File document = new File("sample.pdf");
-    List<File> files = new ArrayList<>();
-    files.add(document);
+        QuickSendDTO quickSendDTO = new QuickSendDTO();
+        quickSendDTO.setSubject("Test envelope");
+        quickSendDTO.setMessage("Test envelope message");
+        QuickSendRecipientDTO sender = new QuickSendRecipientDTO();
+        sender.setRecipient(mailboxUuid.toString());
+        sender.setSigner(true);
+        sender.seteInkSignature(true);
+        quickSendDTO.addRecipientsItem(sender);
+        QuickSendRecipientDTO recipientDTO = new QuickSendRecipientDTO();
+        recipientDTO.setRecipient("wife@family.com");
+        recipientDTO.setSigner(true);
+        recipientDTO.seteInkSignature(true);
+        quickSendDTO.addRecipientsItem(recipientDTO);
 
-    //sending envelope
-    UUID envelopeUuid = envelopeControllerApi.quickSendExternalDocuments(files, quickSendDTO, mailboxUuid).getUuid();
+        //Open file for envelope
+        File document = new File("singlepage.pdf");
+        List<File> files = new ArrayList<>();
+        files.add(document);
 
-    //reading envelope
-    envelopeControllerApi.getEnvelopeByUuid(envelopeUuid, mailboxUuid);
-  }
+        //sending envelope
+        UUID envelopeUuid = envelopeControllerApi.quickSendExternalDocuments(mailboxUuid, files, quickSendDTO).getUuid();
+
+        //reading envelope
+        envelopeControllerApi.getEnvelopeByUuid(envelopeUuid, mailboxUuid);
+    }
 }
 
 ```
