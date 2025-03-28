@@ -1531,7 +1531,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1593,7 +1593,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1859,7 +1859,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: image/png, application/json
+ - **Accept**: image/png
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2200,7 +2200,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2340,7 +2340,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2730,7 +2730,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2803,7 +2803,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2870,7 +2870,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3606,8 +3606,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **201** | OK |  -  |
 
 <a id="sendForApproval"></a>
 # **sendForApproval**

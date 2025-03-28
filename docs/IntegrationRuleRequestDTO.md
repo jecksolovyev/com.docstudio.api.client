@@ -16,6 +16,7 @@ Request details
 |**map** | **String** | XSLT map to use for transformation |  |
 |**source** | **String** | XML source to convert |  |
 |**multipleEnvelopes** | **Boolean** | Multiple envelopes allowed |  [optional] |
+|**validationFiles** | [**List&lt;IntegrationRuleValidationFile&gt;**](IntegrationRuleValidationFile.md) |  |  [optional] |
 
 
 

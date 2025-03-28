@@ -1,8 +1,7 @@
 
 
-# IntegrationRuleDTO
+# IntegrationRuleListItem
 
-Integration rule
 
 ## Properties
 
@@ -20,11 +19,8 @@ Integration rule
 |**matchingPattern** | **String** | File matching pattern |  [optional] |
 |**matchingPatternSrc** | [**MatchingPatternSrcEnum**](#MatchingPatternSrcEnum) | File matching pattern source: name or content |  [optional] |
 |**namingPattern** | **String** | File naming pattern |  [optional] |
-|**rule** | **String** | XSLT mapping |  [optional] |
-|**zipStructureName** | **String** | The name of pre-saved zip structure in the template |  [optional] |
-|**excludeZipFiles** | **String** | Mask to exclude some files from ZIP. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail |  [optional] |
-|**multipleEnvelopes** | **Boolean** | Rule using for creating multiple envelopes |  [optional] |
-|**attributes** | **Map&lt;String, String&gt;** | Some additional attributes (XPATH can be used as a value) |  [optional] |
+|**succeed** | **Integer** | Number of succeed conversion |  [optional] |
+|**failed** | **Integer** | Number of failed conversion |  [optional] |
 
 
 

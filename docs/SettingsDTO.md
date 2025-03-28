@@ -30,7 +30,8 @@
 |**googleMapsApiKey** | **String** | Google maps api key |  [optional] |
 |**pdf** | [**PdfPropertiesDTO**](PdfPropertiesDTO.md) |  |  [optional] |
 |**mailbox** | [**MailboxProperties**](MailboxProperties.md) |  |  [optional] |
-|**exchangeProtocols** | [**Map&lt;String, ExchangeProps&gt;**](ExchangeProps.md) | Available exchange protocols |  [optional] |
+|**exchange** | [**ExchangeProperties**](ExchangeProperties.md) |  |  [optional] |
+|**exchangeProtocols** | [**Map&lt;String, ExchangeProtocolProps&gt;**](ExchangeProtocolProps.md) | Available exchange protocols |  [optional] |
 |**infoLinks** | [**List&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) | Info menu links |  [optional] |
 |**supportedBarcodes** | [**List&lt;SupportedBarcodeDTO&gt;**](SupportedBarcodeDTO.md) | Supported barcodes |  [optional] |
 |**defaultEnvelopeListColumns** | [**DefaultEnvelopeListColumns**](DefaultEnvelopeListColumns.md) |  |  [optional] |

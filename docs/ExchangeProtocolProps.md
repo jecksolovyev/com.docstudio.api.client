@@ -1,6 +1,6 @@
 
 
-# ExchangeProps
+# ExchangeProtocolProps
 
 Available exchange protocols
 
