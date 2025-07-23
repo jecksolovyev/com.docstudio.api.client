@@ -2,7 +2,6 @@
 
 # EnvelopeConfirmInviteRoleDTO
 
-Confirmed mailboxes to roles
 
 ## Properties
 

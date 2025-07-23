@@ -2,7 +2,6 @@
 
 # EnvelopeSenderDTO
 
-Senders
 
 ## Properties
 

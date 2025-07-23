@@ -15,7 +15,7 @@
 |**dateLocale** | **String** | User locale for dates |  [optional] |
 |**locale** | **String** | User locale |  [optional] |
 |**timezone** | **String** | User timezone |  [optional] |
-|**corporateUser** | **Boolean** | Is corporate user |  [optional] |
+|**corporateAccountId** | **UUID** | Corporate account UUID |  [optional] |
 |**ssoEnabled** | **Boolean** | Is SSO enabled for user |  [optional] |
 |**autoDepositMailboxUuid** | **UUID** | Auto Deposit Mailbox UUID |  [optional] |
 |**phone** | **String** | User phone |  [optional] |
@@ -23,6 +23,8 @@
 |**signature** | **String** | Saved eInk signature |  [optional] |
 |**initials** | **String** | Saved initials |  [optional] |
 |**accounts** | [**List&lt;User2AccountWithMailboxesDTO&gt;**](User2AccountWithMailboxesDTO.md) | User accounts belongs to |  [optional] |
+|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
+|**corporateUser** | **Boolean** |  |  [optional] |
 
 
 

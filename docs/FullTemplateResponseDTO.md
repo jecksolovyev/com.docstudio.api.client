@@ -14,6 +14,7 @@
 |**version** | **UUID** | Template version |  [optional] |
 |**dataCreatedAt** | **OffsetDateTime** | Template data create date |  [optional] |
 |**dataModifiedAt** | **OffsetDateTime** | Template data update date |  [optional] |
+|**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Template access level |  [optional] |
 |**mailbox** | **UUID** | Template creator&#39;s mailbox |  [optional] |
 |**account** | **UUID** | Template creator&#39;s account |  [optional] |
@@ -31,15 +32,25 @@
 
 
 
+## Enum: SignatureContainerEnum
+
+| Name | Value |
+|---- | -----|
+| P7_S | &quot;P7S&quot; |
+| ASICE | &quot;ASICE&quot; |
+
+
+
 ## Enum: AccessEnum
 
 | Name | Value |
 |---- | -----|
 | MAILBOX | &quot;mailbox&quot; |
 | ACCOUNT | &quot;account&quot; |
-| PUB | &quot;pub&quot; |
+| PUBLIC | &quot;public&quot; |
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
+| PUBLIC_HIDDEN | &quot;public-hidden&quot; |
 
 
 

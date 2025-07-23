@@ -19,8 +19,8 @@
 |**matchingPattern** | **String** | File matching pattern |  [optional] |
 |**matchingPatternSrc** | [**MatchingPatternSrcEnum**](#MatchingPatternSrcEnum) | File matching pattern source: name or content |  [optional] |
 |**namingPattern** | **String** | File naming pattern |  [optional] |
-|**succeed** | **Integer** | Number of succeed conversion |  [optional] |
-|**failed** | **Integer** | Number of failed conversion |  [optional] |
+|**succeed** | **Integer** | Number of succeed conversions |  [optional] |
+|**failed** | **Integer** | Number of failed conversions |  [optional] |
 
 
 

@@ -32,9 +32,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
     String inviteCode = "inviteCode_example"; // String | Invite code
@@ -63,7 +63,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -96,9 +96,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
     InvitationPostDTO invitationPostDTO = new InvitationPostDTO(); // InvitationPostDTO | 
@@ -128,7 +128,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -161,9 +161,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
     String inviteCode = "inviteCode_example"; // String | Invite code
@@ -192,7 +192,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -225,9 +225,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
     Integer offset = 0; // Integer | Offset records
@@ -259,7 +259,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -292,9 +292,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | 
@@ -325,7 +325,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

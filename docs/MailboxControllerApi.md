@@ -22,7 +22,6 @@ All URIs are relative to *https://api.docstudio.com*
 | [**leaveMailbox**](MailboxControllerApi.md#leaveMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/leave | Leave mailbox if possible |
 | [**patchMailbox**](MailboxControllerApi.md#patchMailbox) | **PATCH** /api/v1/mailbox/{mailboxUuid} | Patch mailbox, return patched mailbox w/o users count |
 | [**searchMailboxes**](MailboxControllerApi.md#searchMailboxes) | **GET** /api/v1/mailbox/search | Search mailboxes by name, contact, alias, user |
-| [**searchMailboxesAsParticipants**](MailboxControllerApi.md#searchMailboxesAsParticipants) | **GET** /api/v1/mailbox/search-participants | Search mailboxes by name, contact, alias, user |
 | [**updateAutoDelegation**](MailboxControllerApi.md#updateAutoDelegation) | **PUT** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Update auto delegation settings |
 | [**updateMailbox**](MailboxControllerApi.md#updateMailbox) | **PUT** /api/v1/mailbox/{mailboxUuid} | Update mailbox |
 
@@ -48,9 +47,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | UUID of account for which to create a mailbox
@@ -86,7 +85,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -119,9 +118,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -152,7 +151,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -185,9 +184,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     String checkMessage = "checkMessage_example"; // String | Proof message
@@ -220,7 +219,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -253,9 +252,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
@@ -284,7 +283,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -317,9 +316,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -349,7 +348,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -384,9 +383,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -424,7 +423,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -457,9 +456,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     try {
@@ -485,7 +484,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -518,9 +517,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -550,7 +549,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -583,9 +582,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -615,7 +614,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -648,9 +647,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -680,7 +679,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -713,9 +712,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -745,7 +744,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -778,9 +777,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | Account UUID
@@ -810,7 +809,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -843,9 +842,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     List<UUID> UUID = Arrays.asList(); // List<UUID> | 
@@ -879,7 +878,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -912,9 +911,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -944,7 +943,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -977,9 +976,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -1015,7 +1014,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1048,9 +1047,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -1079,7 +1078,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1112,9 +1111,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
@@ -1146,7 +1145,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1179,9 +1178,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     String q = ""; // String | String to search by alias, contact, user email, mailbox name or UUID
@@ -1215,76 +1214,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="searchMailboxesAsParticipants"></a>
-# **searchMailboxesAsParticipants**
-> List&lt;MailboxSearchResultDTO&gt; searchMailboxesAsParticipants(q, type, mailbox)
-
-Search mailboxes by name, contact, alias, user
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.MailboxControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
-
-    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
-    String q = ""; // String | String to search by alias, contact, user email, mailbox name or UUID
-    String type = "SENDER"; // String | Participant type
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    try {
-      List<MailboxSearchResultDTO> result = apiInstance.searchMailboxesAsParticipants(q, type, mailbox);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#searchMailboxesAsParticipants");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **q** | **String**| String to search by alias, contact, user email, mailbox name or UUID | [default to ] |
-| **type** | **String**| Participant type | [enum: SENDER, RECIPIENT] |
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-
-### Return type
-
-[**List&lt;MailboxSearchResultDTO&gt;**](MailboxSearchResultDTO.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1317,9 +1247,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
@@ -1350,7 +1280,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1383,9 +1313,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
@@ -1417,7 +1347,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

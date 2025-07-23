@@ -2,7 +2,6 @@
 
 # IntegrationDefaultRuleDTO
 
-Integration default rules
 
 ## Properties
 

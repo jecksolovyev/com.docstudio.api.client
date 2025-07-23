@@ -2,7 +2,6 @@
 
 # EnvelopeFlowInfoDTO
 
-Detailed information about every role
 
 ## Properties
 

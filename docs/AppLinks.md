@@ -2,7 +2,6 @@
 
 # AppLinks
 
-Application Links
 
 ## Properties
 
@@ -15,6 +14,7 @@ Application Links
 |**termsAndConditions** | **String** |  |  [optional] |
 |**privacyPolicy** | **String** |  |  [optional] |
 |**altLoginPageSide** | **String** |  |  [optional] |
+|**publicAttachment** | **String** |  |  [optional] |
 
 
 

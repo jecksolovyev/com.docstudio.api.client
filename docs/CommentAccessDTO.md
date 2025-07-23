@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**threadUuid** | **UUID** | UUID of comment thread |  |
 |**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level (&#39;official&#39; is not allowed here) |  |
-|**sharedTo** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**sharedTo** | **Set&lt;Object&gt;** |  |  [optional] |
 
 
 
@@ -19,9 +19,10 @@
 |---- | -----|
 | MAILBOX | &quot;mailbox&quot; |
 | ACCOUNT | &quot;account&quot; |
-| PUB | &quot;pub&quot; |
+| PUBLIC | &quot;public&quot; |
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
+| PUBLIC_HIDDEN | &quot;public-hidden&quot; |
 
 
 

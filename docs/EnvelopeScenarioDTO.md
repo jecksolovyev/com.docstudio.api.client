@@ -2,7 +2,6 @@
 
 # EnvelopeScenarioDTO
 
-Scenario
 
 ## Properties
 

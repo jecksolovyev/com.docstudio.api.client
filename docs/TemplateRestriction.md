@@ -2,7 +2,6 @@
 
 # TemplateRestriction
 
-Template Restrictions
 
 ## Properties
 

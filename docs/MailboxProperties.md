@@ -2,7 +2,6 @@
 
 # MailboxProperties
 
-Mailbox properties
 
 ## Properties
 

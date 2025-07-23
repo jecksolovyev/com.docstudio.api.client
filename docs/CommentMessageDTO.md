@@ -2,7 +2,6 @@
 
 # CommentMessageDTO
 
-All messages in the thread
 
 ## Properties
 

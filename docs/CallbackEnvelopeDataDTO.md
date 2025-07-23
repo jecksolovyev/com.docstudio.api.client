@@ -11,7 +11,7 @@ This DTO is sent as a callback payload.
 |**uuid** | **UUID** | UUID of the envelope |  |
 |**status** | [**StatusEnum**](#StatusEnum) | Status of the envelope |  |
 |**subject** | **String** | Subject of the envelope |  |
-|**label** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**label** | **Set&lt;Object&gt;** |  |  [optional] |
 |**receiveDate** | **OffsetDateTime** | The date of the envelope was received |  |
 |**expireDate** | **OffsetDateTime** | The date of the envelope expiration |  [optional] |
 |**template** | **UUID** | Template of the envelope |  |

@@ -39,9 +39,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -65,7 +65,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**|  | |
-| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent, create-template, delete-template, allow-template] |
+| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent, create-template, delete-template, allow-template, verify-signature, envelope-ai-assist] |
 | **action** | **String**|  | [enum: create, access] |
 
 ### Return type
@@ -74,7 +74,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -109,9 +109,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
@@ -145,7 +145,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -178,9 +178,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -210,7 +210,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -243,9 +243,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -275,7 +275,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -308,9 +308,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     try {
@@ -336,7 +336,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -369,9 +369,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -403,7 +403,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -438,9 +438,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
@@ -474,7 +474,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -507,9 +507,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -539,7 +539,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -572,9 +572,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -604,7 +604,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -637,9 +637,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -669,7 +669,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -702,9 +702,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -736,7 +736,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -769,9 +769,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
@@ -803,7 +803,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -2,7 +2,6 @@
 
 # ScenarioStepTemplateInfoDTO
 
-Scenario step destination template info
 
 ## Properties
 

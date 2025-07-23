@@ -2,7 +2,6 @@
 
 # AccountSsoIdProviderShortDTO
 
-SSO Identity Provider for domain
 
 ## Properties
 

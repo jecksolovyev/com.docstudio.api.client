@@ -30,9 +30,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ApplicationTokenControllerApi apiInstance = new ApplicationTokenControllerApi(defaultClient);
     CreateAppTokenDTO createAppTokenDTO = new CreateAppTokenDTO(); // CreateAppTokenDTO | 
@@ -62,7 +62,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -72,8 +72,8 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
 <a id="getUserTokens"></a>
 # **getUserTokens**
@@ -96,9 +96,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ApplicationTokenControllerApi apiInstance = new ApplicationTokenControllerApi(defaultClient);
     try {
@@ -124,7 +124,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -134,8 +134,8 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
 <a id="revokeToken"></a>
 # **revokeToken**
@@ -158,9 +158,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ApplicationTokenControllerApi apiInstance = new ApplicationTokenControllerApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Token id
@@ -189,7 +189,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -199,6 +199,6 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 

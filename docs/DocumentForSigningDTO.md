@@ -14,6 +14,7 @@
 |**binaryFileName** | **String** | Binary file name |  [optional] |
 |**binaryFile** | **byte[]** | Binary file for signing |  [optional] |
 |**binaryHash** | **byte[]** | Binary file hash for signing |  [optional] |
+|**stampHash** | **byte[]** | Stamp hash for signing |  [optional] |
 |**signatures** | [**List&lt;RequiredSignatureDTO&gt;**](RequiredSignatureDTO.md) | Signatures |  [optional] |
 
 

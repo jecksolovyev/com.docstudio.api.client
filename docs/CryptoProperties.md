@@ -2,7 +2,6 @@
 
 # CryptoProperties
 
-Signature Providers and Region
 
 ## Properties
 
@@ -10,7 +9,8 @@ Signature Providers and Region
 |------------ | ------------- | ------------- | -------------|
 |**region** | **String** |  |  [optional] |
 |**signatureProviders** | **List&lt;String&gt;** |  |  [optional] |
-|**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) |  |  [optional] |
+|**signatureContainers** | [**Set&lt;SignatureContainersEnum&gt;**](#Set&lt;SignatureContainersEnum&gt;) |  |  [optional] |
+|**defaultSignatureContainer** | [**DefaultSignatureContainerEnum**](#DefaultSignatureContainerEnum) |  |  [optional] |
 |**accountDocumentSharingProviders** | **List&lt;String&gt;** |  |  [optional] |
 |**stampSupported** | **Boolean** |  |  [optional] |
 |**einkSupported** | **Boolean** |  |  [optional] |
@@ -19,10 +19,20 @@ Signature Providers and Region
 |**padesSupported** | **Boolean** |  |  [optional] |
 |**ocspProxy** | **String** |  |  [optional] |
 |**alwaysUseOcspProxy** | **Boolean** |  |  [optional] |
+|**allowVerifySignatures** | **Boolean** |  |  [optional] |
 
 
 
-## Enum: SignatureContainerEnum
+## Enum: Set&lt;SignatureContainersEnum&gt;
+
+| Name | Value |
+|---- | -----|
+| P7_S | &quot;P7S&quot; |
+| ASICE | &quot;ASICE&quot; |
+
+
+
+## Enum: DefaultSignatureContainerEnum
 
 | Name | Value |
 |---- | -----|

@@ -2,7 +2,6 @@
 
 # SupportedBarcodeDTO
 
-Supported barcodes
 
 ## Properties
 

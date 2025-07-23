@@ -2,7 +2,6 @@
 
 # ActivityLogRecordDTO
 
-Data records
 
 ## Properties
 

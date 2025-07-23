@@ -2,7 +2,6 @@
 
 # DataMap
 
-Data records
 
 ## Properties
 

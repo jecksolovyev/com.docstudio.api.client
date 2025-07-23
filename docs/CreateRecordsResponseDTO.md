@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | **List&lt;UUID&gt;** |  |  [optional] |
+|**data** | **List&lt;Object&gt;** |  |  [optional] |
 |**totalElements** | **Long** |  |  [optional] |
 
 

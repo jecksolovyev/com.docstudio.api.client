@@ -8,7 +8,7 @@ Envelope properties distinct with filter
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**labels** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**labels** | **Set&lt;Object&gt;** |  |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) | Envelope status |  [optional] |
 |**subject** | **String** | Envelope subject |  [optional] |
 |**createDate** | **OffsetDateTime** | Creation date |  [optional] |

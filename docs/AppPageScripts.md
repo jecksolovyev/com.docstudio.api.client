@@ -2,7 +2,6 @@
 
 # AppPageScripts
 
-Additional JS scripts
 
 ## Properties
 

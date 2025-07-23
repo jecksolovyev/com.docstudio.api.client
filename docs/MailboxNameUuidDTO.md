@@ -2,7 +2,6 @@
 
 # MailboxNameUuidDTO
 
-Mailboxes user has access to
 
 ## Properties
 

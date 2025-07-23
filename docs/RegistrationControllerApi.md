@@ -25,6 +25,7 @@ Get user password policy
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -32,6 +33,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     String email = "email_example"; // String | Email of user
@@ -61,7 +66,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -85,6 +90,7 @@ Register a user with validation code
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -92,6 +98,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     String code = "code_example"; // String | Validation code
@@ -125,7 +135,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -150,6 +160,7 @@ Renew user&#39;s password
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -157,6 +168,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     RenewPasswordDTO renewPasswordDTO = new RenewPasswordDTO(); // RenewPasswordDTO | 
@@ -185,7 +200,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -209,6 +224,7 @@ Send email validation code
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -216,6 +232,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     RequestValCodeDTO requestValCodeDTO = new RequestValCodeDTO(); // RequestValCodeDTO | 
@@ -245,7 +265,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -255,8 +275,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
 | **405** | Method disabled by configuration |  -  |
+| **200** | OK |  -  |
 
 <a id="requestResetPassword"></a>
 # **requestResetPassword**
@@ -270,6 +290,7 @@ Request password reset
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -277,6 +298,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     RequestValCodeDTO requestValCodeDTO = new RequestValCodeDTO(); // RequestValCodeDTO | 
@@ -306,7 +331,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -330,6 +355,7 @@ Reset password
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -337,6 +363,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     ResetPasswordDTO resetPasswordDTO = new ResetPasswordDTO(); // ResetPasswordDTO | 
@@ -365,7 +395,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -389,6 +419,7 @@ Validate user code from email
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.RegistrationControllerApi;
 
@@ -396,6 +427,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     String code = "code_example"; // String | Validation code from email
@@ -427,7 +462,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

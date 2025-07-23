@@ -2,7 +2,6 @@
 
 # EnvelopeSearchField
 
-Search fields
 
 ## Properties
 

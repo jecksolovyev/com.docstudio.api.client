@@ -2,7 +2,6 @@
 
 # DefaultEnvelopeListColumns
 
-Default envelope list columns
 
 ## Properties
 

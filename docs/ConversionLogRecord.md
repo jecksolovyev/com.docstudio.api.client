@@ -2,7 +2,6 @@
 
 # ConversionLogRecord
 
-Data records
 
 ## Properties
 

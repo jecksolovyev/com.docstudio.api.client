@@ -34,9 +34,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID scenarioUuid = UUID.randomUUID(); // UUID | Scenario uuid
@@ -68,7 +68,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -101,9 +101,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -135,7 +135,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -168,9 +168,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID scenarioUuid = UUID.randomUUID(); // UUID | Scenario uuid
@@ -201,7 +201,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -234,9 +234,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID scenarioUuid = UUID.randomUUID(); // UUID | Scenario uuid
@@ -268,7 +268,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -301,9 +301,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID scenarioUuid = UUID.randomUUID(); // UUID | Scenario uuid
@@ -335,7 +335,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -368,13 +368,13 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    String level = "mailbox"; // String | Scenario access level, 'pub' by default.
+    String level = "mailbox"; // String | Scenario access level
     String keyword = "keyword_example"; // String | Keyword to search scenario by or scenario UUID
     Integer offset = 0; // Integer | Offset records
     Integer limit = 25; // Integer | Limit records, max is 1000
@@ -397,7 +397,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **level** | **String**| Scenario access level, &#39;pub&#39; by default. | [optional] [default to pub] [enum: mailbox, account, pub, official, shared] |
+| **level** | **String**| Scenario access level | [optional] [enum: mailbox, account, public, official, shared, public-hidden] |
 | **keyword** | **String**| Keyword to search scenario by or scenario UUID | [optional] |
 | **offset** | **Integer**| Offset records | [optional] [default to 0] |
 | **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
@@ -408,7 +408,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -441,9 +441,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     ScenarioControllerApi apiInstance = new ScenarioControllerApi(defaultClient);
     UUID scenarioUuid = UUID.randomUUID(); // UUID | Scenario uuid
@@ -477,7 +477,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

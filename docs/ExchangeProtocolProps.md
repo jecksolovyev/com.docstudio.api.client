@@ -2,7 +2,6 @@
 
 # ExchangeProtocolProps
 
-Available exchange protocols
 
 ## Properties
 

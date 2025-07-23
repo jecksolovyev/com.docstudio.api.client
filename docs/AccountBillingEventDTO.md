@@ -2,7 +2,6 @@
 
 # AccountBillingEventDTO
 
-Events
 
 ## Properties
 

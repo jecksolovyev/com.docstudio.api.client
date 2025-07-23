@@ -12,7 +12,7 @@ The DTO for exception details
 |**message** | **String** | The message of the error |  |
 |**messageLocalized** | **String** | Localized message of the error |  [optional] |
 |**messageArgs** | **List&lt;Object&gt;** |  |  [optional] |
-|**data** | **Object** | Some additional data |  [optional] |
+|**data** | **Object** |  |  [optional] |
 
 
 

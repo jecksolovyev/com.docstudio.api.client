@@ -2,7 +2,6 @@
 
 # GeolocationProperties
 
-Geolocation properties
 
 ## Properties
 

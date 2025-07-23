@@ -2,7 +2,6 @@
 
 # SsoProperties
 
-SSO properties
 
 ## Properties
 

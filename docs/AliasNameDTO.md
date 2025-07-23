@@ -2,7 +2,6 @@
 
 # AliasNameDTO
 
-Mailbox alias
 
 ## Properties
 

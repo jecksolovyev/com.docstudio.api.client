@@ -8,8 +8,8 @@ Policies map
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**passwordPolicy** | [**PasswordPolicy**](PasswordPolicy.md) |  |  [optional] |
-|**sessionPolicy** | [**SessionPolicy**](SessionPolicy.md) |  |  [optional] |
+|**passwordPolicy** | [**PasswordPolicy**](PasswordPolicy.md) | Password policy |  [optional] |
+|**sessionPolicy** | [**SessionPolicy**](SessionPolicy.md) | Session policy |  [optional] |
 
 
 

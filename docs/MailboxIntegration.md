@@ -1,6 +1,6 @@
 
 
-# IntegrationDTO
+# MailboxIntegration
 
 Integration info
 
@@ -12,7 +12,9 @@ Integration info
 |**active** | **Boolean** | Integration status |  |
 |**protocol** | [**ProtocolEnum**](#ProtocolEnum) | Integration protocol |  |
 |**protocolSettings** | **Map&lt;String, String&gt;** | Integration protocol settings |  |
-|**defaultRule** | [**IntegrationDefaultRuleDTO**](IntegrationDefaultRuleDTO.md) |  |  |
+|**defaultRule** | [**IntegrationDefaultRuleDTO**](IntegrationDefaultRuleDTO.md) | Integration default rules |  |
+|**succeed** | **Integer** | Number of succeed conversions without assigned rule |  [optional] |
+|**failed** | **Integer** | Number of failed conversions without assigned rule |  [optional] |
 
 
 

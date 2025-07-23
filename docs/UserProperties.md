@@ -2,13 +2,12 @@
 
 # UserProperties
 
-User settings
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**profilePhone** | **Boolean** |  |  [optional] |
+|**profilePhoneRequired** | **Boolean** |  |  [optional] |
 |**passwordPolicy** | [**PasswordPolicy**](PasswordPolicy.md) |  |  [optional] |
 |**sessionPolicy** | [**SessionPolicy**](SessionPolicy.md) |  |  [optional] |
 |**measurementSystem** | [**MeasurementSystemEnum**](#MeasurementSystemEnum) |  |  [optional] |
@@ -17,6 +16,7 @@ User settings
 |**allowUsersToRegister** | **Boolean** | Allow or deny users to register |  [optional] |
 |**allowAutoDeposite** | **Boolean** | Allow or deny users to set Auto Deposit Mailbox |  [optional] |
 |**allowManageNotification** | **Boolean** | Allow or deny users to manage notifications |  [optional] |
+|**profileFields** | [**List&lt;UserField&gt;**](UserField.md) |  |  [optional] |
 
 
 

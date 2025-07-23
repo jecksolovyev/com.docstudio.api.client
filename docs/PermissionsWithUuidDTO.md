@@ -2,7 +2,6 @@
 
 # PermissionsWithUuidDTO
 
-Mailboxes roles and permissions
 
 ## Properties
 

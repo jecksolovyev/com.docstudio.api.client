@@ -2,7 +2,6 @@
 
 # NameUuidDTO
 
-Mailbox groups
 
 ## Properties
 

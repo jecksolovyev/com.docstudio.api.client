@@ -2,7 +2,6 @@
 
 # EnvelopeDocumentSignatureDTO
 
-Document signatures
 
 ## Properties
 

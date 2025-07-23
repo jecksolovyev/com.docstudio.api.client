@@ -2,7 +2,6 @@
 
 # EnvApprovalSearchResultDTO
 
-Data records
 
 ## Properties
 

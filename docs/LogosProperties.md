@@ -2,7 +2,6 @@
 
 # LogosProperties
 
-Logos properties
 
 ## Properties
 

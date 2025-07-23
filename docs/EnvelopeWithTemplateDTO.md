@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**envelope** | [**EnvGetDTO**](EnvGetDTO.md) |  |  [optional] |
-|**template** | [**FullTemplateResponseDTO**](FullTemplateResponseDTO.md) |  |  [optional] |
-|**scenario** | [**EnvelopeScenarioDTO**](EnvelopeScenarioDTO.md) |  |  [optional] |
+|**envelope** | [**EnvGetDTO**](EnvGetDTO.md) | Envelope |  [optional] |
+|**template** | [**FullTemplateResponseDTO**](FullTemplateResponseDTO.md) | Template |  [optional] |
+|**scenario** | [**EnvelopeScenarioDTO**](EnvelopeScenarioDTO.md) | Scenario |  [optional] |
 
 
 

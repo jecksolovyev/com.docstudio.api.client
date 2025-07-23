@@ -2,7 +2,6 @@
 
 # BillingProperties
 
-Billing properties
 
 ## Properties
 

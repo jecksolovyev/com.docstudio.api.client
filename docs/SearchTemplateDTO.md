@@ -2,7 +2,6 @@
 
 # SearchTemplateDTO
 
-Data records
 
 ## Properties
 
@@ -18,6 +17,7 @@ Data records
 |**sharedTo** | **Set&lt;UUID&gt;** | Mailboxes to which template is shared to |  [optional] |
 |**sharedToMailboxGroups** | **Set&lt;UUID&gt;** | Mailbox groups to which template is shared to |  [optional] |
 |**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
+|**favorite** | **Boolean** | Template marked as favorite |  [optional] |
 |**createdAt** | **OffsetDateTime** | Date of Template creation |  [optional] |
 
 
@@ -28,9 +28,10 @@ Data records
 |---- | -----|
 | MAILBOX | &quot;mailbox&quot; |
 | ACCOUNT | &quot;account&quot; |
-| PUB | &quot;pub&quot; |
+| PUBLIC | &quot;public&quot; |
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
+| PUBLIC_HIDDEN | &quot;public-hidden&quot; |
 
 
 

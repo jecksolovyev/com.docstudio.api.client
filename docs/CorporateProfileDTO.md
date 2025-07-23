@@ -19,6 +19,7 @@
 |**phone** | **String** | User phone |  [optional] |
 |**displayExactDate** | **Boolean** | Display exact date instead of relative |  [optional] |
 |**mailboxes** | [**List&lt;MailboxNameUuidDTO&gt;**](MailboxNameUuidDTO.md) | Mailboxes user has access to |  [optional] |
+|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
 
 
 

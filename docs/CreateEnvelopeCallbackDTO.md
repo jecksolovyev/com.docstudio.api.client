@@ -8,7 +8,7 @@ Create envelope callback dto
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**filter** | [**CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) |  |  |
+|**filter** | [**CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) | Envelope filter |  |
 |**url** | **String** | Callback url |  |
 |**retries** | **Integer** | Retries count, 0 &lt; X &lt;&#x3D; 10 |  |
 |**timeout** | **Integer** | Request timeout (ms), 100 &lt; X &lt; 60000 |  |

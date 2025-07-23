@@ -2,7 +2,6 @@
 
 # PasswordPolicy
 
-Password policy
 
 ## Properties
 

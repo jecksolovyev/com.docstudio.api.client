@@ -2,7 +2,6 @@
 
 # EnvelopeToMailboxDTO
 
-Data records
 
 ## Properties
 
@@ -27,7 +26,7 @@ Data records
 |**mailboxName** | **String** | Mailbox name of sender |  [optional] |
 |**total** | **Integer** | Total number of participants |  [optional] |
 |**completed** | **Integer** | Number of participants processed |  [optional] |
-|**labels** | **List&lt;UUID&gt;** |  |  [optional] |
+|**labels** | **List&lt;Object&gt;** |  |  [optional] |
 |**templateUuid** | **UUID** | Envelope template UUID |  [optional] |
 |**templateVersion** | **UUID** | Envelope template version |  [optional] |
 |**templateName** | **String** | Envelope template name |  [optional] |

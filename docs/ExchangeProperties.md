@@ -2,7 +2,6 @@
 
 # ExchangeProperties
 
-Common properties for exchange protocols
 
 ## Properties
 

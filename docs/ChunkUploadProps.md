@@ -2,7 +2,6 @@
 
 # ChunkUploadProps
 
-Chunk Upload properties
 
 ## Properties
 

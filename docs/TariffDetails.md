@@ -2,7 +2,6 @@
 
 # TariffDetails
 
-Tariff details
 
 ## Properties
 

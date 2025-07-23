@@ -2,7 +2,6 @@
 
 # EnvelopeViewColumn
 
-Saved columns to display
 
 ## Properties
 

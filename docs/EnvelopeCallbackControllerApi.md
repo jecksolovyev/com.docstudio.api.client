@@ -33,14 +33,14 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     UUID callbackUuid = UUID.randomUUID(); // UUID | Callback id
     UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
     try {
       EnvelopeCheckResultDTO result = apiInstance.checkCallback(callbackUuid, envelopeUuid, mailboxUuid);
       System.out.println(result);
@@ -61,7 +61,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **callbackUuid** | **UUID**| Callback id | |
 | **envelopeUuid** | **UUID**| Envelope UUID | |
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailboxUuid** | **UUID**| Mailbox UUID | |
 
 ### Return type
 
@@ -69,7 +69,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -102,9 +102,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -136,7 +136,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -169,9 +169,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     try {
@@ -197,7 +197,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -207,8 +207,8 @@ This endpoint does not need any parameter.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **400** | Bad Request |  -  |
 | **200** | OK |  -  |
+| **400** | Bad Request |  -  |
 
 <a id="listCallbacks"></a>
 # **listCallbacks**
@@ -231,9 +231,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
@@ -263,7 +263,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -296,9 +296,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     UUID callbackUuid = UUID.randomUUID(); // UUID | Callback id
@@ -329,7 +329,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -362,14 +362,14 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeCallbackControllerApi apiInstance = new EnvelopeCallbackControllerApi(defaultClient);
     UUID callbackUuid = UUID.randomUUID(); // UUID | Callback id
     UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
     try {
       EnvelopeSendResultDTO result = apiInstance.sendCallback(callbackUuid, envelopeUuid, mailboxUuid);
       System.out.println(result);
@@ -390,7 +390,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **callbackUuid** | **UUID**| Callback id | |
 | **envelopeUuid** | **UUID**| Envelope UUID | |
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailboxUuid** | **UUID**| Mailbox UUID | |
 
 ### Return type
 
@@ -398,7 +398,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

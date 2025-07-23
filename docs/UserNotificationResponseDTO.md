@@ -2,7 +2,6 @@
 
 # UserNotificationResponseDTO
 
-Data records
 
 ## Properties
 
@@ -11,7 +10,7 @@ Data records
 |**id** | **UUID** | Notification uuid |  |
 |**type** | [**TypeEnum**](#TypeEnum) | Notification type |  |
 |**code** | [**CodeEnum**](#CodeEnum) | Notification code |  |
-|**data** | **Object** | Notification data |  |
+|**data** | **Object** |  |  |
 |**createdAt** | **OffsetDateTime** | Notification date |  |
 |**mailboxUuid** | **UUID** | Mailbox UUID for mailbox-wide notifications |  [optional] |
 |**accountUuid** | **UUID** | Account UUID for account-wide notifications |  [optional] |

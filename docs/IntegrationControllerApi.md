@@ -43,9 +43,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID integrationRuleUuid = UUID.randomUUID(); // UUID | UUID of integration rule
@@ -76,7 +76,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -90,7 +90,7 @@ null (empty response body)
 
 <a id="conversionLog"></a>
 # **conversionLog**
-> PageDTOConversionLogRecord conversionLog(accountId, ruleId, status, keyword, offset, limit, uuidOnly, noRule, mailboxId)
+> PageDTOConversionLogRecord conversionLog(accountId, ruleId, mailboxId, status, keyword, offset, limit, uuidOnly, noRule)
 
 Get conversion log
 
@@ -109,22 +109,22 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID accountId = UUID.randomUUID(); // UUID | Account UUID
     UUID ruleId = UUID.randomUUID(); // UUID | UUID of integration rule
+    UUID mailboxId = UUID.randomUUID(); // UUID | Mailbox UUID
     String status = "SUCCEED"; // String | Conversion Status
     String keyword = "keyword_example"; // String | Filter by Filename/Envelope subject/Envelope UUID
     Integer offset = 0; // Integer | Offset, how many records to skip
     Integer limit = 25; // Integer | Limit, how many records to retrieve
     Boolean uuidOnly = true; // Boolean | Retrieve only UUID of record
     Boolean noRule = true; // Boolean | Retrieve only records with no rule
-    UUID mailboxId = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      PageDTOConversionLogRecord result = apiInstance.conversionLog(accountId, ruleId, status, keyword, offset, limit, uuidOnly, noRule, mailboxId);
+      PageDTOConversionLogRecord result = apiInstance.conversionLog(accountId, ruleId, mailboxId, status, keyword, offset, limit, uuidOnly, noRule);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IntegrationControllerApi#conversionLog");
@@ -143,13 +143,13 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **accountId** | **UUID**| Account UUID | |
 | **ruleId** | **UUID**| UUID of integration rule | [optional] |
+| **mailboxId** | **UUID**| Mailbox UUID | [optional] |
 | **status** | **String**| Conversion Status | [optional] [enum: SUCCEED, FAILED] |
 | **keyword** | **String**| Filter by Filename/Envelope subject/Envelope UUID | [optional] |
 | **offset** | **Integer**| Offset, how many records to skip | [optional] [default to 0] |
 | **limit** | **Integer**| Limit, how many records to retrieve | [optional] [default to 25] |
 | **uuidOnly** | **Boolean**| Retrieve only UUID of record | [optional] |
 | **noRule** | **Boolean**| Retrieve only records with no rule | [optional] |
-| **mailboxId** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -157,7 +157,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ public class Example {
 
 <a id="convertBinaryToXML"></a>
 # **convertBinaryToXML**
-> String convertBinaryToXML(filename, mailboxUuid, body)
+> String convertBinaryToXML(mailboxUuid, filename, body)
 
 Convert incoming file to XML view
 
@@ -190,16 +190,16 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
     String filename = "filename_example"; // String | filename, for type detection
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     byte[] body = null; // byte[] | 
     try {
-      String result = apiInstance.convertBinaryToXML(filename, mailboxUuid, body);
+      String result = apiInstance.convertBinaryToXML(mailboxUuid, filename, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IntegrationControllerApi#convertBinaryToXML");
@@ -216,8 +216,8 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **mailboxUuid** | **UUID**| Mailbox UUID | |
 | **filename** | **String**| filename, for type detection | |
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **body** | **byte[]**|  | [optional] |
 
 ### Return type
@@ -226,7 +226,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -259,9 +259,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     IntegrationRule integrationRule = new IntegrationRule(); // IntegrationRule | 
@@ -291,7 +291,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -324,9 +324,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID integrationRuleUuid = UUID.randomUUID(); // UUID | UUID of integration rule
@@ -355,7 +355,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -388,9 +388,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     IntegrationRuleRequestDTO integrationRuleRequestDTO = new IntegrationRuleRequestDTO(); // IntegrationRuleRequestDTO | 
@@ -420,7 +420,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -434,7 +434,7 @@ public class Example {
 
 <a id="generate"></a>
 # **generate**
-> GeneratedEnvelope generate(templateUuid, mailboxUuid, versionUuid)
+> GeneratedEnvelope generate(mailboxUuid, templateUuid, versionUuid, autoFields)
 
 Generate envelope XML by template
 
@@ -453,16 +453,17 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
     UUID templateUuid = UUID.randomUUID(); // UUID | Template UUID
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UUID versionUuid = UUID.randomUUID(); // UUID | Template version UUID
+    Boolean autoFields = true; // Boolean | Include auto fields (lookup, formula, duplicate)
     try {
-      GeneratedEnvelope result = apiInstance.generate(templateUuid, mailboxUuid, versionUuid);
+      GeneratedEnvelope result = apiInstance.generate(mailboxUuid, templateUuid, versionUuid, autoFields);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IntegrationControllerApi#generate");
@@ -479,9 +480,10 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **mailboxUuid** | **UUID**| Mailbox UUID | |
 | **templateUuid** | **UUID**| Template UUID | |
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **versionUuid** | **UUID**| Template version UUID | [optional] |
+| **autoFields** | **Boolean**| Include auto fields (lookup, formula, duplicate) | [optional] |
 
 ### Return type
 
@@ -489,7 +491,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -522,9 +524,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     try {
@@ -550,7 +552,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -583,9 +585,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID integrationRuleUuid = UUID.randomUUID(); // UUID | UUID of integration rule
@@ -617,7 +619,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -650,13 +652,13 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox UUID
     try {
       List<IntegrationRuleListItem> result = apiInstance.getIntegrationRules(accountUuid, mailboxUuid);
       System.out.println(result);
@@ -676,7 +678,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**| Account UUID | |
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
+| **mailboxUuid** | **UUID**| Mailbox UUID | [optional] |
 
 ### Return type
 
@@ -684,7 +686,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -698,7 +700,7 @@ public class Example {
 
 <a id="getMailboxIntegration"></a>
 # **getMailboxIntegration**
-> IntegrationDTO getMailboxIntegration(mailboxUuid)
+> MailboxIntegration getMailboxIntegration(mailboxUuid)
 
 Get Mailbox integration
 
@@ -717,14 +719,14 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | 
     try {
-      IntegrationDTO result = apiInstance.getMailboxIntegration(mailboxUuid);
+      MailboxIntegration result = apiInstance.getMailboxIntegration(mailboxUuid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IntegrationControllerApi#getMailboxIntegration");
@@ -741,15 +743,15 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailboxUuid** | **UUID**|  | |
 
 ### Return type
 
-[**IntegrationDTO**](IntegrationDTO.md)
+[**MailboxIntegration**](MailboxIntegration.md)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -782,9 +784,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID logId = UUID.randomUUID(); // UUID | UUID of conversion log
@@ -814,7 +816,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -847,12 +849,12 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | 
     try {
       Object result = apiInstance.newPassword(mailboxUuid);
       System.out.println(result);
@@ -871,7 +873,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailboxUuid** | **UUID**|  | |
 
 ### Return type
 
@@ -879,7 +881,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -912,9 +914,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     IntegrationReprocessRequest integrationReprocessRequest = new IntegrationReprocessRequest(); // IntegrationReprocessRequest | 
@@ -943,7 +945,7 @@ null (empty response body)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -957,7 +959,7 @@ null (empty response body)
 
 <a id="saveMailboxIntegration"></a>
 # **saveMailboxIntegration**
-> IntegrationDTO saveMailboxIntegration(mailboxUuid, integrationDTO)
+> MailboxIntegration saveMailboxIntegration(mailboxUuid, mailboxIntegration)
 
 Create/update Mailbox integration
 
@@ -976,15 +978,15 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
-    UUID mailboxUuid = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    IntegrationDTO integrationDTO = new IntegrationDTO(); // IntegrationDTO | 
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | 
+    MailboxIntegration mailboxIntegration = new MailboxIntegration(); // MailboxIntegration | 
     try {
-      IntegrationDTO result = apiInstance.saveMailboxIntegration(mailboxUuid, integrationDTO);
+      MailboxIntegration result = apiInstance.saveMailboxIntegration(mailboxUuid, mailboxIntegration);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IntegrationControllerApi#saveMailboxIntegration");
@@ -1001,16 +1003,16 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **mailboxUuid** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **integrationDTO** | [**IntegrationDTO**](IntegrationDTO.md)|  | |
+| **mailboxUuid** | **UUID**|  | |
+| **mailboxIntegration** | [**MailboxIntegration**](MailboxIntegration.md)|  | |
 
 ### Return type
 
-[**IntegrationDTO**](IntegrationDTO.md)
+[**MailboxIntegration**](MailboxIntegration.md)
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1043,9 +1045,9 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
     
-    // Configure HTTP bearer authorization: Authorization
-    HttpBearerAuth Authorization = (HttpBearerAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setBearerToken("BEARER TOKEN");
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     IntegrationControllerApi apiInstance = new IntegrationControllerApi(defaultClient);
     UUID integrationRuleUuid = UUID.randomUUID(); // UUID | UUID of integration rule
@@ -1077,7 +1079,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

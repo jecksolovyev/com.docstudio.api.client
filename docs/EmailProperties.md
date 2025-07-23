@@ -2,7 +2,6 @@
 
 # EmailProperties
 
-E-mails for support
 
 ## Properties
 

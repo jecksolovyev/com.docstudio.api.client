@@ -2,7 +2,6 @@
 
 # AppLocales
 
-Supported locales
 
 ## Properties
 

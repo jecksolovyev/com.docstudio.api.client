@@ -45,5 +45,9 @@
 
 * `ALLOW_TEMPLATE` (value: `"allow-template"`)
 
+* `VERIFY_SIGNATURE` (value: `"verify-signature"`)
+
+* `ENVELOPE_AI_ASSIST` (value: `"envelope-ai-assist"`)
+
 
 

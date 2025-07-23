@@ -10,13 +10,13 @@
 |**uuid** | **UUID** | Domain UUID |  [optional] |
 |**accountUuid** | **UUID** | Domain account uuid |  [optional] |
 |**domain** | **String** | Domain name |  [optional] |
-|**verifyInfo** | [**AccountDomainVerifyInfo**](AccountDomainVerifyInfo.md) |  |  [optional] |
+|**verifyInfo** | [**AccountDomainVerifyInfo**](AccountDomainVerifyInfo.md) | Domain verification info |  [optional] |
 |**verifyMethod** | [**VerifyMethodEnum**](#VerifyMethodEnum) | Domain verification method |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) | Domain status |  [optional] |
 |**verificationDate** | **OffsetDateTime** | Domain verification date |  [optional] |
 |**createDate** | **OffsetDateTime** | Domain creation date |  [optional] |
 |**lastCheckDate** | **OffsetDateTime** | Domain last check date |  [optional] |
-|**ssoIdProvider** | [**AccountSsoIdProviderShortDTO**](AccountSsoIdProviderShortDTO.md) |  |  [optional] |
+|**ssoIdProvider** | [**AccountSsoIdProviderShortDTO**](AccountSsoIdProviderShortDTO.md) | SSO Identity Provider for domain |  [optional] |
 
 
 

@@ -2,7 +2,6 @@
 
 # EnvelopeApproverDTO
 
-Set of approvers (Flow UUID must not be set)
 
 ## Properties
 

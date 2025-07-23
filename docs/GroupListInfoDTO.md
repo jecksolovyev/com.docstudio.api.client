@@ -2,7 +2,6 @@
 
 # GroupListInfoDTO
 
-Data records
 
 ## Properties
 

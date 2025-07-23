@@ -2,7 +2,6 @@
 
 # MailboxProfileDTO
 
-Mailboxes linked to this account
 
 ## Properties
 

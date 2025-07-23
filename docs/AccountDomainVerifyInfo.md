@@ -2,7 +2,6 @@
 
 # AccountDomainVerifyInfo
 
-Domain verification info
 
 ## Properties
 

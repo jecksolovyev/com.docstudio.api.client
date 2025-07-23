@@ -2,7 +2,6 @@
 
 # EnvelopeExtraFieldDTO
 
-Data for extra columns
 
 ## Properties
 

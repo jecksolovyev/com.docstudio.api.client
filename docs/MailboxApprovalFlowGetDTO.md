@@ -2,7 +2,6 @@
 
 # MailboxApprovalFlowGetDTO
 
-Data records
 
 ## Properties
 

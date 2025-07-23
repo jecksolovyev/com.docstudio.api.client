@@ -13,6 +13,7 @@
 |**sharedTo** | **Set&lt;UUID&gt;** | Mailboxes list, which have access to template |  [optional] |
 |**sharedToMailboxGroups** | **Set&lt;UUID&gt;** | Mailbox groups, which have access to template |  [optional] |
 |**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
+|**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
 
 
 
@@ -22,9 +23,19 @@
 |---- | -----|
 | MAILBOX | &quot;mailbox&quot; |
 | ACCOUNT | &quot;account&quot; |
-| PUB | &quot;pub&quot; |
+| PUBLIC | &quot;public&quot; |
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
+| PUBLIC_HIDDEN | &quot;public-hidden&quot; |
+
+
+
+## Enum: SignatureContainerEnum
+
+| Name | Value |
+|---- | -----|
+| P7_S | &quot;P7S&quot; |
+| ASICE | &quot;ASICE&quot; |
 
 
 

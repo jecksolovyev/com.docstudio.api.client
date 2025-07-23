@@ -2,7 +2,6 @@
 
 # ExternalLinkShortResponseDTO
 
-Info menu links
 
 ## Properties
 

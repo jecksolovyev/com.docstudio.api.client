@@ -2,7 +2,6 @@
 
 # UserMailboxPermissionsDTO
 
-Data records
 
 ## Properties
 

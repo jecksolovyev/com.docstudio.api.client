@@ -2,7 +2,6 @@
 
 # PdfPropertiesDTO
 
-PDF properties
 
 ## Properties
 

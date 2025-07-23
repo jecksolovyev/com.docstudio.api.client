@@ -2,7 +2,6 @@
 
 # DictionaryColumnValueResponseDTO
 
-Data records
 
 ## Properties
 

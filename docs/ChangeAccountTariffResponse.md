@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**result** | **Boolean** | Operation result |  [optional] |
 |**details** | **Set&lt;String&gt;** | Operation result details |  [optional] |
-|**tariff** | [**AccountTariffInfo**](AccountTariffInfo.md) |  |  [optional] |
+|**tariff** | [**AccountTariffInfo**](AccountTariffInfo.md) | Tariff info |  [optional] |
 
 
 

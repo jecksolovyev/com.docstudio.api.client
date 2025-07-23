@@ -2,7 +2,6 @@
 
 # EnvSharedToDTO
 
-Mailboxes the envelope shared with
 
 ## Properties
 

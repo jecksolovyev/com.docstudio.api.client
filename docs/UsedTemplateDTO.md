@@ -2,7 +2,6 @@
 
 # UsedTemplateDTO
 
-Data records
 
 ## Properties
 

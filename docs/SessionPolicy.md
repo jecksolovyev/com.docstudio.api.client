@@ -2,7 +2,6 @@
 
 # SessionPolicy
 
-Session policy
 
 ## Properties
 

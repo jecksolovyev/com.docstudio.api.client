@@ -2,7 +2,6 @@
 
 # AccountBillingCounterValueDTO
 
-Counters
 
 ## Properties
 
