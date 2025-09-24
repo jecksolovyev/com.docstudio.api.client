@@ -5,7 +5,7 @@ All URIs are relative to *https://api.docstudio.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**create6**](CategoryControllerApi.md#create6) | **POST** /api/v1/category | Save a category in DB |
-| [**delete4**](CategoryControllerApi.md#delete4) | **DELETE** /api/v1/category/{id} | Delete category by Id |
+| [**delete3**](CategoryControllerApi.md#delete3) | **DELETE** /api/v1/category/{id} | Delete category by Id |
 | [**getAllByType**](CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
 | [**update6**](CategoryControllerApi.md#update6) | **PUT** /api/v1/category/{id} | Update the category in DB |
 
@@ -77,9 +77,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete4"></a>
-# **delete4**
-> delete4(id, mailbox, moveTo, keepChildren)
+<a id="delete3"></a>
+# **delete3**
+> delete3(id, mailbox, moveTo, keepChildren)
 
 Delete category by Id
 
@@ -108,9 +108,9 @@ public class Example {
     UUID moveTo = UUID.randomUUID(); // UUID | Optional id of category to move all subordinated (if any)
     Boolean keepChildren = true; // Boolean | Optional, if true and moveTo is null all children will become root categories
     try {
-      apiInstance.delete4(id, mailbox, moveTo, keepChildren);
+      apiInstance.delete3(id, mailbox, moveTo, keepChildren);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CategoryControllerApi#delete4");
+      System.err.println("Exception when calling CategoryControllerApi#delete3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

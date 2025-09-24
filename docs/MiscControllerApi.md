@@ -362,8 +362,8 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **String**| Barcode type | [enum: upca, upce, ean8, ean13, code39, code128, itf14, code93, rationalizedCodabar, databarexpandedstacked, qrcode, datamatrix, pdf417] |
-| **value** | **String**| Barcode value | |
+| **type** | **String**| Barcode type | [enum: upca, upce, ean8, ean13, code39, code128, itf14, code93, rationalizedCodabar, databarexpandedstacked, qrcode, datamatrix, pdf417, bankGovUa] |
+| **value** | **String**| Barcode value | [optional] |
 
 ### Return type
 

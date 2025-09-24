@@ -11,13 +11,13 @@ All URIs are relative to *https://api.docstudio.com*
 | [**createAiToken**](AccountControllerApi.md#createAiToken) | **POST** /api/v1/account/{accountId}/ai-token | Create new AI token |
 | [**createCorporateUser**](AccountControllerApi.md#createCorporateUser) | **POST** /api/v1/account/{accountUuid}/user | Create corporate user |
 | [**createMassAccountUsers**](AccountControllerApi.md#createMassAccountUsers) | **POST** /api/v1/account/{accountUuid}/create-users | Mass create corporate users |
-| [**deleteAccount**](AccountControllerApi.md#deleteAccount) | **DELETE** /api/v1/account/{uuid} | Delete account |
+| [**deleteAccount**](AccountControllerApi.md#deleteAccount) | **DELETE** /api/v1/account/{id} | Delete account |
 | [**deleteAiToken**](AccountControllerApi.md#deleteAiToken) | **DELETE** /api/v1/account/{accountId}/ai-token/{tokenId} | Delete AI token |
 | [**deleteCorporateUsers**](AccountControllerApi.md#deleteCorporateUsers) | **DELETE** /api/v1/account/{accountUuid}/user | Delete corporate users |
 | [**deleteCryptoConfigs**](AccountControllerApi.md#deleteCryptoConfigs) | **DELETE** /api/v1/account/{accountUuid}/crypto-configs | Delete crypto configs |
 | [**getAccountBillingAddress**](AccountControllerApi.md#getAccountBillingAddress) | **GET** /api/v1/account/{accountUuid}/billing/address | Get account billing address |
 | [**getAccountBrandLogo**](AccountControllerApi.md#getAccountBrandLogo) | **GET** /api/v1/account/brand-logo/{accountUuid} | Retrieve account brand logo |
-| [**getAccountDetails**](AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{uuid} |  |
+| [**getAccountDetails**](AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{id} |  |
 | [**getAccountLogo1**](AccountControllerApi.md#getAccountLogo1) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo |
 | [**getAccountUsersImportFileExample**](AccountControllerApi.md#getAccountUsersImportFileExample) | **GET** /api/v1/account/{accountUuid}/users/example | Get account users import file example |
 | [**getAiTokens**](AccountControllerApi.md#getAiTokens) | **GET** /api/v1/account/{accountId}/ai-token | List AI tokens |
@@ -30,7 +30,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**saveUserPolicies**](AccountControllerApi.md#saveUserPolicies) | **POST** /api/v1/account/{accountUuid}/user-policies | Save user password/session policies |
 | [**searchMailboxes1**](AccountControllerApi.md#searchMailboxes1) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list |
 | [**updateAccountBillingAddress**](AccountControllerApi.md#updateAccountBillingAddress) | **POST** /api/v1/account/{accountUuid}/billing/address | Create/update account billing address |
-| [**updateAccountDetails**](AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{uuid} |  |
+| [**updateAccountDetails**](AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{id} |  |
 | [**usersReport**](AccountControllerApi.md#usersReport) | **POST** /api/v1/account/{accountUuid}/users/report | Generate account users report |
 
 
@@ -513,7 +513,7 @@ public class Example {
 
 <a id="deleteAccount"></a>
 # **deleteAccount**
-> deleteAccount(checkMessage, uuid)
+> deleteAccount(checkMessage, id)
 
 Delete account
 
@@ -538,9 +538,9 @@ public class Example {
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     String checkMessage = "checkMessage_example"; // String | Proof message
-    UUID uuid = UUID.randomUUID(); // UUID | UUID of account to delete
+    UUID id = UUID.randomUUID(); // UUID | UUID of account to delete
     try {
-      apiInstance.deleteAccount(checkMessage, uuid);
+      apiInstance.deleteAccount(checkMessage, id);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#deleteAccount");
       System.err.println("Status code: " + e.getCode());
@@ -557,7 +557,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **checkMessage** | **String**| Proof message | |
-| **uuid** | **UUID**| UUID of account to delete | |
+| **id** | **UUID**| UUID of account to delete | |
 
 ### Return type
 
@@ -913,7 +913,7 @@ public class Example {
 
 <a id="getAccountDetails"></a>
 # **getAccountDetails**
-> AccountDTO getAccountDetails(uuid, withUsers)
+> AccountDTO getAccountDetails(id, withUsers)
 
 
 
@@ -937,10 +937,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     Boolean withUsers = false; // Boolean | 
     try {
-      AccountDTO result = apiInstance.getAccountDetails(uuid, withUsers);
+      AccountDTO result = apiInstance.getAccountDetails(id, withUsers);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#getAccountDetails");
@@ -957,7 +957,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **withUsers** | **Boolean**|  | [optional] [default to false] |
 
 ### Return type
@@ -1787,7 +1787,7 @@ public class Example {
 
 <a id="updateAccountDetails"></a>
 # **updateAccountDetails**
-> AccountDTO updateAccountDetails(uuid, updateAccountRequest)
+> AccountDTO updateAccountDetails(id, updateAccountRequest)
 
 
 
@@ -1811,10 +1811,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     UpdateAccountRequest updateAccountRequest = new UpdateAccountRequest(); // UpdateAccountRequest | 
     try {
-      AccountDTO result = apiInstance.updateAccountDetails(uuid, updateAccountRequest);
+      AccountDTO result = apiInstance.updateAccountDetails(id, updateAccountRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#updateAccountDetails");
@@ -1831,7 +1831,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **updateAccountRequest** | [**UpdateAccountRequest**](UpdateAccountRequest.md)|  | |
 
 ### Return type

@@ -34,6 +34,7 @@
 |**chainUuid** | **UUID** | Envelope chain UUID |  [optional] |
 |**chainedByMe** | **Boolean** | Envelope chained by requested user |  [optional] |
 |**extraFields** | [**List&lt;EnvelopeExtraFieldDTO&gt;**](EnvelopeExtraFieldDTO.md) | Data for extra columns |  [optional] |
+|**formId** | **UUID** | UUID of the form from which the envelope was created |  [optional] |
 
 
 

@@ -13,6 +13,7 @@ Category to save
 |**name** | **String** |  |  |
 |**description** | **String** |  |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Access level |  [optional] |
+|**createdAt** | **OffsetDateTime** | Creation date |  [optional] |
 
 
 

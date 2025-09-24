@@ -5,7 +5,7 @@ All URIs are relative to *https://api.docstudio.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**create4**](FilterSettingsControllerApi.md#create4) | **POST** /api/v1/filterSettings | Create FilterSettings for mailbox |
-| [**delete2**](FilterSettingsControllerApi.md#delete2) | **DELETE** /api/v1/filterSettings/{uuid} | Delete FilterSettings |
+| [**delete1**](FilterSettingsControllerApi.md#delete1) | **DELETE** /api/v1/filterSettings/{uuid} | Delete FilterSettings |
 | [**getAll1**](FilterSettingsControllerApi.md#getAll1) | **GET** /api/v1/filterSettings | Read all by mailbox |
 | [**getByUuid**](FilterSettingsControllerApi.md#getByUuid) | **GET** /api/v1/filterSettings/{uuid} | Get by UUID |
 | [**update3**](FilterSettingsControllerApi.md#update3) | **PUT** /api/v1/filterSettings/{uuid} | Update FilterSettings for mailbox |
@@ -78,9 +78,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete2"></a>
-# **delete2**
-> delete2(uuid, mailbox)
+<a id="delete1"></a>
+# **delete1**
+> delete1(uuid, mailbox)
 
 Delete FilterSettings
 
@@ -107,9 +107,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | 
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.delete2(uuid, mailbox);
+      apiInstance.delete1(uuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling FilterSettingsControllerApi#delete2");
+      System.err.println("Exception when calling FilterSettingsControllerApi#delete1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

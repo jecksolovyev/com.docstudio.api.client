@@ -9,6 +9,8 @@
 |------------ | ------------- | ------------- | -------------|
 |**region** | **String** |  |  [optional] |
 |**signatureProviders** | **List&lt;String&gt;** |  |  [optional] |
+|**signatureAlgorithms** | [**Set&lt;SignatureAlgorithmsEnum&gt;**](#Set&lt;SignatureAlgorithmsEnum&gt;) |  |  [optional] |
+|**defaultSignatureAlgorithm** | [**DefaultSignatureAlgorithmEnum**](#DefaultSignatureAlgorithmEnum) |  |  [optional] |
 |**signatureContainers** | [**Set&lt;SignatureContainersEnum&gt;**](#Set&lt;SignatureContainersEnum&gt;) |  |  [optional] |
 |**defaultSignatureContainer** | [**DefaultSignatureContainerEnum**](#DefaultSignatureContainerEnum) |  |  [optional] |
 |**accountDocumentSharingProviders** | **List&lt;String&gt;** |  |  [optional] |
@@ -20,6 +22,24 @@
 |**ocspProxy** | **String** |  |  [optional] |
 |**alwaysUseOcspProxy** | **Boolean** |  |  [optional] |
 |**allowVerifySignatures** | **Boolean** |  |  [optional] |
+
+
+
+## Enum: Set&lt;SignatureAlgorithmsEnum&gt;
+
+| Name | Value |
+|---- | -----|
+| DSTU4145 | &quot;DSTU4145&quot; |
+| ECDSA_RSA | &quot;ECDSA_RSA&quot; |
+
+
+
+## Enum: DefaultSignatureAlgorithmEnum
+
+| Name | Value |
+|---- | -----|
+| DSTU4145 | &quot;DSTU4145&quot; |
+| ECDSA_RSA | &quot;ECDSA_RSA&quot; |
 
 
 

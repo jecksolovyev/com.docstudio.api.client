@@ -12,7 +12,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**resetColumnSettings**](EnvelopeSearchControllerApi.md#resetColumnSettings) | **POST** /api/v1/envelope/column-reset | Reset column settings |
 | [**searchEnvelopes**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes |
 | [**searchEnvelopesForApproval**](EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval |
-| [**updateColumn**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{uuid} | Update column to display |
+| [**updateColumn**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{id} | Update column to display |
 
 
 <a id="addNewColumn"></a>
@@ -563,7 +563,7 @@ public class Example {
 
 <a id="updateColumn"></a>
 # **updateColumn**
-> updateColumn(uuid, mailbox, updateEnvColumnDTO)
+> updateColumn(id, mailbox, updateEnvColumnDTO)
 
 Update column to display
 
@@ -587,11 +587,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UpdateEnvColumnDTO updateEnvColumnDTO = new UpdateEnvColumnDTO(); // UpdateEnvColumnDTO | 
     try {
-      apiInstance.updateColumn(uuid, mailbox, updateEnvColumnDTO);
+      apiInstance.updateColumn(id, mailbox, updateEnvColumnDTO);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeSearchControllerApi#updateColumn");
       System.err.println("Status code: " + e.getCode());
@@ -607,7 +607,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **updateEnvColumnDTO** | [**UpdateEnvColumnDTO**](UpdateEnvColumnDTO.md)|  | |
 

@@ -49,5 +49,7 @@
 
 * `ENVELOPE_AI_ASSIST` (value: `"envelope-ai-assist"`)
 
+* `TEMPLATE_AI_ASSIST` (value: `"template-ai-assist"`)
+
 
 

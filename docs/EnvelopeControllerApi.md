@@ -8,64 +8,67 @@ All URIs are relative to *https://api.docstudio.com*
 | [**addEnvelopesIntoChain**](EnvelopeControllerApi.md#addEnvelopesIntoChain) | **PUT** /api/v1/envelope/chain/{chainUuid} | Add envelopes into chain |
 | [**approve**](EnvelopeControllerApi.md#approve) | **POST** /api/v1/envelope/approve | Approve envelope |
 | [**archive**](EnvelopeControllerApi.md#archive) | **PATCH** /api/v1/envelope/archive/{flag} | Archive envelopes |
-| [**cancelApprovalFlow**](EnvelopeControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Cancel envelope approval |
+| [**cancelApprovalFlow**](EnvelopeControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{id}/approval/{flowUuid} | Cancel envelope approval |
 | [**cancelEnvelopeDelegation**](EnvelopeControllerApi.md#cancelEnvelopeDelegation) | **DELETE** /api/v1/envelope/delegate | Cancel envelope delegation |
 | [**cancelEnvelopes**](EnvelopeControllerApi.md#cancelEnvelopes) | **DELETE** /api/v1/envelope/cancel | Cancel envelopes |
 | [**check**](EnvelopeControllerApi.md#check) | **POST** /api/v1/envelope/check | Check an envelope |
-| [**checkEnvelopeHasActiveRole**](EnvelopeControllerApi.md#checkEnvelopeHasActiveRole) | **HEAD** /api/v1/envelope/{envelopeUuid}/has-active-role | Check envelope has active role |
+| [**checkEnvelopeHasActiveRole**](EnvelopeControllerApi.md#checkEnvelopeHasActiveRole) | **HEAD** /api/v1/envelope/{id}/has-active-role | Check envelope has active role |
 | [**checkUserHasInvitations**](EnvelopeControllerApi.md#checkUserHasInvitations) | **HEAD** /api/v1/envelope/invitations | Check user has pending invitations |
 | [**cloneAttachment**](EnvelopeControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment |
 | [**confirmInvite**](EnvelopeControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations |
-| [**continueScenarioStep**](EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{envelopeUuid}/scenario/{stepId} | Continue scenario flow with step |
+| [**continueScenarioStep**](EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{id}/scenario/{stepId} | Continue scenario flow with step |
 | [**create**](EnvelopeControllerApi.md#create) | **POST** /api/v1/envelope | Create draft envelope |
 | [**createAttachment**](EnvelopeControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment |
-| [**createEnvelopeComment**](EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/comment | Create envelope comment thread |
+| [**createEnvelopeComment**](EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{id}/comment | Create envelope comment thread |
 | [**createPdfAttachment**](EnvelopeControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment |
 | [**delegateEnvelopes**](EnvelopeControllerApi.md#delegateEnvelopes) | **POST** /api/v1/envelope/delegate | Delegate envelopes |
 | [**deleteDrafts**](EnvelopeControllerApi.md#deleteDrafts) | **DELETE** /api/v1/envelope | Delete draft envelopes |
-| [**deleteEnvelopeComment**](EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{envelopeUuid}/comment | Delete envelope comment in thread or the whole thread |
+| [**deleteEnvelopeComment**](EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{id}/comment | Delete envelope comment in thread or the whole thread |
+| [**deleteEnvelopeMetadata**](EnvelopeControllerApi.md#deleteEnvelopeMetadata) | **DELETE** /api/v1/envelope/{id}/metadata | Delete envelope metadata |
 | [**downloadEnvelopeAttachment**](EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw |
-| [**downloadFinalPdf**](EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{envelopeUuid}/download-final-pdf | Download final PDF |
+| [**downloadFinalPdf**](EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{id}/download-final-pdf | Download final PDF |
 | [**downloadSharedAttachment**](EnvelopeControllerApi.md#downloadSharedAttachment) | **GET** /api/v1/envelope/shared-attachment | Download shared attachment for specific provider |
 | [**envelopeApproval**](EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/approval | Approve or Reject envelopes |
-| [**envelopeApprovalHistory**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{envelopeUuid}/approval-history | Get approval history |
+| [**envelopeApprovalHistory**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history |
 | [**fill**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope |
 | [**generateStamp**](EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate |
-| [**getActiveRoles**](EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{uuid}/activeRoles | Get active roles by Envelope UUID |
-| [**getApprovalFlow**](EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Get envelope approval |
+| [**getActiveRoles**](EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID |
+| [**getApprovalFlow**](EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval |
 | [**getAttachmentPageSizes**](EnvelopeControllerApi.md#getAttachmentPageSizes) | **GET** /api/v1/envelope/attachment/page-sizes | Get attachment page sizes |
 | [**getChainEnvelopes**](EnvelopeControllerApi.md#getChainEnvelopes) | **GET** /api/v1/envelope/chain/{chainUuid} | Get chain envelopes list |
-| [**getDocumentFileForSign**](EnvelopeControllerApi.md#getDocumentFileForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-sign-file | Get BINARY or XML for signing |
-| [**getDocumentForSign**](EnvelopeControllerApi.md#getDocumentForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-single-sign | BINARY and XML for signing |
-| [**getDocumentPrintVersion**](EnvelopeControllerApi.md#getDocumentPrintVersion) | **GET** /api/v1/envelope/{envelopeUuid}/for-print | Get document PDF for printing |
-| [**getDocumentsForSign**](EnvelopeControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{envelopeUuid}/for-sign | BINARYs and XMLs for signing |
+| [**getDocumentFileForSign**](EnvelopeControllerApi.md#getDocumentFileForSign) | **POST** /api/v1/envelope/{id}/for-sign-file | Get BINARY or XML for signing |
+| [**getDocumentForSign**](EnvelopeControllerApi.md#getDocumentForSign) | **POST** /api/v1/envelope/{id}/for-single-sign | BINARY and XML for signing |
+| [**getDocumentPrintVersion**](EnvelopeControllerApi.md#getDocumentPrintVersion) | **GET** /api/v1/envelope/{id}/for-print | Get document PDF for printing |
+| [**getDocumentsForSign**](EnvelopeControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{id}/for-sign | BINARYs and XMLs for signing |
 | [**getEnvelopeByUuid**](EnvelopeControllerApi.md#getEnvelopeByUuid) | **GET** /api/v1/envelope/{envelopeUuid} | Retrieve envelope by UUID |
-| [**getEnvelopeComments**](EnvelopeControllerApi.md#getEnvelopeComments) | **GET** /api/v1/envelope/{envelopeUuid}/comment | Get envelope comments for each document |
+| [**getEnvelopeComments**](EnvelopeControllerApi.md#getEnvelopeComments) | **GET** /api/v1/envelope/{id}/comment | Get envelope comments for each document |
 | [**getEnvelopeInviteAuthorized**](EnvelopeControllerApi.md#getEnvelopeInviteAuthorized) | **GET** /api/v1/envelope/invite-authorized-info | Get information about envelope by the invitation code (by already registered user) |
 | [**getEnvelopeInviteUnauthorized**](EnvelopeControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user) |
 | [**getEnvelopeSharedZip**](EnvelopeControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive |
-| [**getEnvelopeZip**](EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{envelopeUuid}/zip | Get envelope or document zip archive |
+| [**getEnvelopeZip**](EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{id}/zip | Get envelope or document zip archive |
 | [**getMassSigningReport**](EnvelopeControllerApi.md#getMassSigningReport) | **GET** /api/v1/envelope/signing-report/{sessionId} | Get mass signing report |
 | [**getUserPendingInvitations**](EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations |
+| [**markEnvelopesAsRead**](EnvelopeControllerApi.md#markEnvelopesAsRead) | **POST** /api/v1/envelope/mark-as-read | Mark envelopes as read by mailbox |
 | [**mergeEnvelopesIntoChain**](EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain |
 | [**oneTimeSend**](EnvelopeControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted) |
 | [**publicQuickSendWithOneExternalDocument**](EnvelopeControllerApi.md#publicQuickSendWithOneExternalDocument) | **POST** /api/v1/envelope/public-quick-send | Public quick send envelope with one external document |
 | [**quickSendExternalDocuments**](EnvelopeControllerApi.md#quickSendExternalDocuments) | **POST** /api/v1/envelope/quick-send | Quick send envelope with external documents only |
 | [**recycleBin**](EnvelopeControllerApi.md#recycleBin) | **PATCH** /api/v1/envelope/recycle-bin/{flag} | Archive envelopes |
-| [**removeEnvelopeFromChain**](EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{envelopeUuid}/chain | Remove envelope from chain |
+| [**removeEnvelopeFromChain**](EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{id}/chain | Remove envelope from chain |
 | [**resendNotifications**](EnvelopeControllerApi.md#resendNotifications) | **POST** /api/v1/envelope/notify | Resend notifications for active roles |
-| [**resolvedEnvelopeComment**](EnvelopeControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/resolve-comment | Set Resolved Flag for comment thread |
+| [**resolvedEnvelopeComment**](EnvelopeControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{id}/resolve-comment | Set Resolved Flag for comment thread |
 | [**revokeEnvelopeSharing**](EnvelopeControllerApi.md#revokeEnvelopeSharing) | **DELETE** /api/v1/envelope/share-copy | Revoke sharing an envelope copy |
 | [**send**](EnvelopeControllerApi.md#send) | **POST** /api/v1/envelope/send | Send envelope |
 | [**sendByTemplateCode**](EnvelopeControllerApi.md#sendByTemplateCode) | **POST** /api/v1/envelope/send-by-share-code | Send envelope by template code |
 | [**sendForApproval**](EnvelopeControllerApi.md#sendForApproval) | **PUT** /api/v1/envelope/send-for-approval | Send envelope for approval |
 | [**shareEnvelopesByEmail**](EnvelopeControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share-archive | Share envelopes by email |
 | [**shareEnvelopesCopy**](EnvelopeControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies |
-| [**sign**](EnvelopeControllerApi.md#sign) | **PUT** /api/v1/envelope/{envelopeUuid}/sign | Sign envelope documents |
-| [**signSES**](EnvelopeControllerApi.md#signSES) | **POST** /api/v1/envelope/{envelopeUuid}/sign-ses | Sign envelope with SES |
+| [**sign**](EnvelopeControllerApi.md#sign) | **PUT** /api/v1/envelope/{id}/sign | Sign envelope documents |
+| [**signSES**](EnvelopeControllerApi.md#signSES) | **POST** /api/v1/envelope/{id}/sign-ses | Sign envelope with SES |
 | [**update4**](EnvelopeControllerApi.md#update4) | **PUT** /api/v1/envelope | Update draft envelope |
-| [**updateEnvelopeComment**](EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{envelopeUuid}/comment | Add/Update envelope comment in thread |
-| [**updateEnvelopeCommentAccess**](EnvelopeControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{envelopeUuid}/comment-access | Update envelope comment thread access level |
+| [**updateEnvelopeComment**](EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{id}/comment | Add/Update envelope comment in thread |
+| [**updateEnvelopeCommentAccess**](EnvelopeControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{id}/comment-access | Update envelope comment thread access level |
+| [**updateEnvelopeMetadata**](EnvelopeControllerApi.md#updateEnvelopeMetadata) | **PUT** /api/v1/envelope/{id}/metadata | Update envelope metadata. Will be saved on the account level |
 
 
 <a id="acceptUserPendingInvitations"></a>
@@ -339,7 +342,7 @@ null (empty response body)
 
 <a id="cancelApprovalFlow"></a>
 # **cancelApprovalFlow**
-> cancelApprovalFlow(envelopeUuid, flowUuid, mailbox)
+> cancelApprovalFlow(id, flowUuid, mailbox)
 
 Cancel envelope approval
 
@@ -363,11 +366,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope to approve
+    UUID id = UUID.randomUUID(); // UUID | Envelope to approve
     UUID flowUuid = UUID.randomUUID(); // UUID | Flow to approve
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.cancelApprovalFlow(envelopeUuid, flowUuid, mailbox);
+      apiInstance.cancelApprovalFlow(id, flowUuid, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#cancelApprovalFlow");
       System.err.println("Status code: " + e.getCode());
@@ -383,7 +386,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope to approve | |
+| **id** | **UUID**| Envelope to approve | |
 | **flowUuid** | **UUID**| Flow to approve | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
@@ -607,7 +610,7 @@ public class Example {
 
 <a id="checkEnvelopeHasActiveRole"></a>
 # **checkEnvelopeHasActiveRole**
-> checkEnvelopeHasActiveRole(envelopeUuid, mailbox)
+> checkEnvelopeHasActiveRole(id, mailbox)
 
 Check envelope has active role
 
@@ -631,10 +634,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | UUID of envelope
+    UUID id = UUID.randomUUID(); // UUID | UUID of envelope
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.checkEnvelopeHasActiveRole(envelopeUuid, mailbox);
+      apiInstance.checkEnvelopeHasActiveRole(id, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#checkEnvelopeHasActiveRole");
       System.err.println("Status code: " + e.getCode());
@@ -650,7 +653,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| UUID of envelope | |
+| **id** | **UUID**| UUID of envelope | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -864,7 +867,7 @@ null (empty response body)
 
 <a id="continueScenarioStep"></a>
 # **continueScenarioStep**
-> List&lt;SingleUuidDTO&gt; continueScenarioStep(envelopeUuid, stepId, mailbox)
+> List&lt;SingleUuidDTO&gt; continueScenarioStep(id, stepId, mailbox)
 
 Continue scenario flow with step
 
@@ -888,11 +891,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     String stepId = "stepId_example"; // String | Step id
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<SingleUuidDTO> result = apiInstance.continueScenarioStep(envelopeUuid, stepId, mailbox);
+      List<SingleUuidDTO> result = apiInstance.continueScenarioStep(id, stepId, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#continueScenarioStep");
@@ -909,7 +912,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **stepId** | **String**| Step id | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
@@ -1064,7 +1067,7 @@ No authorization required
 
 <a id="createEnvelopeComment"></a>
 # **createEnvelopeComment**
-> CommentThreadDTO createEnvelopeComment(envelopeUuid, mailbox, commentPostDTO)
+> CommentThreadDTO createEnvelopeComment(id, mailbox, commentPostDTO)
 
 Create envelope comment thread
 
@@ -1088,11 +1091,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     CommentPostDTO commentPostDTO = new CommentPostDTO(); // CommentPostDTO | 
     try {
-      CommentThreadDTO result = apiInstance.createEnvelopeComment(envelopeUuid, mailbox, commentPostDTO);
+      CommentThreadDTO result = apiInstance.createEnvelopeComment(id, mailbox, commentPostDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#createEnvelopeComment");
@@ -1109,7 +1112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **commentPostDTO** | [**CommentPostDTO**](CommentPostDTO.md)|  | |
 
@@ -1330,7 +1333,7 @@ null (empty response body)
 
 <a id="deleteEnvelopeComment"></a>
 # **deleteEnvelopeComment**
-> CommentThreadDTO deleteEnvelopeComment(envelopeUuid, threadUuid, mailbox, messageId)
+> CommentThreadDTO deleteEnvelopeComment(id, threadUuid, mailbox, messageId)
 
 Delete envelope comment in thread or the whole thread
 
@@ -1354,12 +1357,12 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID threadUuid = UUID.randomUUID(); // UUID | Thread UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     Integer messageId = 56; // Integer | Message ID (optional)
     try {
-      CommentThreadDTO result = apiInstance.deleteEnvelopeComment(envelopeUuid, threadUuid, mailbox, messageId);
+      CommentThreadDTO result = apiInstance.deleteEnvelopeComment(id, threadUuid, mailbox, messageId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#deleteEnvelopeComment");
@@ -1376,7 +1379,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **threadUuid** | **UUID**| Thread UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **messageId** | **Integer**| Message ID (optional) | [optional] |
@@ -1393,6 +1396,74 @@ public class Example {
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="deleteEnvelopeMetadata"></a>
+# **deleteEnvelopeMetadata**
+> deleteEnvelopeMetadata(id, mailbox, key)
+
+Delete envelope metadata
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID id = UUID.randomUUID(); // UUID | 
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Set<String> key = Arrays.asList(); // Set<String> | 
+    try {
+      apiInstance.deleteEnvelopeMetadata(id, mailbox, key);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#deleteEnvelopeMetadata");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **key** | [**Set&lt;String&gt;**](String.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1472,7 +1543,7 @@ public class Example {
 
 <a id="downloadFinalPdf"></a>
 # **downloadFinalPdf**
-> File downloadFinalPdf(envelopeUuid, documentId, mailbox)
+> File downloadFinalPdf(id, documentId, mailbox)
 
 Download final PDF
 
@@ -1496,11 +1567,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     String documentId = "documentId_example"; // String | Document id
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      File result = apiInstance.downloadFinalPdf(envelopeUuid, documentId, mailbox);
+      File result = apiInstance.downloadFinalPdf(id, documentId, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#downloadFinalPdf");
@@ -1517,7 +1588,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **documentId** | **String**| Document id | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
@@ -1669,7 +1740,7 @@ null (empty response body)
 
 <a id="envelopeApprovalHistory"></a>
 # **envelopeApprovalHistory**
-> List&lt;EnvelopeApprovalHistoryDTO&gt; envelopeApprovalHistory(envelopeUuid, mailbox)
+> List&lt;EnvelopeApprovalHistoryDTO&gt; envelopeApprovalHistory(id, mailbox)
 
 Get approval history
 
@@ -1693,10 +1764,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<EnvelopeApprovalHistoryDTO> result = apiInstance.envelopeApprovalHistory(envelopeUuid, mailbox);
+      List<EnvelopeApprovalHistoryDTO> result = apiInstance.envelopeApprovalHistory(id, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#envelopeApprovalHistory");
@@ -1713,7 +1784,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -1736,7 +1807,7 @@ public class Example {
 
 <a id="fill"></a>
 # **fill**
-> fill(mailbox, envPostDTO)
+> fill(mailbox, envDTO)
 
 Fill envelope
 
@@ -1761,9 +1832,9 @@ public class Example {
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    EnvPostDTO envPostDTO = new EnvPostDTO(); // EnvPostDTO | 
+    EnvDTO envDTO = new EnvDTO(); // EnvDTO | 
     try {
-      apiInstance.fill(mailbox, envPostDTO);
+      apiInstance.fill(mailbox, envDTO);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#fill");
       System.err.println("Status code: " + e.getCode());
@@ -1780,7 +1851,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **envPostDTO** | [**EnvPostDTO**](EnvPostDTO.md)|  | |
+| **envDTO** | [**EnvDTO**](EnvDTO.md)|  | |
 
 ### Return type
 
@@ -1869,7 +1940,7 @@ public class Example {
 
 <a id="getActiveRoles"></a>
 # **getActiveRoles**
-> List&lt;SingleUuidDTO&gt; getActiveRoles(uuid, mailbox)
+> List&lt;SingleUuidDTO&gt; getActiveRoles(id, mailbox)
 
 Get active roles by Envelope UUID
 
@@ -1893,10 +1964,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | UUID of envelope to get active roles from
+    UUID id = UUID.randomUUID(); // UUID | UUID of envelope to get active roles from
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<SingleUuidDTO> result = apiInstance.getActiveRoles(uuid, mailbox);
+      List<SingleUuidDTO> result = apiInstance.getActiveRoles(id, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getActiveRoles");
@@ -1913,7 +1984,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| UUID of envelope to get active roles from | |
+| **id** | **UUID**| UUID of envelope to get active roles from | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -1936,7 +2007,7 @@ public class Example {
 
 <a id="getApprovalFlow"></a>
 # **getApprovalFlow**
-> EnvelopeApprovalHistoryDTO getApprovalFlow(envelopeUuid, flowUuid, mailbox)
+> EnvelopeApprovalHistoryDTO getApprovalFlow(id, flowUuid, mailbox)
 
 Get envelope approval
 
@@ -1960,11 +2031,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope to approve
+    UUID id = UUID.randomUUID(); // UUID | Envelope to approve
     UUID flowUuid = UUID.randomUUID(); // UUID | Flow to approve
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      EnvelopeApprovalHistoryDTO result = apiInstance.getApprovalFlow(envelopeUuid, flowUuid, mailbox);
+      EnvelopeApprovalHistoryDTO result = apiInstance.getApprovalFlow(id, flowUuid, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getApprovalFlow");
@@ -1981,7 +2052,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope to approve | |
+| **id** | **UUID**| Envelope to approve | |
 | **flowUuid** | **UUID**| Flow to approve | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
@@ -2141,7 +2212,7 @@ public class Example {
 
 <a id="getDocumentFileForSign"></a>
 # **getDocumentFileForSign**
-> File getDocumentFileForSign(envelopeUuid, mailbox, documentFileForSignRequestDTO)
+> File getDocumentFileForSign(id, mailbox, documentFileForSignRequestDTO)
 
 Get BINARY or XML for signing
 
@@ -2165,11 +2236,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     DocumentFileForSignRequestDTO documentFileForSignRequestDTO = new DocumentFileForSignRequestDTO(); // DocumentFileForSignRequestDTO | 
     try {
-      File result = apiInstance.getDocumentFileForSign(envelopeUuid, mailbox, documentFileForSignRequestDTO);
+      File result = apiInstance.getDocumentFileForSign(id, mailbox, documentFileForSignRequestDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentFileForSign");
@@ -2186,7 +2257,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **documentFileForSignRequestDTO** | [**DocumentFileForSignRequestDTO**](DocumentFileForSignRequestDTO.md)|  | |
 
@@ -2210,7 +2281,7 @@ public class Example {
 
 <a id="getDocumentForSign"></a>
 # **getDocumentForSign**
-> DocumentForSigningDTO getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO, sessionId)
+> DocumentForSigningDTO getDocumentForSign(id, mailbox, singleDocForSignRequestDTO)
 
 BINARY and XML for signing
 
@@ -2234,12 +2305,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     SingleDocForSignRequestDTO singleDocForSignRequestDTO = new SingleDocForSignRequestDTO(); // SingleDocForSignRequestDTO | 
-    UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      DocumentForSigningDTO result = apiInstance.getDocumentForSign(envelopeUuid, mailbox, singleDocForSignRequestDTO, sessionId);
+      DocumentForSigningDTO result = apiInstance.getDocumentForSign(id, mailbox, singleDocForSignRequestDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentForSign");
@@ -2256,10 +2326,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **singleDocForSignRequestDTO** | [**SingleDocForSignRequestDTO**](SingleDocForSignRequestDTO.md)|  | |
-| **sessionId** | **UUID**| Mass signing session UUID | [optional] |
 
 ### Return type
 
@@ -2281,7 +2350,7 @@ public class Example {
 
 <a id="getDocumentPrintVersion"></a>
 # **getDocumentPrintVersion**
-> File getDocumentPrintVersion(envelopeUuid, documentId, mailbox)
+> File getDocumentPrintVersion(id, documentId, mailbox)
 
 Get document PDF for printing
 
@@ -2305,11 +2374,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     String documentId = "documentId_example"; // String | Document id
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      File result = apiInstance.getDocumentPrintVersion(envelopeUuid, documentId, mailbox);
+      File result = apiInstance.getDocumentPrintVersion(id, documentId, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentPrintVersion");
@@ -2326,7 +2395,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **documentId** | **String**| Document id | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
@@ -2350,7 +2419,7 @@ public class Example {
 
 <a id="getDocumentsForSign"></a>
 # **getDocumentsForSign**
-> List&lt;DocumentForSigningDTO&gt; getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO, sessionId)
+> List&lt;DocumentForSigningDTO&gt; getDocumentsForSign(id, mailbox, documentsForSignRequestDTO, sessionId)
 
 BINARYs and XMLs for signing
 
@@ -2374,12 +2443,12 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     DocumentsForSignRequestDTO documentsForSignRequestDTO = new DocumentsForSignRequestDTO(); // DocumentsForSignRequestDTO | 
     UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      List<DocumentForSigningDTO> result = apiInstance.getDocumentsForSign(envelopeUuid, mailbox, documentsForSignRequestDTO, sessionId);
+      List<DocumentForSigningDTO> result = apiInstance.getDocumentsForSign(id, mailbox, documentsForSignRequestDTO, sessionId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getDocumentsForSign");
@@ -2396,7 +2465,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **documentsForSignRequestDTO** | [**DocumentsForSignRequestDTO**](DocumentsForSignRequestDTO.md)|  | |
 | **sessionId** | **UUID**| Mass signing session UUID | [optional] |
@@ -2488,7 +2557,7 @@ public class Example {
 
 <a id="getEnvelopeComments"></a>
 # **getEnvelopeComments**
-> List&lt;DocumentCommentsDTO&gt; getEnvelopeComments(envelopeUuid, mailbox)
+> List&lt;DocumentCommentsDTO&gt; getEnvelopeComments(id, mailbox)
 
 Get envelope comments for each document
 
@@ -2512,10 +2581,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<DocumentCommentsDTO> result = apiInstance.getEnvelopeComments(envelopeUuid, mailbox);
+      List<DocumentCommentsDTO> result = apiInstance.getEnvelopeComments(id, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getEnvelopeComments");
@@ -2532,7 +2601,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -2745,7 +2814,7 @@ No authorization required
 
 <a id="getEnvelopeZip"></a>
 # **getEnvelopeZip**
-> File getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles, zipStructureName)
+> File getEnvelopeZip(id, mailbox, documentId, excludeFiles, zipStructureName)
 
 Get envelope or document zip archive
 
@@ -2769,13 +2838,13 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     String documentId = "documentId_example"; // String | Document id
     String excludeFiles = "excludeFiles_example"; // String | Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail
     String zipStructureName = "zipStructureName_example"; // String | The name of pre-saved zip structure in the template
     try {
-      File result = apiInstance.getEnvelopeZip(envelopeUuid, mailbox, documentId, excludeFiles, zipStructureName);
+      File result = apiInstance.getEnvelopeZip(id, mailbox, documentId, excludeFiles, zipStructureName);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#getEnvelopeZip");
@@ -2792,7 +2861,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **documentId** | **String**| Document id | [optional] |
 | **excludeFiles** | **String**| Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail | [optional] |
@@ -2944,6 +3013,72 @@ public class Example {
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="markEnvelopesAsRead"></a>
+# **markEnvelopesAsRead**
+> markEnvelopesAsRead(mailbox, markAsReadRequest)
+
+Mark envelopes as read by mailbox
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    MarkAsReadRequest markAsReadRequest = new MarkAsReadRequest(); // MarkAsReadRequest | 
+    try {
+      apiInstance.markEnvelopesAsRead(mailbox, markAsReadRequest);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#markEnvelopesAsRead");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **markAsReadRequest** | [**MarkAsReadRequest**](MarkAsReadRequest.md)|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3290,7 +3425,7 @@ null (empty response body)
 
 <a id="removeEnvelopeFromChain"></a>
 # **removeEnvelopeFromChain**
-> removeEnvelopeFromChain(envelopeUuid, mailbox)
+> removeEnvelopeFromChain(id, mailbox)
 
 Remove envelope from chain
 
@@ -3314,10 +3449,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.removeEnvelopeFromChain(envelopeUuid, mailbox);
+      apiInstance.removeEnvelopeFromChain(id, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#removeEnvelopeFromChain");
       System.err.println("Status code: " + e.getCode());
@@ -3333,7 +3468,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -3422,7 +3557,7 @@ null (empty response body)
 
 <a id="resolvedEnvelopeComment"></a>
 # **resolvedEnvelopeComment**
-> resolvedEnvelopeComment(envelopeUuid, mailbox, resolveCommentThreadDTO)
+> resolvedEnvelopeComment(id, mailbox, resolveCommentThreadDTO)
 
 Set Resolved Flag for comment thread
 
@@ -3446,11 +3581,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     ResolveCommentThreadDTO resolveCommentThreadDTO = new ResolveCommentThreadDTO(); // ResolveCommentThreadDTO | 
     try {
-      apiInstance.resolvedEnvelopeComment(envelopeUuid, mailbox, resolveCommentThreadDTO);
+      apiInstance.resolvedEnvelopeComment(id, mailbox, resolveCommentThreadDTO);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#resolvedEnvelopeComment");
       System.err.println("Status code: " + e.getCode());
@@ -3466,7 +3601,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **resolveCommentThreadDTO** | [**ResolveCommentThreadDTO**](ResolveCommentThreadDTO.md)|  | |
 
@@ -3888,7 +4023,7 @@ null (empty response body)
 
 <a id="sign"></a>
 # **sign**
-> sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO, sessionId)
+> sign(id, mailbox, envelopeDocumentSignaturesDTO, sessionId)
 
 Sign envelope documents
 
@@ -3912,12 +4047,12 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope to update
+    UUID id = UUID.randomUUID(); // UUID | Envelope to update
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     List<EnvelopeDocumentSignaturesDTO> envelopeDocumentSignaturesDTO = Arrays.asList(); // List<EnvelopeDocumentSignaturesDTO> | 
     UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      apiInstance.sign(envelopeUuid, mailbox, envelopeDocumentSignaturesDTO, sessionId);
+      apiInstance.sign(id, mailbox, envelopeDocumentSignaturesDTO, sessionId);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#sign");
       System.err.println("Status code: " + e.getCode());
@@ -3933,7 +4068,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope to update | |
+| **id** | **UUID**| Envelope to update | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **envelopeDocumentSignaturesDTO** | [**List&lt;EnvelopeDocumentSignaturesDTO&gt;**](EnvelopeDocumentSignaturesDTO.md)|  | |
 | **sessionId** | **UUID**| Mass signing session UUID | [optional] |
@@ -3958,7 +4093,7 @@ null (empty response body)
 
 <a id="signSES"></a>
 # **signSES**
-> signSES(envelopeUuid, mailbox, body, sessionId)
+> signSES(id, mailbox, body, sessionId)
 
 Sign envelope with SES
 
@@ -3982,12 +4117,12 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope to fill
+    UUID id = UUID.randomUUID(); // UUID | Envelope to fill
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     String body = "body_example"; // String | 
     UUID sessionId = UUID.randomUUID(); // UUID | Mass signing session UUID
     try {
-      apiInstance.signSES(envelopeUuid, mailbox, body, sessionId);
+      apiInstance.signSES(id, mailbox, body, sessionId);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#signSES");
       System.err.println("Status code: " + e.getCode());
@@ -4003,7 +4138,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope to fill | |
+| **id** | **UUID**| Envelope to fill | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **body** | **String**|  | |
 | **sessionId** | **UUID**| Mass signing session UUID | [optional] |
@@ -4094,7 +4229,7 @@ null (empty response body)
 
 <a id="updateEnvelopeComment"></a>
 # **updateEnvelopeComment**
-> CommentThreadDTO updateEnvelopeComment(envelopeUuid, mailbox, commentPutDTO)
+> CommentThreadDTO updateEnvelopeComment(id, mailbox, commentPutDTO)
 
 Add/Update envelope comment in thread
 
@@ -4118,11 +4253,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     CommentPutDTO commentPutDTO = new CommentPutDTO(); // CommentPutDTO | 
     try {
-      CommentThreadDTO result = apiInstance.updateEnvelopeComment(envelopeUuid, mailbox, commentPutDTO);
+      CommentThreadDTO result = apiInstance.updateEnvelopeComment(id, mailbox, commentPutDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeComment");
@@ -4139,7 +4274,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **commentPutDTO** | [**CommentPutDTO**](CommentPutDTO.md)|  | |
 
@@ -4163,7 +4298,7 @@ public class Example {
 
 <a id="updateEnvelopeCommentAccess"></a>
 # **updateEnvelopeCommentAccess**
-> CommentThreadDTO updateEnvelopeCommentAccess(envelopeUuid, mailbox, commentAccessDTO)
+> CommentThreadDTO updateEnvelopeCommentAccess(id, mailbox, commentAccessDTO)
 
 Update envelope comment thread access level
 
@@ -4187,11 +4322,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
+    UUID id = UUID.randomUUID(); // UUID | Envelope UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     CommentAccessDTO commentAccessDTO = new CommentAccessDTO(); // CommentAccessDTO | 
     try {
-      CommentThreadDTO result = apiInstance.updateEnvelopeCommentAccess(envelopeUuid, mailbox, commentAccessDTO);
+      CommentThreadDTO result = apiInstance.updateEnvelopeCommentAccess(id, mailbox, commentAccessDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeCommentAccess");
@@ -4208,7 +4343,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **envelopeUuid** | **UUID**| Envelope UUID | |
+| **id** | **UUID**| Envelope UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **commentAccessDTO** | [**CommentAccessDTO**](CommentAccessDTO.md)|  | |
 
@@ -4224,6 +4359,74 @@ public class Example {
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateEnvelopeMetadata"></a>
+# **updateEnvelopeMetadata**
+> updateEnvelopeMetadata(id, mailbox, requestBody)
+
+Update envelope metadata. Will be saved on the account level
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID id = UUID.randomUUID(); // UUID | 
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Map<String, String> requestBody = new HashMap(); // Map<String, String> | 
+    try {
+      apiInstance.updateEnvelopeMetadata(id, mailbox, requestBody);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#updateEnvelopeMetadata");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **requestBody** | [**Map&lt;String, String&gt;**](String.md)|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

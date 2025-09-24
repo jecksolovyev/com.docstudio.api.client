@@ -8,7 +8,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**createInvitation**](UserInviteControllerApi.md#createInvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions |
 | [**declineInvite**](UserInviteControllerApi.md#declineInvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite |
 | [**getInvites**](UserInviteControllerApi.md#getInvites) | **GET** /api/v1/user/invites | Get paged invites list |
-| [**updateInvitation**](UserInviteControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid |
+| [**updateInvitation**](UserInviteControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{id} | Update invitation by userUuid |
 
 
 <a id="acceptInvite"></a>
@@ -273,7 +273,7 @@ public class Example {
 
 <a id="updateInvitation"></a>
 # **updateInvitation**
-> updateInvitation(uuid, invitationPutDTO)
+> updateInvitation(id, invitationPutDTO)
 
 Update invitation by userUuid
 
@@ -297,10 +297,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserInviteControllerApi apiInstance = new UserInviteControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     InvitationPutDTO invitationPutDTO = new InvitationPutDTO(); // InvitationPutDTO | 
     try {
-      apiInstance.updateInvitation(uuid, invitationPutDTO);
+      apiInstance.updateInvitation(id, invitationPutDTO);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserInviteControllerApi#updateInvitation");
       System.err.println("Status code: " + e.getCode());
@@ -316,7 +316,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **invitationPutDTO** | [**InvitationPutDTO**](InvitationPutDTO.md)|  | |
 
 ### Return type

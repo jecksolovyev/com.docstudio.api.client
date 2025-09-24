@@ -16,7 +16,7 @@
 |**verificationDate** | **OffsetDateTime** | Domain verification date |  [optional] |
 |**createDate** | **OffsetDateTime** | Domain creation date |  [optional] |
 |**lastCheckDate** | **OffsetDateTime** | Domain last check date |  [optional] |
-|**ssoIdProvider** | [**AccountSsoIdProviderShortDTO**](AccountSsoIdProviderShortDTO.md) | SSO Identity Provider for domain |  [optional] |
+|**ssoIdProvider** | [**NameUuidDTO**](NameUuidDTO.md) | SSO Identity Provider for domain |  [optional] |
 
 
 

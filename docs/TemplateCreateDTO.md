@@ -13,6 +13,7 @@
 |**sharedTo** | **Set&lt;UUID&gt;** | Mailboxes list, which have access to template |  [optional] |
 |**sharedToMailboxGroups** | **Set&lt;UUID&gt;** | Mailbox groups, which have access to template |  [optional] |
 |**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
+|**signatureAlgorithm** | [**SignatureAlgorithmEnum**](#SignatureAlgorithmEnum) | Signature algorithm |  [optional] |
 |**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
 
 
@@ -27,6 +28,15 @@
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
 | PUBLIC_HIDDEN | &quot;public-hidden&quot; |
+
+
+
+## Enum: SignatureAlgorithmEnum
+
+| Name | Value |
+|---- | -----|
+| DSTU4145 | &quot;DSTU4145&quot; |
+| ECDSA_RSA | &quot;ECDSA_RSA&quot; |
 
 
 

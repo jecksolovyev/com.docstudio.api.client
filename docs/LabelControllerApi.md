@@ -7,9 +7,9 @@ All URIs are relative to *https://api.docstudio.com*
 | [**assignments**](LabelControllerApi.md#assignments) | **POST** /api/v1/label/assignments | Assign label to envelopes |
 | [**create3**](LabelControllerApi.md#create3) | **POST** /api/v1/label | Save label to DB |
 | [**deAssignments**](LabelControllerApi.md#deAssignments) | **DELETE** /api/v1/label/assignments | Unassign label from envelopes |
-| [**delete1**](LabelControllerApi.md#delete1) | **DELETE** /api/v1/label/{uuid} | Delete label |
+| [**delete6**](LabelControllerApi.md#delete6) | **DELETE** /api/v1/label/{uuid} | Delete label |
 | [**getAll**](LabelControllerApi.md#getAll) | **GET** /api/v1/label | Retrieve all labels for mailbox for authorized user |
-| [**update2**](LabelControllerApi.md#update2) | **PUT** /api/v1/label/{uuid} | Update label |
+| [**update2**](LabelControllerApi.md#update2) | **PUT** /api/v1/label/{id} | Update label |
 
 
 <a id="assignments"></a>
@@ -211,9 +211,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="delete1"></a>
-# **delete1**
-> delete1(uuid, mailbox)
+<a id="delete6"></a>
+# **delete6**
+> delete6(uuid, mailbox)
 
 Delete label
 
@@ -240,9 +240,9 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | UUID of label to delete
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.delete1(uuid, mailbox);
+      apiInstance.delete6(uuid, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LabelControllerApi#delete1");
+      System.err.println("Exception when calling LabelControllerApi#delete6");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -344,7 +344,7 @@ public class Example {
 
 <a id="update2"></a>
 # **update2**
-> LabelDTO update2(uuid, mailbox, labelDTO)
+> LabelDTO update2(id, mailbox, labelDTO)
 
 Update label
 
@@ -368,11 +368,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     LabelControllerApi apiInstance = new LabelControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | UUID of label to update
+    UUID id = UUID.randomUUID(); // UUID | UUID of label to update
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     LabelDTO labelDTO = new LabelDTO(); // LabelDTO | 
     try {
-      LabelDTO result = apiInstance.update2(uuid, mailbox, labelDTO);
+      LabelDTO result = apiInstance.update2(id, mailbox, labelDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelControllerApi#update2");
@@ -389,7 +389,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| UUID of label to update | |
+| **id** | **UUID**| UUID of label to update | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **labelDTO** | [**LabelDTO**](LabelDTO.md)|  | |
 

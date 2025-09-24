@@ -5,7 +5,7 @@ All URIs are relative to *https://api.docstudio.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**create7**](ApprovalFlowControllerApi.md#create7) | **POST** /api/v1/approvalFlow | Create approval flow |
-| [**delete5**](ApprovalFlowControllerApi.md#delete5) | **DELETE** /api/v1/approvalFlow | Delete approval flows |
+| [**delete4**](ApprovalFlowControllerApi.md#delete4) | **DELETE** /api/v1/approvalFlow | Delete approval flows |
 | [**retrieve**](ApprovalFlowControllerApi.md#retrieve) | **GET** /api/v1/approvalFlow/{flowUuid} | Retrieve approval flow |
 | [**search**](ApprovalFlowControllerApi.md#search) | **GET** /api/v1/approvalFlow | Retrieve approval flows |
 | [**update7**](ApprovalFlowControllerApi.md#update7) | **PUT** /api/v1/approvalFlow/{flowUuid} | Update approval flow |
@@ -78,9 +78,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete5"></a>
-# **delete5**
-> delete5(mailbox, UUID)
+<a id="delete4"></a>
+# **delete4**
+> delete4(mailbox, UUID)
 
 Delete approval flows
 
@@ -107,9 +107,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     List<UUID> UUID = Arrays.asList(); // List<UUID> | 
     try {
-      apiInstance.delete5(mailbox, UUID);
+      apiInstance.delete4(mailbox, UUID);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ApprovalFlowControllerApi#delete5");
+      System.err.println("Exception when calling ApprovalFlowControllerApi#delete4");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

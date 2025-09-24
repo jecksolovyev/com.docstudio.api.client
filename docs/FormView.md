@@ -11,6 +11,7 @@
 |**name** | **String** |  |  [optional] |
 |**mailboxId** | **UUID** |  |  [optional] |
 |**allowMicrosoftOfficeViewer** | **Boolean** |  |  [optional] |
+|**multiUse** | **Boolean** |  |  [optional] |
 |**template** | [**FormViewTemplate**](FormViewTemplate.md) |  |  [optional] |
 |**envelope** | [**FormViewEnvelope**](FormViewEnvelope.md) |  |  [optional] |
 

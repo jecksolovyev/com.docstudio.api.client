@@ -5,9 +5,9 @@ All URIs are relative to *https://api.docstudio.com*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**create5**](ContactControllerApi.md#create5) | **POST** /api/v1/contact | Save a contact in DB |
-| [**delete3**](ContactControllerApi.md#delete3) | **DELETE** /api/v1/contact/{uuid} | Delete contact by Id |
+| [**delete2**](ContactControllerApi.md#delete2) | **DELETE** /api/v1/contact/{id} | Delete contact by Id |
 | [**searchOrList**](ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#39;access&#39; type and name |
-| [**update5**](ContactControllerApi.md#update5) | **PUT** /api/v1/contact/{uuid} | Update the contact in DB |
+| [**update5**](ContactControllerApi.md#update5) | **PUT** /api/v1/contact/{id} | Update the contact in DB |
 
 
 <a id="create5"></a>
@@ -77,9 +77,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete3"></a>
-# **delete3**
-> delete3(uuid, mailbox)
+<a id="delete2"></a>
+# **delete2**
+> delete2(id, mailbox)
 
 Delete contact by Id
 
@@ -103,12 +103,12 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     ContactControllerApi apiInstance = new ContactControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | Contact UUID
+    UUID id = UUID.randomUUID(); // UUID | Contact UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.delete3(uuid, mailbox);
+      apiInstance.delete2(id, mailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ContactControllerApi#delete3");
+      System.err.println("Exception when calling ContactControllerApi#delete2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -122,7 +122,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| Contact UUID | |
+| **id** | **UUID**| Contact UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -216,7 +216,7 @@ public class Example {
 
 <a id="update5"></a>
 # **update5**
-> ContactResponseDTO update5(uuid, mailbox, contactDTO)
+> ContactResponseDTO update5(id, mailbox, contactDTO)
 
 Update the contact in DB
 
@@ -240,11 +240,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     ContactControllerApi apiInstance = new ContactControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | Contact UUID
+    UUID id = UUID.randomUUID(); // UUID | Contact UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     ContactDTO contactDTO = new ContactDTO(); // ContactDTO | 
     try {
-      ContactResponseDTO result = apiInstance.update5(uuid, mailbox, contactDTO);
+      ContactResponseDTO result = apiInstance.update5(id, mailbox, contactDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ContactControllerApi#update5");
@@ -261,7 +261,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| Contact UUID | |
+| **id** | **UUID**| Contact UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **contactDTO** | [**ContactDTO**](ContactDTO.md)|  | |
 

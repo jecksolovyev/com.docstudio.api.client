@@ -10,6 +10,7 @@ Envelope to send
 |------------ | ------------- | ------------- | -------------|
 |**uuid** | **UUID** | UUID of envelope |  [optional] |
 |**data** | **String** | Envelope XML |  [optional] |
+|**metadata** | **Map&lt;String, String&gt;** | Envelope metadata |  [optional] |
 
 
 

@@ -65,7 +65,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**|  | |
-| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent, create-template, delete-template, allow-template, verify-signature, envelope-ai-assist] |
+| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent, create-template, delete-template, allow-template, verify-signature, envelope-ai-assist, template-ai-assist] |
 | **action** | **String**|  | [enum: create, access] |
 
 ### Return type

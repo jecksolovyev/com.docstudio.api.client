@@ -10,12 +10,14 @@ All URIs are relative to *https://api.docstudio.com*
 | [**confirmOauthEmailAndGetToken**](UserControllerApi.md#confirmOauthEmailAndGetToken) | **GET** /api/v1/user/confirm-oauth-email-get-token | Confirm email from OAuth2 Identity Provider |
 | [**deleteUser**](UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself |
 | [**findUser**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
-| [**getAvatar**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{uuid} | Retrieve user avatar |
-| [**getCorporateUserProfile**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{uuid}/account/{accountUuid} | Retrieve corporate user profile |
+| [**getAvatar**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{id} | Retrieve user avatar |
+| [**getCorporateUserProfile**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getMailboxesInfo**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
 | [**getProfile**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
-| [**updateCorporateUserProfile**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{uuid}/account/{accountUuid} | Update corporate user&#39;s profile |
+| [**updateCorporateUserProfile**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{id}/account/{accountUuid} | Update corporate user&#39;s profile |
+| [**updateCorporateUserProfile1**](UserControllerApi.md#updateCorporateUserProfile1) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**updateProfile**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update self profile |
+| [**updateProfile1**](UserControllerApi.md#updateProfile1) | **PATCH** /api/v1/user/profile | Patch user profile |
 
 
 <a id="changeInitials"></a>
@@ -407,7 +409,7 @@ public class Example {
 
 <a id="getAvatar"></a>
 # **getAvatar**
-> File getAvatar(uuid, initials)
+> File getAvatar(id, initials)
 
 Retrieve user avatar
 
@@ -431,10 +433,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     Boolean initials = true; // Boolean | Get default avatar
     try {
-      File result = apiInstance.getAvatar(uuid, initials);
+      File result = apiInstance.getAvatar(id, initials);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserControllerApi#getAvatar");
@@ -451,7 +453,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **initials** | **Boolean**| Get default avatar | [optional] |
 
 ### Return type
@@ -474,7 +476,7 @@ public class Example {
 
 <a id="getCorporateUserProfile"></a>
 # **getCorporateUserProfile**
-> CorporateProfileDTO getCorporateUserProfile(uuid, accountUuid)
+> CorporateProfileDTO getCorporateUserProfile(id, accountUuid)
 
 Retrieve corporate user profile
 
@@ -498,10 +500,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     UUID accountUuid = UUID.randomUUID(); // UUID | 
     try {
-      CorporateProfileDTO result = apiInstance.getCorporateUserProfile(uuid, accountUuid);
+      CorporateProfileDTO result = apiInstance.getCorporateUserProfile(id, accountUuid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserControllerApi#getCorporateUserProfile");
@@ -518,7 +520,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **accountUuid** | **UUID**|  | |
 
 ### Return type
@@ -667,7 +669,7 @@ This endpoint does not need any parameter.
 
 <a id="updateCorporateUserProfile"></a>
 # **updateCorporateUserProfile**
-> CorporateProfileDTO updateCorporateUserProfile(uuid, accountUuid, updateProfileDTO)
+> CorporateProfileDTO updateCorporateUserProfile(id, accountUuid, updateProfileDTO)
 
 Update corporate user&#39;s profile
 
@@ -691,11 +693,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     UUID accountUuid = UUID.randomUUID(); // UUID | 
     UpdateProfileDTO updateProfileDTO = new UpdateProfileDTO(); // UpdateProfileDTO | 
     try {
-      CorporateProfileDTO result = apiInstance.updateCorporateUserProfile(uuid, accountUuid, updateProfileDTO);
+      CorporateProfileDTO result = apiInstance.updateCorporateUserProfile(id, accountUuid, updateProfileDTO);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserControllerApi#updateCorporateUserProfile");
@@ -712,9 +714,78 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**|  | |
+| **id** | **UUID**|  | |
 | **accountUuid** | **UUID**|  | |
 | **updateProfileDTO** | [**UpdateProfileDTO**](UpdateProfileDTO.md)|  | |
+
+### Return type
+
+[**CorporateProfileDTO**](CorporateProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateCorporateUserProfile1"></a>
+# **updateCorporateUserProfile1**
+> CorporateProfileDTO updateCorporateUserProfile1(userId, accountId, patchProfile)
+
+Partial update corporate user&#39;s profile
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    UUID userId = UUID.randomUUID(); // UUID | 
+    UUID accountId = UUID.randomUUID(); // UUID | 
+    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
+    try {
+      CorporateProfileDTO result = apiInstance.updateCorporateUserProfile1(userId, accountId, patchProfile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#updateCorporateUserProfile1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **UUID**|  | |
+| **accountId** | **UUID**|  | |
+| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
 
 ### Return type
 
@@ -780,6 +851,71 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateProfileDTO** | [**UpdateProfileDTO**](UpdateProfileDTO.md)|  | |
+
+### Return type
+
+[**ProfileDTO**](ProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateProfile1"></a>
+# **updateProfile1**
+> ProfileDTO updateProfile1(patchProfile)
+
+Patch user profile
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
+    try {
+      ProfileDTO result = apiInstance.updateProfile1(patchProfile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#updateProfile1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
 
 ### Return type
 

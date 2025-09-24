@@ -29,6 +29,8 @@ Search parameters
 |**sortField** | **String** | Field for sorting (&#39;createdAt&#39; by default) |  [optional] |
 |**sort** | [**SortEnum**](#SortEnum) | Sort order, asc or desc |  [optional] |
 |**searchFields** | [**Set&lt;SearchFieldValueDTO&gt;**](SearchFieldValueDTO.md) |  |  [optional] |
+|**form** | **Set&lt;Object&gt;** |  |  [optional] |
+|**metadata** | **Map&lt;String, String&gt;** | Metadata for filter by |  [optional] |
 
 
 

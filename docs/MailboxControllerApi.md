@@ -6,8 +6,9 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**createMailbox**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox |
 | [**customizeDashboard**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard |
-| [**delete6**](MailboxControllerApi.md#delete6) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
+| [**delete5**](MailboxControllerApi.md#delete5) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
 | [**deleteMailboxUsers**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester |
+| [**deleteViewPreferences**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
 | [**getAccountLogo**](MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
 | [**getActivityLog**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox |
 | [**getAllForUser**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailboxes list |
@@ -19,11 +20,13 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getMailboxesInfo1**](MailboxControllerApi.md#getMailboxesInfo1) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
+| [**getViewPreferences**](MailboxControllerApi.md#getViewPreferences) | **GET** /api/v1/mailbox/view-preferences | Get mailbox view preferences |
 | [**leaveMailbox**](MailboxControllerApi.md#leaveMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/leave | Leave mailbox if possible |
 | [**patchMailbox**](MailboxControllerApi.md#patchMailbox) | **PATCH** /api/v1/mailbox/{mailboxUuid} | Patch mailbox, return patched mailbox w/o users count |
 | [**searchMailboxes**](MailboxControllerApi.md#searchMailboxes) | **GET** /api/v1/mailbox/search | Search mailboxes by name, contact, alias, user |
 | [**updateAutoDelegation**](MailboxControllerApi.md#updateAutoDelegation) | **PUT** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Update auto delegation settings |
 | [**updateMailbox**](MailboxControllerApi.md#updateMailbox) | **PUT** /api/v1/mailbox/{mailboxUuid} | Update mailbox |
+| [**updateViewPreferences**](MailboxControllerApi.md#updateViewPreferences) | **PUT** /api/v1/mailbox/view-preferences | Save mailbox view preferences |
 
 
 <a id="createMailbox"></a>
@@ -163,9 +166,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="delete6"></a>
-# **delete6**
-> delete6(checkMessage, mailbox, moveEntitiesToMailbox)
+<a id="delete5"></a>
+# **delete5**
+> delete5(checkMessage, mailbox, moveEntitiesToMailbox)
 
 Delete mailbox by UUID in the header.
 
@@ -193,9 +196,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UUID moveEntitiesToMailbox = UUID.randomUUID(); // UUID | Move entities to chosen mailbox
     try {
-      apiInstance.delete6(checkMessage, mailbox, moveEntitiesToMailbox);
+      apiInstance.delete5(checkMessage, mailbox, moveEntitiesToMailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#delete6");
+      System.err.println("Exception when calling MailboxControllerApi#delete5");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -276,6 +279,74 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **mailboxUuid** | **UUID**| Mailbox UUID | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="deleteViewPreferences"></a>
+# **deleteViewPreferences**
+> deleteViewPreferences(mailbox, key)
+
+Delete mailbox view preferences
+
+Deletes specified keys from mailbox view preferences. If no keys are provided, all preferences will be deleted.
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Set<String> key = Arrays.asList(); // Set<String> | Keys of preferences to delete
+    try {
+      apiInstance.deleteViewPreferences(mailbox, key);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#deleteViewPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **key** | [**Set&lt;String&gt;**](String.md)| Keys of preferences to delete | [optional] |
 
 ### Return type
 
@@ -1026,6 +1097,75 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
+<a id="getViewPreferences"></a>
+# **getViewPreferences**
+> Map&lt;String, String&gt; getViewPreferences(key, mailbox)
+
+Get mailbox view preferences
+
+Retrieve preferences for mailbox view, such as templates view mode. If preferences are not set or keys are not found, returns empty preferences.
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    Set<String> key = Arrays.asList(); // Set<String> | Keys of preferences to retrieve
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      Map<String, String> result = apiInstance.getViewPreferences(key, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#getViewPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **key** | [**Set&lt;String&gt;**](String.md)| Keys of preferences to retrieve | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+**Map&lt;String, String&gt;**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
 <a id="leaveMailbox"></a>
 # **leaveMailbox**
 > leaveMailbox(mailboxUuid)
@@ -1344,6 +1484,75 @@ public class Example {
 ### Return type
 
 [**AccountMailboxInfoDTO**](AccountMailboxInfoDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateViewPreferences"></a>
+# **updateViewPreferences**
+> Map&lt;String, String&gt; updateViewPreferences(mailbox, requestBody)
+
+Save mailbox view preferences
+
+Saves preferences for mailbox view, such as templates view mode. If preferences are not set, creates new preferences with provided values.
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    Map<String, String> requestBody = new HashMap(); // Map<String, String> | 
+    try {
+      Map<String, String> result = apiInstance.updateViewPreferences(mailbox, requestBody);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#updateViewPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **requestBody** | [**Map&lt;String, String&gt;**](String.md)|  | |
+
+### Return type
+
+**Map&lt;String, String&gt;**
 
 ### Authorization
 

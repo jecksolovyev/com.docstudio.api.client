@@ -33,6 +33,7 @@
 | QRCODE | &quot;qrcode&quot; |
 | DATAMATRIX | &quot;datamatrix&quot; |
 | PDF417 | &quot;pdf417&quot; |
+| BANK_GOV_UA | &quot;bankGovUa&quot; |
 
 
 

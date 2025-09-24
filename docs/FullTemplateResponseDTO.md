@@ -14,6 +14,7 @@
 |**version** | **UUID** | Template version |  [optional] |
 |**dataCreatedAt** | **OffsetDateTime** | Template data create date |  [optional] |
 |**dataModifiedAt** | **OffsetDateTime** | Template data update date |  [optional] |
+|**signatureAlgorithm** | [**SignatureAlgorithmEnum**](#SignatureAlgorithmEnum) | Signature algorithm |  [optional] |
 |**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Template access level |  [optional] |
 |**mailbox** | **UUID** | Template creator&#39;s mailbox |  [optional] |
@@ -29,6 +30,15 @@
 |**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
 |**createdAt** | **OffsetDateTime** | Template create date |  [optional] |
 |**modifiedAt** | **OffsetDateTime** | Template update date |  [optional] |
+
+
+
+## Enum: SignatureAlgorithmEnum
+
+| Name | Value |
+|---- | -----|
+| DSTU4145 | &quot;DSTU4145&quot; |
+| ECDSA_RSA | &quot;ECDSA_RSA&quot; |
 
 
 

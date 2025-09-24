@@ -24,6 +24,7 @@
 |**archived** | **Boolean** | Is envelope archived? |  [optional] |
 |**shared** | **Boolean** | Is envelope shared to the mailbox? (if the mailbox is not in the main flow) |  [optional] |
 |**sharedTo** | [**List&lt;EnvSharedToDTO&gt;**](EnvSharedToDTO.md) | Mailboxes the envelope shared with |  [optional] |
+|**metadata** | **Map&lt;String, String&gt;** | Envelope metadata |  [optional] |
 
 
 
