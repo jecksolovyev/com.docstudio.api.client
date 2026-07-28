@@ -9,10 +9,8 @@
 |------------ | ------------- | ------------- | -------------|
 |**uuid** | **UUID** |  |  [optional] |
 |**name** | **String** |  |  [optional] |
+|**roles** | **Set&lt;UUID&gt;** | Roles for current user to mailbox relation |  [optional] |
 |**permissions** | **Set&lt;Integer&gt;** | Permissions for current user to mailbox relation |  [optional] |
-|**system** | **Boolean** |  |  [optional] |
-|**invited** | **Boolean** | User added via invitation |  [optional] |
-|**roles** | [**List&lt;RoleGetDTO&gt;**](RoleGetDTO.md) |  |  [optional] |
 
 
 

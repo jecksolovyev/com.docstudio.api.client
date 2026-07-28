@@ -17,6 +17,7 @@
 |**createDate** | **OffsetDateTime** | Domain creation date |  [optional] |
 |**lastCheckDate** | **OffsetDateTime** | Domain last check date |  [optional] |
 |**ssoIdProvider** | [**NameUuidDTO**](NameUuidDTO.md) | SSO Identity Provider for domain |  [optional] |
+|**onlySsoLogin** | **Boolean** | Allow only SSO login for this domain |  [optional] |
 
 
 

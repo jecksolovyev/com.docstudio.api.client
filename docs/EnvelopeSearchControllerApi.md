@@ -310,7 +310,7 @@ public class Example {
 
     EnvelopeSearchControllerApi apiInstance = new EnvelopeSearchControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    Set<UUID> UUID = new LinkedHashSet<>(); // Set<UUID> | 
     try {
       TemplateRolesDTO result = apiInstance.getTemplateRoles(mailbox, UUID);
       System.out.println(result);

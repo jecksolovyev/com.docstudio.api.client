@@ -4,17 +4,17 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**create5**](ContactControllerApi.md#create5) | **POST** /api/v1/contact | Save a contact in DB |
+| [**create5**](ContactControllerApi.md#create5) | **POST** /api/v1/contact | Save a contact |
 | [**delete2**](ContactControllerApi.md#delete2) | **DELETE** /api/v1/contact/{id} | Delete contact by Id |
 | [**searchOrList**](ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#39;access&#39; type and name |
-| [**update5**](ContactControllerApi.md#update5) | **PUT** /api/v1/contact/{id} | Update the contact in DB |
+| [**update5**](ContactControllerApi.md#update5) | **PUT** /api/v1/contact/{id} | Update the contact |
 
 
 <a id="create5"></a>
 # **create5**
 > ContactResponseDTO create5(mailbox, contactDTO)
 
-Save a contact in DB
+Save a contact
 
 ### Example
 ```java
@@ -218,7 +218,7 @@ public class Example {
 # **update5**
 > ContactResponseDTO update5(id, mailbox, contactDTO)
 
-Update the contact in DB
+Update the contact
 
 ### Example
 ```java

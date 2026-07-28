@@ -2,17 +2,17 @@
 
 # CategoryDTO
 
-Category to save
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** | Identifier in DB. Shouldn&#39;t be set for creation. |  [optional] |
 |**parentId** | **UUID** | Id of parent category |  [optional] |
 |**name** | **String** |  |  |
 |**description** | **String** |  |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Access level |  [optional] |
+|**id** | **UUID** | Identifier. Shouldn&#39;t be set for creation |  [optional] |
+|**mailboxId** | **UUID** | Category creator&#39;s mailbox |  [optional] |
 |**createdAt** | **OffsetDateTime** | Creation date |  [optional] |
 
 

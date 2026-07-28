@@ -10,7 +10,6 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getUserAccountPermissions**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions |
 | [**patchMbPermissions1**](PermissionAccountControllerApi.md#patchMbPermissions1) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
 | [**replaceAllPermissions1**](PermissionAccountControllerApi.md#replaceAllPermissions1) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
-| [**setUserAccountPermissions**](PermissionAccountControllerApi.md#setUserAccountPermissions) | **POST** /api/v1/permission/{userUuid}/account/{accountUuid} | Write user permissions |
 
 
 <a id="deleteAccAllPermissions"></a>
@@ -399,74 +398,6 @@ public class Example {
 | **userUuid** | **UUID**| UUID of User | |
 | **accountUuid** | **UUID**| UUID of account | |
 | **permissionsDTO** | [**PermissionsDTO**](PermissionsDTO.md)|  | |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="setUserAccountPermissions"></a>
-# **setUserAccountPermissions**
-> setUserAccountPermissions(userUuid, accountUuid, basePermissionsDTO)
-
-Write user permissions
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.PermissionAccountControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    PermissionAccountControllerApi apiInstance = new PermissionAccountControllerApi(defaultClient);
-    UUID userUuid = UUID.randomUUID(); // UUID | UUID of User
-    UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
-    BasePermissionsDTO basePermissionsDTO = new BasePermissionsDTO(); // BasePermissionsDTO | 
-    try {
-      apiInstance.setUserAccountPermissions(userUuid, accountUuid, basePermissionsDTO);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#setUserAccountPermissions");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userUuid** | **UUID**| UUID of User | |
-| **accountUuid** | **UUID**| UUID of account | |
-| **basePermissionsDTO** | [**BasePermissionsDTO**](BasePermissionsDTO.md)|  | |
 
 ### Return type
 

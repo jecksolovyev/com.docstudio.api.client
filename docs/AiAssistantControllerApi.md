@@ -6,7 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**envelopeAssistConversationGet**](AiAssistantControllerApi.md#envelopeAssistConversationGet) | **GET** /api/v1/ai-assistant/envelope/{id}/history | Retrieve existing chat with AI assistant for envelope |
 | [**envelopeAssistRequest**](AiAssistantControllerApi.md#envelopeAssistRequest) | **GET** /api/v1/ai-assistant/envelope/{id} | Chat with AI assistant |
-| [**startTemplateSession**](AiAssistantControllerApi.md#startTemplateSession) | **POST** /api/v1/ai-assistant/template/{id} | Start template session with AI assistant |
+| [**startTemplateSession**](AiAssistantControllerApi.md#startTemplateSession) | **POST** /api/v1/ai-assistant/template | Start template session with AI assistant |
 | [**templateAssistRequest**](AiAssistantControllerApi.md#templateAssistRequest) | **GET** /api/v1/ai-assistant/template-session/{id} | Chat with AI assistant |
 
 
@@ -152,7 +152,7 @@ public class Example {
 
 <a id="startTemplateSession"></a>
 # **startTemplateSession**
-> IdResult startTemplateSession(id, mailbox, templateSessionRequest)
+> IdResult startTemplateSession(mailbox, templateSessionRequest, id)
 
 Start template session with AI assistant
 
@@ -178,11 +178,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     AiAssistantControllerApi apiInstance = new AiAssistantControllerApi(defaultClient);
-    UUID id = UUID.randomUUID(); // UUID | Template ID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     TemplateSessionRequest templateSessionRequest = new TemplateSessionRequest(); // TemplateSessionRequest | 
+    UUID id = UUID.randomUUID(); // UUID | Template ID
     try {
-      IdResult result = apiInstance.startTemplateSession(id, mailbox, templateSessionRequest);
+      IdResult result = apiInstance.startTemplateSession(mailbox, templateSessionRequest, id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AiAssistantControllerApi#startTemplateSession");
@@ -199,9 +199,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Template ID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **templateSessionRequest** | [**TemplateSessionRequest**](TemplateSessionRequest.md)|  | |
+| **id** | **UUID**| Template ID | [optional] |
 
 ### Return type
 

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getAccount**](AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing |  |
 | [**getAccountBillingStateHeader**](AccountBillingControllerApi.md#getAccountBillingStateHeader) | **GET** /api/v1/account/{accountUuid}/billing-state |  |
 | [**getCurrencyRates**](AccountBillingControllerApi.md#getCurrencyRates) | **GET** /api/v1/account/currency-rates |  |
+| [**getEventTypes**](AccountBillingControllerApi.md#getEventTypes) | **GET** /api/v1/account/predefined-event-types |  |
 | [**getInvoiceStatus**](AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} |  |
 | [**getInvoices**](AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice |  |
 | [**getPaymentMethodInfo**](AccountBillingControllerApi.md#getPaymentMethodInfo) | **GET** /api/v1/account/{accountUuid}/payment-method |  |
@@ -20,7 +21,7 @@ All URIs are relative to *https://api.docstudio.com*
 
 <a id="checkEventAbility"></a>
 # **checkEventAbility**
-> checkEventAbility(accountUuid, type, action)
+> checkEventAbility(accountUuid, type, action, templateId, mailbox)
 
 
 
@@ -45,10 +46,12 @@ public class Example {
 
     AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | 
-    BillingEventType type = BillingEventType.fromValue("new-corp-user"); // BillingEventType | 
+    String type = "type_example"; // String | 
     String action = "create"; // String | 
+    UUID templateId = UUID.randomUUID(); // UUID | 
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      apiInstance.checkEventAbility(accountUuid, type, action);
+      apiInstance.checkEventAbility(accountUuid, type, action, templateId, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountBillingControllerApi#checkEventAbility");
       System.err.println("Status code: " + e.getCode());
@@ -65,8 +68,10 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**|  | |
-| **type** | [**BillingEventType**](.md)|  | [enum: new-corp-user, new-account-invite, income-envelope, sent-envelope, archive-envelope, unarchive-envelope, delete-envelope, restore-envelope, account-mailbox, dig-sign-envelope, account-domain, integration-rule, envelope-scenario, cloud-signature, envelope-approval, password-policy, callback-sent, create-template, delete-template, allow-template, verify-signature, envelope-ai-assist, template-ai-assist] |
+| **type** | **String**|  | |
 | **action** | **String**|  | [enum: create, access] |
+| **templateId** | **UUID**|  | [optional] |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -150,7 +155,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -333,6 +338,67 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;CurrencyRateDTO&gt;**](CurrencyRateDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getEventTypes"></a>
+# **getEventTypes**
+> Set&lt;BillingEventType&gt; getEventTypes()
+
+
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountBillingControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AccountBillingControllerApi apiInstance = new AccountBillingControllerApi(defaultClient);
+    try {
+      Set<BillingEventType> result = apiInstance.getEventTypes();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountBillingControllerApi#getEventTypes");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Set&lt;BillingEventType&gt;**](BillingEventType.md)
 
 ### Authorization
 

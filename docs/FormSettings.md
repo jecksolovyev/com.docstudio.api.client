@@ -14,7 +14,7 @@ Form settings
 |**sharing** | **Boolean** | Form data sharing |  [optional] |
 |**documents** | **Map&lt;String, List&lt;FormDataField&gt;&gt;** | Form documents map, key is document id, value is documents fields list |  [optional] |
 |**flow** | **Map&lt;String, String&gt;** | Form flow map, key is role id, value is mailbox UUID or email |  [optional] |
-|**anonymous** | **Set&lt;Object&gt;** |  |  |
+|**anonymous** | **Set&lt;String&gt;** |  |  |
 |**metadata** | **Map&lt;String, String&gt;** | Envelope metadata |  [optional] |
 
 

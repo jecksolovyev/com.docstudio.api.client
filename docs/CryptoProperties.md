@@ -49,6 +49,7 @@
 |---- | -----|
 | P7_S | &quot;P7S&quot; |
 | ASICE | &quot;ASICE&quot; |
+| P7_S_ENVELOPED | &quot;P7S_ENVELOPED&quot; |
 
 
 
@@ -58,6 +59,7 @@
 |---- | -----|
 | P7_S | &quot;P7S&quot; |
 | ASICE | &quot;ASICE&quot; |
+| P7_S_ENVELOPED | &quot;P7S_ENVELOPED&quot; |
 
 
 

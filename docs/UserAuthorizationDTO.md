@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**roles** | [**Set&lt;RoleShortDTO&gt;**](RoleShortDTO.md) |  |  [optional] |
+|**roles** | **Set&lt;UUID&gt;** |  |  [optional] |
 |**permissions** | **Set&lt;Integer&gt;** |  |  [optional] |
 
 

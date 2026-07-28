@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**name** | **String** |  |  |
-|**workflow** | [**List&lt;AutomationBrickCreate&gt;**](AutomationBrickCreate.md) |  |  [optional] |
+|**workflow** | [**List&lt;AutomationBrick&gt;**](AutomationBrick.md) |  |  [optional] |
 |**active** | **Boolean** |  |  [optional] |
 
 

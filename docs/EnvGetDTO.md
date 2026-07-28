@@ -12,7 +12,7 @@
 |**createdAt** | **OffsetDateTime** | Envelope creation date |  [optional] |
 |**receivedAt** | **OffsetDateTime** | Date of receiving the envelope by the mailbox |  [optional] |
 |**sentAt** | **OffsetDateTime** | Envelope sending date |  [optional] |
-|**labels** | **Set&lt;Object&gt;** |  |  [optional] |
+|**labels** | **Set&lt;UUID&gt;** |  |  [optional] |
 |**total** | **Integer** | Total number of participants |  [optional] |
 |**completed** | **Integer** | Number of participants who completed their processing |  [optional] |
 |**chainUuid** | **UUID** | Envelope chain UUID |  [optional] |
@@ -25,6 +25,7 @@
 |**shared** | **Boolean** | Is envelope shared to the mailbox? (if the mailbox is not in the main flow) |  [optional] |
 |**sharedTo** | [**List&lt;EnvSharedToDTO&gt;**](EnvSharedToDTO.md) | Mailboxes the envelope shared with |  [optional] |
 |**metadata** | **Map&lt;String, String&gt;** | Envelope metadata |  [optional] |
+|**savedDocSignatures** | [**List&lt;ExtEnvelopeDocumentSignaturesDTO&gt;**](ExtEnvelopeDocumentSignaturesDTO.md) |  |  [optional] |
 
 
 

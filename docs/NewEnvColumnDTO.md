@@ -31,6 +31,7 @@
 | DUPLICATE | &quot;duplicate&quot; |
 | ATTACHMENT | &quot;attachment&quot; |
 | FORMULA | &quot;formula&quot; |
+| NUMBER_TO_TEXT | &quot;numberToText&quot; |
 | AUTONUMBER | &quot;autonumber&quot; |
 | CHECKBOX | &quot;checkbox&quot; |
 | DROPDOWN | &quot;dropdown&quot; |

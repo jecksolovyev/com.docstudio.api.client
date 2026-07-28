@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuids** | **Set&lt;Object&gt;** |  |  |
+|**uuids** | **Set&lt;UUID&gt;** |  |  |
 
 
 

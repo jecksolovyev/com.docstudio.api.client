@@ -95,7 +95,7 @@ public class Example {
 
 <a id="createAccountDomain"></a>
 # **createAccountDomain**
-> AccountDomainDTO createAccountDomain(accountUuid, accountDomainCreateDTO)
+> AccountDomainDTO createAccountDomain(accountUuid, accountDomainCreate)
 
 Create account domain
 
@@ -120,9 +120,9 @@ public class Example {
 
     AccountDomainControllerApi apiInstance = new AccountDomainControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
-    AccountDomainCreateDTO accountDomainCreateDTO = new AccountDomainCreateDTO(); // AccountDomainCreateDTO | 
+    AccountDomainCreate accountDomainCreate = new AccountDomainCreate(); // AccountDomainCreate | 
     try {
-      AccountDomainDTO result = apiInstance.createAccountDomain(accountUuid, accountDomainCreateDTO);
+      AccountDomainDTO result = apiInstance.createAccountDomain(accountUuid, accountDomainCreate);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountDomainControllerApi#createAccountDomain");
@@ -140,7 +140,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**| Account UUID | |
-| **accountDomainCreateDTO** | [**AccountDomainCreateDTO**](AccountDomainCreateDTO.md)|  | |
+| **accountDomainCreate** | [**AccountDomainCreate**](AccountDomainCreate.md)|  | |
 
 ### Return type
 
@@ -898,7 +898,7 @@ public class Example {
 
 <a id="updateAccountDomain"></a>
 # **updateAccountDomain**
-> AccountDomainDTO updateAccountDomain(accountUuid, domainUuid, accountDomainUpdateDTO)
+> AccountDomainDTO updateAccountDomain(accountUuid, domainUuid, accountDomainUpdate)
 
 Update account domain
 
@@ -924,9 +924,9 @@ public class Example {
     AccountDomainControllerApi apiInstance = new AccountDomainControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     UUID domainUuid = UUID.randomUUID(); // UUID | Domain UUID
-    AccountDomainUpdateDTO accountDomainUpdateDTO = new AccountDomainUpdateDTO(); // AccountDomainUpdateDTO | 
+    AccountDomainUpdate accountDomainUpdate = new AccountDomainUpdate(); // AccountDomainUpdate | 
     try {
-      AccountDomainDTO result = apiInstance.updateAccountDomain(accountUuid, domainUuid, accountDomainUpdateDTO);
+      AccountDomainDTO result = apiInstance.updateAccountDomain(accountUuid, domainUuid, accountDomainUpdate);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountDomainControllerApi#updateAccountDomain");
@@ -945,7 +945,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**| Account UUID | |
 | **domainUuid** | **UUID**| Domain UUID | |
-| **accountDomainUpdateDTO** | [**AccountDomainUpdateDTO**](AccountDomainUpdateDTO.md)|  | |
+| **accountDomainUpdate** | [**AccountDomainUpdate**](AccountDomainUpdate.md)|  | |
 
 ### Return type
 

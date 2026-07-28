@@ -9,6 +9,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**calculateFormula**](MiscControllerApi.md#calculateFormula) | **POST** /api/v1/formula | Calculate excel formulas for documents |
 | [**createAuditReport**](MiscControllerApi.md#createAuditReport) | **POST** /api/v1/audit/report | Request audit report |
 | [**detectCountry**](MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country |  |
+| [**detectLanguage**](MiscControllerApi.md#detectLanguage) | **GET** /api/v1/detect-language |  |
 | [**getBarcode**](MiscControllerApi.md#getBarcode) | **GET** /api/v1/barcode |  |
 | [**getProcessStatus**](MiscControllerApi.md#getProcessStatus) | **GET** /api/v1/process-status/{id} | Process status |
 | [**parseCsv**](MiscControllerApi.md#parseCsv) | **POST** /api/v1/csv-parser | Parse CSV text (5 rows max) |
@@ -321,9 +322,65 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
+<a id="detectLanguage"></a>
+# **detectLanguage**
+> String detectLanguage()
+
+
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MiscControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+
+    MiscControllerApi apiInstance = new MiscControllerApi(defaultClient);
+    try {
+      String result = apiInstance.detectLanguage();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MiscControllerApi#detectLanguage");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
 <a id="getBarcode"></a>
 # **getBarcode**
-> String getBarcode(type, value)
+> String getBarcode(type, value, qrOnly)
 
 
 
@@ -344,8 +401,9 @@ public class Example {
     MiscControllerApi apiInstance = new MiscControllerApi(defaultClient);
     String type = "upca"; // String | Barcode type
     String value = "value_example"; // String | Barcode value
+    Boolean qrOnly = true; // Boolean | Generate bare QR code without frames, texts etc
     try {
-      String result = apiInstance.getBarcode(type, value);
+      String result = apiInstance.getBarcode(type, value, qrOnly);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MiscControllerApi#getBarcode");
@@ -362,8 +420,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **String**| Barcode type | [enum: upca, upce, ean8, ean13, code39, code128, itf14, code93, rationalizedCodabar, databarexpandedstacked, qrcode, datamatrix, pdf417, bankGovUa] |
+| **type** | **String**| Barcode type | [enum: upca, upce, ean8, ean13, code39, code128, itf14, code93, rationalizedCodabar, databarexpandedstacked, qrcode, datamatrix, pdf417, bankGovUa, bankGovUaV3] |
 | **value** | **String**| Barcode value | [optional] |
+| **qrOnly** | **Boolean**| Generate bare QR code without frames, texts etc | [optional] |
 
 ### Return type
 

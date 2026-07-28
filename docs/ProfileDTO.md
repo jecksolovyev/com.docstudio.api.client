@@ -24,6 +24,8 @@
 |**initials** | **String** | Saved initials |  [optional] |
 |**accounts** | [**List&lt;User2AccountWithMailboxesDTO&gt;**](User2AccountWithMailboxesDTO.md) | User accounts belongs to |  [optional] |
 |**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
+|**mfaEnabled** | **Boolean** | Is Multi-Factor Authentication enabled |  [optional] |
+|**preferences** | [**UserPreferences**](UserPreferences.md) | User preferences (active mailbox, account, sign type, search recipients) |  [optional] |
 |**corporateUser** | **Boolean** |  |  [optional] |
 
 

@@ -8,7 +8,7 @@ uuids or search parameters have to specified separately
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuids** | **List&lt;Object&gt;** |  |  [optional] |
+|**uuids** | **List&lt;UUID&gt;** |  |  [optional] |
 |**searchParams** | [**SearchEnvelopesDTO**](SearchEnvelopesDTO.md) |  |  [optional] |
 
 

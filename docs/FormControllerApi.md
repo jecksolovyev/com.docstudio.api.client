@@ -212,7 +212,7 @@ public class Example {
 
 <a id="updateForm"></a>
 # **updateForm**
-> FormGet updateForm(id, mailbox, formCreate)
+> FormGet updateForm(id, mailbox, formUpdate)
 
 Update form
 
@@ -238,9 +238,9 @@ public class Example {
     FormControllerApi apiInstance = new FormControllerApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Form UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    FormCreate formCreate = new FormCreate(); // FormCreate | 
+    FormUpdate formUpdate = new FormUpdate(); // FormUpdate | 
     try {
-      FormGet result = apiInstance.updateForm(id, mailbox, formCreate);
+      FormGet result = apiInstance.updateForm(id, mailbox, formUpdate);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling FormControllerApi#updateForm");
@@ -259,7 +259,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Form UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **formCreate** | [**FormCreate**](FormCreate.md)|  | |
+| **formUpdate** | [**FormUpdate**](FormUpdate.md)|  | |
 
 ### Return type
 

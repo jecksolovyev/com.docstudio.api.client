@@ -20,6 +20,7 @@
 |**displayExactDate** | **Boolean** | Display exact date instead of relative |  [optional] |
 |**mailboxes** | [**List&lt;MailboxNameUuidDTO&gt;**](MailboxNameUuidDTO.md) | Mailboxes user has access to |  [optional] |
 |**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
+|**preferences** | [**UserPreferences**](UserPreferences.md) | User preferences (active mailbox, account, sign type, search recipients) |  [optional] |
 
 
 

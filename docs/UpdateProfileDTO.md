@@ -16,7 +16,8 @@
 |**phone** | **String** | User phone |  [optional] |
 |**displayExactDate** | **Boolean** | Display exact date instead of relative |  [optional] |
 |**avatar** | **String** | User avatar in base64 format (svg, png, jpeg) |  [optional] |
-|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  |
+|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
+|**mfaEnabled** | **Boolean** | Enable Multi-Factor Authentication |  [optional] |
 
 
 

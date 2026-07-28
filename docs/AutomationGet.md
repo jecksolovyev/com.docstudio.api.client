@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**name** | **String** |  |  [optional] |
 |**active** | **Boolean** |  |  [optional] |
-|**workflow** | [**List&lt;AutomationBrickGet&gt;**](AutomationBrickGet.md) |  |  [optional] |
+|**workflow** | [**List&lt;AutomationBrick&gt;**](AutomationBrick.md) |  |  [optional] |
 
 
 

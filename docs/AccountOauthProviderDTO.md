@@ -15,6 +15,7 @@
 |**tokenUri** | **String** |  |  |
 |**issuerUri** | **String** |  |  |
 |**jwkSetUri** | **String** |  |  |
+|**scopes** | **String** |  |  |
 |**createdAt** | **OffsetDateTime** |  |  [optional] |
 
 

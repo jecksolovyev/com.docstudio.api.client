@@ -8,7 +8,7 @@ Mailbox to create
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
+|**name** | **String** |  |  |
 
 
 

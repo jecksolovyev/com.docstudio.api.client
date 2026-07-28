@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**documentId** | **String** | Document ID |  [optional] |
-|**signatureName** | **String** | Signature field name |  [optional] |
+|**documentId** | **String** | Document ID |  |
+|**signatureName** | **String** | Signature field name |  |
 
 
 

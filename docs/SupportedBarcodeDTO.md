@@ -34,6 +34,7 @@
 | DATAMATRIX | &quot;datamatrix&quot; |
 | PDF417 | &quot;pdf417&quot; |
 | BANK_GOV_UA | &quot;bankGovUa&quot; |
+| BANK_GOV_UA_V3 | &quot;bankGovUaV3&quot; |
 
 
 

@@ -7,13 +7,14 @@ All URIs are relative to *https://api.docstudio.com*
 | [**changeInitials**](UserControllerApi.md#changeInitials) | **PUT** /api/v1/user/initials | Update user&#39;s initials in base64 format |
 | [**changePassword**](UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#39;s password |
 | [**changeSignature**](UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#39;s eink signature in base64 format |
-| [**confirmOauthEmailAndGetToken**](UserControllerApi.md#confirmOauthEmailAndGetToken) | **GET** /api/v1/user/confirm-oauth-email-get-token | Confirm email from OAuth2 Identity Provider |
 | [**deleteUser**](UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself |
 | [**findUser**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
 | [**getAvatar**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{id} | Retrieve user avatar |
 | [**getCorporateUserProfile**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getMailboxesInfo**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
 | [**getProfile**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
+| [**patchPreferences**](UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences |
+| [**setPreferences**](UserControllerApi.md#setPreferences) | **POST** /api/v1/user/preferences | Set user preferences |
 | [**updateCorporateUserProfile**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{id}/account/{accountUuid} | Update corporate user&#39;s profile |
 | [**updateCorporateUserProfile1**](UserControllerApi.md#updateCorporateUserProfile1) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**updateProfile**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update self profile |
@@ -206,68 +207,6 @@ null (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="confirmOauthEmailAndGetToken"></a>
-# **confirmOauthEmailAndGetToken**
-> LoginResponseDTO confirmOauthEmailAndGetToken(code, emailToMatch)
-
-Confirm email from OAuth2 Identity Provider
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.UserControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-
-    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    String code = "code_example"; // String | Verification code
-    String emailToMatch = "emailToMatch_example"; // String | Check email matches
-    try {
-      LoginResponseDTO result = apiInstance.confirmOauthEmailAndGetToken(code, emailToMatch);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UserControllerApi#confirmOauthEmailAndGetToken");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **code** | **String**| Verification code | |
-| **emailToMatch** | **String**| Check email matches | [optional] |
-
-### Return type
-
-[**LoginResponseDTO**](LoginResponseDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -661,6 +600,134 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="patchPreferences"></a>
+# **patchPreferences**
+> patchPreferences(userPreferences)
+
+Patch user preferences
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    UserPreferences userPreferences = new UserPreferences(); // UserPreferences | 
+    try {
+      apiInstance.patchPreferences(userPreferences);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#patchPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userPreferences** | [**UserPreferences**](UserPreferences.md)|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="setPreferences"></a>
+# **setPreferences**
+> setPreferences(userPreferences)
+
+Set user preferences
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    UserPreferences userPreferences = new UserPreferences(); // UserPreferences | 
+    try {
+      apiInstance.setPreferences(userPreferences);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#setPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userPreferences** | [**UserPreferences**](UserPreferences.md)|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -25,9 +25,9 @@ All URIs are relative to *https://api.docstudio.com*
 | [**removeTemplateFavoriteFlag**](TemplateControllerApi.md#removeTemplateFavoriteFlag) | **DELETE** /api/v1/template/{uuid}/favorite | Remove favorite flag |
 | [**searchTemplates**](TemplateControllerApi.md#searchTemplates) | **GET** /api/v1/template | Get paged templates list |
 | [**setTemplateFavoriteFlag**](TemplateControllerApi.md#setTemplateFavoriteFlag) | **PUT** /api/v1/template/{uuid}/favorite | Mark template as favorite |
-| [**update**](TemplateControllerApi.md#update) | **PUT** /api/v1/template/{uuid} | Update template in DB. Category in template could be null. |
-| [**updateCategories**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template. |
-| [**updateName**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template. |
+| [**update**](TemplateControllerApi.md#update) | **PUT** /api/v1/template/{uuid} | Update template. Category in template could be null |
+| [**updateCategories**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template |
+| [**updateName**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template |
 | [**uploadImage**](TemplateControllerApi.md#uploadImage) | **POST** /api/v1/template/image | Upload new image |
 | [**uploadPdf**](TemplateControllerApi.md#uploadPdf) | **POST** /api/v1/template/pdf | Upload new PDF |
 | [**validateTemplate**](TemplateControllerApi.md#validateTemplate) | **GET** /api/v1/template/validate | Validate template by UUID or version |
@@ -507,7 +507,7 @@ null (empty response body)
 
 <a id="downloadTemplateImage"></a>
 # **downloadTemplateImage**
-> byte[] downloadTemplateImage(uuid, imageUuid, envelopeUuid, mailbox)
+> byte[] downloadTemplateImage(uuid, imageUuid)
 
 Download template image
 
@@ -528,10 +528,8 @@ public class Example {
     TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | Template UUID
     UUID imageUuid = UUID.randomUUID(); // UUID | Image UUID
-    UUID envelopeUuid = UUID.randomUUID(); // UUID | Envelope UUID
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      byte[] result = apiInstance.downloadTemplateImage(uuid, imageUuid, envelopeUuid, mailbox);
+      byte[] result = apiInstance.downloadTemplateImage(uuid, imageUuid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TemplateControllerApi#downloadTemplateImage");
@@ -550,8 +548,6 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **uuid** | **UUID**| Template UUID | |
 | **imageUuid** | **UUID**| Image UUID | |
-| **envelopeUuid** | **UUID**| Envelope UUID | [optional] |
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -564,7 +560,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*, application/json
+ - **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -637,7 +633,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*, application/json
+ - **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1317,7 +1313,7 @@ null (empty response body)
 
 <a id="searchTemplates"></a>
 # **searchTemplates**
-> PageDTOSearchTemplateDTO searchTemplates(mailbox, level, keyword, category, extended, favorite, offset, limit)
+> PageDTOSearchTemplateDTO searchTemplates(mailbox, level, keyword, category, extended, favorite, excludeCategorized, offset, limit)
 
 Get paged templates list
 
@@ -1347,10 +1343,11 @@ public class Example {
     UUID category = UUID.randomUUID(); // UUID | Category id to search template in
     Boolean extended = false; // Boolean | Add extended info to each template (access, account, categories)
     Boolean favorite = true; // Boolean | Filter only favorite or not favorite templates
+    Boolean excludeCategorized = true; // Boolean | Exclude templates if they are located in any other category, except categoryId, within same access level
     Integer offset = 0; // Integer | Offset records
     Integer limit = 25; // Integer | Limit records, max is 1000
     try {
-      PageDTOSearchTemplateDTO result = apiInstance.searchTemplates(mailbox, level, keyword, category, extended, favorite, offset, limit);
+      PageDTOSearchTemplateDTO result = apiInstance.searchTemplates(mailbox, level, keyword, category, extended, favorite, excludeCategorized, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TemplateControllerApi#searchTemplates");
@@ -1373,6 +1370,7 @@ public class Example {
 | **category** | **UUID**| Category id to search template in | [optional] |
 | **extended** | **Boolean**| Add extended info to each template (access, account, categories) | [optional] [default to false] |
 | **favorite** | **Boolean**| Filter only favorite or not favorite templates | [optional] |
+| **excludeCategorized** | **Boolean**| Exclude templates if they are located in any other category, except categoryId, within same access level | [optional] |
 | **offset** | **Integer**| Offset records | [optional] [default to 0] |
 | **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
 
@@ -1464,7 +1462,7 @@ null (empty response body)
 # **update**
 > FullTemplateResponseDTO update(uuid, mailbox, templateCreateDTO)
 
-Update template in DB. Category in template could be null.
+Update template. Category in template could be null
 
 ### Example
 ```java
@@ -1533,7 +1531,7 @@ public class Example {
 # **updateCategories**
 > updateCategories(uuid, mailbox, UUID)
 
-Update categories in template.
+Update categories in template
 
 ### Example
 ```java
@@ -1601,7 +1599,7 @@ null (empty response body)
 # **updateName**
 > updateName(uuid, mailbox, body)
 
-Update name in template.
+Update name in template
 
 ### Example
 ```java

@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**mailboxUuid** | **UUID** |  |  [optional] |
 |**userUuid** | **UUID** |  |  [optional] |
-|**name** | **String** | Mailbox name |  |
+|**name** | **String** | Mailbox name |  [optional] |
 |**accountUuid** | **UUID** |  |  [optional] |
 |**accountName** | **String** |  |  [optional] |
 |**authorization** | [**UserAuthorizationDTO**](UserAuthorizationDTO.md) |  |  [optional] |

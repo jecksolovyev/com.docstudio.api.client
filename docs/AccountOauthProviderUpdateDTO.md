@@ -16,6 +16,7 @@ New provider info
 |**tokenUri** | **String** |  |  |
 |**issuerUri** | **String** |  |  |
 |**jwkSetUri** | **String** |  |  |
+|**scopes** | **String** |  |  |
 
 
 

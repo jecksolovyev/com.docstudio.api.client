@@ -4,16 +4,16 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**loginOauth2**](SsoAuthenticationControllerApi.md#loginOauth2) | **GET** /oauth2/authorization/{registrationId} | Login with oAuth2 |
+| [**loginOauth2**](SsoAuthenticationControllerApi.md#loginOauth2) | **GET** /oauth2/authorization/{registrationId} | Login with oauth2 |
 | [**loginSaml2**](SsoAuthenticationControllerApi.md#loginSaml2) | **GET** /saml2/authenticate/{registrationId} | Login with SAML2 |
 | [**samlMetadata**](SsoAuthenticationControllerApi.md#samlMetadata) | **GET** /saml/metadata | Returns SAML Metadata |
 
 
 <a id="loginOauth2"></a>
 # **loginOauth2**
-> loginOauth2(registrationId, redirectUrl)
+> loginOauth2(registrationId, redirectUrl, forwardPath)
 
-Login with oAuth2
+Login with oauth2
 
 ### Example
 ```java
@@ -31,9 +31,10 @@ public class Example {
 
     SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi(defaultClient);
     String registrationId = "registrationId_example"; // String | 
-    String redirectUrl = "redirectUrl_example"; // String | 
+    String redirectUrl = "redirectUrl_example"; // String | The URL where the token or error message should be sent when redirecting using the GET method (default is {UI_HOST}/sso-login
+    String forwardPath = "forwardPath_example"; // String | The path to which the user should be redirected within the host {redirectUrl}
     try {
-      apiInstance.loginOauth2(registrationId, redirectUrl);
+      apiInstance.loginOauth2(registrationId, redirectUrl, forwardPath);
     } catch (ApiException e) {
       System.err.println("Exception when calling SsoAuthenticationControllerApi#loginOauth2");
       System.err.println("Status code: " + e.getCode());
@@ -50,7 +51,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **registrationId** | **String**|  | |
-| **redirectUrl** | **String**|  | [optional] |
+| **redirectUrl** | **String**| The URL where the token or error message should be sent when redirecting using the GET method (default is {UI_HOST}/sso-login | [optional] |
+| **forwardPath** | **String**| The path to which the user should be redirected within the host {redirectUrl} | [optional] |
 
 ### Return type
 
@@ -72,7 +74,7 @@ No authorization required
 
 <a id="loginSaml2"></a>
 # **loginSaml2**
-> loginSaml2(registrationId, redirectUrl)
+> loginSaml2(registrationId, redirectUrl, forwardPath)
 
 Login with SAML2
 
@@ -92,9 +94,10 @@ public class Example {
 
     SsoAuthenticationControllerApi apiInstance = new SsoAuthenticationControllerApi(defaultClient);
     String registrationId = "registrationId_example"; // String | 
-    String redirectUrl = "redirectUrl_example"; // String | 
+    String redirectUrl = "redirectUrl_example"; // String | The URL where the token or error message should be sent when redirecting using the GET method (default is {UI_HOST}/sso-login
+    String forwardPath = "forwardPath_example"; // String | The path to which the user should be redirected within the host {redirectUrl}
     try {
-      apiInstance.loginSaml2(registrationId, redirectUrl);
+      apiInstance.loginSaml2(registrationId, redirectUrl, forwardPath);
     } catch (ApiException e) {
       System.err.println("Exception when calling SsoAuthenticationControllerApi#loginSaml2");
       System.err.println("Status code: " + e.getCode());
@@ -111,7 +114,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **registrationId** | **String**|  | |
-| **redirectUrl** | **String**|  | [optional] |
+| **redirectUrl** | **String**| The URL where the token or error message should be sent when redirecting using the GET method (default is {UI_HOST}/sso-login | [optional] |
+| **forwardPath** | **String**| The path to which the user should be redirected within the host {redirectUrl} | [optional] |
 
 ### Return type
 

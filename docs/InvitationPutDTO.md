@@ -9,7 +9,8 @@
 |------------ | ------------- | ------------- | -------------|
 |**account** | [**PermissionsWithUuidDTO**](PermissionsWithUuidDTO.md) | Account roles and permissions |  |
 |**mailboxes** | [**List&lt;PermissionsWithUuidDTO&gt;**](PermissionsWithUuidDTO.md) | Mailboxes roles and permissions |  [optional] |
-|**nickname** | **String** | Nick name of invited user |  [optional] |
+|**firstName** | **String** | First name of invited user |  [optional] |
+|**lastName** | **String** | Last name of invited user |  [optional] |
 
 
 

@@ -16,6 +16,7 @@
 |**allowUsersToRegister** | **Boolean** | Allow or deny users to register |  [optional] |
 |**allowAutoDeposite** | **Boolean** | Allow or deny users to set Auto Deposit Mailbox |  [optional] |
 |**allowManageNotification** | **Boolean** | Allow or deny users to manage notifications |  [optional] |
+|**registerCompanyAccountDefault** | **Boolean** | Company as default account on registration |  [optional] |
 |**profileFields** | [**List&lt;UserField&gt;**](UserField.md) |  |  [optional] |
 
 

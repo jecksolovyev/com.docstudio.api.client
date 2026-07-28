@@ -4,17 +4,17 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**create6**](CategoryControllerApi.md#create6) | **POST** /api/v1/category | Save a category in DB |
+| [**create6**](CategoryControllerApi.md#create6) | **POST** /api/v1/category | Save a category |
 | [**delete3**](CategoryControllerApi.md#delete3) | **DELETE** /api/v1/category/{id} | Delete category by Id |
 | [**getAllByType**](CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
-| [**update6**](CategoryControllerApi.md#update6) | **PUT** /api/v1/category/{id} | Update the category in DB |
+| [**update6**](CategoryControllerApi.md#update6) | **PUT** /api/v1/category/{id} | Update the category |
 
 
 <a id="create6"></a>
 # **create6**
-> CategoryDTO create6(mailbox, categoryDTO)
+> CategoryDTO create6(mailbox, categoryUpdateRequest)
 
-Save a category in DB
+Save a category
 
 ### Example
 ```java
@@ -37,9 +37,9 @@ public class Example {
 
     CategoryControllerApi apiInstance = new CategoryControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    CategoryDTO categoryDTO = new CategoryDTO(); // CategoryDTO | 
+    CategoryUpdateRequest categoryUpdateRequest = new CategoryUpdateRequest(); // CategoryUpdateRequest | 
     try {
-      CategoryDTO result = apiInstance.create6(mailbox, categoryDTO);
+      CategoryDTO result = apiInstance.create6(mailbox, categoryUpdateRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling CategoryControllerApi#create6");
@@ -57,7 +57,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **categoryDTO** | [**CategoryDTO**](CategoryDTO.md)|  | |
+| **categoryUpdateRequest** | [**CategoryUpdateRequest**](CategoryUpdateRequest.md)|  | |
 
 ### Return type
 
@@ -216,9 +216,9 @@ public class Example {
 
 <a id="update6"></a>
 # **update6**
-> CategoryDTO update6(id, mailbox, categoryDTO)
+> CategoryDTO update6(id, mailbox, categoryUpdateRequest)
 
-Update the category in DB
+Update the category
 
 ### Example
 ```java
@@ -242,9 +242,9 @@ public class Example {
     CategoryControllerApi apiInstance = new CategoryControllerApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Category Id
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    CategoryDTO categoryDTO = new CategoryDTO(); // CategoryDTO | 
+    CategoryUpdateRequest categoryUpdateRequest = new CategoryUpdateRequest(); // CategoryUpdateRequest | 
     try {
-      CategoryDTO result = apiInstance.update6(id, mailbox, categoryDTO);
+      CategoryDTO result = apiInstance.update6(id, mailbox, categoryUpdateRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling CategoryControllerApi#update6");
@@ -263,7 +263,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Category Id | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **categoryDTO** | [**CategoryDTO**](CategoryDTO.md)|  | |
+| **categoryUpdateRequest** | [**CategoryUpdateRequest**](CategoryUpdateRequest.md)|  | |
 
 ### Return type
 

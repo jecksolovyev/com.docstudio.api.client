@@ -23,6 +23,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getAiTokens**](AccountControllerApi.md#getAiTokens) | **GET** /api/v1/account/{accountId}/ai-token | List AI tokens |
 | [**getCryptoConfigs**](AccountControllerApi.md#getCryptoConfigs) | **GET** /api/v1/account/{accountUuid}/crypto-configs | Get crypto configs |
 | [**getMailbox**](AccountControllerApi.md#getMailbox) | **GET** /api/v1/account/mailbox/{uuid} | Users and their permissions by mailbox |
+| [**getUserMailboxesByAccount**](AccountControllerApi.md#getUserMailboxesByAccount) | **GET** /api/v1/account/{accountUuid}/user/{userUuid}/mailbox | Read list of mailboxes for user |
 | [**getUserPolicies**](AccountControllerApi.md#getUserPolicies) | **GET** /api/v1/account/{accountUuid}/user-policies | Get user password/session policies |
 | [**getUsersPermissions**](AccountControllerApi.md#getUsersPermissions) | **POST** /api/v1/account/{accountUuid}/users | Get users with permissions per account and mailboxes |
 | [**mailboxesReport**](AccountControllerApi.md#mailboxesReport) | **POST** /api/v1/account/{accountUuid}/mailbox/report | Generate account mailboxes report |
@@ -740,7 +741,7 @@ public class Example {
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
-    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    Set<UUID> UUID = new LinkedHashSet<>(); // Set<UUID> | 
     try {
       apiInstance.deleteCryptoConfigs(accountUuid, UUID);
     } catch (ApiException e) {
@@ -781,7 +782,7 @@ null (empty response body)
 
 <a id="getAccountBillingAddress"></a>
 # **getAccountBillingAddress**
-> AccountAddressDTO getAccountBillingAddress(accountUuid)
+> AccountAddress getAccountBillingAddress(accountUuid)
 
 Get account billing address
 
@@ -807,7 +808,7 @@ public class Example {
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     try {
-      AccountAddressDTO result = apiInstance.getAccountBillingAddress(accountUuid);
+      AccountAddress result = apiInstance.getAccountBillingAddress(accountUuid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#getAccountBillingAddress");
@@ -828,7 +829,7 @@ public class Example {
 
 ### Return type
 
-[**AccountAddressDTO**](AccountAddressDTO.md)
+[**AccountAddress**](AccountAddress.md)
 
 ### Authorization
 
@@ -913,7 +914,7 @@ public class Example {
 
 <a id="getAccountDetails"></a>
 # **getAccountDetails**
-> AccountDTO getAccountDetails(id, withUsers)
+> AccountDTO getAccountDetails(id)
 
 
 
@@ -938,9 +939,8 @@ public class Example {
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | 
-    Boolean withUsers = false; // Boolean | 
     try {
-      AccountDTO result = apiInstance.getAccountDetails(id, withUsers);
+      AccountDTO result = apiInstance.getAccountDetails(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#getAccountDetails");
@@ -958,7 +958,6 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**|  | |
-| **withUsers** | **Boolean**|  | [optional] [default to false] |
 
 ### Return type
 
@@ -1103,7 +1102,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/octet-stream, application/json
+ - **Accept**: application/octet-stream
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1294,6 +1293,81 @@ public class Example {
 ### Return type
 
 [**MailboxAccountSimpleDTO**](MailboxAccountSimpleDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getUserMailboxesByAccount"></a>
+# **getUserMailboxesByAccount**
+> PageDTOMailboxRolePermissionDTO getUserMailboxesByAccount(accountUuid, userUuid, hasPermissions, keyword, offset, limit)
+
+Read list of mailboxes for user
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AccountControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
+    UUID userUuid = UUID.randomUUID(); // UUID | User UUID
+    Boolean hasPermissions = true; // Boolean | Filter mailboxes by any user permission existence
+    String keyword = "keyword_example"; // String | Keyword to search mailbox by or mailbox UUID
+    Integer offset = 0; // Integer | Offset records
+    Integer limit = 25; // Integer | Limit records, max is 1000
+    try {
+      PageDTOMailboxRolePermissionDTO result = apiInstance.getUserMailboxesByAccount(accountUuid, userUuid, hasPermissions, keyword, offset, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AccountControllerApi#getUserMailboxesByAccount");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**| Account UUID | |
+| **userUuid** | **UUID**| User UUID | |
+| **hasPermissions** | **Boolean**| Filter mailboxes by any user permission existence | [optional] |
+| **keyword** | **String**| Keyword to search mailbox by or mailbox UUID | [optional] |
+| **offset** | **Integer**| Offset records | [optional] [default to 0] |
+| **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
+
+### Return type
+
+[**PageDTOMailboxRolePermissionDTO**](PageDTOMailboxRolePermissionDTO.md)
 
 ### Authorization
 
@@ -1645,7 +1719,7 @@ null (empty response body)
 
 <a id="searchMailboxes1"></a>
 # **searchMailboxes1**
-> PageDTOAccountMailboxInfoDTO searchMailboxes1(accountUuid, keyword, withGroups, group, offset, limit)
+> PageDTOAccountMailboxInfoDTO searchMailboxes1(accountUuid, keyword, group, _short, offset, limit)
 
 Get paged account mailboxes list
 
@@ -1671,12 +1745,12 @@ public class Example {
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     String keyword = "keyword_example"; // String | Keyword to search mailbox by or mailbox UUID
-    Boolean withGroups = true; // Boolean | Include groups info into response
-    Set<UUID> group = Arrays.asList(); // Set<UUID> | Include groups info into response
+    Set<UUID> group = new LinkedHashSet<>(); // Set<UUID> | Groups to filter by
+    Boolean _short = true; // Boolean | Return only UUID and Name
     Integer offset = 0; // Integer | Offset records
     Integer limit = 25; // Integer | Limit records, max is 1000
     try {
-      PageDTOAccountMailboxInfoDTO result = apiInstance.searchMailboxes1(accountUuid, keyword, withGroups, group, offset, limit);
+      PageDTOAccountMailboxInfoDTO result = apiInstance.searchMailboxes1(accountUuid, keyword, group, _short, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#searchMailboxes1");
@@ -1695,8 +1769,8 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**| Account UUID | |
 | **keyword** | **String**| Keyword to search mailbox by or mailbox UUID | [optional] |
-| **withGroups** | **Boolean**| Include groups info into response | [optional] |
-| **group** | [**Set&lt;UUID&gt;**](UUID.md)| Include groups info into response | [optional] |
+| **group** | [**Set&lt;UUID&gt;**](UUID.md)| Groups to filter by | [optional] |
+| **_short** | **Boolean**| Return only UUID and Name | [optional] |
 | **offset** | **Integer**| Offset records | [optional] [default to 0] |
 | **limit** | **Integer**| Limit records, max is 1000 | [optional] [default to 25] |
 
@@ -1720,7 +1794,7 @@ public class Example {
 
 <a id="updateAccountBillingAddress"></a>
 # **updateAccountBillingAddress**
-> AccountAddressDTO updateAccountBillingAddress(accountUuid, accountAddressDTO)
+> AccountAddress updateAccountBillingAddress(accountUuid, accountAddress)
 
 Create/update account billing address
 
@@ -1745,9 +1819,9 @@ public class Example {
 
     AccountControllerApi apiInstance = new AccountControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
-    AccountAddressDTO accountAddressDTO = new AccountAddressDTO(); // AccountAddressDTO | 
+    AccountAddress accountAddress = new AccountAddress(); // AccountAddress | 
     try {
-      AccountAddressDTO result = apiInstance.updateAccountBillingAddress(accountUuid, accountAddressDTO);
+      AccountAddress result = apiInstance.updateAccountBillingAddress(accountUuid, accountAddress);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccountControllerApi#updateAccountBillingAddress");
@@ -1765,11 +1839,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountUuid** | **UUID**| Account UUID | |
-| **accountAddressDTO** | [**AccountAddressDTO**](AccountAddressDTO.md)|  | |
+| **accountAddress** | [**AccountAddress**](AccountAddress.md)|  | |
 
 ### Return type
 
-[**AccountAddressDTO**](AccountAddressDTO.md)
+[**AccountAddress**](AccountAddress.md)
 
 ### Authorization
 

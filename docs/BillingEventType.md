@@ -13,6 +13,12 @@
 
 * `SENT_ENVELOPE` (value: `"sent-envelope"`)
 
+* `ENVELOPE_SENT_Q` (value: `"envelope-sent-q"`)
+
+* `ENVELOPE_SENT_T` (value: `"envelope-sent-t"`)
+
+* `ENVELOPE_SENT_F` (value: `"envelope-sent-f"`)
+
 * `ARCHIVE_ENVELOPE` (value: `"archive-envelope"`)
 
 * `UNARCHIVE_ENVELOPE` (value: `"unarchive-envelope"`)
@@ -49,7 +55,19 @@
 
 * `ENVELOPE_AI_ASSIST` (value: `"envelope-ai-assist"`)
 
+* `ENVELOPE_AI_ASSIST_C` (value: `"envelope-ai-assist-c"`)
+
 * `TEMPLATE_AI_ASSIST` (value: `"template-ai-assist"`)
+
+* `TEMPLATE_AI_ASSIST_C` (value: `"template-ai-assist-c"`)
+
+* `DIIA_MULTISHARING` (value: `"diia-multisharing"`)
+
+* `DIIA_SHARING` (value: `"diia-sharing"`)
+
+* `DIIA_MULTISHARING_C` (value: `"diia-multisharing-c"`)
+
+* `DIIA_SHARING_C` (value: `"diia-sharing-c"`)
 
 
 

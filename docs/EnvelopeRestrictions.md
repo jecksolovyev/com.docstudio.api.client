@@ -8,6 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**einkFooter** | **String** |  |  [optional] |
+|**spelledCurrency** | **Set&lt;String&gt;** |  |  [optional] |
+|**hideUserIdentifier** | **Boolean** |  |  [optional] |
 |**field** | [**FieldRestriction**](FieldRestriction.md) |  |  [optional] |
 |**attachment** | [**AttachmentRestriction**](AttachmentRestriction.md) |  |  [optional] |
 |**search** | [**SearchRestriction**](SearchRestriction.md) |  |  [optional] |

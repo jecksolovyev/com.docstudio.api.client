@@ -21,6 +21,7 @@
 |---- | -----|
 | FAILED | &quot;FAILED&quot; |
 | SUCCEED | &quot;SUCCEED&quot; |
+| PROCESSING | &quot;PROCESSING&quot; |
 
 
 

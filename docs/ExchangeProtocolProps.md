@@ -13,8 +13,6 @@
 |**url** | **String** |  |  |
 |**dbnaAccount** | **UUID** |  |  |
 |**ftpPassword** | **String** |  |  |
-|**encryptionAlgorithms** | **List&lt;String&gt;** |  |  |
-|**signingAlgorithms** | **List&lt;String&gt;** |  |  |
 
 
 

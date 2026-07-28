@@ -214,7 +214,7 @@ null (empty response body)
 
 <a id="requestResendValidationCode"></a>
 # **requestResendValidationCode**
-> Object requestResendValidationCode(requestValCodeDTO)
+> Object requestResendValidationCode(requestValCodeDTO, initiation)
 
 Send email validation code
 
@@ -239,8 +239,9 @@ public class Example {
 
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     RequestValCodeDTO requestValCodeDTO = new RequestValCodeDTO(); // RequestValCodeDTO | 
+    Boolean initiation = true; // Boolean | Code for envelope initiation purpose
     try {
-      Object result = apiInstance.requestResendValidationCode(requestValCodeDTO);
+      Object result = apiInstance.requestResendValidationCode(requestValCodeDTO, initiation);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RegistrationControllerApi#requestResendValidationCode");
@@ -258,6 +259,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **requestValCodeDTO** | [**RequestValCodeDTO**](RequestValCodeDTO.md)|  | |
+| **initiation** | **Boolean**| Code for envelope initiation purpose | [optional] |
 
 ### Return type
 
@@ -345,7 +347,7 @@ public class Example {
 
 <a id="resetPassword"></a>
 # **resetPassword**
-> resetPassword(resetPasswordDTO)
+> LoginResponseDTO resetPassword(resetPasswordDTO)
 
 Reset password
 
@@ -371,7 +373,8 @@ public class Example {
     RegistrationControllerApi apiInstance = new RegistrationControllerApi(defaultClient);
     ResetPasswordDTO resetPasswordDTO = new ResetPasswordDTO(); // ResetPasswordDTO | 
     try {
-      apiInstance.resetPassword(resetPasswordDTO);
+      LoginResponseDTO result = apiInstance.resetPassword(resetPasswordDTO);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RegistrationControllerApi#resetPassword");
       System.err.println("Status code: " + e.getCode());
@@ -391,7 +394,7 @@ public class Example {
 
 ### Return type
 
-null (empty response body)
+[**LoginResponseDTO**](LoginResponseDTO.md)
 
 ### Authorization
 
@@ -400,7 +403,7 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -454,7 +457,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **code** | **String**| Validation code from email | |
-| **type** | **String**| Verification type | [enum: validation, resetPassword, corporateNewPassword, newPassword, externalAuthentication, changeEmail] |
+| **type** | **String**| Verification type | [enum: validation, resetPassword, corporateNewPassword, newPassword, externalAuthentication, changeEmail, oneTimePassword] |
 
 ### Return type
 

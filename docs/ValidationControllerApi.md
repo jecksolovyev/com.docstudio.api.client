@@ -6,6 +6,7 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**getEnvelopeInvite**](ValidationControllerApi.md#getEnvelopeInvite) | **GET** /api/v1/validation/envelope-authorized-invite | Get invitation info by already registered user |
 | [**getEnvelopeInviteNotRegistered**](ValidationControllerApi.md#getEnvelopeInviteNotRegistered) | **GET** /api/v1/validation/envelope-invite | Get invitation info by not authenticated user |
+| [**getUserInvitationStatus**](ValidationControllerApi.md#getUserInvitationStatus) | **GET** /api/v1/validation/account-invite | Get user status by account invitation code |
 
 
 <a id="getEnvelopeInvite"></a>
@@ -75,7 +76,7 @@ public class Example {
 
 <a id="getEnvelopeInviteNotRegistered"></a>
 # **getEnvelopeInviteNotRegistered**
-> GetEnvelopeInviteInfoDTO getEnvelopeInviteNotRegistered(code)
+> GetEnvelopeInviteInfoDTO getEnvelopeInviteNotRegistered(code, email)
 
 Get invitation info by not authenticated user
 
@@ -100,8 +101,9 @@ public class Example {
 
     ValidationControllerApi apiInstance = new ValidationControllerApi(defaultClient);
     String code = "code_example"; // String | 
+    String email = "email_example"; // String | 
     try {
-      GetEnvelopeInviteInfoDTO result = apiInstance.getEnvelopeInviteNotRegistered(code);
+      GetEnvelopeInviteInfoDTO result = apiInstance.getEnvelopeInviteNotRegistered(code, email);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ValidationControllerApi#getEnvelopeInviteNotRegistered");
@@ -119,10 +121,78 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **code** | **String**|  | |
+| **email** | **String**|  | |
 
 ### Return type
 
 [**GetEnvelopeInviteInfoDTO**](GetEnvelopeInviteInfoDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getUserInvitationStatus"></a>
+# **getUserInvitationStatus**
+> UserStatusInfo getUserInvitationStatus(code, email)
+
+Get user status by account invitation code
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.ValidationControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    ValidationControllerApi apiInstance = new ValidationControllerApi(defaultClient);
+    String code = "code_example"; // String | 
+    String email = "email_example"; // String | 
+    try {
+      UserStatusInfo result = apiInstance.getUserInvitationStatus(code, email);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ValidationControllerApi#getUserInvitationStatus");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **code** | **String**|  | |
+| **email** | **String**|  | |
+
+### Return type
+
+[**UserStatusInfo**](UserStatusInfo.md)
 
 ### Authorization
 

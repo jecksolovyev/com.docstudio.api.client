@@ -9,6 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**name** | **String** | Signature field name |  [optional] |
 |**stampRequired** | **Boolean** | Is stamp required for signature? |  [optional] |
+|**qualifiedSignatureRequired** | **Boolean** | Is qualified signature required? |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) | Signature type |  [optional] |
 |**tin** | **String** | Expected Tax Individual Number |  [optional] |
 

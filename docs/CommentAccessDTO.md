@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**threadUuid** | **UUID** | UUID of comment thread |  |
 |**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level (&#39;official&#39; is not allowed here) |  |
-|**sharedTo** | **Set&lt;Object&gt;** |  |  [optional] |
+|**sharedTo** | **Set&lt;UUID&gt;** |  |  [optional] |
 
 
 

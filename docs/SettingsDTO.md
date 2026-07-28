@@ -35,6 +35,7 @@
 |**infoLinks** | [**List&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) | Info menu links |  [optional] |
 |**supportedBarcodes** | [**List&lt;SupportedBarcodeDTO&gt;**](SupportedBarcodeDTO.md) | Supported barcodes |  [optional] |
 |**defaultEnvelopeListColumns** | [**DefaultEnvelopeListColumns**](DefaultEnvelopeListColumns.md) | Default envelope list columns |  [optional] |
+|**integrations** | [**ConnectorProperties**](ConnectorProperties.md) | Available integrations |  [optional] |
 
 
 

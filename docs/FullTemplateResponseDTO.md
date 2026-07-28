@@ -21,6 +21,7 @@
 |**account** | **UUID** | Template creator&#39;s account |  [optional] |
 |**archive** | **Boolean** | Template archived |  [optional] |
 |**newEnvelopeCanBeCreated** | **Boolean** | Returns a flag whether a new envelope can be created using this template |  [optional] |
+|**draftInitializationRequired** | **Boolean** | For proper envelope initialization a draft must be created at once |  [optional] |
 |**publiclyShared** | **Boolean** | Returns a flag indicating whether the template is publicly accessible by code |  [optional] |
 |**defaultDownloadOptions** | **Boolean** | Returns a flag whether default download options should appear or only custom one |  [optional] |
 |**categories** | **List&lt;UUID&gt;** | Template categories ids. Empty array if not within any category. |  [optional] |
@@ -48,6 +49,7 @@
 |---- | -----|
 | P7_S | &quot;P7S&quot; |
 | ASICE | &quot;ASICE&quot; |
+| P7_S_ENVELOPED | &quot;P7S_ENVELOPED&quot; |
 
 
 

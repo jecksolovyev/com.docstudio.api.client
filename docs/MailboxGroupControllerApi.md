@@ -42,7 +42,7 @@ public class Example {
     MailboxGroupControllerApi apiInstance = new MailboxGroupControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     UUID groupUuid = UUID.randomUUID(); // UUID | Group UUID
-    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    Set<UUID> UUID = new LinkedHashSet<>(); // Set<UUID> | 
     try {
       GroupInfoDTO result = apiInstance.addMailboxesToGroup(accountUuid, groupUuid, UUID);
       System.out.println(result);
@@ -247,7 +247,7 @@ public class Example {
     MailboxGroupControllerApi apiInstance = new MailboxGroupControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    Set<UUID> UUID = new LinkedHashSet<>(); // Set<UUID> | 
     try {
       List<NameUuidDTO> result = apiInstance.getMailboxGroupsNames(accountUuid, mailbox, UUID);
       System.out.println(result);
@@ -316,7 +316,7 @@ public class Example {
     MailboxGroupControllerApi apiInstance = new MailboxGroupControllerApi(defaultClient);
     UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
     UUID groupUuid = UUID.randomUUID(); // UUID | Group UUID
-    Set<UUID> UUID = Arrays.asList(); // Set<UUID> | 
+    Set<UUID> UUID = new LinkedHashSet<>(); // Set<UUID> | 
     try {
       GroupInfoDTO result = apiInstance.removeMailboxesFromGroup(accountUuid, groupUuid, UUID);
       System.out.println(result);

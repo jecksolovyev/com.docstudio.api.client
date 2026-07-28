@@ -11,7 +11,7 @@
 |**text** | **String** | Text of the message |  |
 |**xpath** | **String** | xPath to find selected area |  [optional] |
 |**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level (&#39;official&#39; is not allowed here) |  |
-|**sharedTo** | **Set&lt;Object&gt;** |  |  [optional] |
+|**sharedTo** | **Set&lt;UUID&gt;** |  |  [optional] |
 
 
 

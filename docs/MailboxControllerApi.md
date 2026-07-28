@@ -16,7 +16,6 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getCustomizedDashboard**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
 | [**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
-| [**getMailboxesByAccount**](MailboxControllerApi.md#getMailboxesByAccount) | **GET** /api/v1/mailbox/account/{uuid} | Read list of account mailboxes |
 | [**getMailboxesInfo1**](MailboxControllerApi.md#getMailboxesInfo1) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
@@ -327,7 +326,7 @@ public class Example {
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    Set<String> key = Arrays.asList(); // Set<String> | Keys of preferences to delete
+    Set<String> key = new LinkedHashSet<>(); // Set<String> | Keys of preferences to delete
     try {
       apiInstance.deleteViewPreferences(mailbox, key);
     } catch (ApiException e) {
@@ -755,7 +754,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/html, application/json
+ - **Accept**: text/html
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -812,71 +811,6 @@ public class Example {
 ### Return type
 
 [**MailboxEssentialsDTO**](MailboxEssentialsDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="getMailboxesByAccount"></a>
-# **getMailboxesByAccount**
-> List&lt;MailboxNameUuidDTO&gt; getMailboxesByAccount(uuid)
-
-Read list of account mailboxes
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.MailboxControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | Account UUID
-    try {
-      List<MailboxNameUuidDTO> result = apiInstance.getMailboxesByAccount(uuid);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#getMailboxesByAccount");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| Account UUID | |
-
-### Return type
-
-[**List&lt;MailboxNameUuidDTO&gt;**](MailboxNameUuidDTO.md)
 
 ### Authorization
 
@@ -1125,7 +1059,7 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
-    Set<String> key = Arrays.asList(); // Set<String> | Keys of preferences to retrieve
+    Set<String> key = new LinkedHashSet<>(); // Set<String> | Keys of preferences to retrieve
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
       Map<String, String> result = apiInstance.getViewPreferences(key, mailbox);

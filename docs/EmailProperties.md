@@ -11,6 +11,7 @@
 |**helpCenterTitleKey** | **String** |  |  [optional] |
 |**addressTitleKey** | **String** |  |  [optional] |
 |**contacts** | **Map&lt;String, List&lt;String&gt;&gt;** |  |  [optional] |
+|**errorRetryDelays** | **List&lt;String&gt;** |  |  [optional] |
 
 
 

@@ -12,10 +12,10 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getAutomationExecutionFile**](AutomationControllerApi.md#getAutomationExecutionFile) | **GET** /api/v1/automation/account/{accountId}/execution/{traceId}/log/{spanId}/file | Get automation execution result file |
 | [**getAutomationExecutionLog**](AutomationControllerApi.md#getAutomationExecutionLog) | **GET** /api/v1/automation/account/{accountId}/execution/{traceId}/log | Get automation execution log |
 | [**getAutomationExecutions**](AutomationControllerApi.md#getAutomationExecutions) | **GET** /api/v1/automation/account/{accountId}/executions | Get automation executions |
-| [**getAutomations**](AutomationControllerApi.md#getAutomations) | **GET** /api/v1/automation/account/{accountId} | Get account/mailbox automations |
+| [**getAutomations**](AutomationControllerApi.md#getAutomations) | **GET** /api/v1/automation/account/{accountId} | Get account automations |
 | [**getBrickTypes**](AutomationControllerApi.md#getBrickTypes) | **GET** /api/v1/automation/account/{accountId}/brick-types |  |
 | [**getCredentialTypes**](AutomationControllerApi.md#getCredentialTypes) | **GET** /api/v1/automation/account/{accountId}/credential-types |  |
-| [**getCredentials**](AutomationControllerApi.md#getCredentials) | **GET** /api/v1/automation/account/{accountId}/credentials | Get account/mailbox credentials |
+| [**getCredentials**](AutomationControllerApi.md#getCredentials) | **GET** /api/v1/automation/account/{accountId}/credentials | Get account credentials |
 | [**reprocessExecution**](AutomationControllerApi.md#reprocessExecution) | **POST** /api/v1/automation/account/{accountId}/execution/{traceId}/log/{spanId}/reprocess | Reprocess execution starting from the span |
 | [**updateAutomation**](AutomationControllerApi.md#updateAutomation) | **PUT** /api/v1/automation/account/{accountId}/{id} | Update automation |
 
@@ -357,7 +357,7 @@ public class Example {
 
 <a id="getAutomationExecutionFile"></a>
 # **getAutomationExecutionFile**
-> File getAutomationExecutionFile(accountId, traceId, spanId)
+> File getAutomationExecutionFile(accountId, traceId, spanId, filename)
 
 Get automation execution result file
 
@@ -384,8 +384,9 @@ public class Example {
     UUID accountId = UUID.randomUUID(); // UUID | Account UUID
     String traceId = "traceId_example"; // String | Execution Trace ID
     String spanId = "spanId_example"; // String | Execution Span ID
+    String filename = "filename_example"; // String | Optional filename
     try {
-      File result = apiInstance.getAutomationExecutionFile(accountId, traceId, spanId);
+      File result = apiInstance.getAutomationExecutionFile(accountId, traceId, spanId, filename);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AutomationControllerApi#getAutomationExecutionFile");
@@ -405,6 +406,7 @@ public class Example {
 | **accountId** | **UUID**| Account UUID | |
 | **traceId** | **String**| Execution Trace ID | |
 | **spanId** | **String**| Execution Span ID | |
+| **filename** | **String**| Optional filename | [optional] |
 
 ### Return type
 
@@ -493,7 +495,7 @@ public class Example {
 
 <a id="getAutomationExecutions"></a>
 # **getAutomationExecutions**
-> List&lt;AutomationExecution&gt; getAutomationExecutions(accountId)
+> List&lt;AutomationExecution&gt; getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to)
 
 Get automation executions
 
@@ -518,8 +520,14 @@ public class Example {
 
     AutomationControllerApi apiInstance = new AutomationControllerApi(defaultClient);
     UUID accountId = UUID.randomUUID(); // UUID | Account UUID
+    UUID mailboxId = UUID.randomUUID(); // UUID | 
+    UUID envelopeId = UUID.randomUUID(); // UUID | 
+    UUID workflowId = UUID.randomUUID(); // UUID | 
+    String filename = "filename_example"; // String | 
+    Long from = 56L; // Long | 
+    Long to = 56L; // Long | 
     try {
-      List<AutomationExecution> result = apiInstance.getAutomationExecutions(accountId);
+      List<AutomationExecution> result = apiInstance.getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AutomationControllerApi#getAutomationExecutions");
@@ -537,6 +545,12 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountId** | **UUID**| Account UUID | |
+| **mailboxId** | **UUID**|  | [optional] |
+| **envelopeId** | **UUID**|  | [optional] |
+| **workflowId** | **UUID**|  | [optional] |
+| **filename** | **String**|  | [optional] |
+| **from** | **Long**|  | [optional] |
+| **to** | **Long**|  | [optional] |
 
 ### Return type
 
@@ -560,7 +574,7 @@ public class Example {
 # **getAutomations**
 > List&lt;AutomationGetList&gt; getAutomations(accountId)
 
-Get account/mailbox automations
+Get account automations
 
 ### Example
 ```java
@@ -755,7 +769,7 @@ public class Example {
 # **getCredentials**
 > List&lt;CredentialsGetList&gt; getCredentials(accountId)
 
-Get account/mailbox credentials
+Get account credentials
 
 ### Example
 ```java

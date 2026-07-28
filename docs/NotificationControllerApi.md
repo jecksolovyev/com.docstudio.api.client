@@ -147,7 +147,7 @@ public class Example {
 
 <a id="getMailboxPreferences"></a>
 # **getMailboxPreferences**
-> Map&lt;String, List&lt;Integer&gt;&gt; getMailboxPreferences(userUuid, accountUuid, mailbox)
+> MailboxNotificationPreferences getMailboxPreferences(userUuid, accountUuid, mailbox)
 
 Get corporate user mailbox related notification preferences
 
@@ -175,7 +175,7 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
     UUID mailbox = UUID.randomUUID(); // UUID | 
     try {
-      Map<String, List<Integer>> result = apiInstance.getMailboxPreferences(userUuid, accountUuid, mailbox);
+      MailboxNotificationPreferences result = apiInstance.getMailboxPreferences(userUuid, accountUuid, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferences");
@@ -198,7 +198,7 @@ public class Example {
 
 ### Return type
 
-[**Map&lt;String, List&lt;Integer&gt;&gt;**](List.md)
+[**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ public class Example {
 
 <a id="getMailboxPreferences1"></a>
 # **getMailboxPreferences1**
-> Map&lt;String, List&lt;Integer&gt;&gt; getMailboxPreferences1(mailbox)
+> MailboxNotificationPreferences getMailboxPreferences1(mailbox)
 
 Get mailbox related notification preferences
 
@@ -242,7 +242,7 @@ public class Example {
     NotificationControllerApi apiInstance = new NotificationControllerApi(defaultClient);
     UUID mailbox = UUID.randomUUID(); // UUID | 
     try {
-      Map<String, List<Integer>> result = apiInstance.getMailboxPreferences1(mailbox);
+      MailboxNotificationPreferences result = apiInstance.getMailboxPreferences1(mailbox);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferences1");
@@ -263,7 +263,7 @@ public class Example {
 
 ### Return type
 
-[**Map&lt;String, List&lt;Integer&gt;&gt;**](List.md)
+[**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)
 
 ### Authorization
 
@@ -536,7 +536,7 @@ null (empty response body)
 
 <a id="saveMailboxPreferences"></a>
 # **saveMailboxPreferences**
-> saveMailboxPreferences(requestBody, mailbox)
+> saveMailboxPreferences(mailboxNotificationPreferences, mailbox)
 
 Update mailbox related notification preferences
 
@@ -560,10 +560,10 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     NotificationControllerApi apiInstance = new NotificationControllerApi(defaultClient);
-    Map<String, List<Integer>> requestBody = new HashMap(); // Map<String, List<Integer>> | 
+    MailboxNotificationPreferences mailboxNotificationPreferences = new MailboxNotificationPreferences(); // MailboxNotificationPreferences | 
     UUID mailbox = UUID.randomUUID(); // UUID | 
     try {
-      apiInstance.saveMailboxPreferences(requestBody, mailbox);
+      apiInstance.saveMailboxPreferences(mailboxNotificationPreferences, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotificationControllerApi#saveMailboxPreferences");
       System.err.println("Status code: " + e.getCode());
@@ -579,7 +579,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **requestBody** | [**Map&lt;String, List&lt;Integer&gt;&gt;**](List.md)|  | |
+| **mailboxNotificationPreferences** | [**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)|  | |
 | **mailbox** | **UUID**|  | [optional] |
 
 ### Return type
@@ -670,7 +670,7 @@ null (empty response body)
 
 <a id="setMailboxPreferences"></a>
 # **setMailboxPreferences**
-> setMailboxPreferences(userUuid, accountUuid, requestBody, mailbox)
+> setMailboxPreferences(userUuid, accountUuid, mailboxNotificationPreferences, mailbox)
 
 Update corporate user mailbox related notification preferences
 
@@ -696,10 +696,10 @@ public class Example {
     NotificationControllerApi apiInstance = new NotificationControllerApi(defaultClient);
     UUID userUuid = UUID.randomUUID(); // UUID | User uuid
     UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
-    Map<String, List<Integer>> requestBody = new HashMap(); // Map<String, List<Integer>> | 
+    MailboxNotificationPreferences mailboxNotificationPreferences = new MailboxNotificationPreferences(); // MailboxNotificationPreferences | 
     UUID mailbox = UUID.randomUUID(); // UUID | 
     try {
-      apiInstance.setMailboxPreferences(userUuid, accountUuid, requestBody, mailbox);
+      apiInstance.setMailboxPreferences(userUuid, accountUuid, mailboxNotificationPreferences, mailbox);
     } catch (ApiException e) {
       System.err.println("Exception when calling NotificationControllerApi#setMailboxPreferences");
       System.err.println("Status code: " + e.getCode());
@@ -717,7 +717,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userUuid** | **UUID**| User uuid | |
 | **accountUuid** | **UUID**| Account uuid | |
-| **requestBody** | [**Map&lt;String, List&lt;Integer&gt;&gt;**](List.md)|  | |
+| **mailboxNotificationPreferences** | [**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)|  | |
 | **mailbox** | **UUID**|  | [optional] |
 
 ### Return type
