@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
 |**actionType** | **String** |  |  [optional] |
 |**batchSize** | **Integer** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
 |**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
 
 

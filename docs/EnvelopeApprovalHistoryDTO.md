@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  [optional] |
-|**urgent** | **Boolean** |  |  [optional] |
+|**approvers** | [**List&lt;ApproverDetailsDTO&gt;**](ApproverDetailsDTO.md) |  |  [optional] |
 |**completed** | **Boolean** |  |  [optional] |
 |**mailboxUuid** | **UUID** |  |  [optional] |
-|**approvers** | [**List&lt;ApproverDetailsDTO&gt;**](ApproverDetailsDTO.md) |  |  [optional] |
+|**urgent** | **Boolean** |  |  [optional] |
+|**uuid** | **UUID** |  |  [optional] |
 
 
 

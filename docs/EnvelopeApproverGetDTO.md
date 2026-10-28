@@ -7,10 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  |
-|**mailboxUuid** | **UUID** |  |  |
-|**order** | **Integer** |  |  [optional] |
+|**email** | **String** |  |  [optional] |
 |**mailboxName** | **String** |  |  [optional] |
+|**mailboxUuid** | **UUID** |  |  [optional] |
+|**name** | **String** |  |  |
+|**order** | **Integer** |  |  [optional] |
 
 
 

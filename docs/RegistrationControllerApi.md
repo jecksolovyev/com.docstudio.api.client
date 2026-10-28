@@ -80,7 +80,7 @@ public class Example {
 
 <a id="register"></a>
 # **register**
-> LoginResponseDTO register(code, userCreateDTO, codeType)
+> LoginResponseDTO register(code, userCreateDTO, codeType, refreshToken)
 
 Register a user with validation code
 
@@ -107,8 +107,9 @@ public class Example {
     String code = "code_example"; // String | Validation code
     UserCreateDTO userCreateDTO = new UserCreateDTO(); // UserCreateDTO | 
     String codeType = "envelopeInvite"; // String | Type of code
+    Boolean refreshToken = true; // Boolean | Is refresh token needed
     try {
-      LoginResponseDTO result = apiInstance.register(code, userCreateDTO, codeType);
+      LoginResponseDTO result = apiInstance.register(code, userCreateDTO, codeType, refreshToken);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RegistrationControllerApi#register");
@@ -128,6 +129,7 @@ public class Example {
 | **code** | **String**| Validation code | |
 | **userCreateDTO** | [**UserCreateDTO**](UserCreateDTO.md)|  | |
 | **codeType** | **String**| Type of code | [optional] [enum: envelopeInvite, accountInvite, emailValidation, sharedByEmail, externalAuth] |
+| **refreshToken** | **Boolean**| Is refresh token needed | [optional] |
 
 ### Return type
 
@@ -145,8 +147,8 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **405** | Method disabled by configuration |  -  |
 | **201** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
 <a id="renewPassword"></a>
 # **renewPassword**
@@ -277,8 +279,8 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **405** | Method disabled by configuration |  -  |
 | **200** | OK |  -  |
+| **405** | Method disabled by configuration |  -  |
 
 <a id="requestResetPassword"></a>
 # **requestResetPassword**

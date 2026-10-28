@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**result** | **Integer** | Result code |  |
-|**message** | **String** | Result message |  |
 |**httpStatus** | [**DictionaryCheckResponseDTO**](DictionaryCheckResponseDTO.md) |  |  [optional] |
+|**message** | **String** | Result message |  |
+|**result** | **Integer** | Result code |  |
 
 
 

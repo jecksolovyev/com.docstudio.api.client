@@ -141,6 +141,8 @@
 
 * `ENVELOPE_SENT_FOR_APPROVAL` (value: `"envelope-sent-for-approval"`)
 
+* `ENVELOPE_REVIEWERS_ADDED` (value: `"envelope-reviewers-added"`)
+
 * `ENVELOPE_APPROVAL_CANCELLED` (value: `"envelope-approval-cancelled"`)
 
 * `ENVELOPE_APPROVED` (value: `"envelope-approved"`)
@@ -166,6 +168,10 @@
 * `ENVELOPE_ADDED_INTO_CHAIN` (value: `"envelope-added-into-chain"`)
 
 * `ENVELOPE_REMOVED_FROM_CHAIN` (value: `"envelope-removed-from-chain"`)
+
+* `APPROVAL_INVITATION_ACCEPTED` (value: `"approval-invitation-accepted"`)
+
+* `REVIEW_INVITATION_ACCEPTED` (value: `"review-invitation-accepted"`)
 
 * `APPROVAL_FLOW_CREATED` (value: `"approval-flow-created"`)
 

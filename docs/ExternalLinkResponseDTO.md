@@ -7,12 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Link uuid |  |
-|**name** | **String** | Link name |  |
-|**url** | **String** | Link url |  |
 |**access** | [**AccessEnum**](#AccessEnum) | Link access level |  |
-|**mailboxUuid** | **UUID** | Link mailbox |  |
+|**mailboxName** | **String** | Link mailbox name |  |
+|**mailboxUuid** | **UUID** | Link mailbox UUID |  |
+|**name** | **String** | Link name |  |
 |**order** | **Integer** | link order |  |
+|**url** | **String** | Link url |  |
+|**uuid** | **UUID** | Link uuid |  |
 
 
 

@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  [optional] |
-|**name** | **String** |  |  [optional] |
 |**entityID** | **String** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**uuid** | **UUID** |  |  [optional] |
 
 
 

@@ -7,18 +7,18 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Template UUID |  |
-|**mailboxUuid** | **UUID** | Template owner mailbox UUID |  |
-|**name** | **String** | Template name |  |
-|**description** | **String** | Template description |  |
 |**access** | [**AccessEnum**](#AccessEnum) | Template access level |  [optional] |
 |**categories** | **List&lt;UUID&gt;** | Template categories |  [optional] |
+|**createdAt** | **OffsetDateTime** | Date of Template creation |  [optional] |
+|**description** | **String** | Template description |  |
+|**favorite** | **Boolean** | Template marked as favorite |  [optional] |
+|**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
+|**mailboxUuid** | **UUID** | Template owner mailbox UUID |  |
+|**name** | **String** | Template name |  |
 |**sharedCategories** | **List&lt;UUID&gt;** | Template shared categories |  [optional] |
 |**sharedTo** | **Set&lt;UUID&gt;** | Mailboxes to which template is shared to |  [optional] |
 |**sharedToMailboxGroups** | **Set&lt;UUID&gt;** | Mailbox groups to which template is shared to |  [optional] |
-|**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
-|**favorite** | **Boolean** | Template marked as favorite |  [optional] |
-|**createdAt** | **OffsetDateTime** | Date of Template creation |  [optional] |
+|**uuid** | **UUID** | Template UUID |  |
 
 
 

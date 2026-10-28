@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**totalElements** | **Long** | Total elements by request |  [optional] |
-|**sizeRequested** | **Long** | Requested size |  [optional] |
-|**numberOfElements** | **Long** | Fetched records count |  [optional] |
 |**data** | [**List&lt;SearchTemplateDTO&gt;**](SearchTemplateDTO.md) | Data records |  [optional] |
+|**numberOfElements** | **Long** | Fetched records count |  [optional] |
+|**sizeRequested** | **Long** | Requested size |  [optional] |
+|**totalElements** | **Long** | Total elements by request |  [optional] |
 
 
 

@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**format** | [**FormatEnum**](#FormatEnum) | Export file format |  |
 |**filters** | [**DictionaryFiltersRequestDTO**](DictionaryFiltersRequestDTO.md) | Filters for dictionary |  |
+|**format** | [**FormatEnum**](#FormatEnum) | Export file format |  |
 
 
 

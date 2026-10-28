@@ -7,16 +7,16 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** |  |  [optional] |
-|**name** | **String** |  |  |
+|**authorizationUri** | **String** |  |  |
 |**clientId** | **String** |  |  |
 |**clientSecret** | **String** |  |  |
-|**authorizationUri** | **String** |  |  |
-|**tokenUri** | **String** |  |  |
+|**createdAt** | **OffsetDateTime** |  |  [optional] |
+|**id** | **UUID** |  |  [optional] |
 |**issuerUri** | **String** |  |  |
 |**jwkSetUri** | **String** |  |  |
+|**name** | **String** |  |  |
 |**scopes** | **String** |  |  |
-|**createdAt** | **OffsetDateTime** |  |  [optional] |
+|**tokenUri** | **String** |  |  |
 
 
 

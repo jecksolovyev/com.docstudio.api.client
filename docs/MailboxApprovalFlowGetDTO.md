@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**approvers** | [**List&lt;EnvelopeApproverGetDTO&gt;**](EnvelopeApproverGetDTO.md) |  |  |
+|**flowType** | [**FlowTypeEnum**](#FlowTypeEnum) |  |  |
+|**name** | **String** |  |  |
 |**sharedForAccount** | **Boolean** |  |  [optional] |
 |**sharedForMailboxes** | [**Set&lt;MailboxNameUuidDTO&gt;**](MailboxNameUuidDTO.md) |  |  [optional] |
-|**name** | **String** |  |  |
-|**flowType** | [**FlowTypeEnum**](#FlowTypeEnum) |  |  |
-|**approvers** | [**List&lt;EnvelopeApproverGetDTO&gt;**](EnvelopeApproverGetDTO.md) |  |  |
 |**uuid** | **UUID** |  |  [optional] |
 
 

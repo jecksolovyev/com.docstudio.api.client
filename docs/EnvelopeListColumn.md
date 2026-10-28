@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  [optional] |
-|**visible** | **Boolean** |  |  [optional] |
+|**defaultWidth** | **Integer** |  |  [optional] |
 |**hideable** | **Boolean** |  |  [optional] |
 |**minWidth** | **Integer** |  |  [optional] |
-|**defaultWidth** | **Integer** |  |  [optional] |
+|**uuid** | **UUID** |  |  [optional] |
+|**visible** | **Boolean** |  |  [optional] |
 
 
 

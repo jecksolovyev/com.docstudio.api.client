@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Group id |  [optional] |
-|**name** | **String** | Group name |  [optional] |
-|**mailboxesCount** | **Long** | Group mailboxes count |  [optional] |
 |**createdAt** | **OffsetDateTime** | Created at |  [optional] |
+|**mailboxesCount** | **Long** | Group mailboxes count |  [optional] |
 |**modifiedAt** | **OffsetDateTime** | Modified at |  [optional] |
+|**name** | **String** | Group name |  [optional] |
+|**uuid** | **UUID** | Group id |  [optional] |
 
 
 

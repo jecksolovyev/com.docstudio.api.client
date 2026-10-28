@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**active** | **Boolean** | Active |  [optional] |
+|**displayName** | **String** | Display name |  [optional] |
 |**id** | **UUID** | Id |  [optional] |
 |**name** | **String** | Name |  [optional] |
-|**price** | **Long** | Tariff price |  [optional] |
-|**tariffPriceApplyRule** | **String** | Tariff price apply rule |  [optional] |
-|**displayName** | **String** | Display name |  [optional] |
-|**publicAvailable** | **Boolean** | Public availability |  [optional] |
 |**prepay** | **Boolean** | Prepay |  [optional] |
-|**active** | **Boolean** | Active |  [optional] |
+|**price** | **Long** | Tariff price |  [optional] |
+|**publicAvailable** | **Boolean** | Public availability |  [optional] |
+|**tariffPriceApplyRule** | **String** | Tariff price apply rule |  [optional] |
 
 
 

@@ -7,13 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** |  |  [optional] |
-|**name** | **String** |  |  [optional] |
-|**mailboxId** | **UUID** |  |  [optional] |
 |**allowMicrosoftOfficeViewer** | **Boolean** |  |  [optional] |
-|**multiUse** | **Boolean** |  |  [optional] |
-|**template** | [**FormViewTemplate**](FormViewTemplate.md) |  |  [optional] |
 |**envelope** | [**FormViewEnvelope**](FormViewEnvelope.md) |  |  [optional] |
+|**id** | **UUID** |  |  [optional] |
+|**mailboxId** | **UUID** |  |  [optional] |
+|**multiUse** | **Boolean** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**template** | [**FormViewTemplate**](FormViewTemplate.md) |  |  [optional] |
 
 
 

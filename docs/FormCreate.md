@@ -8,12 +8,12 @@ Form create request
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Form name |  |
-|**template** | [**FormTemplate**](FormTemplate.md) | Form template |  |
+|**envelopeCreationCallback** | [**FormFullCallback**](FormFullCallback.md) | Callback on envelope creation |  [optional] |
 |**multiUse** | **Boolean** | Form multi use (true) or single use (false, default) |  [optional] |
+|**name** | **String** | Form name |  |
 |**redirectUrl** | **String** | Form custom redirect url |  [optional] |
 |**settings** | [**FormSettings**](FormSettings.md) | Form settings |  |
-|**envelopeCreationCallback** | [**FormFullCallback**](FormFullCallback.md) | Callback on envelope creation |  [optional] |
+|**template** | [**FormTemplate**](FormTemplate.md) | Form template |  |
 
 
 

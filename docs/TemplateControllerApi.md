@@ -8,7 +8,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**archiveTemplate**](TemplateControllerApi.md#archiveTemplate) | **PATCH** /api/v1/template/{uuid}/archive | Make template archived |
 | [**checkTemplateExistsByUuid**](TemplateControllerApi.md#checkTemplateExistsByUuid) | **HEAD** /api/v1/template/{uuid} | Check template exists by UUID |
 | [**clone**](TemplateControllerApi.md#clone) | **POST** /api/v1/template/{uuid}/clone | Clone template |
-| [**create1**](TemplateControllerApi.md#create1) | **POST** /api/v1/template | Create new template |
+| [**createTemplate**](TemplateControllerApi.md#createTemplate) | **POST** /api/v1/template | Create new template |
 | [**deleteShareCode**](TemplateControllerApi.md#deleteShareCode) | **DELETE** /api/v1/template/{uuid}/share-code | Delete share code for template |
 | [**deleteZipStructure**](TemplateControllerApi.md#deleteZipStructure) | **DELETE** /api/v1/template/{uuid}/zip-structure/{title} | Delete structure for zip archive |
 | [**downloadTemplateImage**](TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image |
@@ -25,9 +25,9 @@ All URIs are relative to *https://api.docstudio.com*
 | [**removeTemplateFavoriteFlag**](TemplateControllerApi.md#removeTemplateFavoriteFlag) | **DELETE** /api/v1/template/{uuid}/favorite | Remove favorite flag |
 | [**searchTemplates**](TemplateControllerApi.md#searchTemplates) | **GET** /api/v1/template | Get paged templates list |
 | [**setTemplateFavoriteFlag**](TemplateControllerApi.md#setTemplateFavoriteFlag) | **PUT** /api/v1/template/{uuid}/favorite | Mark template as favorite |
-| [**update**](TemplateControllerApi.md#update) | **PUT** /api/v1/template/{uuid} | Update template. Category in template could be null |
-| [**updateCategories**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template |
 | [**updateName**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template |
+| [**updateTemplate**](TemplateControllerApi.md#updateTemplate) | **PUT** /api/v1/template/{uuid} | Update template. Category in template could be null |
+| [**updateTemplateCategories**](TemplateControllerApi.md#updateTemplateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template |
 | [**uploadImage**](TemplateControllerApi.md#uploadImage) | **POST** /api/v1/template/image | Upload new image |
 | [**uploadPdf**](TemplateControllerApi.md#uploadPdf) | **POST** /api/v1/template/pdf | Upload new PDF |
 | [**validateTemplate**](TemplateControllerApi.md#validateTemplate) | **GET** /api/v1/template/validate | Validate template by UUID or version |
@@ -302,9 +302,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="create1"></a>
-# **create1**
-> FullTemplateResponseDTO create1(mailbox, templateCreateDTO)
+<a id="createTemplate"></a>
+# **createTemplate**
+> FullTemplateResponseDTO createTemplate(mailbox, templateCreateDTO)
 
 Create new template
 
@@ -331,10 +331,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     TemplateCreateDTO templateCreateDTO = new TemplateCreateDTO(); // TemplateCreateDTO | 
     try {
-      FullTemplateResponseDTO result = apiInstance.create1(mailbox, templateCreateDTO);
+      FullTemplateResponseDTO result = apiInstance.createTemplate(mailbox, templateCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TemplateControllerApi#create1");
+      System.err.println("Exception when calling TemplateControllerApi#createTemplate");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -592,6 +592,12 @@ public class Example {
     HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
     bearerAuth.setBearerToken("BEARER TOKEN");
 
+    // Configure API key authorization: formAuth
+    ApiKeyAuth formAuth = (ApiKeyAuth) defaultClient.getAuthentication("formAuth");
+    formAuth.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //formAuth.setApiKeyPrefix("Token");
+
     TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | Template UUID
     UUID pdfUuid = UUID.randomUUID(); // UUID | Pdf UUID
@@ -628,7 +634,7 @@ public class Example {
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[bearerAuth](../README.md#bearerAuth), [formAuth](../README.md#formAuth)
 
 ### HTTP request headers
 
@@ -1458,143 +1464,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="update"></a>
-# **update**
-> FullTemplateResponseDTO update(uuid, mailbox, templateCreateDTO)
-
-Update template. Category in template could be null
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.TemplateControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | Template uuid
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    TemplateCreateDTO templateCreateDTO = new TemplateCreateDTO(); // TemplateCreateDTO | 
-    try {
-      FullTemplateResponseDTO result = apiInstance.update(uuid, mailbox, templateCreateDTO);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TemplateControllerApi#update");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| Template uuid | |
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **templateCreateDTO** | [**TemplateCreateDTO**](TemplateCreateDTO.md)|  | |
-
-### Return type
-
-[**FullTemplateResponseDTO**](FullTemplateResponseDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="updateCategories"></a>
-# **updateCategories**
-> updateCategories(uuid, mailbox, UUID)
-
-Update categories in template
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.TemplateControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
-    UUID uuid = UUID.randomUUID(); // UUID | Template UUID
-    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
-    List<UUID> UUID = Arrays.asList(); // List<UUID> | 
-    try {
-      apiInstance.updateCategories(uuid, mailbox, UUID);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TemplateControllerApi#updateCategories");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **uuid** | **UUID**| Template UUID | |
-| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **UUID** | [**List&lt;UUID&gt;**](UUID.md)|  | |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
 <a id="updateName"></a>
 # **updateName**
 > updateName(uuid, mailbox, body)
@@ -1644,6 +1513,143 @@ public class Example {
 | **uuid** | **UUID**| Template UUID | |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **body** | **String**|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateTemplate"></a>
+# **updateTemplate**
+> FullTemplateResponseDTO updateTemplate(uuid, mailbox, templateCreateDTO)
+
+Update template. Category in template could be null
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.TemplateControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
+    UUID uuid = UUID.randomUUID(); // UUID | Template uuid
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    TemplateCreateDTO templateCreateDTO = new TemplateCreateDTO(); // TemplateCreateDTO | 
+    try {
+      FullTemplateResponseDTO result = apiInstance.updateTemplate(uuid, mailbox, templateCreateDTO);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TemplateControllerApi#updateTemplate");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uuid** | **UUID**| Template uuid | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **templateCreateDTO** | [**TemplateCreateDTO**](TemplateCreateDTO.md)|  | |
+
+### Return type
+
+[**FullTemplateResponseDTO**](FullTemplateResponseDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="updateTemplateCategories"></a>
+# **updateTemplateCategories**
+> updateTemplateCategories(uuid, mailbox, UUID)
+
+Update categories in template
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.TemplateControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    TemplateControllerApi apiInstance = new TemplateControllerApi(defaultClient);
+    UUID uuid = UUID.randomUUID(); // UUID | Template UUID
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    List<UUID> UUID = Arrays.asList(); // List<UUID> | 
+    try {
+      apiInstance.updateTemplateCategories(uuid, mailbox, UUID);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling TemplateControllerApi#updateTemplateCategories");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uuid** | **UUID**| Template UUID | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **UUID** | [**List&lt;UUID&gt;**](UUID.md)|  | |
 
 ### Return type
 

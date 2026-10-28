@@ -7,15 +7,15 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**createdAt** | **OffsetDateTime** |  |  [optional] |
+|**envelopeId** | **UUID** |  |  [optional] |
+|**envelopeSubject** | **String** |  |  [optional] |
+|**error** | **String** |  |  [optional] |
+|**filename** | **String** |  |  [optional] |
 |**id** | **UUID** |  |  [optional] |
 |**mailboxId** | **UUID** |  |  [optional] |
 |**ruleId** | **UUID** |  |  [optional] |
-|**envelopeId** | **UUID** |  |  [optional] |
-|**envelopeSubject** | **String** |  |  [optional] |
-|**filename** | **String** |  |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
-|**error** | **String** |  |  [optional] |
-|**createdAt** | **OffsetDateTime** |  |  [optional] |
 
 
 

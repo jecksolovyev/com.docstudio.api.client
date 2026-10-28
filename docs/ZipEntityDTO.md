@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
-|**displayName** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**selected** | **Boolean** |  |  [optional] |
 |**children** | [**List&lt;ZipEntityDTO&gt;**](ZipEntityDTO.md) |  |  [optional] |
+|**displayName** | **String** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**selected** | **Boolean** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
 
 
 

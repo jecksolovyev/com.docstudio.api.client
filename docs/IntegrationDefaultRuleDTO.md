@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**rule** | [**RuleEnum**](#RuleEnum) | Default rule |  |
 |**parameter** | **String** | Default rule parameter |  [optional] |
+|**rule** | [**RuleEnum**](#RuleEnum) | Default rule |  |
 
 
 

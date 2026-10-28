@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**source** | [**SourceEnum**](#SourceEnum) | Signature source type |  |
-|**data** | **byte[]** | Signature in base64 |  |
 |**certificate** | **byte[]** | Optional X.509 certificate in base64 |  [optional] |
+|**data** | **byte[]** | Signature in base64 |  |
+|**source** | [**SourceEnum**](#SourceEnum) | Signature source type |  |
 
 
 

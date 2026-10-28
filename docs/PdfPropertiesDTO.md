@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**minSupportedWidth** | **String** |  |  [optional] |
 |**minSupportedHeight** | **String** |  |  [optional] |
-|**stampWidth** | **String** |  |  [optional] |
+|**minSupportedWidth** | **String** |  |  [optional] |
 |**stampHeight** | **String** |  |  [optional] |
+|**stampWidth** | **String** |  |  [optional] |
 |**supportedConversionExtensions** | **List&lt;String&gt;** |  |  [optional] |
 
 

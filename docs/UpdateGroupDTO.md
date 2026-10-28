@@ -8,8 +8,8 @@ group info
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Name |  |
 |**mailboxes** | **Set&lt;UUID&gt;** | Mailboxes |  [optional] |
+|**name** | **String** | Name |  |
 
 
 

@@ -7,20 +7,19 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | User uuid |  [optional] |
+|**autoDepositMailboxUuid** | **UUID** | Auto Deposit Mailbox UUID |  [optional] |
+|**dateLocale** | **String** | User locale for dates |  [optional] |
+|**displayExactDate** | **Boolean** | Display exact date instead of relative |  [optional] |
 |**email** | **String** | User email |  [optional] |
+|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
 |**firstName** | **String** | User first name |  [optional] |
 |**lastName** | **String** | User last name |  [optional] |
-|**status** | [**StatusEnum**](#StatusEnum) | User status |  [optional] |
-|**dateLocale** | **String** | User locale for dates |  [optional] |
 |**locale** | **String** | User locale |  [optional] |
-|**timezone** | **String** | User timezone |  [optional] |
-|**autoDepositMailboxUuid** | **UUID** | Auto Deposit Mailbox UUID |  [optional] |
 |**phone** | **String** | User phone |  [optional] |
-|**displayExactDate** | **Boolean** | Display exact date instead of relative |  [optional] |
-|**mailboxes** | [**List&lt;MailboxNameUuidDTO&gt;**](MailboxNameUuidDTO.md) | Mailboxes user has access to |  [optional] |
-|**fields** | **Map&lt;String, Object&gt;** | Additional user fields |  [optional] |
 |**preferences** | [**UserPreferences**](UserPreferences.md) | User preferences (active mailbox, account, sign type, search recipients) |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) | User status |  [optional] |
+|**timezone** | **String** | User timezone |  [optional] |
+|**uuid** | **UUID** | User uuid |  [optional] |
 
 
 

@@ -8,11 +8,11 @@ Link info
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Link name |  |
-|**url** | **String** | Link url |  |
 |**access** | [**AccessEnum**](#AccessEnum) | Link access level, account-wide by default |  [optional] |
-|**order** | **Integer** | Link order, last by default |  [optional] |
 |**mailboxUuid** | **UUID** | Mailbox allowed to see link |  [optional] |
+|**name** | **String** | Link name |  |
+|**order** | **Integer** | Link order, last by default |  [optional] |
+|**url** | **String** | Link url |  |
 
 
 

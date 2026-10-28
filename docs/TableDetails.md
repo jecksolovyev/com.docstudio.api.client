@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
 |**index** | **Integer** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
 
 
 

@@ -7,13 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**maxSize** | **Long** |  |  [optional] |
-|**totalMaxSize** | **Long** |  |  [optional] |
-|**fileNameLength** | **Integer** |  |  [optional] |
+|**archive** | [**AttachmentFileAllowance**](AttachmentFileAllowance.md) |  |  [optional] |
 |**document** | [**AttachmentFileAllowance**](AttachmentFileAllowance.md) |  |  [optional] |
 |**_file** | [**AttachmentFileAllowance**](AttachmentFileAllowance.md) |  |  [optional] |
+|**fileNameLength** | **Integer** |  |  [optional] |
 |**image** | [**AttachmentFileAllowance**](AttachmentFileAllowance.md) |  |  [optional] |
-|**archive** | [**AttachmentFileAllowance**](AttachmentFileAllowance.md) |  |  [optional] |
+|**maxSize** | **Long** |  |  [optional] |
+|**totalMaxSize** | **Long** |  |  [optional] |
 
 
 

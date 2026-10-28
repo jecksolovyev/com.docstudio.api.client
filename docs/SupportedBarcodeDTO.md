@@ -7,12 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**defaultWidth** | **Integer** |  |  [optional] |
 |**defaultHeight** | **Integer** |  |  [optional] |
+|**defaultWidth** | **Integer** |  |  [optional] |
 |**linkSupported** | **Boolean** |  |  [optional] |
 |**name** | **String** |  |  [optional] |
 |**staticSize** | **Boolean** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
+|**visible** | **Boolean** |  |  [optional] |
 
 
 

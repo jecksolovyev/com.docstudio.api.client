@@ -7,15 +7,16 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Scenario uuid |  [optional] |
-|**name** | **String** | Scenario name |  [optional] |
-|**description** | **String** | Scenario description |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Scenario access level |  [optional] |
-|**steps** | [**List&lt;ScenarioShortStepDTO&gt;**](ScenarioShortStepDTO.md) | Scenario steps |  [optional] |
-|**mailboxUuid** | **UUID** | Scenario mailbox |  [optional] |
-|**editable** | **Boolean** | Scenario editable |  [optional] |
 |**createdAt** | **OffsetDateTime** | Scenario created date |  [optional] |
+|**description** | **String** | Scenario description |  [optional] |
+|**editable** | **Boolean** | Scenario editable |  [optional] |
+|**favorite** | **Boolean** | Scenario marked as favorite |  [optional] |
+|**mailboxUuid** | **UUID** | Scenario mailbox |  [optional] |
+|**name** | **String** | Scenario name |  [optional] |
+|**steps** | [**List&lt;ScenarioShortStepDTO&gt;**](ScenarioShortStepDTO.md) | Scenario steps |  [optional] |
 |**updatedAt** | **OffsetDateTime** | Scenario update date |  [optional] |
+|**uuid** | **UUID** | Scenario uuid |  [optional] |
 
 
 

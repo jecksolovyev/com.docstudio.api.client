@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**templateName** | **String** |  |  [optional] |
 |**templateUuid** | **UUID** |  |  [optional] |
 |**versionUuid** | **UUID** |  |  [optional] |
-|**templateName** | **String** |  |  [optional] |
 
 
 

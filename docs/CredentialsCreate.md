@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**data** | **Map&lt;String, Object&gt;** |  |  |
 |**name** | **String** |  |  |
 |**type** | **String** |  |  |
-|**data** | **Map&lt;String, Object&gt;** |  |  |
 
 
 

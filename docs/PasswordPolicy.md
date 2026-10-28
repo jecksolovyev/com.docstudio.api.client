@@ -7,20 +7,20 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**minLength** | **Integer** |  |  [optional] |
-|**maxLength** | **Integer** |  |  [optional] |
-|**uppercase** | **Integer** |  |  [optional] |
-|**lowercase** | **Integer** |  |  [optional] |
-|**digit** | **Integer** |  |  [optional] |
-|**specialSymbol** | **Integer** |  |  [optional] |
-|**repeatCharacter** | **Integer** |  |  [optional] |
 |**allowWhitespace** | **Boolean** |  |  [optional] |
+|**digit** | **Integer** |  |  [optional] |
+|**expirationDays** | **Integer** |  |  [optional] |
+|**lowercase** | **Integer** |  |  [optional] |
+|**maxLength** | **Integer** |  |  [optional] |
+|**minLength** | **Integer** |  |  [optional] |
+|**notifyBeforeDays** | **Integer** |  |  [optional] |
 |**preventCommonPasswords** | **Boolean** |  |  [optional] |
 |**preventCommonWords** | **Boolean** |  |  [optional] |
-|**expirationDays** | **Integer** |  |  [optional] |
-|**notifyBeforeDays** | **Integer** |  |  [optional] |
-|**preventReuseMonths** | **Integer** |  |  [optional] |
 |**preventReuseCount** | **Integer** |  |  [optional] |
+|**preventReuseMonths** | **Integer** |  |  [optional] |
+|**repeatCharacter** | **Integer** |  |  [optional] |
+|**specialSymbol** | **Integer** |  |  [optional] |
+|**uppercase** | **Integer** |  |  [optional] |
 
 
 

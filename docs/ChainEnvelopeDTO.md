@@ -7,12 +7,12 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**envelopeUuid** | **UUID** | Envelope UUID |  [optional] |
 |**chainUuid** | **UUID** | Chain UUID |  [optional] |
-|**subject** | **String** | Envelope subject |  [optional] |
-|**status** | [**StatusEnum**](#StatusEnum) | Envelope status |  [optional] |
-|**templateName** | **String** | Envelope template name |  [optional] |
+|**envelopeUuid** | **UUID** | Envelope UUID |  [optional] |
 |**receivedAt** | **OffsetDateTime** | Envelope receive date |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) | Envelope status |  [optional] |
+|**subject** | **String** | Envelope subject |  [optional] |
+|**templateName** | **String** | Envelope template name |  [optional] |
 
 
 

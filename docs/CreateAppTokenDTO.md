@@ -8,8 +8,8 @@ Create token request
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Token name |  |
 |**expireAt** | **OffsetDateTime** | Token expiration date |  |
+|**name** | **String** | Token name |  |
 
 
 

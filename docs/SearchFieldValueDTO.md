@@ -8,13 +8,13 @@ Search by field value parameters
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Field name |  |
-|**value** | **String** | Field string value |  [optional] |
-|**number** | **Double** | Field number value |  [optional] |
-|**from** | **OffsetDateTime** | Field date from value |  [optional] |
-|**to** | **OffsetDateTime** | Field date to value |  [optional] |
 |**checked** | **Boolean** | Field checked or not |  [optional] |
+|**from** | **OffsetDateTime** | Field date from value |  [optional] |
+|**name** | **String** | Field name |  |
+|**number** | **Double** | Field number value |  [optional] |
+|**to** | **OffsetDateTime** | Field date to value |  [optional] |
 |**type** | **String** | Ignored if not &#39;strict&#39; |  [optional] |
+|**value** | **String** | Field string value |  [optional] |
 
 
 

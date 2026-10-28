@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** |  |  [optional] |
-|**refillAmount** | **Long** |  |  [optional] |
 |**displayName** | **String** |  |  [optional] |
+|**id** | **UUID** |  |  [optional] |
 |**order** | **Integer** |  |  [optional] |
+|**refillAmount** | **Long** |  |  [optional] |
 
 
 

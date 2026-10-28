@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**logo** | **String** |  |  [optional] |
 |**domain** | **String** |  |  [optional] |
+|**logo** | **String** |  |  [optional] |
 |**name** | **String** |  |  [optional] |
 
 

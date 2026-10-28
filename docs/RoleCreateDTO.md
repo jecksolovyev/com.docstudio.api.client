@@ -7,12 +7,12 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** |  |  [optional] |
-|**description** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**permissions** | **Set&lt;Integer&gt;** |  |  [optional] |
 |**accountUuid** | **UUID** |  |  [optional] |
+|**description** | **String** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**permissions** | **Set&lt;Integer&gt;** |  |  [optional] |
 |**system** | **Boolean** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
 
 
 

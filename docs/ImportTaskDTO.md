@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
 |**createdAt** | **OffsetDateTime** |  |  [optional] |
 |**errorMessage** | **String** |  |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
 
 
 

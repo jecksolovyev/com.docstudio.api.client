@@ -8,15 +8,15 @@ This DTO is sent as a callback payload.
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | UUID of the envelope |  |
+|**expireDate** | **OffsetDateTime** | The date of the envelope expiration |  [optional] |
+|**label** | **Set&lt;UUID&gt;** |  |  [optional] |
+|**mailbox** | **UUID** | Mailbox of the envelope |  |
+|**receiveDate** | **OffsetDateTime** | The date of the envelope was received |  |
+|**sender** | **UUID** | Sender of the envelope |  |
 |**status** | [**StatusEnum**](#StatusEnum) | Status of the envelope |  |
 |**subject** | **String** | Subject of the envelope |  |
-|**label** | **Set&lt;UUID&gt;** |  |  [optional] |
-|**receiveDate** | **OffsetDateTime** | The date of the envelope was received |  |
-|**expireDate** | **OffsetDateTime** | The date of the envelope expiration |  [optional] |
 |**template** | **UUID** | Template of the envelope |  |
-|**sender** | **UUID** | Sender of the envelope |  |
-|**mailbox** | **UUID** | Mailbox of the envelope |  |
+|**uuid** | **UUID** | UUID of the envelope |  |
 
 
 

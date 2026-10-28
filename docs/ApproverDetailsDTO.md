@@ -7,15 +7,16 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mailboxUuid** | **UUID** |  |  [optional] |
+|**comment** | **String** |  |  [optional] |
+|**completedAt** | **OffsetDateTime** |  |  [optional] |
+|**createdAt** | **OffsetDateTime** |  |  [optional] |
+|**email** | **String** |  |  [optional] |
 |**mailboxName** | **String** |  |  [optional] |
+|**mailboxUuid** | **UUID** |  |  [optional] |
 |**name** | **String** |  |  [optional] |
 |**order** | **Integer** |  |  [optional] |
-|**createdAt** | **OffsetDateTime** |  |  [optional] |
 |**seenAt** | **OffsetDateTime** |  |  [optional] |
-|**completedAt** | **OffsetDateTime** |  |  [optional] |
 |**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
-|**comment** | **String** |  |  [optional] |
 
 
 

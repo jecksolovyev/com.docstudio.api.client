@@ -8,8 +8,8 @@ AI assistant conversation message
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**role** | [**RoleEnum**](#RoleEnum) | Role |  |
 |**message** | **String** | Message |  |
+|**role** | [**RoleEnum**](#RoleEnum) | Role |  |
 
 
 

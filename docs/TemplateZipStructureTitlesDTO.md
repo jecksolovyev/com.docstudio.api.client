@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**titles** | **List&lt;String&gt;** |  |  [optional] |
 |**showDefaultDownloadOptions** | **Boolean** |  |  [optional] |
+|**titles** | **List&lt;String&gt;** |  |  [optional] |
 
 
 

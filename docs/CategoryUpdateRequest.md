@@ -8,10 +8,11 @@ Category to save
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**parentId** | **UUID** | Id of parent category |  [optional] |
-|**name** | **String** |  |  |
-|**description** | **String** |  |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Access level |  [optional] |
+|**description** | **String** |  |  [optional] |
+|**name** | **String** |  |  |
+|**parentId** | **UUID** | Id of parent category |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | Category type |  |
 
 
 
@@ -25,6 +26,15 @@ Category to save
 | OFFICIAL | &quot;official&quot; |
 | SHARED | &quot;shared&quot; |
 | PUBLIC_HIDDEN | &quot;public-hidden&quot; |
+
+
+
+## Enum: TypeEnum
+
+| Name | Value |
+|---- | -----|
+| TEMPLATE | &quot;template&quot; |
+| SCENARIO | &quot;scenario&quot; |
 
 
 

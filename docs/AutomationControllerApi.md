@@ -495,7 +495,7 @@ public class Example {
 
 <a id="getAutomationExecutions"></a>
 # **getAutomationExecutions**
-> List&lt;AutomationExecution&gt; getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to)
+> PageDTOAutomationExecution getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to, state, version, offset, limit)
 
 Get automation executions
 
@@ -526,8 +526,12 @@ public class Example {
     String filename = "filename_example"; // String | 
     Long from = 56L; // Long | 
     Long to = 56L; // Long | 
+    String state = "FAILED"; // String | 
+    Integer version = 56; // Integer | 
+    Integer offset = 0; // Integer | 
+    Integer limit = 25; // Integer | 
     try {
-      List<AutomationExecution> result = apiInstance.getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to);
+      PageDTOAutomationExecution result = apiInstance.getAutomationExecutions(accountId, mailboxId, envelopeId, workflowId, filename, from, to, state, version, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AutomationControllerApi#getAutomationExecutions");
@@ -551,10 +555,14 @@ public class Example {
 | **filename** | **String**|  | [optional] |
 | **from** | **Long**|  | [optional] |
 | **to** | **Long**|  | [optional] |
+| **state** | **String**|  | [optional] [enum: FAILED, SUCCEED, PROCESSING] |
+| **version** | **Integer**|  | [optional] |
+| **offset** | **Integer**|  | [optional] [default to 0] |
+| **limit** | **Integer**|  | [optional] [default to 25] |
 
 ### Return type
 
-[**List&lt;AutomationExecution&gt;**](AutomationExecution.md)
+[**PageDTOAutomationExecution**](PageDTOAutomationExecution.md)
 
 ### Authorization
 
@@ -572,7 +580,7 @@ public class Example {
 
 <a id="getAutomations"></a>
 # **getAutomations**
-> List&lt;AutomationGetList&gt; getAutomations(accountId)
+> List&lt;AutomationGetList&gt; getAutomations(accountId, name, status, hidden)
 
 Get account automations
 
@@ -597,8 +605,11 @@ public class Example {
 
     AutomationControllerApi apiInstance = new AutomationControllerApi(defaultClient);
     UUID accountId = UUID.randomUUID(); // UUID | Account UUID
+    String name = "name_example"; // String | Filter by name
+    Boolean status = true; // Boolean | Filter by active status
+    Boolean hidden = true; // Boolean | Filter by hidden status
     try {
-      List<AutomationGetList> result = apiInstance.getAutomations(accountId);
+      List<AutomationGetList> result = apiInstance.getAutomations(accountId, name, status, hidden);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AutomationControllerApi#getAutomations");
@@ -616,6 +627,9 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountId** | **UUID**| Account UUID | |
+| **name** | **String**| Filter by name | [optional] |
+| **status** | **Boolean**| Filter by active status | [optional] |
+| **hidden** | **Boolean**| Filter by hidden status | [optional] |
 
 ### Return type
 
@@ -767,7 +781,7 @@ public class Example {
 
 <a id="getCredentials"></a>
 # **getCredentials**
-> List&lt;CredentialsGetList&gt; getCredentials(accountId)
+> List&lt;CredentialsGetList&gt; getCredentials(accountId, name, type)
 
 Get account credentials
 
@@ -792,8 +806,10 @@ public class Example {
 
     AutomationControllerApi apiInstance = new AutomationControllerApi(defaultClient);
     UUID accountId = UUID.randomUUID(); // UUID | Account UUID
+    String name = "name_example"; // String | Filter by name
+    String type = "type_example"; // String | Filter by type
     try {
-      List<CredentialsGetList> result = apiInstance.getCredentials(accountId);
+      List<CredentialsGetList> result = apiInstance.getCredentials(accountId, name, type);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AutomationControllerApi#getCredentials");
@@ -811,6 +827,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **accountId** | **UUID**| Account UUID | |
+| **name** | **String**| Filter by name | [optional] |
+| **type** | **String**| Filter by type | [optional] |
 
 ### Return type
 

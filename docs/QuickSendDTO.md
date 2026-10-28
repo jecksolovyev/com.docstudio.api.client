@@ -8,12 +8,12 @@ Send QuickSendDTO in BLOB format with Content-Type: application/json
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**subject** | **String** | Subject of envelope |  |
 |**message** | **String** | Message of envelope |  [optional] |
-|**recipients** | [**List&lt;QuickSendRecipientDTO&gt;**](QuickSendRecipientDTO.md) |  |  [optional] |
+|**recipientExperience** | [**RecipientExperience**](RecipientExperience.md) |  |  [optional] |
+|**recipients** | [**List&lt;QuickSendRecipientDTO&gt;**](QuickSendRecipientDTO.md) |  |  |
 |**signatureAlgorithm** | [**SignatureAlgorithmEnum**](#SignatureAlgorithmEnum) | Signature algorithm |  [optional] |
 |**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
-|**recipientExperience** | [**RecipientExperience**](RecipientExperience.md) |  |  [optional] |
+|**subject** | **String** | Subject of envelope |  |
 
 
 

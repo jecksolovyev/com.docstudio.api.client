@@ -8,9 +8,9 @@ New AI token information
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**model** | **String** | AI model name |  |
 |**name** | **String** | Token name |  |
 |**provider** | [**ProviderEnum**](#ProviderEnum) | AI provider |  |
-|**model** | **String** | AI model name |  |
 |**token** | **String** | Token value |  |
 
 
@@ -21,6 +21,7 @@ New AI token information
 |---- | -----|
 | OPENAI | &quot;openai&quot; |
 | GEMINI | &quot;gemini&quot; |
+| ANTHROPIC | &quot;anthropic&quot; |
 
 
 

@@ -8,10 +8,10 @@ Dictionary info
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**name** | **String** | Dictionary name |  |
-|**description** | **String** | Dictionary description |  [optional] |
 |**access** | [**AccessEnum**](#AccessEnum) | Dictionary access level |  |
+|**description** | **String** | Dictionary description |  [optional] |
 |**filteredAccessOnly** | **Boolean** | Dictionary filtered access only |  |
+|**name** | **String** | Dictionary name |  |
 
 
 

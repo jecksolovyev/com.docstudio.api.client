@@ -61,6 +61,10 @@
 
 * `TEMPLATE_AI_ASSIST_C` (value: `"template-ai-assist-c"`)
 
+* `ENVELOPE_AI_SEARCH` (value: `"envelope-ai-search"`)
+
+* `ENVELOPE_AI_SEARCH_C` (value: `"envelope-ai-search-c"`)
+
 * `DIIA_MULTISHARING` (value: `"diia-multisharing"`)
 
 * `DIIA_SHARING` (value: `"diia-sharing"`)
@@ -68,6 +72,8 @@
 * `DIIA_MULTISHARING_C` (value: `"diia-multisharing-c"`)
 
 * `DIIA_SHARING_C` (value: `"diia-sharing-c"`)
+
+* `EDITORIAL_REVIEW` (value: `"editorial-review"`)
 
 
 

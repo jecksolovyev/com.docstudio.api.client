@@ -7,18 +7,18 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**einkFooter** | **String** |  |  [optional] |
-|**spelledCurrency** | **Set&lt;String&gt;** |  |  [optional] |
-|**hideUserIdentifier** | **Boolean** |  |  [optional] |
-|**field** | [**FieldRestriction**](FieldRestriction.md) |  |  [optional] |
 |**attachment** | [**AttachmentRestriction**](AttachmentRestriction.md) |  |  [optional] |
-|**search** | [**SearchRestriction**](SearchRestriction.md) |  |  [optional] |
-|**searchField** | [**SearchFieldRestriction**](SearchFieldRestriction.md) |  |  [optional] |
-|**table** | [**EnvTableRestriction**](EnvTableRestriction.md) |  |  [optional] |
-|**share** | [**ShareRestriction**](ShareRestriction.md) |  |  [optional] |
+|**deleteFromBinAfterDays** | **Long** |  |  [optional] |
+|**einkFooter** | **String** |  |  [optional] |
+|**field** | [**FieldRestriction**](FieldRestriction.md) |  |  [optional] |
+|**hideUserIdentifier** | **Boolean** |  |  [optional] |
 |**listColumns** | [**List&lt;EnvelopeListColumn&gt;**](EnvelopeListColumn.md) |  |  [optional] |
 |**listExtraColumn** | [**EnvelopeListColumnExtra**](EnvelopeListColumnExtra.md) |  |  [optional] |
-|**deleteFromBinAfterDays** | **Long** |  |  [optional] |
+|**search** | [**SearchRestriction**](SearchRestriction.md) |  |  [optional] |
+|**searchField** | [**SearchFieldRestriction**](SearchFieldRestriction.md) |  |  [optional] |
+|**share** | [**ShareRestriction**](ShareRestriction.md) |  |  [optional] |
+|**spelledCurrency** | **Set&lt;String&gt;** |  |  [optional] |
+|**table** | [**EnvTableRestriction**](EnvTableRestriction.md) |  |  [optional] |
 
 
 

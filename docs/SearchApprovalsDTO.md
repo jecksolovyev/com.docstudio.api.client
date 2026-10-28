@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**scope** | [**ScopeEnum**](#ScopeEnum) | Envelope approval scope |  |
-|**status** | [**Set&lt;StatusEnum&gt;**](#Set&lt;StatusEnum&gt;) | Envelope statuses |  [optional] |
-|**subject** | **String** | Envelope subject |  [optional] |
+|**initiator** | **Set&lt;UUID&gt;** | Envelope approval initiator uuids |  [optional] |
 |**receiveDateFrom** | **OffsetDateTime** | Receive date from |  [optional] |
 |**receiveDateTo** | **OffsetDateTime** | Receive date to |  [optional] |
-|**template** | **Set&lt;UUID&gt;** | Template uuids |  [optional] |
-|**initiator** | **Set&lt;UUID&gt;** | Envelope approval initiator uuids |  [optional] |
+|**scope** | [**ScopeEnum**](#ScopeEnum) | Envelope approval scope |  |
 |**sort** | [**SortEnum**](#SortEnum) | Sort order, asc or desc |  [optional] |
+|**status** | [**Set&lt;StatusEnum&gt;**](#Set&lt;StatusEnum&gt;) | Approval statuses |  [optional] |
+|**subject** | **String** | Envelope subject |  [optional] |
+|**template** | **Set&lt;UUID&gt;** | Template uuids |  [optional] |
 |**urgent** | **Boolean** | Is approval urgent? |  [optional] |
 
 
@@ -28,6 +28,15 @@
 
 
 
+## Enum: SortEnum
+
+| Name | Value |
+|---- | -----|
+| DESC | &quot;desc&quot; |
+| ASC | &quot;asc&quot; |
+
+
+
 ## Enum: Set&lt;StatusEnum&gt;
 
 | Name | Value |
@@ -37,15 +46,6 @@
 | APPROVED | &quot;APPROVED&quot; |
 | REJECTED | &quot;REJECTED&quot; |
 | CANCELLED | &quot;CANCELLED&quot; |
-
-
-
-## Enum: SortEnum
-
-| Name | Value |
-|---- | -----|
-| DESC | &quot;desc&quot; |
-| ASC | &quot;asc&quot; |
 
 
 

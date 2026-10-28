@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  |
 |**name** | **String** |  |  |
-|**type** | [**TypeEnum**](#TypeEnum) |  |  |
 |**order** | **Integer** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  |
+|**uuid** | **UUID** |  |  |
 |**visible** | **Boolean** |  |  [optional] |
 |**width** | **Integer** |  |  [optional] |
 

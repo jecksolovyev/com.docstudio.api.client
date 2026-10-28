@@ -11,14 +11,14 @@ All URIs are relative to *https://api.docstudio.com*
 | [**findUser**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
 | [**getAvatar**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{id} | Retrieve user avatar |
 | [**getCorporateUserProfile**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
-| [**getMailboxesInfo**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
 | [**getProfile**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
+| [**getUserMailboxesInfo**](UserControllerApi.md#getUserMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**patchCorporateUserProfile**](UserControllerApi.md#patchCorporateUserProfile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**patchPreferences**](UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences |
+| [**patchProfile**](UserControllerApi.md#patchProfile) | **PATCH** /api/v1/user/profile | Patch user profile |
 | [**setPreferences**](UserControllerApi.md#setPreferences) | **POST** /api/v1/user/preferences | Set user preferences |
 | [**updateCorporateUserProfile**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{id}/account/{accountUuid} | Update corporate user&#39;s profile |
-| [**updateCorporateUserProfile1**](UserControllerApi.md#updateCorporateUserProfile1) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**updateProfile**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update self profile |
-| [**updateProfile1**](UserControllerApi.md#updateProfile1) | **PATCH** /api/v1/user/profile | Patch user profile |
 
 
 <a id="changeInitials"></a>
@@ -480,71 +480,6 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getMailboxesInfo"></a>
-# **getMailboxesInfo**
-> Map&lt;String, UserInfoDTO&gt; getMailboxesInfo(UUID)
-
-Retrieve users info
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.UserControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    List<UUID> UUID = Arrays.asList(); // List<UUID> | 
-    try {
-      Map<String, UserInfoDTO> result = apiInstance.getMailboxesInfo(UUID);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UserControllerApi#getMailboxesInfo");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **UUID** | [**List&lt;UUID&gt;**](UUID.md)|  | |
-
-### Return type
-
-[**Map&lt;String, UserInfoDTO&gt;**](UserInfoDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
 <a id="getProfile"></a>
 # **getProfile**
 > ProfileDTO getProfile()
@@ -599,6 +534,140 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getUserMailboxesInfo"></a>
+# **getUserMailboxesInfo**
+> Map&lt;String, UserInfoDTO&gt; getUserMailboxesInfo(UUID)
+
+Retrieve users info
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    List<UUID> UUID = Arrays.asList(); // List<UUID> | 
+    try {
+      Map<String, UserInfoDTO> result = apiInstance.getUserMailboxesInfo(UUID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#getUserMailboxesInfo");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **UUID** | [**List&lt;UUID&gt;**](UUID.md)|  | |
+
+### Return type
+
+[**Map&lt;String, UserInfoDTO&gt;**](UserInfoDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="patchCorporateUserProfile"></a>
+# **patchCorporateUserProfile**
+> CorporateProfileDTO patchCorporateUserProfile(userId, accountId, patchProfile)
+
+Partial update corporate user&#39;s profile
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    UUID userId = UUID.randomUUID(); // UUID | 
+    UUID accountId = UUID.randomUUID(); // UUID | 
+    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
+    try {
+      CorporateProfileDTO result = apiInstance.patchCorporateUserProfile(userId, accountId, patchProfile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#patchCorporateUserProfile");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **UUID**|  | |
+| **accountId** | **UUID**|  | |
+| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
+
+### Return type
+
+[**CorporateProfileDTO**](CorporateProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -664,6 +733,71 @@ null (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="patchProfile"></a>
+# **patchProfile**
+> ProfileDTO patchProfile(patchProfile)
+
+Patch user profile
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
+    try {
+      ProfileDTO result = apiInstance.patchProfile(patchProfile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#patchProfile");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
+
+### Return type
+
+[**ProfileDTO**](ProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -803,75 +937,6 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="updateCorporateUserProfile1"></a>
-# **updateCorporateUserProfile1**
-> CorporateProfileDTO updateCorporateUserProfile1(userId, accountId, patchProfile)
-
-Partial update corporate user&#39;s profile
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.UserControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    UUID userId = UUID.randomUUID(); // UUID | 
-    UUID accountId = UUID.randomUUID(); // UUID | 
-    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
-    try {
-      CorporateProfileDTO result = apiInstance.updateCorporateUserProfile1(userId, accountId, patchProfile);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UserControllerApi#updateCorporateUserProfile1");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **userId** | **UUID**|  | |
-| **accountId** | **UUID**|  | |
-| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
-
-### Return type
-
-[**CorporateProfileDTO**](CorporateProfileDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
 <a id="updateProfile"></a>
 # **updateProfile**
 > ProfileDTO updateProfile(updateProfileDTO)
@@ -918,71 +983,6 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **updateProfileDTO** | [**UpdateProfileDTO**](UpdateProfileDTO.md)|  | |
-
-### Return type
-
-[**ProfileDTO**](ProfileDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="updateProfile1"></a>
-# **updateProfile1**
-> ProfileDTO updateProfile1(patchProfile)
-
-Patch user profile
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.UserControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
-    PatchProfile patchProfile = new PatchProfile(); // PatchProfile | 
-    try {
-      ProfileDTO result = apiInstance.updateProfile1(patchProfile);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling UserControllerApi#updateProfile1");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **patchProfile** | [**PatchProfile**](PatchProfile.md)|  | |
 
 ### Return type
 

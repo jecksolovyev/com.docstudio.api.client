@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Column UUID |  |
 |**op** | [**OpEnum**](#OpEnum) | Operation |  |
+|**uuid** | **UUID** | Column UUID |  |
 |**value** | **String** | Required value |  |
 
 
@@ -17,10 +17,10 @@
 
 | Name | Value |
 |---- | -----|
-| EQUAL | &quot;&#x3D;&quot; |
-| NOT_EQUAL | &quot;!&#x3D;&quot; |
-| DOUBLE_EQUAL | &quot;&#x3D;&#x3D;&quot; |
-| u | &quot;!&#x3D;&#x3D;&quot; |
+| LIKE | &quot;&#x3D;&quot; |
+| NOT_LIKE | &quot;!&#x3D;&quot; |
+| EQUALS | &quot;&#x3D;&#x3D;&quot; |
+| NOT_EQUALS | &quot;!&#x3D;&#x3D;&quot; |
 
 
 

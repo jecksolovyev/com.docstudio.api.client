@@ -4,17 +4,17 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**create2**](RoleControllerApi.md#create2) | **POST** /api/v1/permission/role | Create a role |
-| [**delete**](RoleControllerApi.md#delete) | **DELETE** /api/v1/permission/role/{uuid} |  |
+| [**createRole**](RoleControllerApi.md#createRole) | **POST** /api/v1/permission/role | Create a role |
+| [**deleteRole**](RoleControllerApi.md#deleteRole) | **DELETE** /api/v1/permission/role/{uuid} |  |
 | [**read**](RoleControllerApi.md#read) | **GET** /api/v1/permission/role/{uuid} | Read role by UUID |
 | [**readAll**](RoleControllerApi.md#readAll) | **GET** /api/v1/permission/role | Read all system roles |
 | [**readAllWithAccount**](RoleControllerApi.md#readAllWithAccount) | **GET** /api/v1/permission/role/account/{uuid} | Read all roles for account including system predefined |
-| [**update1**](RoleControllerApi.md#update1) | **PUT** /api/v1/permission/role/{uuid} | Update role, allow to change name and permissions |
+| [**updateRole**](RoleControllerApi.md#updateRole) | **PUT** /api/v1/permission/role/{uuid} | Update role, allow to change name and permissions |
 
 
-<a id="create2"></a>
-# **create2**
-> RoleGetDTO create2(roleCreateDTO)
+<a id="createRole"></a>
+# **createRole**
+> RoleGetDTO createRole(roleCreateDTO)
 
 Create a role
 
@@ -40,10 +40,10 @@ public class Example {
     RoleControllerApi apiInstance = new RoleControllerApi(defaultClient);
     RoleCreateDTO roleCreateDTO = new RoleCreateDTO(); // RoleCreateDTO | 
     try {
-      RoleGetDTO result = apiInstance.create2(roleCreateDTO);
+      RoleGetDTO result = apiInstance.createRole(roleCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling RoleControllerApi#create2");
+      System.err.println("Exception when calling RoleControllerApi#createRole");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -77,9 +77,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete"></a>
-# **delete**
-> delete(uuid)
+<a id="deleteRole"></a>
+# **deleteRole**
+> deleteRole(uuid)
 
 
 
@@ -105,9 +105,9 @@ public class Example {
     RoleControllerApi apiInstance = new RoleControllerApi(defaultClient);
     UUID uuid = UUID.randomUUID(); // UUID | 
     try {
-      apiInstance.delete(uuid);
+      apiInstance.deleteRole(uuid);
     } catch (ApiException e) {
-      System.err.println("Exception when calling RoleControllerApi#delete");
+      System.err.println("Exception when calling RoleControllerApi#deleteRole");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -348,9 +348,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="update1"></a>
-# **update1**
-> RoleGetDTO update1(uuid, roleCreateDTO)
+<a id="updateRole"></a>
+# **updateRole**
+> RoleGetDTO updateRole(uuid, roleCreateDTO)
 
 Update role, allow to change name and permissions
 
@@ -377,10 +377,10 @@ public class Example {
     UUID uuid = UUID.randomUUID(); // UUID | 
     RoleCreateDTO roleCreateDTO = new RoleCreateDTO(); // RoleCreateDTO | 
     try {
-      RoleGetDTO result = apiInstance.update1(uuid, roleCreateDTO);
+      RoleGetDTO result = apiInstance.updateRole(uuid, roleCreateDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling RoleControllerApi#update1");
+      System.err.println("Exception when calling RoleControllerApi#updateRole");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -8,15 +8,15 @@ New provider info
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** |  |  [optional] |
-|**name** | **String** |  |  |
+|**authorizationUri** | **String** |  |  |
 |**clientId** | **String** |  |  |
 |**clientSecret** | **String** |  |  |
-|**authorizationUri** | **String** |  |  |
-|**tokenUri** | **String** |  |  |
+|**id** | **UUID** |  |  [optional] |
 |**issuerUri** | **String** |  |  |
 |**jwkSetUri** | **String** |  |  |
+|**name** | **String** |  |  |
 |**scopes** | **String** |  |  |
+|**tokenUri** | **String** |  |  |
 
 
 

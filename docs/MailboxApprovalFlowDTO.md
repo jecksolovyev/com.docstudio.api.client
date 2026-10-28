@@ -8,11 +8,11 @@ Flow to create
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**approvers** | [**List&lt;EnvelopeApproverDTO&gt;**](EnvelopeApproverDTO.md) |  |  |
+|**flowType** | [**FlowTypeEnum**](#FlowTypeEnum) |  |  |
+|**name** | **String** |  |  |
 |**sharedForAccount** | **Boolean** |  |  [optional] |
 |**sharedForMailboxes** | **Set&lt;UUID&gt;** |  |  [optional] |
-|**name** | **String** |  |  |
-|**flowType** | [**FlowTypeEnum**](#FlowTypeEnum) |  |  |
-|**approvers** | [**List&lt;EnvelopeApproverDTO&gt;**](EnvelopeApproverDTO.md) |  |  |
 
 
 

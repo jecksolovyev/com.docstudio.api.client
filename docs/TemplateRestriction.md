@@ -7,15 +7,15 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**defaultPageSize** | [**DefaultPageSizeEnum**](#DefaultPageSizeEnum) |  |  [optional] |
+|**expireAfterDays** | **Integer** |  |  [optional] |
 |**image** | [**ImageRestriction**](ImageRestriction.md) |  |  [optional] |
 |**logo** | [**LogoImageRestriction**](LogoImageRestriction.md) |  |  [optional] |
-|**table** | [**TemplTableRestriction**](TemplTableRestriction.md) |  |  [optional] |
-|**patterns** | [**List&lt;TextFieldPattern&gt;**](TextFieldPattern.md) |  |  [optional] |
-|**expireAfterDays** | **Integer** |  |  [optional] |
-|**notifyInDays** | **Integer** |  |  [optional] |
 |**maxExternalDocsCount** | **Integer** |  |  [optional] |
-|**defaultPageSize** | [**DefaultPageSizeEnum**](#DefaultPageSizeEnum) |  |  [optional] |
+|**notifyInDays** | **Integer** |  |  [optional] |
+|**patterns** | [**List&lt;TextFieldPattern&gt;**](TextFieldPattern.md) |  |  [optional] |
 |**supportedPageSizes** | [**List&lt;DocumentPageSizeDTO&gt;**](DocumentPageSizeDTO.md) |  |  [optional] |
+|**table** | [**TemplTableRestriction**](TemplTableRestriction.md) |  |  [optional] |
 
 
 

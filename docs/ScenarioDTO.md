@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Scenario uuid |  [optional] |
-|**name** | **String** | Scenario name |  |
+|**access** | [**AccessEnum**](#AccessEnum) | Scenario access level |  |
+|**addToChain** | **Boolean** | Should envelopes be chained? |  [optional] |
 |**description** | **String** | Scenario description |  |
 |**mailboxUuid** | **UUID** | Scenario mailbox |  [optional] |
-|**access** | [**AccessEnum**](#AccessEnum) | Scenario access level |  |
+|**name** | **String** | Scenario name |  |
 |**sharedTo** | **Set&lt;UUID&gt;** | Mailboxes list, which have access to scenario |  [optional] |
 |**steps** | [**List&lt;ScenarioStepDTO&gt;**](ScenarioStepDTO.md) | Scenario steps |  |
-|**addToChain** | **Boolean** | Should envelopes be chained? |  [optional] |
+|**uuid** | **UUID** | Scenario uuid |  [optional] |
 
 
 

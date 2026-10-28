@@ -7,12 +7,13 @@ All URIs are relative to *https://api.docstudio.com*
 | [**login**](AuthenticationControllerApi.md#login) | **POST** /api/login | Login with email/password |
 | [**loginByCode**](AuthenticationControllerApi.md#loginByCode) | **POST** /api/login/by-code | Login with the code from email (for non-existing user) |
 | [**logout**](AuthenticationControllerApi.md#logout) | **POST** /api/logout | Logout |
+| [**refreshToken**](AuthenticationControllerApi.md#refreshToken) | **POST** /api/refresh-token | Get new Access Token by Refresh Token |
 | [**userExistsByCode**](AuthenticationControllerApi.md#userExistsByCode) | **GET** /api/login/check-by-code/{code} | Check login ability with the code from email (for non-existing user) |
 
 
 <a id="login"></a>
 # **login**
-> LoginResponseDTO login(loginDTO)
+> LoginResponseDTO login(loginDTO, refreshToken)
 
 Login with email/password
 
@@ -37,8 +38,9 @@ public class Example {
 
     AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
     LoginDTO loginDTO = new LoginDTO(); // LoginDTO | 
+    Boolean refreshToken = true; // Boolean | Is refresh token needed
     try {
-      LoginResponseDTO result = apiInstance.login(loginDTO);
+      LoginResponseDTO result = apiInstance.login(loginDTO, refreshToken);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AuthenticationControllerApi#login");
@@ -56,6 +58,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **loginDTO** | [**LoginDTO**](LoginDTO.md)|  | |
+| **refreshToken** | **Boolean**| Is refresh token needed | [optional] |
 
 ### Return type
 
@@ -194,6 +197,73 @@ null (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="refreshToken"></a>
+# **refreshToken**
+> LoginResponseDTO refreshToken(clientDeviceId, tokenRefreshRequest)
+
+Get new Access Token by Refresh Token
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.AuthenticationControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    AuthenticationControllerApi apiInstance = new AuthenticationControllerApi(defaultClient);
+    String clientDeviceId = "clientDeviceId_example"; // String | 
+    TokenRefreshRequest tokenRefreshRequest = new TokenRefreshRequest(); // TokenRefreshRequest | 
+    try {
+      LoginResponseDTO result = apiInstance.refreshToken(clientDeviceId, tokenRefreshRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AuthenticationControllerApi#refreshToken");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **clientDeviceId** | **String**|  | |
+| **tokenRefreshRequest** | [**TokenRefreshRequest**](TokenRefreshRequest.md)|  | |
+
+### Return type
+
+[**LoginResponseDTO**](LoginResponseDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
 
 ### HTTP response details
 | Status code | Description | Response headers |

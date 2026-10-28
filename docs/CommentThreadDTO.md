@@ -7,13 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mailboxUuid** | **UUID** | UUID of Mailbox created this comment |  [optional] |
+|**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level |  [optional] |
 |**mailboxName** | **String** | Name of Mailbox created this comment |  [optional] |
+|**mailboxUuid** | **UUID** | UUID of Mailbox created this comment |  [optional] |
+|**messages** | [**List&lt;CommentMessageDTO&gt;**](CommentMessageDTO.md) | All messages in the thread |  [optional] |
+|**sharedTo** | [**Set&lt;NameUuidDTO&gt;**](NameUuidDTO.md) |  |  [optional] |
 |**threadUuid** | **UUID** | Thread UUID |  [optional] |
 |**xpath** | **String** | xPath to find selected area |  [optional] |
-|**messages** | [**List&lt;CommentMessageDTO&gt;**](CommentMessageDTO.md) | All messages in the thread |  [optional] |
-|**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level |  [optional] |
-|**sharedTo** | [**Set&lt;NameUuidDTO&gt;**](NameUuidDTO.md) |  |  [optional] |
 
 
 

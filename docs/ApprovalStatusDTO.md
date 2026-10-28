@@ -8,9 +8,9 @@ Approval Details
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**status** | [**StatusEnum**](#StatusEnum) |  |  |
 |**comment** | **String** |  |  [optional] |
 |**envelopes** | [**List&lt;EnvelopeWithFlow&gt;**](EnvelopeWithFlow.md) |  |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) |  |  |
 
 
 

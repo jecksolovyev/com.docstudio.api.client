@@ -4,15 +4,15 @@ All URIs are relative to *https://api.docstudio.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**create6**](CategoryControllerApi.md#create6) | **POST** /api/v1/category | Save a category |
-| [**delete3**](CategoryControllerApi.md#delete3) | **DELETE** /api/v1/category/{id} | Delete category by Id |
-| [**getAllByType**](CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
-| [**update6**](CategoryControllerApi.md#update6) | **PUT** /api/v1/category/{id} | Update the category |
+| [**createCategory**](CategoryControllerApi.md#createCategory) | **POST** /api/v1/category | Save a category |
+| [**deleteCategory**](CategoryControllerApi.md#deleteCategory) | **DELETE** /api/v1/category/{id} | Delete category by Id |
+| [**getAllByAccessAndType**](CategoryControllerApi.md#getAllByAccessAndType) | **GET** /api/v1/category/{type}/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
+| [**updateCategory**](CategoryControllerApi.md#updateCategory) | **PUT** /api/v1/category/{id} | Update the category |
 
 
-<a id="create6"></a>
-# **create6**
-> CategoryDTO create6(mailbox, categoryUpdateRequest)
+<a id="createCategory"></a>
+# **createCategory**
+> CategoryDTO createCategory(mailbox, categoryUpdateRequest)
 
 Save a category
 
@@ -39,10 +39,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     CategoryUpdateRequest categoryUpdateRequest = new CategoryUpdateRequest(); // CategoryUpdateRequest | 
     try {
-      CategoryDTO result = apiInstance.create6(mailbox, categoryUpdateRequest);
+      CategoryDTO result = apiInstance.createCategory(mailbox, categoryUpdateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CategoryControllerApi#create6");
+      System.err.println("Exception when calling CategoryControllerApi#createCategory");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -77,9 +77,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
 
-<a id="delete3"></a>
-# **delete3**
-> delete3(id, mailbox, moveTo, keepChildren)
+<a id="deleteCategory"></a>
+# **deleteCategory**
+> deleteCategory(id, mailbox, moveTo, keepChildren)
 
 Delete category by Id
 
@@ -108,9 +108,9 @@ public class Example {
     UUID moveTo = UUID.randomUUID(); // UUID | Optional id of category to move all subordinated (if any)
     Boolean keepChildren = true; // Boolean | Optional, if true and moveTo is null all children will become root categories
     try {
-      apiInstance.delete3(id, mailbox, moveTo, keepChildren);
+      apiInstance.deleteCategory(id, mailbox, moveTo, keepChildren);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CategoryControllerApi#delete3");
+      System.err.println("Exception when calling CategoryControllerApi#deleteCategory");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -147,9 +147,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **204** | No Content |  -  |
 
-<a id="getAllByType"></a>
-# **getAllByType**
-> List&lt;CategoryDTO&gt; getAllByType(access, mailbox)
+<a id="getAllByAccessAndType"></a>
+# **getAllByAccessAndType**
+> List&lt;CategoryDTO&gt; getAllByAccessAndType(type, access, mailbox)
 
 Retrieve all categories by id of specified &#39;access&#39; type
 
@@ -173,13 +173,14 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     CategoryControllerApi apiInstance = new CategoryControllerApi(defaultClient);
-    String access = "mailbox"; // String | Type of level to retrieve categories by
+    String type = "template"; // String | Type of categories
+    String access = "mailbox"; // String | Access level to retrieve categories by
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     try {
-      List<CategoryDTO> result = apiInstance.getAllByType(access, mailbox);
+      List<CategoryDTO> result = apiInstance.getAllByAccessAndType(type, access, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CategoryControllerApi#getAllByType");
+      System.err.println("Exception when calling CategoryControllerApi#getAllByAccessAndType");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -193,7 +194,8 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **access** | **String**| Type of level to retrieve categories by | [enum: mailbox, account, public, official, shared, public-hidden] |
+| **type** | **String**| Type of categories | [enum: template, scenario] |
+| **access** | **String**| Access level to retrieve categories by | [enum: mailbox, account, public, official, shared, public-hidden] |
 | **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -214,9 +216,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="update6"></a>
-# **update6**
-> CategoryDTO update6(id, mailbox, categoryUpdateRequest)
+<a id="updateCategory"></a>
+# **updateCategory**
+> CategoryDTO updateCategory(id, mailbox, categoryUpdateRequest)
 
 Update the category
 
@@ -244,10 +246,10 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     CategoryUpdateRequest categoryUpdateRequest = new CategoryUpdateRequest(); // CategoryUpdateRequest | 
     try {
-      CategoryDTO result = apiInstance.update6(id, mailbox, categoryUpdateRequest);
+      CategoryDTO result = apiInstance.updateCategory(id, mailbox, categoryUpdateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CategoryControllerApi#update6");
+      System.err.println("Exception when calling CategoryControllerApi#updateCategory");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

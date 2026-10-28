@@ -7,23 +7,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** | Notification uuid |  |
-|**type** | [**TypeEnum**](#TypeEnum) | Notification type |  |
-|**code** | [**CodeEnum**](#CodeEnum) | Notification code |  |
-|**data** | **Object** |  |  |
-|**createdAt** | **OffsetDateTime** | Notification date |  |
-|**mailboxUuid** | **UUID** | Mailbox UUID for mailbox-wide notifications |  [optional] |
 |**accountUuid** | **UUID** | Account UUID for account-wide notifications |  [optional] |
-
-
-
-## Enum: TypeEnum
-
-| Name | Value |
-|---- | -----|
-| USER | &quot;user&quot; |
-| ACCOUNT | &quot;account&quot; |
-| MAILBOX | &quot;mailbox&quot; |
+|**code** | [**CodeEnum**](#CodeEnum) | Notification code |  |
+|**createdAt** | **OffsetDateTime** | Notification date |  |
+|**data** | **Object** |  |  |
+|**id** | **UUID** | Notification uuid |  |
+|**mailboxUuid** | **UUID** | Mailbox UUID for mailbox-wide notifications |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) | Notification type |  |
 
 
 
@@ -63,6 +53,12 @@
 | NUMBER_317 | 317 |
 | NUMBER_318 | 318 |
 | NUMBER_319 | 319 |
+| NUMBER_320 | 320 |
+| NUMBER_321 | 321 |
+| NUMBER_322 | 322 |
+| NUMBER_323 | 323 |
+| NUMBER_324 | 324 |
+| NUMBER_325 | 325 |
 | NUMBER_401 | 401 |
 | NUMBER_402 | 402 |
 | NUMBER_501 | 501 |
@@ -70,6 +66,16 @@
 | NUMBER_503 | 503 |
 | NUMBER_504 | 504 |
 | NUMBER_505 | 505 |
+
+
+
+## Enum: TypeEnum
+
+| Name | Value |
+|---- | -----|
+| USER | &quot;user&quot; |
+| ACCOUNT | &quot;account&quot; |
+| MAILBOX | &quot;mailbox&quot; |
 
 
 

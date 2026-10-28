@@ -8,13 +8,13 @@ AI token information
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** | Token id |  [optional] |
-|**name** | **String** | Token name |  [optional] |
-|**provider** | [**ProviderEnum**](#ProviderEnum) | Ai provider |  [optional] |
-|**model** | **String** | Model name |  [optional] |
-|**token** | **String** | Cut token |  [optional] |
 |**active** | **Boolean** | Token activity status |  [optional] |
 |**createdAt** | **OffsetDateTime** | Date created |  [optional] |
+|**id** | **UUID** | Token id |  [optional] |
+|**model** | **String** | Model name |  [optional] |
+|**name** | **String** | Token name |  [optional] |
+|**provider** | [**ProviderEnum**](#ProviderEnum) | Ai provider |  [optional] |
+|**token** | **String** | Cut token |  [optional] |
 
 
 
@@ -24,6 +24,7 @@ AI token information
 |---- | -----|
 | OPENAI | &quot;openai&quot; |
 | GEMINI | &quot;gemini&quot; |
+| ANTHROPIC | &quot;anthropic&quot; |
 
 
 

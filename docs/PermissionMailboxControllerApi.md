@@ -7,8 +7,8 @@ All URIs are relative to *https://api.docstudio.com*
 | [**deleteAllPermissions**](PermissionMailboxControllerApi.md#deleteAllPermissions) | **DELETE** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Delete all permissions and roles for selected user-to-mailbox relation |
 | [**deletePermission**](PermissionMailboxControllerApi.md#deletePermission) | **DELETE** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid}/{permissionId} | Delete permission for specific user-to-mailbox relation |
 | [**deleteRoleFromMailbox**](PermissionMailboxControllerApi.md#deleteRoleFromMailbox) | **DELETE** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid}/role/{roleUuid} | Delete role |
-| [**patchMbPermissions**](PermissionMailboxControllerApi.md#patchMbPermissions) | **PATCH** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Add exact permissions/roles leaving existing as is. Ignore if already present. |
-| [**replaceAllPermissions**](PermissionMailboxControllerApi.md#replaceAllPermissions) | **PUT** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Replace all permissions for selected user-to-mailbox relation |
+| [**patchMailboxPermissions**](PermissionMailboxControllerApi.md#patchMailboxPermissions) | **PATCH** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Add exact permissions/roles leaving existing as is. Ignore if already present. |
+| [**replaceAllMailboxPermissions**](PermissionMailboxControllerApi.md#replaceAllMailboxPermissions) | **PUT** /api/v1/permission/{userUuid}/mailbox/{mailboxUuid} | Replace all permissions for selected user-to-mailbox relation |
 
 
 <a id="deleteAllPermissions"></a>
@@ -213,9 +213,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **204** | No Content |  -  |
 
-<a id="patchMbPermissions"></a>
-# **patchMbPermissions**
-> patchMbPermissions(userUuid, mailboxUuid, permissionsDTO)
+<a id="patchMailboxPermissions"></a>
+# **patchMailboxPermissions**
+> patchMailboxPermissions(userUuid, mailboxUuid, permissionsDTO)
 
 Add exact permissions/roles leaving existing as is. Ignore if already present.
 
@@ -243,9 +243,9 @@ public class Example {
     UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.patchMbPermissions(userUuid, mailboxUuid, permissionsDTO);
+      apiInstance.patchMailboxPermissions(userUuid, mailboxUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionMailboxControllerApi#patchMbPermissions");
+      System.err.println("Exception when calling PermissionMailboxControllerApi#patchMailboxPermissions");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -281,9 +281,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="replaceAllPermissions"></a>
-# **replaceAllPermissions**
-> replaceAllPermissions(userUuid, mailboxUuid, permissionsDTO)
+<a id="replaceAllMailboxPermissions"></a>
+# **replaceAllMailboxPermissions**
+> replaceAllMailboxPermissions(userUuid, mailboxUuid, permissionsDTO)
 
 Replace all permissions for selected user-to-mailbox relation
 
@@ -311,9 +311,9 @@ public class Example {
     UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.replaceAllPermissions(userUuid, mailboxUuid, permissionsDTO);
+      apiInstance.replaceAllMailboxPermissions(userUuid, mailboxUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionMailboxControllerApi#replaceAllPermissions");
+      System.err.println("Exception when calling PermissionMailboxControllerApi#replaceAllMailboxPermissions");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

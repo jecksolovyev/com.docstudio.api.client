@@ -8,8 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**fieldName** | **String** |  |  |
-|**type** | [**TypeEnum**](#TypeEnum) |  |  |
 |**order** | **Integer** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  |
 |**visible** | **Boolean** |  |  [optional] |
 |**width** | **Integer** |  |  [optional] |
 

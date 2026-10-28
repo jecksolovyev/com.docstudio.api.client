@@ -8,8 +8,8 @@ All URIs are relative to *https://api.docstudio.com*
 | [**deleteAccPermission**](PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#39;user-to-account&#39; relation |
 | [**deleteAccRole**](PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role |
 | [**getUserAccountPermissions**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions |
-| [**patchMbPermissions1**](PermissionAccountControllerApi.md#patchMbPermissions1) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
-| [**replaceAllPermissions1**](PermissionAccountControllerApi.md#replaceAllPermissions1) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
+| [**patchAccountPermissions**](PermissionAccountControllerApi.md#patchAccountPermissions) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
+| [**replaceAllAccountPermissions**](PermissionAccountControllerApi.md#replaceAllAccountPermissions) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
 
 
 <a id="deleteAccAllPermissions"></a>
@@ -281,9 +281,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="patchMbPermissions1"></a>
-# **patchMbPermissions1**
-> patchMbPermissions1(userUuid, accountUuid, permissionsDTO)
+<a id="patchAccountPermissions"></a>
+# **patchAccountPermissions**
+> patchAccountPermissions(userUuid, accountUuid, permissionsDTO)
 
 Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
 
@@ -311,9 +311,9 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.patchMbPermissions1(userUuid, accountUuid, permissionsDTO);
+      apiInstance.patchAccountPermissions(userUuid, accountUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#patchMbPermissions1");
+      System.err.println("Exception when calling PermissionAccountControllerApi#patchAccountPermissions");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -349,9 +349,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="replaceAllPermissions1"></a>
-# **replaceAllPermissions1**
-> replaceAllPermissions1(userUuid, accountUuid, permissionsDTO)
+<a id="replaceAllAccountPermissions"></a>
+# **replaceAllAccountPermissions**
+> replaceAllAccountPermissions(userUuid, accountUuid, permissionsDTO)
 
 Replace all permissions for selected user-to-account relation
 
@@ -379,9 +379,9 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | UUID of account
     PermissionsDTO permissionsDTO = new PermissionsDTO(); // PermissionsDTO | 
     try {
-      apiInstance.replaceAllPermissions1(userUuid, accountUuid, permissionsDTO);
+      apiInstance.replaceAllAccountPermissions(userUuid, accountUuid, permissionsDTO);
     } catch (ApiException e) {
-      System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllPermissions1");
+      System.err.println("Exception when calling PermissionAccountControllerApi#replaceAllAccountPermissions");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

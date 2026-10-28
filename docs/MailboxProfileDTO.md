@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  [optional] |
+|**invited** | **Boolean** | User added via invitation |  [optional] |
 |**name** | **String** |  |  [optional] |
 |**permissions** | **Set&lt;Integer&gt;** | Permissions for current user to mailbox relation |  [optional] |
 |**system** | **Boolean** |  |  [optional] |
-|**invited** | **Boolean** | User added via invitation |  [optional] |
+|**uuid** | **UUID** |  |  [optional] |
 
 
 

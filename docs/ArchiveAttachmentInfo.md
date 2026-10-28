@@ -8,11 +8,11 @@ Returns the information about the single file from the archive that can be displ
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**content** | **byte[]** |  |  [optional] |
 |**fileName** | **String** |  |  [optional] |
 |**mimeType** | **String** |  |  [optional] |
-|**content** | **byte[]** |  |  [optional] |
-|**signers** | [**List&lt;ExternalSignerInfo&gt;**](ExternalSignerInfo.md) |  |  [optional] |
 |**pdfPageSizes** | [**PdfPageSizes**](PdfPageSizes.md) |  |  [optional] |
+|**signers** | [**List&lt;ExternalSignerInfo&gt;**](ExternalSignerInfo.md) |  |  [optional] |
 
 
 

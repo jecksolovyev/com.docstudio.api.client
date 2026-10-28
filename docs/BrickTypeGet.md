@@ -7,10 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | **String** |  |  [optional] |
 |**configSchema** | **String** |  |  [optional] |
+|**group** | **String** |  |  [optional] |
 |**multipleInput** | **Boolean** |  |  [optional] |
-|**outputParam** | **Set&lt;String&gt;** |  |  [optional] |
+|**outputParams** | **Set&lt;String&gt;** |  |  [optional] |
+|**type** | **String** |  |  [optional] |
 
 
 

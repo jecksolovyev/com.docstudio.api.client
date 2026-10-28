@@ -8,8 +8,8 @@ uuids or search parameters have to specified separately
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuids** | **Set&lt;UUID&gt;** |  |  [optional] |
 |**searchParams** | [**UsersSearchFilterDTO**](UsersSearchFilterDTO.md) |  |  [optional] |
+|**uuids** | **Set&lt;UUID&gt;** |  |  [optional] |
 
 
 

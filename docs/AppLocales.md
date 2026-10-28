@@ -9,9 +9,9 @@
 |------------ | ------------- | ------------- | -------------|
 |**defaultCountry** | **String** |  |  [optional] |
 |**defaultDateLocale** | **String** |  |  [optional] |
-|**timezone** | **String** |  |  [optional] |
 |**defaultLocale** | **String** |  |  [optional] |
 |**supported** | [**List&lt;LocaleItemDTO&gt;**](LocaleItemDTO.md) |  |  [optional] |
+|**timezone** | **String** |  |  [optional] |
 
 
 

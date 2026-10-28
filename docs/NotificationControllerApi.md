@@ -6,8 +6,8 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**getAccountPreferences**](NotificationControllerApi.md#getAccountPreferences) | **GET** /api/v1/notification/account-preferences | Get account related notification preferences |
 | [**getCorporateUserAccountPreferences**](NotificationControllerApi.md#getCorporateUserAccountPreferences) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/account-preferences | Get corporate user account related notification preferences |
-| [**getMailboxPreferences**](NotificationControllerApi.md#getMailboxPreferences) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/mailbox-preferences | Get corporate user mailbox related notification preferences |
-| [**getMailboxPreferences1**](NotificationControllerApi.md#getMailboxPreferences1) | **GET** /api/v1/notification/mailbox-preferences | Get mailbox related notification preferences |
+| [**getMailboxPreferences**](NotificationControllerApi.md#getMailboxPreferences) | **GET** /api/v1/notification/mailbox-preferences | Get mailbox related notification preferences |
+| [**getMailboxPreferencesForUser**](NotificationControllerApi.md#getMailboxPreferencesForUser) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/mailbox-preferences | Get corporate user mailbox related notification preferences |
 | [**getUnreadNotifications**](NotificationControllerApi.md#getUnreadNotifications) | **GET** /api/v1/notification | Get unread notifications |
 | [**markAllNotificationRead**](NotificationControllerApi.md#markAllNotificationRead) | **POST** /api/v1/notification/read-all | Mark notifications as read |
 | [**markNotificationRead**](NotificationControllerApi.md#markNotificationRead) | **POST** /api/v1/notification/read | Mark notifications as read |
@@ -147,7 +147,72 @@ public class Example {
 
 <a id="getMailboxPreferences"></a>
 # **getMailboxPreferences**
-> MailboxNotificationPreferences getMailboxPreferences(userUuid, accountUuid, mailbox)
+> MailboxNotificationPreferences getMailboxPreferences(mailbox)
+
+Get mailbox related notification preferences
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.NotificationControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    NotificationControllerApi apiInstance = new NotificationControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | 
+    try {
+      MailboxNotificationPreferences result = apiInstance.getMailboxPreferences(mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferences");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**|  | [optional] |
+
+### Return type
+
+[**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getMailboxPreferencesForUser"></a>
+# **getMailboxPreferencesForUser**
+> MailboxNotificationPreferences getMailboxPreferencesForUser(userUuid, accountUuid, mailbox)
 
 Get corporate user mailbox related notification preferences
 
@@ -175,10 +240,10 @@ public class Example {
     UUID accountUuid = UUID.randomUUID(); // UUID | Account uuid
     UUID mailbox = UUID.randomUUID(); // UUID | 
     try {
-      MailboxNotificationPreferences result = apiInstance.getMailboxPreferences(userUuid, accountUuid, mailbox);
+      MailboxNotificationPreferences result = apiInstance.getMailboxPreferencesForUser(userUuid, accountUuid, mailbox);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferences");
+      System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferencesForUser");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -194,71 +259,6 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **userUuid** | **UUID**| User uuid | |
 | **accountUuid** | **UUID**| Account uuid | |
-| **mailbox** | **UUID**|  | [optional] |
-
-### Return type
-
-[**MailboxNotificationPreferences**](MailboxNotificationPreferences.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="getMailboxPreferences1"></a>
-# **getMailboxPreferences1**
-> MailboxNotificationPreferences getMailboxPreferences1(mailbox)
-
-Get mailbox related notification preferences
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.NotificationControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    NotificationControllerApi apiInstance = new NotificationControllerApi(defaultClient);
-    UUID mailbox = UUID.randomUUID(); // UUID | 
-    try {
-      MailboxNotificationPreferences result = apiInstance.getMailboxPreferences1(mailbox);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling NotificationControllerApi#getMailboxPreferences1");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
 | **mailbox** | **UUID**|  | [optional] |
 
 ### Return type

@@ -8,8 +8,8 @@ Envelope callback check result
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**passed** | **Boolean** | Check passed |  [optional] |
 |**failed** | [**FailedEnvelopeCallbackFilterDTO**](FailedEnvelopeCallbackFilterDTO.md) | Envelope properties failed match |  [optional] |
+|**passed** | **Boolean** | Check passed |  [optional] |
 
 
 

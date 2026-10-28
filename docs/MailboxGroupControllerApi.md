@@ -6,12 +6,12 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**addMailboxesToGroup**](MailboxGroupControllerApi.md#addMailboxesToGroup) | **POST** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid}/mailbox | Add mailboxes to group |
 | [**createMailboxGroup**](MailboxGroupControllerApi.md#createMailboxGroup) | **POST** /api/v1/account/{accountUuid}/mailbox-group | Create mailbox group |
+| [**deleteMailboxGroup**](MailboxGroupControllerApi.md#deleteMailboxGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Delete mailbox group |
 | [**getMailboxGroup**](MailboxGroupControllerApi.md#getMailboxGroup) | **GET** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Get mailbox group |
 | [**getMailboxGroupsNames**](MailboxGroupControllerApi.md#getMailboxGroupsNames) | **POST** /api/v1/account/{accountUuid}/mailbox-group/info | Get groups names |
 | [**removeMailboxesFromGroup**](MailboxGroupControllerApi.md#removeMailboxesFromGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid}/mailbox | Remove mailboxes from group |
 | [**searchGroups**](MailboxGroupControllerApi.md#searchGroups) | **GET** /api/v1/account/{accountUuid}/mailbox-group | List/search groups |
-| [**updateMailboxGroup**](MailboxGroupControllerApi.md#updateMailboxGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Delete mailbox group |
-| [**updateMailboxGroup1**](MailboxGroupControllerApi.md#updateMailboxGroup1) | **PATCH** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Update mailbox group |
+| [**updateMailboxGroup**](MailboxGroupControllerApi.md#updateMailboxGroup) | **PATCH** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Update mailbox group |
 
 
 <a id="addMailboxesToGroup"></a>
@@ -149,6 +149,72 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | Created |  -  |
+
+<a id="deleteMailboxGroup"></a>
+# **deleteMailboxGroup**
+> deleteMailboxGroup(accountUuid, groupUuid)
+
+Delete mailbox group
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxGroupControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxGroupControllerApi apiInstance = new MailboxGroupControllerApi(defaultClient);
+    UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
+    UUID groupUuid = UUID.randomUUID(); // UUID | Group UUID
+    try {
+      apiInstance.deleteMailboxGroup(accountUuid, groupUuid);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxGroupControllerApi#deleteMailboxGroup");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountUuid** | **UUID**| Account UUID | |
+| **groupUuid** | **UUID**| Group UUID | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 <a id="getMailboxGroup"></a>
 # **getMailboxGroup**
@@ -434,73 +500,7 @@ public class Example {
 
 <a id="updateMailboxGroup"></a>
 # **updateMailboxGroup**
-> updateMailboxGroup(accountUuid, groupUuid)
-
-Delete mailbox group
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.MailboxGroupControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    MailboxGroupControllerApi apiInstance = new MailboxGroupControllerApi(defaultClient);
-    UUID accountUuid = UUID.randomUUID(); // UUID | Account UUID
-    UUID groupUuid = UUID.randomUUID(); // UUID | Group UUID
-    try {
-      apiInstance.updateMailboxGroup(accountUuid, groupUuid);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxGroupControllerApi#updateMailboxGroup");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **accountUuid** | **UUID**| Account UUID | |
-| **groupUuid** | **UUID**| Group UUID | |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-<a id="updateMailboxGroup1"></a>
-# **updateMailboxGroup1**
-> GroupInfoDTO updateMailboxGroup1(accountUuid, groupUuid, updateGroupDTO)
+> GroupInfoDTO updateMailboxGroup(accountUuid, groupUuid, updateGroupDTO)
 
 Update mailbox group
 
@@ -528,10 +528,10 @@ public class Example {
     UUID groupUuid = UUID.randomUUID(); // UUID | Group UUID
     UpdateGroupDTO updateGroupDTO = new UpdateGroupDTO(); // UpdateGroupDTO | 
     try {
-      GroupInfoDTO result = apiInstance.updateMailboxGroup1(accountUuid, groupUuid, updateGroupDTO);
+      GroupInfoDTO result = apiInstance.updateMailboxGroup(accountUuid, groupUuid, updateGroupDTO);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxGroupControllerApi#updateMailboxGroup1");
+      System.err.println("Exception when calling MailboxGroupControllerApi#updateMailboxGroup");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -8,8 +8,8 @@ Envelope to check
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | UUID of envelope |  [optional] |
 |**data** | **String** | Envelope XML |  [optional] |
+|**uuid** | **UUID** | UUID of envelope |  [optional] |
 
 
 

@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Task uuid |  |
-|**status** | [**StatusEnum**](#StatusEnum) | Task status |  |
 |**fileUrl** | **String** | Exported dictionary url |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) | Task status |  |
+|**uuid** | **UUID** | Task uuid |  |
 
 
 

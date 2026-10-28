@@ -8,13 +8,13 @@ New IdP info
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **UUID** |  |  [optional] |
-|**name** | **String** |  |  [optional] |
 |**firstNameMapping** | **String** |  |  [optional] |
+|**id** | **UUID** |  |  [optional] |
 |**lastNameMapping** | **String** |  |  [optional] |
-|**phoneMapping** | **String** |  |  [optional] |
 |**metadataUrl** | **String** |  |  [optional] |
 |**metadataXml** | **String** |  |  [optional] |
+|**name** | **String** |  |  [optional] |
+|**phoneMapping** | **String** |  |  [optional] |
 |**signingCertificate** | **byte[]** |  |  [optional] |
 |**signingPrivateKey** | **byte[]** |  |  [optional] |
 

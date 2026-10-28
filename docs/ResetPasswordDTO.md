@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**password** | **String** |  |  |
 |**code** | **String** |  |  |
+|**password** | **String** |  |  |
 
 
 

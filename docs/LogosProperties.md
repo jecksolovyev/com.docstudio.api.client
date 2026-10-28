@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**defaultBrandSvg** | **String** |  |  [optional] |
+|**logoCacheHours** | **Integer** |  |  [optional] |
 |**logoCircleSvg** | **String** |  |  [optional] |
-|**mimeTypes** | **Set&lt;String&gt;** |  |  [optional] |
+|**logoMaxBytes** | **Integer** |  |  [optional] |
 |**logoMaxPx** | **Integer** |  |  [optional] |
 |**logoMinPx** | **Integer** |  |  [optional] |
-|**logoMaxBytes** | **Integer** |  |  [optional] |
-|**logoCacheHours** | **Integer** |  |  [optional] |
-|**defaultBrandSvg** | **String** |  |  [optional] |
 |**logoWithNameSvg** | **String** |  |  [optional] |
+|**mimeTypes** | **Set&lt;String&gt;** |  |  [optional] |
 
 
 

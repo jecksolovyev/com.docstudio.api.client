@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**threadUuid** | **UUID** | Thread UUID |  |
 |**resolved** | **Boolean** | Is thread resolved? |  |
+|**threadUuid** | **UUID** | Thread UUID |  |
 
 
 

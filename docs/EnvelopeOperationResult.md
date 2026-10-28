@@ -9,8 +9,8 @@ Share envelopes result map
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**envelopeUuid** | **UUID** |  |  [optional] |
-|**operationResult** | **Boolean** |  |  [optional] |
 |**errorMessage** | **String** |  |  [optional] |
+|**operationResult** | **Boolean** |  |  [optional] |
 
 
 

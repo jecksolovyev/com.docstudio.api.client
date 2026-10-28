@@ -7,18 +7,18 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Dictionary uuid |  |
-|**name** | **String** | Dictionary name |  |
-|**description** | **String** | Dictionary description |  |
 |**access** | [**AccessEnum**](#AccessEnum) | Dictionary access level |  |
 |**archive** | **Boolean** | Dictionary archived flag |  |
+|**columns** | [**List&lt;DictionaryColumnResponseDTO&gt;**](DictionaryColumnResponseDTO.md) |  |  [optional] |
 |**createdAt** | **OffsetDateTime** | Dictionary created date |  |
+|**description** | **String** | Dictionary description |  |
 |**editable** | **Boolean** | Dictionary can be edited |  |
 |**filteredAccessOnly** | **Boolean** | Dictionary can be used only with filtering |  |
-|**recordsCount** | **Long** | Dictionary records count |  [optional] |
-|**columns** | [**List&lt;DictionaryColumnResponseDTO&gt;**](DictionaryColumnResponseDTO.md) |  |  [optional] |
-|**status** | [**StatusEnum**](#StatusEnum) | Dictionary availability status |  [optional] |
 |**mailboxUuid** | **UUID** | Owner of the dictionary |  [optional] |
+|**name** | **String** | Dictionary name |  |
+|**recordsCount** | **Long** | Dictionary records count |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) | Dictionary availability status |  [optional] |
+|**uuid** | **UUID** | Dictionary uuid |  |
 
 
 

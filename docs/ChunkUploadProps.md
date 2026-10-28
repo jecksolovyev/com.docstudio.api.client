@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**maxFileSize** | **Long** |  |  [optional] |
 |**chunkSize** | **Long** |  |  [optional] |
+|**maxFileSize** | **Long** |  |  [optional] |
 |**maxRequestFileSize** | **Long** |  |  [optional] |
 
 

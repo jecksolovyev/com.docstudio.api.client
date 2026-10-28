@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level (&#39;official&#39; is not allowed here) |  |
 |**documentId** | **String** | Document ID to create new comment thread |  |
+|**sharedTo** | **Set&lt;UUID&gt;** |  |  [optional] |
 |**text** | **String** | Text of the message |  |
 |**xpath** | **String** | xPath to find selected area |  [optional] |
-|**accessType** | [**AccessTypeEnum**](#AccessTypeEnum) | Access level (&#39;official&#39; is not allowed here) |  |
-|**sharedTo** | **Set&lt;UUID&gt;** |  |  [optional] |
 
 
 

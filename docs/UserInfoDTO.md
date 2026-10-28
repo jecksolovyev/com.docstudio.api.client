@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Unique identifier of user |  [optional] |
+|**email** | **String** | User e-mail |  [optional] |
 |**firstName** | **String** | First name of user |  [optional] |
 |**lastName** | **String** | Last name of user |  [optional] |
-|**email** | **String** | User e-mail |  [optional] |
+|**uuid** | **UUID** | Unique identifier of user |  [optional] |
 
 
 

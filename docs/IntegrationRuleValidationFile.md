@@ -8,8 +8,8 @@ XSD or SCH result validation file
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**filename** | **String** |  |  [optional] |
 |**content** | **String** |  |  [optional] |
+|**filename** | **String** |  |  [optional] |
 
 
 

@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**templateXml** | **String** | Template XML |  |
 |**envelopeXml** | **String** | Envelope XML |  |
 |**signatureAlgorithm** | [**SignatureAlgorithmEnum**](#SignatureAlgorithmEnum) | Signature algorithm |  [optional] |
 |**signatureContainer** | [**SignatureContainerEnum**](#SignatureContainerEnum) | Signature container |  [optional] |
+|**templateXml** | **String** | Template XML |  |
 
 
 

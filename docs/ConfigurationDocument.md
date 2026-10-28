@@ -8,8 +8,8 @@ Vchasno connector configuration document
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) | Document type |  |
 |**template** | [**ConfigurationDocumentTemplate**](ConfigurationDocumentTemplate.md) | Document template info |  |
+|**type** | [**TypeEnum**](#TypeEnum) | Document type |  |
 
 
 

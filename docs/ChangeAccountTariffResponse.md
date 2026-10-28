@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**result** | **Boolean** | Operation result |  [optional] |
 |**details** | **Set&lt;String&gt;** | Operation result details |  [optional] |
+|**result** | **Boolean** | Operation result |  [optional] |
 |**tariff** | [**AccountTariffInfo**](AccountTariffInfo.md) | Tariff info |  [optional] |
 
 

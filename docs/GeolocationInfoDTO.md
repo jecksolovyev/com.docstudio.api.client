@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**latitude** | **Float** |  |  [optional] |
-|**longitude** | **Float** |  |  [optional] |
-|**location** | **String** |  |  [optional] |
 |**countryCode** | **String** |  |  [optional] |
+|**latitude** | **Float** |  |  [optional] |
+|**location** | **String** |  |  [optional] |
+|**longitude** | **Float** |  |  [optional] |
 
 
 

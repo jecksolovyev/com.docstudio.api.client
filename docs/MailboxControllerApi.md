@@ -6,23 +6,26 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**createMailbox**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox |
 | [**customizeDashboard**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard |
-| [**delete5**](MailboxControllerApi.md#delete5) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
+| [**deleteMailbox**](MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
 | [**deleteMailboxUsers**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester |
 | [**deleteViewPreferences**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
-| [**getAccountLogo**](MailboxControllerApi.md#getAccountLogo) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
+| [**getAccountLogoByMailbox**](MailboxControllerApi.md#getAccountLogoByMailbox) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
 | [**getActivityLog**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox |
-| [**getAllForUser**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailboxes list |
+| [**getAllForUser**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox/user-view | Retrieve user&#39;s mailbox list |
+| [**getAllForUserWithPagination**](MailboxControllerApi.md#getAllForUserWithPagination) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailbox list with pagination |
 | [**getAutoDelegation**](MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings |
 | [**getCustomizedDashboard**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
 | [**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
-| [**getMailboxesInfo1**](MailboxControllerApi.md#getMailboxesInfo1) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
+| [**getMailboxesInfo**](MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
 | [**getViewPreferences**](MailboxControllerApi.md#getViewPreferences) | **GET** /api/v1/mailbox/view-preferences | Get mailbox view preferences |
 | [**leaveMailbox**](MailboxControllerApi.md#leaveMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/leave | Leave mailbox if possible |
 | [**patchMailbox**](MailboxControllerApi.md#patchMailbox) | **PATCH** /api/v1/mailbox/{mailboxUuid} | Patch mailbox, return patched mailbox w/o users count |
+| [**pinMailbox**](MailboxControllerApi.md#pinMailbox) | **PUT** /api/v1/mailbox/{mailboxUuid}/pin | Mark mailbox as pinned |
 | [**searchMailboxes**](MailboxControllerApi.md#searchMailboxes) | **GET** /api/v1/mailbox/search | Search mailboxes by name, contact, alias, user |
+| [**unpinMailbox**](MailboxControllerApi.md#unpinMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/pin | Unmark mailbox as pinned |
 | [**updateAutoDelegation**](MailboxControllerApi.md#updateAutoDelegation) | **PUT** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Update auto delegation settings |
 | [**updateMailbox**](MailboxControllerApi.md#updateMailbox) | **PUT** /api/v1/mailbox/{mailboxUuid} | Update mailbox |
 | [**updateViewPreferences**](MailboxControllerApi.md#updateViewPreferences) | **PUT** /api/v1/mailbox/view-preferences | Save mailbox view preferences |
@@ -165,9 +168,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="delete5"></a>
-# **delete5**
-> delete5(checkMessage, mailbox, moveEntitiesToMailbox)
+<a id="deleteMailbox"></a>
+# **deleteMailbox**
+> deleteMailbox(checkMessage, mailbox, moveEntitiesToMailbox)
 
 Delete mailbox by UUID in the header.
 
@@ -195,9 +198,9 @@ public class Example {
     UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
     UUID moveEntitiesToMailbox = UUID.randomUUID(); // UUID | Move entities to chosen mailbox
     try {
-      apiInstance.delete5(checkMessage, mailbox, moveEntitiesToMailbox);
+      apiInstance.deleteMailbox(checkMessage, mailbox, moveEntitiesToMailbox);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#delete5");
+      System.err.println("Exception when calling MailboxControllerApi#deleteMailbox");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -365,9 +368,9 @@ null (empty response body)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getAccountLogo"></a>
-# **getAccountLogo**
-> File getAccountLogo(mailboxUuid)
+<a id="getAccountLogoByMailbox"></a>
+# **getAccountLogoByMailbox**
+> File getAccountLogoByMailbox(mailboxUuid)
 
 Retrieve mailbox account logo
 
@@ -393,10 +396,10 @@ public class Example {
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
     UUID mailboxUuid = UUID.randomUUID(); // UUID | 
     try {
-      File result = apiInstance.getAccountLogo(mailboxUuid);
+      File result = apiInstance.getAccountLogoByMailbox(mailboxUuid);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#getAccountLogo");
+      System.err.println("Exception when calling MailboxControllerApi#getAccountLogoByMailbox");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -507,9 +510,9 @@ public class Example {
 
 <a id="getAllForUser"></a>
 # **getAllForUser**
-> List&lt;User2MailboxDTO&gt; getAllForUser()
+> List&lt;User2MailboxDTO&gt; getAllForUser(pinned, mailboxesForAccount, requiredMailboxId)
 
-Retrieve user&#39;s mailboxes list
+Retrieve user&#39;s mailbox list
 
 ### Example
 ```java
@@ -531,8 +534,11 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    Boolean pinned = true; // Boolean | Return all pinned mailboxes
+    Integer mailboxesForAccount = 56; // Integer | Return mailboxes for each account (max 5)
+    UUID requiredMailboxId = UUID.randomUUID(); // UUID | Required mailbox in the response
     try {
-      List<User2MailboxDTO> result = apiInstance.getAllForUser();
+      List<User2MailboxDTO> result = apiInstance.getAllForUser(pinned, mailboxesForAccount, requiredMailboxId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling MailboxControllerApi#getAllForUser");
@@ -546,11 +552,91 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pinned** | **Boolean**| Return all pinned mailboxes | [optional] |
+| **mailboxesForAccount** | **Integer**| Return mailboxes for each account (max 5) | [optional] |
+| **requiredMailboxId** | **UUID**| Required mailbox in the response | [optional] |
 
 ### Return type
 
 [**List&lt;User2MailboxDTO&gt;**](User2MailboxDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getAllForUserWithPagination"></a>
+# **getAllForUserWithPagination**
+> PageDTOUser2MailboxDTO getAllForUserWithPagination(invited, accountId, keyword, permission, offset, limit)
+
+Retrieve user&#39;s mailbox list with pagination
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    Boolean invited = true; // Boolean | Filter mailboxes user was invited to
+    UUID accountId = UUID.randomUUID(); // UUID | Filter by account UUID
+    String keyword = "keyword_example"; // String | Search by mailbox name or alias
+    Integer permission = 56; // Integer | Required mailbox permission in a specific account
+    Integer offset = 0; // Integer | Offset, how much mailboxes to skip
+    Integer limit = 25; // Integer | Limit, how much mailboxes to retrieve
+    try {
+      PageDTOUser2MailboxDTO result = apiInstance.getAllForUserWithPagination(invited, accountId, keyword, permission, offset, limit);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#getAllForUserWithPagination");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **invited** | **Boolean**| Filter mailboxes user was invited to | [optional] |
+| **accountId** | **UUID**| Filter by account UUID | [optional] |
+| **keyword** | **String**| Search by mailbox name or alias | [optional] |
+| **permission** | **Integer**| Required mailbox permission in a specific account | [optional] |
+| **offset** | **Integer**| Offset, how much mailboxes to skip | [optional] [default to 0] |
+| **limit** | **Integer**| Limit, how much mailboxes to retrieve | [optional] [default to 25] |
+
+### Return type
+
+[**PageDTOUser2MailboxDTO**](PageDTOUser2MailboxDTO.md)
 
 ### Authorization
 
@@ -826,9 +912,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getMailboxesInfo1"></a>
-# **getMailboxesInfo1**
-> Map&lt;String, MailboxInfoDTO&gt; getMailboxesInfo1(UUID, accountName, accountITN)
+<a id="getMailboxesInfo"></a>
+# **getMailboxesInfo**
+> Map&lt;String, MailboxInfoDTO&gt; getMailboxesInfo(UUID, accountName, accountITN)
 
 Retrieve mailboxes info
 
@@ -856,10 +942,10 @@ public class Example {
     Boolean accountName = false; // Boolean | Including account name
     Boolean accountITN = false; // Boolean | Including account ITN
     try {
-      Map<String, MailboxInfoDTO> result = apiInstance.getMailboxesInfo1(UUID, accountName, accountITN);
+      Map<String, MailboxInfoDTO> result = apiInstance.getMailboxesInfo(UUID, accountName, accountITN);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#getMailboxesInfo1");
+      System.err.println("Exception when calling MailboxControllerApi#getMailboxesInfo");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1231,6 +1317,70 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
+<a id="pinMailbox"></a>
+# **pinMailbox**
+> pinMailbox(mailboxUuid)
+
+Mark mailbox as pinned
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
+    try {
+      apiInstance.pinMailbox(mailboxUuid);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#pinMailbox");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailboxUuid** | **UUID**| UUID of mailbox | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
 <a id="searchMailboxes"></a>
 # **searchMailboxes**
 > List&lt;MailboxSearchResultDTO&gt; searchMailboxes(q, mailbox, type)
@@ -1294,6 +1444,70 @@ public class Example {
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="unpinMailbox"></a>
+# **unpinMailbox**
+> unpinMailbox(mailboxUuid)
+
+Unmark mailbox as pinned
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailboxUuid = UUID.randomUUID(); // UUID | UUID of mailbox
+    try {
+      apiInstance.unpinMailbox(mailboxUuid);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#unpinMailbox");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailboxUuid** | **UUID**| UUID of mailbox | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

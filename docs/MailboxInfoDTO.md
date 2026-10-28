@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** | Mailbox uuid |  |
-|**name** | **String** | Mailbox name |  |
-|**accountName** | **String** | Mailbox account name |  [optional] |
 |**accountITN** | **String** | Mailbox account ITN |  [optional] |
+|**accountName** | **String** | Mailbox account name |  [optional] |
 |**deleted** | **Boolean** |  |  [optional] |
+|**name** | **String** | Mailbox name |  |
+|**uuid** | **UUID** | Mailbox uuid |  |
 
 
 

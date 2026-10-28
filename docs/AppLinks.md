@@ -7,14 +7,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**officialUrl** | **String** |  |  [optional] |
+|**altLoginPageSide** | **String** |  |  [optional] |
 |**baseUrl** | **String** |  |  [optional] |
 |**docsUrl** | **String** |  |  [optional] |
 |**errorListUrl** | **String** |  |  [optional] |
-|**termsAndConditions** | **String** |  |  [optional] |
+|**officialUrl** | **String** |  |  [optional] |
 |**privacyPolicy** | **String** |  |  [optional] |
-|**altLoginPageSide** | **String** |  |  [optional] |
 |**publicAttachment** | **String** |  |  [optional] |
+|**termsAndConditions** | **String** |  |  [optional] |
 
 
 

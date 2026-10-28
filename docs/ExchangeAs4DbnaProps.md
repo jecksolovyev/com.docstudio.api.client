@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**url** | **String** |  |  |
 |**dbnaAccount** | **UUID** |  |  |
 |**ftpPassword** | **String** |  |  |
+|**url** | **String** |  |  |
 
 
 
