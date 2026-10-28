@@ -19,23 +19,30 @@ Building the API client library requires:
 mvn clean package
 ```
 
-## Deploying
+## Releasing
 
-1. Update version in README and in the POM file (see https://api.docstudio.com)
-2. Generate files using command
-```shell
-./genarate.sh
+This package is generated from the DocStudio OpenAPI document; the API version above is
+the API release it was generated from. Releases are cut by the DocStudio team from
+internal tooling.
+
+## Authentication
+
+Set exactly one credential per client instance.
+
+```java
+ApiClient client = new ApiClient();
+client.setBasePath("https://api.docstudio.com");
+
+// user API
+client.setBearerToken(token);
+
+// form API - a form token instead
+((ApiKeyAuth) client.getAuthentication("formAuth")).setApiKey(formToken);
+((ApiKeyAuth) client.getAuthentication("formAuth")).setApiKeyPrefix("Form");
 ```
-3. Add MIME decoder to ApiClient (https://github.com/OpenAPITools/openapi-generator-cli/issues/853)
-```shell
-filename = sanitizeFilename(MimeUtility.decodeText(matcher.group(1)));
-```
-4. Commit and create a tag with current version
-5. Push changes with tags
-6. Deploy to GIT
-```shell
-mvn deploy
-```
+
+A handful of endpoints accept either credential. If both are set, the one applied last
+wins, which is why a client instance should carry only one.
 
 ## Usage with maven
 

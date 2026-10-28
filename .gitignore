@@ -36,3 +36,13 @@ gradlew.bat
 gradle.properties
 settings.gradle
 settings.xml
+# release tooling lives in com.docstudio.api.tooling
+/scripts/
+/spec/
+/config.json
+/openapitools.json
+/generate.sh
+/.generated/
+/.openapi-generator/
+/.openapi-generator-ignore
+/clients.local.json
