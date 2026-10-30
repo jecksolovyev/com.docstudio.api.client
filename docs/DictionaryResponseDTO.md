@@ -11,7 +11,7 @@
 |**archive** | **Boolean** | Dictionary archived flag |  |
 |**columns** | [**List&lt;DictionaryColumnResponseDTO&gt;**](DictionaryColumnResponseDTO.md) |  |  [optional] |
 |**createdAt** | **OffsetDateTime** | Dictionary created date |  |
-|**description** | **String** | Dictionary description |  |
+|**description** | **String** | Dictionary description |  [optional] |
 |**editable** | **Boolean** | Dictionary can be edited |  |
 |**filteredAccessOnly** | **Boolean** | Dictionary can be used only with filtering |  |
 |**mailboxUuid** | **UUID** | Owner of the dictionary |  [optional] |

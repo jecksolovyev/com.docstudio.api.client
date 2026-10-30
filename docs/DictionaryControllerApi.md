@@ -719,6 +719,7 @@ Retrieve column value for specific record
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.DictionaryControllerApi;
 
@@ -726,6 +727,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     DictionaryControllerApi apiInstance = new DictionaryControllerApi(defaultClient);
     UUID dictionaryUuid = UUID.randomUUID(); // UUID | Dictionary UUID
@@ -761,7 +766,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

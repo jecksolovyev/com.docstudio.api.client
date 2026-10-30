@@ -289,6 +289,8 @@ null (empty response body)
 
 Approve envelope
 
+One envelope is processed synchronously and the response carries that envelope&#39;s uuid; several are handed to a background process and the response carries the process uuid.
+
 ### Example
 ```java
 // Import classes:
@@ -557,6 +559,8 @@ null (empty response body)
 > SingleUuidDTO cancelEnvelopes(mailbox, envCancellationRequestDTO)
 
 Cancel envelopes
+
+One envelope is processed synchronously and the response carries that envelope&#39;s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 ```java
@@ -1024,6 +1028,7 @@ Create/upload new attachment
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.EnvelopeControllerApi;
 
@@ -1031,6 +1036,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
     File _file = new File("/path/to/file"); // File | 
@@ -1064,7 +1073,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1224,6 +1233,7 @@ Create/upload new PDF attachment
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.EnvelopeControllerApi;
 
@@ -1231,6 +1241,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
     File _file = new File("/path/to/file"); // File | 
@@ -1264,7 +1278,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1281,6 +1295,8 @@ No authorization required
 > SingleUuidDTO delegateEnvelopes(mailbox, envDelegationDTO)
 
 Delegate envelopes
+
+One envelope is processed synchronously and the response carries that envelope&#39;s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 ```java
@@ -2958,6 +2974,7 @@ Anonymous users download it with the access code of a payment link; files visibl
 import com.docstudio.client.ApiClient;
 import com.docstudio.client.ApiException;
 import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
 import com.docstudio.client.models.*;
 import com.docstudio.client.api.EnvelopeControllerApi;
 
@@ -2965,6 +2982,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
 
     EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Envelope UUID
@@ -3006,7 +3027,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -4287,6 +4308,8 @@ public class Example {
 > SingleUuidDTO sendForApproval(mailbox, envelopeApprovalRequestDTO)
 
 Send envelope for approval
+
+One envelope is processed synchronously and the response carries that envelope&#39;s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 ```java

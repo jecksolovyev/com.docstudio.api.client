@@ -10,7 +10,7 @@
 |**access** | [**AccessEnum**](#AccessEnum) | Template access level |  [optional] |
 |**categories** | **List&lt;UUID&gt;** | Template categories |  [optional] |
 |**createdAt** | **OffsetDateTime** | Date of Template creation |  [optional] |
-|**description** | **String** | Template description |  |
+|**description** | **String** | Template description |  [optional] |
 |**favorite** | **Boolean** | Template marked as favorite |  [optional] |
 |**logoImageUuid** | **UUID** | UUID of the template logo image |  [optional] |
 |**mailboxUuid** | **UUID** | Template owner mailbox UUID |  |

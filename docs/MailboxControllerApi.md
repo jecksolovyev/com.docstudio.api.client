@@ -11,12 +11,12 @@ All URIs are relative to *https://api.docstudio.com*
 | [**deleteViewPreferences**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
 | [**getAccountLogoByMailbox**](MailboxControllerApi.md#getAccountLogoByMailbox) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
 | [**getActivityLog**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox |
-| [**getAllForUser**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox/user-view | Retrieve user&#39;s mailbox list |
 | [**getAllForUserWithPagination**](MailboxControllerApi.md#getAllForUserWithPagination) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailbox list with pagination |
 | [**getAutoDelegation**](MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings |
 | [**getCustomizedDashboard**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
 | [**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
+| [**getMailboxesForUserView**](MailboxControllerApi.md#getMailboxesForUserView) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user&#39;s sidebar view |
 | [**getMailboxesInfo**](MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
@@ -508,75 +508,6 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 
-<a id="getAllForUser"></a>
-# **getAllForUser**
-> List&lt;User2MailboxDTO&gt; getAllForUser(pinned, mailboxesForAccount, requiredMailboxId)
-
-Retrieve user&#39;s mailbox list
-
-### Example
-```java
-// Import classes:
-import com.docstudio.client.ApiClient;
-import com.docstudio.client.ApiException;
-import com.docstudio.client.Configuration;
-import com.docstudio.client.auth.*;
-import com.docstudio.client.models.*;
-import com.docstudio.client.api.MailboxControllerApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.docstudio.com");
-    
-    // Configure HTTP bearer authorization: bearerAuth
-    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
-    bearerAuth.setBearerToken("BEARER TOKEN");
-
-    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
-    Boolean pinned = true; // Boolean | Return all pinned mailboxes
-    Integer mailboxesForAccount = 56; // Integer | Return mailboxes for each account (max 5)
-    UUID requiredMailboxId = UUID.randomUUID(); // UUID | Required mailbox in the response
-    try {
-      List<User2MailboxDTO> result = apiInstance.getAllForUser(pinned, mailboxesForAccount, requiredMailboxId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling MailboxControllerApi#getAllForUser");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pinned** | **Boolean**| Return all pinned mailboxes | [optional] |
-| **mailboxesForAccount** | **Integer**| Return mailboxes for each account (max 5) | [optional] |
-| **requiredMailboxId** | **UUID**| Required mailbox in the response | [optional] |
-
-### Return type
-
-[**List&lt;User2MailboxDTO&gt;**](User2MailboxDTO.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
 <a id="getAllForUserWithPagination"></a>
 # **getAllForUserWithPagination**
 > PageDTOUser2MailboxDTO getAllForUserWithPagination(invited, accountId, keyword, permission, offset, limit)
@@ -897,6 +828,77 @@ public class Example {
 ### Return type
 
 [**MailboxEssentialsDTO**](MailboxEssentialsDTO.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getMailboxesForUserView"></a>
+# **getMailboxesForUserView**
+> List&lt;User2MailboxDTO&gt; getMailboxesForUserView(pinned, mailboxesForAccount, requiredMailboxId)
+
+Retrieve the mailboxes of the user&#39;s sidebar view
+
+Returns only the mailboxes the selectors below ask for; GET /api/v1/mailbox lists every mailbox the user can reach.
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    Boolean pinned = true; // Boolean | Return all pinned mailboxes
+    Integer mailboxesForAccount = 56; // Integer | Return mailboxes for each account (max 5)
+    UUID requiredMailboxId = UUID.randomUUID(); // UUID | Required mailbox in the response
+    try {
+      List<User2MailboxDTO> result = apiInstance.getMailboxesForUserView(pinned, mailboxesForAccount, requiredMailboxId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#getMailboxesForUserView");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pinned** | **Boolean**| Return all pinned mailboxes | [optional] |
+| **mailboxesForAccount** | **Integer**| Return mailboxes for each account (max 5) | [optional] |
+| **requiredMailboxId** | **UUID**| Required mailbox in the response | [optional] |
+
+### Return type
+
+[**List&lt;User2MailboxDTO&gt;**](User2MailboxDTO.md)
 
 ### Authorization
 
