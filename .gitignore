@@ -46,4 +46,3 @@ settings.xml
 /.openapi-generator/
 /.openapi-generator-ignore
 /clients.local.json
-/examples/

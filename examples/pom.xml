@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.docstudio.examples</groupId>
+  <artifactId>docstudio-api-client-examples</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  <name>DocStudio API client examples</name>
+
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <docstudio-client-version>R168.21</docstudio-client-version>
+  </properties>
+
+  <!-- JitPack builds the client straight from the public repository's tag, so no
+       credentials are needed. GitHub Packages serves the same artifact under
+       com.docstudio:docstudio-api-client if you prefer it; that one needs a token. -->
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.github.jecksolovyev</groupId>
+      <artifactId>com.docstudio.api.client</artifactId>
+      <version>${docstudio-client-version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
