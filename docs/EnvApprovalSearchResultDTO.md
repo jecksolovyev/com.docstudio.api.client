@@ -17,6 +17,7 @@
 |**mailboxName** | **String** | Mailbox name of approval initiator |  [optional] |
 |**mailboxUUID** | **UUID** | Mailbox UUID of approval initiator |  [optional] |
 |**message** | **String** | The envelope message |  [optional] |
+|**review** | [**ReviewInfo**](ReviewInfo.md) | Current review round state |  [optional] |
 |**seenAt** | **OffsetDateTime** | Date-time it was seen by approver |  [optional] |
 |**status** | **String** | Status of approval |  [optional] |
 |**subject** | **String** | The envelope subject |  [optional] |

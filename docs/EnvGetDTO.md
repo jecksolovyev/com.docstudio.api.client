@@ -18,6 +18,7 @@
 |**labels** | **Set&lt;UUID&gt;** |  |  [optional] |
 |**metadata** | **Map&lt;String, String&gt;** | Envelope metadata |  [optional] |
 |**receivedAt** | **OffsetDateTime** | Date of receiving the envelope by the mailbox |  [optional] |
+|**review** | [**ReviewInfo**](ReviewInfo.md) | Current review round state (editorial review only) |  [optional] |
 |**savedDocSignatures** | [**List&lt;ExtEnvelopeDocumentSignaturesDTO&gt;**](ExtEnvelopeDocumentSignaturesDTO.md) |  |  [optional] |
 |**sender** | [**EnvelopeSenderDTO**](EnvelopeSenderDTO.md) | Envelope sender info |  [optional] |
 |**sentAt** | **OffsetDateTime** | Envelope sending date |  [optional] |

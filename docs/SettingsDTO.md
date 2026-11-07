@@ -22,6 +22,7 @@
 |**hideUnauthorizedFunctions** | **Boolean** | Hide or disable unauthorized functions |  [optional] |
 |**infoLinks** | [**List&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) | Info menu links |  [optional] |
 |**integrations** | [**ConnectorProperties**](ConnectorProperties.md) | Available integrations |  [optional] |
+|**jsExtensions** | **List&lt;String&gt;** | JS extension names (for live chat/documentation) |  [optional] |
 |**links** | [**AppLinks**](AppLinks.md) | Application Links |  [optional] |
 |**locales** | [**AppLocales**](AppLocales.md) | Supported locales |  [optional] |
 |**logosProperties** | [**LogosProperties**](LogosProperties.md) | Logos properties |  [optional] |
@@ -31,7 +32,6 @@
 |**pdf** | [**PdfPropertiesDTO**](PdfPropertiesDTO.md) | PDF properties |  [optional] |
 |**podName** | **String** | Kubernetes Pod Name |  [optional] |
 |**sso** | [**SsoProperties**](SsoProperties.md) | SSO properties |  [optional] |
-|**supportChatProvider** | **String** | Support live chat provider name |  [optional] |
 |**supportedBarcodes** | [**List&lt;SupportedBarcodeDTO&gt;**](SupportedBarcodeDTO.md) | Supported barcodes |  [optional] |
 |**template** | [**TemplateRestriction**](TemplateRestriction.md) | Template Restrictions |  [optional] |
 |**testMode** | **Boolean** | Is Test Mode enabled? |  [optional] |

@@ -1,8 +1,8 @@
 # DocStudio Client
 
 DocStudio Api Documentation
-- API version: R168.21
-- Build date: 2026-10-31
+- API version: R169.4
+- Build date: 2026-11-06
 - Generator version: 7.24.0
 - Build package: org.openapitools.codegen.languages.JavaClientCodegen
 
@@ -352,6 +352,7 @@ Class | Method | HTTP request | Description
 *EnvelopeControllerApi* | [**envelopeApprovalHistory**](docs/EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history
 *EnvelopeControllerApi* | [**fill**](docs/EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope
 *EnvelopeControllerApi* | [**generateStamp**](docs/EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate
+*EnvelopeControllerApi* | [**getActionLinkForUser**](docs/EnvelopeControllerApi.md#getActionLinkForUser) | **GET** /api/v1/envelope/{id}/action-link | 
 *EnvelopeControllerApi* | [**getActiveRoles**](docs/EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID
 *EnvelopeControllerApi* | [**getApprovalFlow**](docs/EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval
 *EnvelopeControllerApi* | [**getArchiveInfo**](docs/EnvelopeControllerApi.md#getArchiveInfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf)
@@ -629,6 +630,7 @@ Class | Method | HTTP request | Description
  - [AccountSamlProviderUpdateDTO](docs/AccountSamlProviderUpdateDTO.md)
  - [AccountSsoIdProviderShortDTO](docs/AccountSsoIdProviderShortDTO.md)
  - [AccountTariffInfo](docs/AccountTariffInfo.md)
+ - [ActionLinkResponse](docs/ActionLinkResponse.md)
  - [ActivityLogAction](docs/ActivityLogAction.md)
  - [ActivityLogObjectType](docs/ActivityLogObjectType.md)
  - [ActivityLogRecordDTO](docs/ActivityLogRecordDTO.md)
@@ -917,7 +919,9 @@ Class | Method | HTTP request | Description
  - [ResolveCommentThreadDTO](docs/ResolveCommentThreadDTO.md)
  - [ReviewFlowReviewer](docs/ReviewFlowReviewer.md)
  - [ReviewFlowUpdateRequest](docs/ReviewFlowUpdateRequest.md)
+ - [ReviewInfo](docs/ReviewInfo.md)
  - [ReviewReworkRequest](docs/ReviewReworkRequest.md)
+ - [ReviewerInfo](docs/ReviewerInfo.md)
  - [RoleCreateDTO](docs/RoleCreateDTO.md)
  - [RoleGetDTO](docs/RoleGetDTO.md)
  - [SamlSsoProps](docs/SamlSsoProps.md)

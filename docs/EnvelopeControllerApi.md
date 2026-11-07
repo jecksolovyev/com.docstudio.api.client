@@ -33,6 +33,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**envelopeApprovalHistory**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history |
 | [**fill**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope |
 | [**generateStamp**](EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate |
+| [**getActionLinkForUser**](EnvelopeControllerApi.md#getActionLinkForUser) | **GET** /api/v1/envelope/{id}/action-link |  |
 | [**getActiveRoles**](EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID |
 | [**getApprovalFlow**](EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval |
 | [**getArchiveInfo**](EnvelopeControllerApi.md#getArchiveInfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf) |
@@ -2046,6 +2047,75 @@ public class Example {
 
  - **Content-Type**: application/json
  - **Accept**: image/png
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getActionLinkForUser"></a>
+# **getActionLinkForUser**
+> ActionLinkResponse getActionLinkForUser(id, email, mailbox)
+
+
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.EnvelopeControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    EnvelopeControllerApi apiInstance = new EnvelopeControllerApi(defaultClient);
+    UUID id = UUID.randomUUID(); // UUID | UUID of envelope
+    String email = "email_example"; // String | Email of user assigned to a role
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      ActionLinkResponse result = apiInstance.getActionLinkForUser(id, email, mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling EnvelopeControllerApi#getActionLinkForUser");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**| UUID of envelope | |
+| **email** | **String**| Email of user assigned to a role | |
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**ActionLinkResponse**](ActionLinkResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
