@@ -6,6 +6,8 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 | [**createMailbox**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox |
 | [**customizeDashboard**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard |
+| [**customizeDashboardWidgets**](MailboxControllerApi.md#customizeDashboardWidgets) | **PUT** /api/v1/mailbox/dashboard-widgets | Customize mailbox dashboard widgets |
+| [**deleteCustomizedDashboardWidgets**](MailboxControllerApi.md#deleteCustomizedDashboardWidgets) | **DELETE** /api/v1/mailbox/dashboard-widgets | Delete mailbox dashboard widgets |
 | [**deleteMailbox**](MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
 | [**deleteMailboxUsers**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester |
 | [**deleteViewPreferences**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
@@ -15,6 +17,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getAutoDelegation**](MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings |
 | [**getCustomizedDashboard**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
+| [**getCustomizedDashboardWidgets**](MailboxControllerApi.md#getCustomizedDashboardWidgets) | **GET** /api/v1/mailbox/dashboard-widgets | Get mailbox dashboard widgets |
 | [**getMailboxEssentials**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
 | [**getMailboxesForUserView**](MailboxControllerApi.md#getMailboxesForUserView) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user&#39;s sidebar view |
 | [**getMailboxesInfo**](MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
@@ -161,6 +164,136 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="customizeDashboardWidgets"></a>
+# **customizeDashboardWidgets**
+> customizeDashboardWidgets(mailbox, body)
+
+Customize mailbox dashboard widgets
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    String body = "body_example"; // String | 
+    try {
+      apiInstance.customizeDashboardWidgets(mailbox, body);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#customizeDashboardWidgets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **body** | **String**|  | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="deleteCustomizedDashboardWidgets"></a>
+# **deleteCustomizedDashboardWidgets**
+> deleteCustomizedDashboardWidgets(mailbox)
+
+Delete mailbox dashboard widgets
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      apiInstance.deleteCustomizedDashboardWidgets(mailbox);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#deleteCustomizedDashboardWidgets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -772,6 +905,71 @@ public class Example {
 
  - **Content-Type**: Not defined
  - **Accept**: text/html
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getCustomizedDashboardWidgets"></a>
+# **getCustomizedDashboardWidgets**
+> String getCustomizedDashboardWidgets(mailbox)
+
+Get mailbox dashboard widgets
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.MailboxControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    MailboxControllerApi apiInstance = new MailboxControllerApi(defaultClient);
+    UUID mailbox = UUID.randomUUID(); // UUID | Mailbox context, HTTP Header with current mailbox UUID
+    try {
+      String result = apiInstance.getCustomizedDashboardWidgets(mailbox);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling MailboxControllerApi#getCustomizedDashboardWidgets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | **UUID**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

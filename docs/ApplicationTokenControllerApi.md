@@ -11,7 +11,7 @@ All URIs are relative to *https://api.docstudio.com*
 
 <a id="createToken"></a>
 # **createToken**
-> AppTokenDTO createToken(createAppTokenDTO)
+> AppTokenDTO createToken(createAppToken)
 
 Create application token
 
@@ -35,9 +35,9 @@ public class Example {
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     ApplicationTokenControllerApi apiInstance = new ApplicationTokenControllerApi(defaultClient);
-    CreateAppTokenDTO createAppTokenDTO = new CreateAppTokenDTO(); // CreateAppTokenDTO | 
+    CreateAppToken createAppToken = new CreateAppToken(); // CreateAppToken | 
     try {
-      AppTokenDTO result = apiInstance.createToken(createAppTokenDTO);
+      AppTokenDTO result = apiInstance.createToken(createAppToken);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationTokenControllerApi#createToken");
@@ -54,7 +54,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **createAppTokenDTO** | [**CreateAppTokenDTO**](CreateAppTokenDTO.md)|  | |
+| **createAppToken** | [**CreateAppToken**](CreateAppToken.md)|  | |
 
 ### Return type
 

@@ -9,6 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**externalLinks** | [**List&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) |  |  [optional] |
 |**hasCustomDashboard** | **Boolean** |  |  [optional] |
+|**hasDashboardWidgets** | **Boolean** |  |  [optional] |
 |**statCounters** | **Map&lt;String, Integer&gt;** |  |  [optional] |
 
 

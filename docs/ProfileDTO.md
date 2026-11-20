@@ -8,6 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**accounts** | [**List&lt;User2AccountWithMailboxesDTO&gt;**](User2AccountWithMailboxesDTO.md) | User accounts belongs to |  [optional] |
+|**activatedAt** | **OffsetDateTime** | Date when the user completed registration (first became active) |  [optional] |
 |**autoDepositMailboxUuid** | **UUID** | Auto Deposit Mailbox UUID |  [optional] |
 |**corporateAccountId** | **UUID** | Corporate account UUID |  [optional] |
 |**corporateUser** | **Boolean** |  |  [optional] |

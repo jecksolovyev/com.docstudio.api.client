@@ -13,6 +13,7 @@ All URIs are relative to *https://api.docstudio.com*
 | [**getCorporateUserProfile**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getProfile**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
 | [**getUserMailboxesInfo**](UserControllerApi.md#getUserMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**getUsertourToken**](UserControllerApi.md#getUsertourToken) | **GET** /api/v1/user/usertour-token | Get Usertour identity verification token |
 | [**patchCorporateUserProfile**](UserControllerApi.md#patchCorporateUserProfile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**patchPreferences**](UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences |
 | [**patchProfile**](UserControllerApi.md#patchProfile) | **PATCH** /api/v1/user/profile | Patch user profile |
@@ -599,6 +600,67 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+<a id="getUsertourToken"></a>
+# **getUsertourToken**
+> UsertourToken getUsertourToken()
+
+Get Usertour identity verification token
+
+### Example
+```java
+// Import classes:
+import com.docstudio.client.ApiClient;
+import com.docstudio.client.ApiException;
+import com.docstudio.client.Configuration;
+import com.docstudio.client.auth.*;
+import com.docstudio.client.models.*;
+import com.docstudio.client.api.UserControllerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.docstudio.com");
+    
+    // Configure HTTP bearer authorization: bearerAuth
+    HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+    bearerAuth.setBearerToken("BEARER TOKEN");
+
+    UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+    try {
+      UsertourToken result = apiInstance.getUsertourToken();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserControllerApi#getUsertourToken");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UsertourToken**](UsertourToken.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details

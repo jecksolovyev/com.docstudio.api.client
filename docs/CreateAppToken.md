@@ -1,6 +1,6 @@
 
 
-# CreateAppTokenDTO
+# CreateAppToken
 
 Create token request
 
@@ -8,7 +8,7 @@ Create token request
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**expireAt** | **OffsetDateTime** | Token expiration date |  |
+|**expireAt** | **LocalDate** | Token expiration date (yyyy-MM-dd). The token expires at the end of this day (23:59:59 UTC) |  |
 |**name** | **String** | Token name |  |
 
 

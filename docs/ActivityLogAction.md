@@ -43,6 +43,10 @@
 
 * `MAILBOX_ENTITIES_TRANSFERRED` (value: `"mailbox-entities-transferred"`)
 
+* `DASHBOARD_HTML_UPDATED` (value: `"dashboard-html-updated"`)
+
+* `DASHBOARD_WIDGETS_UPDATED` (value: `"dashboard-widgets-updated"`)
+
 * `USER_INVITED` (value: `"user-invited"`)
 
 * `USER_INVITATION_REVOKED` (value: `"user-invitation-revoked"`)

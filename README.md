@@ -1,8 +1,8 @@
 # DocStudio Client
 
 DocStudio Api Documentation
-- API version: R169.4
-- Build date: 2026-11-06
+- API version: R170.5
+- Build date: 2026-11-20
 - Generator version: 7.24.0
 - Build package: org.openapitools.codegen.languages.JavaClientCodegen
 
@@ -317,86 +317,81 @@ Class | Method | HTTP request | Description
 *DictionaryControllerApi* | [**readDictionary**](docs/DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary
 *DictionaryControllerApi* | [**searchDictionaries**](docs/DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list
 *DictionaryControllerApi* | [**updateDictionaryColumn**](docs/DictionaryControllerApi.md#updateDictionaryColumn) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column
+*EnvelopeApprovalControllerApi* | [**addReviewers**](docs/EnvelopeApprovalControllerApi.md#addReviewers) | **PUT** /api/v1/envelope/editorial-review/{id}/flow | Add reviewers to a running editorial review
+*EnvelopeApprovalControllerApi* | [**cancelApprovalFlow**](docs/EnvelopeApprovalControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{id}/approval/{flowUuid} | Cancel envelope approval
+*EnvelopeApprovalControllerApi* | [**envelopeApproval**](docs/EnvelopeApprovalControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/approval | Approve or Reject envelopes
+*EnvelopeApprovalControllerApi* | [**envelopeApprovalHistory**](docs/EnvelopeApprovalControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history
+*EnvelopeApprovalControllerApi* | [**getApprovalFlow**](docs/EnvelopeApprovalControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval
+*EnvelopeApprovalControllerApi* | [**reworkEditorialReview**](docs/EnvelopeApprovalControllerApi.md#reworkEditorialReview) | **POST** /api/v1/envelope/editorial-review/{id}/rework | Send editorial review back for rework
+*EnvelopeApprovalControllerApi* | [**sendForApproval**](docs/EnvelopeApprovalControllerApi.md#sendForApproval) | **PUT** /api/v1/envelope/send-for-approval | Send envelope for approval
+*EnvelopeApprovalControllerApi* | [**startEditorialReviewForExternalDocuments**](docs/EnvelopeApprovalControllerApi.md#startEditorialReviewForExternalDocuments) | **POST** /api/v1/envelope/editorial-review | Start editorial review of DOC, DOCX
 *EnvelopeCallbackControllerApi* | [**checkCallback**](docs/EnvelopeCallbackControllerApi.md#checkCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/check | Check callback with certain envelope
 *EnvelopeCallbackControllerApi* | [**createCallback**](docs/EnvelopeCallbackControllerApi.md#createCallback) | **POST** /api/v1/envelope/callback/add | Add new callback
 *EnvelopeCallbackControllerApi* | [**getCallbackRequestPayload**](docs/EnvelopeCallbackControllerApi.md#getCallbackRequestPayload) | **GET** /api/v1/envelope/callback/callbackRequestPayload | Check CallbackEnvelopeDataDTO as an example of callback payload
 *EnvelopeCallbackControllerApi* | [**listCallbacks**](docs/EnvelopeCallbackControllerApi.md#listCallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks
 *EnvelopeCallbackControllerApi* | [**removeCallback**](docs/EnvelopeCallbackControllerApi.md#removeCallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback
 *EnvelopeCallbackControllerApi* | [**sendCallback**](docs/EnvelopeCallbackControllerApi.md#sendCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/send | Send callback with certain envelope
-*EnvelopeControllerApi* | [**acceptUserPendingInvitations**](docs/EnvelopeControllerApi.md#acceptUserPendingInvitations) | **POST** /api/v1/envelope/invitations | Accept user&#39;s pending invitations
-*EnvelopeControllerApi* | [**addEnvelopesIntoChain**](docs/EnvelopeControllerApi.md#addEnvelopesIntoChain) | **PUT** /api/v1/envelope/chain/{chainId} | Add envelopes into chain
-*EnvelopeControllerApi* | [**addReviewers**](docs/EnvelopeControllerApi.md#addReviewers) | **PUT** /api/v1/envelope/editorial-review/{id}/flow | Add reviewers to a running editorial review
-*EnvelopeControllerApi* | [**approve**](docs/EnvelopeControllerApi.md#approve) | **POST** /api/v1/envelope/approve | Approve envelope
+*EnvelopeCollaborationControllerApi* | [**addEnvelopesIntoChain**](docs/EnvelopeCollaborationControllerApi.md#addEnvelopesIntoChain) | **PUT** /api/v1/envelope/chain/{chainId} | Add envelopes into chain
+*EnvelopeCollaborationControllerApi* | [**createEnvelopeComment**](docs/EnvelopeCollaborationControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{id}/comment | Create envelope comment thread
+*EnvelopeCollaborationControllerApi* | [**deleteEnvelopeComment**](docs/EnvelopeCollaborationControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{id}/comment | Delete envelope comment in thread or the whole thread
+*EnvelopeCollaborationControllerApi* | [**getChainEnvelopes**](docs/EnvelopeCollaborationControllerApi.md#getChainEnvelopes) | **GET** /api/v1/envelope/chain/{chainId} | Get chain envelopes list
+*EnvelopeCollaborationControllerApi* | [**getEnvelopeComments**](docs/EnvelopeCollaborationControllerApi.md#getEnvelopeComments) | **GET** /api/v1/envelope/{id}/comment | Get envelope comments for each document
+*EnvelopeCollaborationControllerApi* | [**mergeEnvelopesIntoChain**](docs/EnvelopeCollaborationControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain
+*EnvelopeCollaborationControllerApi* | [**removeEnvelopeFromChain**](docs/EnvelopeCollaborationControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{id}/chain | Remove envelope from chain
+*EnvelopeCollaborationControllerApi* | [**removeEnvelopesFromChain**](docs/EnvelopeCollaborationControllerApi.md#removeEnvelopesFromChain) | **PUT** /api/v1/envelope/unchain | Remove envelopes from chain
+*EnvelopeCollaborationControllerApi* | [**resolvedEnvelopeComment**](docs/EnvelopeCollaborationControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{id}/resolve-comment | Set Resolved Flag for comment thread
+*EnvelopeCollaborationControllerApi* | [**revokeEnvelopeSharing**](docs/EnvelopeCollaborationControllerApi.md#revokeEnvelopeSharing) | **DELETE** /api/v1/envelope/share-copy | Revoke sharing an envelope copy
+*EnvelopeCollaborationControllerApi* | [**shareEnvelopesCopy**](docs/EnvelopeCollaborationControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies
+*EnvelopeCollaborationControllerApi* | [**updateEnvelopeComment**](docs/EnvelopeCollaborationControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{id}/comment | Add/Update envelope comment in thread
+*EnvelopeCollaborationControllerApi* | [**updateEnvelopeCommentAccess**](docs/EnvelopeCollaborationControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{id}/comment-access | Update envelope comment thread access level
 *EnvelopeControllerApi* | [**archiveEnvelope**](docs/EnvelopeControllerApi.md#archiveEnvelope) | **PATCH** /api/v1/envelope/archive/{flag} | Archive envelopes
-*EnvelopeControllerApi* | [**cancelApprovalFlow**](docs/EnvelopeControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{id}/approval/{flowUuid} | Cancel envelope approval
 *EnvelopeControllerApi* | [**cancelEnvelopeDelegation**](docs/EnvelopeControllerApi.md#cancelEnvelopeDelegation) | **DELETE** /api/v1/envelope/delegate | Cancel envelope delegation
 *EnvelopeControllerApi* | [**cancelEnvelopes**](docs/EnvelopeControllerApi.md#cancelEnvelopes) | **DELETE** /api/v1/envelope/cancel | Cancel envelopes
 *EnvelopeControllerApi* | [**check**](docs/EnvelopeControllerApi.md#check) | **POST** /api/v1/envelope/check | Check an envelope
 *EnvelopeControllerApi* | [**checkEnvelopeHasActiveRole**](docs/EnvelopeControllerApi.md#checkEnvelopeHasActiveRole) | **HEAD** /api/v1/envelope/{id}/has-active-role | Check envelope has active role
-*EnvelopeControllerApi* | [**checkUserHasInvitations**](docs/EnvelopeControllerApi.md#checkUserHasInvitations) | **HEAD** /api/v1/envelope/invitations | Check user has pending invitations
-*EnvelopeControllerApi* | [**cloneAttachment**](docs/EnvelopeControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment
-*EnvelopeControllerApi* | [**confirmInvite**](docs/EnvelopeControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations
 *EnvelopeControllerApi* | [**continueScenarioStep**](docs/EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{id}/scenario/{stepId} | Continue scenario flow with step
-*EnvelopeControllerApi* | [**createAttachment**](docs/EnvelopeControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment
 *EnvelopeControllerApi* | [**createEnvelope**](docs/EnvelopeControllerApi.md#createEnvelope) | **POST** /api/v1/envelope | Create draft envelope
-*EnvelopeControllerApi* | [**createEnvelopeComment**](docs/EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{id}/comment | Create envelope comment thread
-*EnvelopeControllerApi* | [**createPdfAttachment**](docs/EnvelopeControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment
 *EnvelopeControllerApi* | [**delegateEnvelopes**](docs/EnvelopeControllerApi.md#delegateEnvelopes) | **POST** /api/v1/envelope/delegate | Delegate envelopes
 *EnvelopeControllerApi* | [**deleteDrafts**](docs/EnvelopeControllerApi.md#deleteDrafts) | **DELETE** /api/v1/envelope | Delete draft envelopes
-*EnvelopeControllerApi* | [**deleteEnvelopeComment**](docs/EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{id}/comment | Delete envelope comment in thread or the whole thread
 *EnvelopeControllerApi* | [**deleteEnvelopeMetadata**](docs/EnvelopeControllerApi.md#deleteEnvelopeMetadata) | **DELETE** /api/v1/envelope/{id}/metadata | Delete envelope metadata
-*EnvelopeControllerApi* | [**downloadEnvelopeAttachment**](docs/EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw
-*EnvelopeControllerApi* | [**downloadFinalPdf**](docs/EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{id}/download-final-pdf | Download final PDF
-*EnvelopeControllerApi* | [**downloadSharedAttachment**](docs/EnvelopeControllerApi.md#downloadSharedAttachment) | **GET** /api/v1/envelope/shared-attachment | Download shared attachment for specific provider
-*EnvelopeControllerApi* | [**envelopeApproval**](docs/EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/approval | Approve or Reject envelopes
-*EnvelopeControllerApi* | [**envelopeApprovalHistory**](docs/EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history
-*EnvelopeControllerApi* | [**fill**](docs/EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope
-*EnvelopeControllerApi* | [**generateStamp**](docs/EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate
-*EnvelopeControllerApi* | [**getActionLinkForUser**](docs/EnvelopeControllerApi.md#getActionLinkForUser) | **GET** /api/v1/envelope/{id}/action-link | 
 *EnvelopeControllerApi* | [**getActiveRoles**](docs/EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID
-*EnvelopeControllerApi* | [**getApprovalFlow**](docs/EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval
-*EnvelopeControllerApi* | [**getArchiveInfo**](docs/EnvelopeControllerApi.md#getArchiveInfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf)
-*EnvelopeControllerApi* | [**getAttachmentPageSizes**](docs/EnvelopeControllerApi.md#getAttachmentPageSizes) | **GET** /api/v1/envelope/attachment/page-sizes | Get attachment page sizes
-*EnvelopeControllerApi* | [**getChainEnvelopes**](docs/EnvelopeControllerApi.md#getChainEnvelopes) | **GET** /api/v1/envelope/chain/{chainId} | Get chain envelopes list
-*EnvelopeControllerApi* | [**getDocumentFileForSign**](docs/EnvelopeControllerApi.md#getDocumentFileForSign) | **GET** /api/v1/envelope/{id}/for-sign-file | Get BINARY or XML for signing
-*EnvelopeControllerApi* | [**getDocumentPrintVersion**](docs/EnvelopeControllerApi.md#getDocumentPrintVersion) | **GET** /api/v1/envelope/{id}/for-print | Get document PDF for printing
-*EnvelopeControllerApi* | [**getDocumentsForSign**](docs/EnvelopeControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{id}/for-sign | BINARYs and XMLs for signing
 *EnvelopeControllerApi* | [**getEnvelopeByUuid**](docs/EnvelopeControllerApi.md#getEnvelopeByUuid) | **GET** /api/v1/envelope/{envelopeUuid} | Retrieve envelope by UUID
-*EnvelopeControllerApi* | [**getEnvelopeComments**](docs/EnvelopeControllerApi.md#getEnvelopeComments) | **GET** /api/v1/envelope/{id}/comment | Get envelope comments for each document
-*EnvelopeControllerApi* | [**getEnvelopeInviteAuthorized**](docs/EnvelopeControllerApi.md#getEnvelopeInviteAuthorized) | **GET** /api/v1/envelope/invite-authorized-info | Get information about envelope by the invitation code (by already registered user)
-*EnvelopeControllerApi* | [**getEnvelopeInviteUnauthorized**](docs/EnvelopeControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user)
-*EnvelopeControllerApi* | [**getEnvelopeSharedZip**](docs/EnvelopeControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive
-*EnvelopeControllerApi* | [**getEnvelopeZip**](docs/EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{id}/zip | Get envelope or document zip archive
-*EnvelopeControllerApi* | [**getMassSigningReport**](docs/EnvelopeControllerApi.md#getMassSigningReport) | **GET** /api/v1/envelope/signing-report/{sessionId} | Get mass signing report
 *EnvelopeControllerApi* | [**getPaymentDetails**](docs/EnvelopeControllerApi.md#getPaymentDetails) | **GET** /api/v1/envelope/payment-details/{accessCode} | Get payment details of a payment link for the checkout page
 *EnvelopeControllerApi* | [**getPaymentLink**](docs/EnvelopeControllerApi.md#getPaymentLink) | **POST** /api/v1/envelope/{id}/payment-link | Get the public checkout link of a QR pay field; the role of the field must be completed
-*EnvelopeControllerApi* | [**getUserPendingInvitations**](docs/EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations
 *EnvelopeControllerApi* | [**markEnvelopesAsRead**](docs/EnvelopeControllerApi.md#markEnvelopesAsRead) | **POST** /api/v1/envelope/mark-as-read | Mark envelopes as read by mailbox
-*EnvelopeControllerApi* | [**mergeEnvelopesIntoChain**](docs/EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain
 *EnvelopeControllerApi* | [**numberToText**](docs/EnvelopeControllerApi.md#numberToText) | **POST** /api/v1/envelope/number-to-text | Convert a numeric amount to words
-*EnvelopeControllerApi* | [**oneTimeSend**](docs/EnvelopeControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted)
-*EnvelopeControllerApi* | [**publicQuickSendWithOneExternalDocument**](docs/EnvelopeControllerApi.md#publicQuickSendWithOneExternalDocument) | **POST** /api/v1/envelope/public-quick-send | Public quick send envelope with one external document
-*EnvelopeControllerApi* | [**quickSendExternalDocuments**](docs/EnvelopeControllerApi.md#quickSendExternalDocuments) | **POST** /api/v1/envelope/quick-send | Quick send envelope with external documents only
 *EnvelopeControllerApi* | [**recycleBin**](docs/EnvelopeControllerApi.md#recycleBin) | **PATCH** /api/v1/envelope/recycle-bin/{flag} | Archive envelopes
-*EnvelopeControllerApi* | [**removeEnvelopeFromChain**](docs/EnvelopeControllerApi.md#removeEnvelopeFromChain) | **DELETE** /api/v1/envelope/{id}/chain | Remove envelope from chain
-*EnvelopeControllerApi* | [**removeEnvelopesFromChain**](docs/EnvelopeControllerApi.md#removeEnvelopesFromChain) | **PUT** /api/v1/envelope/unchain | Remove envelopes from chain
 *EnvelopeControllerApi* | [**resendNotifications**](docs/EnvelopeControllerApi.md#resendNotifications) | **POST** /api/v1/envelope/notify | Resend notifications for active roles
-*EnvelopeControllerApi* | [**resolvedEnvelopeComment**](docs/EnvelopeControllerApi.md#resolvedEnvelopeComment) | **POST** /api/v1/envelope/{id}/resolve-comment | Set Resolved Flag for comment thread
-*EnvelopeControllerApi* | [**revokeEnvelopeSharing**](docs/EnvelopeControllerApi.md#revokeEnvelopeSharing) | **DELETE** /api/v1/envelope/share-copy | Revoke sharing an envelope copy
-*EnvelopeControllerApi* | [**reworkEditorialReview**](docs/EnvelopeControllerApi.md#reworkEditorialReview) | **POST** /api/v1/envelope/editorial-review/{id}/rework | Send editorial review back for rework
-*EnvelopeControllerApi* | [**send**](docs/EnvelopeControllerApi.md#send) | **POST** /api/v1/envelope/send | Send envelope
-*EnvelopeControllerApi* | [**sendByTemplateCode**](docs/EnvelopeControllerApi.md#sendByTemplateCode) | **POST** /api/v1/envelope/send-by-share-code | Send envelope by template code
-*EnvelopeControllerApi* | [**sendForApproval**](docs/EnvelopeControllerApi.md#sendForApproval) | **PUT** /api/v1/envelope/send-for-approval | Send envelope for approval
-*EnvelopeControllerApi* | [**shareEnvelopesByEmail**](docs/EnvelopeControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share-archive | Share envelopes by email
-*EnvelopeControllerApi* | [**shareEnvelopesCopy**](docs/EnvelopeControllerApi.md#shareEnvelopesCopy) | **POST** /api/v1/envelope/share-copy | Share envelopes copies
-*EnvelopeControllerApi* | [**signEnvelope**](docs/EnvelopeControllerApi.md#signEnvelope) | **PUT** /api/v1/envelope/{id}/sign | Sign envelope documents
-*EnvelopeControllerApi* | [**signSES**](docs/EnvelopeControllerApi.md#signSES) | **POST** /api/v1/envelope/{id}/sign-ses | Sign envelope with SES
-*EnvelopeControllerApi* | [**startEditorialReviewForExternalDocuments**](docs/EnvelopeControllerApi.md#startEditorialReviewForExternalDocuments) | **POST** /api/v1/envelope/editorial-review | Start editorial review of DOC, DOCX
 *EnvelopeControllerApi* | [**updateEnvelope**](docs/EnvelopeControllerApi.md#updateEnvelope) | **PUT** /api/v1/envelope | Update envelope without sending
-*EnvelopeControllerApi* | [**updateEnvelopeComment**](docs/EnvelopeControllerApi.md#updateEnvelopeComment) | **PUT** /api/v1/envelope/{id}/comment | Add/Update envelope comment in thread
-*EnvelopeControllerApi* | [**updateEnvelopeCommentAccess**](docs/EnvelopeControllerApi.md#updateEnvelopeCommentAccess) | **PUT** /api/v1/envelope/{id}/comment-access | Update envelope comment thread access level
 *EnvelopeControllerApi* | [**updateEnvelopeMetadata**](docs/EnvelopeControllerApi.md#updateEnvelopeMetadata) | **PUT** /api/v1/envelope/{id}/metadata | Update envelope metadata. Will be saved on the account level
 *EnvelopeControllerApi* | [**updateFlow**](docs/EnvelopeControllerApi.md#updateFlow) | **POST** /api/v1/envelope/{id}/flow-update | Update recipient email/mailbox for not finished roles in a sent envelope
+*EnvelopeDocumentControllerApi* | [**cloneAttachment**](docs/EnvelopeDocumentControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment
+*EnvelopeDocumentControllerApi* | [**createAttachment**](docs/EnvelopeDocumentControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment
+*EnvelopeDocumentControllerApi* | [**createPdfAttachment**](docs/EnvelopeDocumentControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment
+*EnvelopeDocumentControllerApi* | [**downloadEnvelopeAttachment**](docs/EnvelopeDocumentControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw
+*EnvelopeDocumentControllerApi* | [**downloadFinalPdf**](docs/EnvelopeDocumentControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{id}/download-final-pdf | Download final PDF
+*EnvelopeDocumentControllerApi* | [**downloadSharedAttachment**](docs/EnvelopeDocumentControllerApi.md#downloadSharedAttachment) | **GET** /api/v1/envelope/shared-attachment | Download shared attachment for specific provider
+*EnvelopeDocumentControllerApi* | [**getArchiveInfo**](docs/EnvelopeDocumentControllerApi.md#getArchiveInfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf)
+*EnvelopeDocumentControllerApi* | [**getAttachmentPageSizes**](docs/EnvelopeDocumentControllerApi.md#getAttachmentPageSizes) | **GET** /api/v1/envelope/attachment/page-sizes | Get attachment page sizes
+*EnvelopeDocumentControllerApi* | [**getDocumentPrintVersion**](docs/EnvelopeDocumentControllerApi.md#getDocumentPrintVersion) | **GET** /api/v1/envelope/{id}/for-print | Get document PDF for printing
+*EnvelopeDocumentControllerApi* | [**getEnvelopeSharedZip**](docs/EnvelopeDocumentControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive
+*EnvelopeDocumentControllerApi* | [**getEnvelopeZip**](docs/EnvelopeDocumentControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{id}/zip | Get envelope or document zip archive
+*EnvelopeDocumentControllerApi* | [**shareEnvelopesByEmail**](docs/EnvelopeDocumentControllerApi.md#shareEnvelopesByEmail) | **POST** /api/v1/envelope/share-archive | Share envelopes by email
+*EnvelopeInvitationControllerApi* | [**acceptUserPendingInvitations**](docs/EnvelopeInvitationControllerApi.md#acceptUserPendingInvitations) | **POST** /api/v1/envelope/invitations | Accept user&#39;s pending invitations
+*EnvelopeInvitationControllerApi* | [**checkUserHasInvitations**](docs/EnvelopeInvitationControllerApi.md#checkUserHasInvitations) | **HEAD** /api/v1/envelope/invitations | Check user has pending invitations
+*EnvelopeInvitationControllerApi* | [**confirmInvite**](docs/EnvelopeInvitationControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations
+*EnvelopeInvitationControllerApi* | [**getActionLinkForUser**](docs/EnvelopeInvitationControllerApi.md#getActionLinkForUser) | **GET** /api/v1/envelope/{id}/action-link | 
+*EnvelopeInvitationControllerApi* | [**getEnvelopeInviteAuthorized**](docs/EnvelopeInvitationControllerApi.md#getEnvelopeInviteAuthorized) | **GET** /api/v1/envelope/invite-authorized-info | Get information about envelope by the invitation code (by already registered user)
+*EnvelopeInvitationControllerApi* | [**getEnvelopeInviteUnauthorized**](docs/EnvelopeInvitationControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user)
+*EnvelopeInvitationControllerApi* | [**getUserPendingInvitations**](docs/EnvelopeInvitationControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations
+*EnvelopeRoleActionControllerApi* | [**approve**](docs/EnvelopeRoleActionControllerApi.md#approve) | **POST** /api/v1/envelope/approve | Approve envelope
+*EnvelopeRoleActionControllerApi* | [**fill**](docs/EnvelopeRoleActionControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope
+*EnvelopeRoleActionControllerApi* | [**generateStamp**](docs/EnvelopeRoleActionControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate
+*EnvelopeRoleActionControllerApi* | [**getDocumentFileForSign**](docs/EnvelopeRoleActionControllerApi.md#getDocumentFileForSign) | **GET** /api/v1/envelope/{id}/for-sign-file | Get BINARY or XML for signing
+*EnvelopeRoleActionControllerApi* | [**getDocumentsForSign**](docs/EnvelopeRoleActionControllerApi.md#getDocumentsForSign) | **POST** /api/v1/envelope/{id}/for-sign | BINARYs and XMLs for signing
+*EnvelopeRoleActionControllerApi* | [**getMassSigningReport**](docs/EnvelopeRoleActionControllerApi.md#getMassSigningReport) | **GET** /api/v1/envelope/signing-report/{sessionId} | Get mass signing report
+*EnvelopeRoleActionControllerApi* | [**signEnvelope**](docs/EnvelopeRoleActionControllerApi.md#signEnvelope) | **PUT** /api/v1/envelope/{id}/sign | Sign envelope documents
+*EnvelopeRoleActionControllerApi* | [**signSES**](docs/EnvelopeRoleActionControllerApi.md#signSES) | **POST** /api/v1/envelope/{id}/sign-ses | Sign envelope with SES
 *EnvelopeSearchControllerApi* | [**addNewColumn**](docs/EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display
 *EnvelopeSearchControllerApi* | [**createReport**](docs/EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report
 *EnvelopeSearchControllerApi* | [**deleteEnvelopeColumn**](docs/EnvelopeSearchControllerApi.md#deleteEnvelopeColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying
@@ -408,6 +403,11 @@ Class | Method | HTTP request | Description
 *EnvelopeSearchControllerApi* | [**searchEnvelopesForApproval**](docs/EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval
 *EnvelopeSearchControllerApi* | [**searchEnvelopesForReview**](docs/EnvelopeSearchControllerApi.md#searchEnvelopesForReview) | **POST** /api/v1/envelope/search-reviews | Search envelopes for review
 *EnvelopeSearchControllerApi* | [**updateEnvelopeColumn**](docs/EnvelopeSearchControllerApi.md#updateEnvelopeColumn) | **PUT** /api/v1/envelope/column/{id} | Update column to display
+*EnvelopeSendControllerApi* | [**oneTimeSend**](docs/EnvelopeSendControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted)
+*EnvelopeSendControllerApi* | [**publicQuickSendWithOneExternalDocument**](docs/EnvelopeSendControllerApi.md#publicQuickSendWithOneExternalDocument) | **POST** /api/v1/envelope/public-quick-send | Public quick send envelope with one external document
+*EnvelopeSendControllerApi* | [**quickSendExternalDocuments**](docs/EnvelopeSendControllerApi.md#quickSendExternalDocuments) | **POST** /api/v1/envelope/quick-send | Quick send envelope with external documents only
+*EnvelopeSendControllerApi* | [**send**](docs/EnvelopeSendControllerApi.md#send) | **POST** /api/v1/envelope/send | Send envelope
+*EnvelopeSendControllerApi* | [**sendByTemplateCode**](docs/EnvelopeSendControllerApi.md#sendByTemplateCode) | **POST** /api/v1/envelope/send-by-share-code | Send envelope by template code
 *ExternalLinkControllerApi* | [**createExternalLink**](docs/ExternalLinkControllerApi.md#createExternalLink) | **POST** /api/v1/account/{accountUuid}/external-link | Create external link
 *ExternalLinkControllerApi* | [**deleteExternalLink**](docs/ExternalLinkControllerApi.md#deleteExternalLink) | **DELETE** /api/v1/account/{accountUuid}/external-link/{linkUuid} | Delete external link
 *ExternalLinkControllerApi* | [**getAccountExternalLinks**](docs/ExternalLinkControllerApi.md#getAccountExternalLinks) | **GET** /api/v1/account/{accountUuid}/external-link | Get account external links
@@ -458,6 +458,8 @@ Class | Method | HTTP request | Description
 *LabelControllerApi* | [**updateLabel**](docs/LabelControllerApi.md#updateLabel) | **PUT** /api/v1/label/{id} | Update label
 *MailboxControllerApi* | [**createMailbox**](docs/MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox
 *MailboxControllerApi* | [**customizeDashboard**](docs/MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard
+*MailboxControllerApi* | [**customizeDashboardWidgets**](docs/MailboxControllerApi.md#customizeDashboardWidgets) | **PUT** /api/v1/mailbox/dashboard-widgets | Customize mailbox dashboard widgets
+*MailboxControllerApi* | [**deleteCustomizedDashboardWidgets**](docs/MailboxControllerApi.md#deleteCustomizedDashboardWidgets) | **DELETE** /api/v1/mailbox/dashboard-widgets | Delete mailbox dashboard widgets
 *MailboxControllerApi* | [**deleteMailbox**](docs/MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header.
 *MailboxControllerApi* | [**deleteMailboxUsers**](docs/MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester
 *MailboxControllerApi* | [**deleteViewPreferences**](docs/MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences
@@ -467,6 +469,7 @@ Class | Method | HTTP request | Description
 *MailboxControllerApi* | [**getAutoDelegation**](docs/MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings
 *MailboxControllerApi* | [**getCustomizedDashboard**](docs/MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard
 *MailboxControllerApi* | [**getCustomizedDashboardHtml**](docs/MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html
+*MailboxControllerApi* | [**getCustomizedDashboardWidgets**](docs/MailboxControllerApi.md#getCustomizedDashboardWidgets) | **GET** /api/v1/mailbox/dashboard-widgets | Get mailbox dashboard widgets
 *MailboxControllerApi* | [**getMailboxEssentials**](docs/MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials
 *MailboxControllerApi* | [**getMailboxesForUserView**](docs/MailboxControllerApi.md#getMailboxesForUserView) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user&#39;s sidebar view
 *MailboxControllerApi* | [**getMailboxesInfo**](docs/MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info
@@ -591,6 +594,7 @@ Class | Method | HTTP request | Description
 *UserControllerApi* | [**getCorporateUserProfile**](docs/UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile
 *UserControllerApi* | [**getProfile**](docs/UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile
 *UserControllerApi* | [**getUserMailboxesInfo**](docs/UserControllerApi.md#getUserMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info
+*UserControllerApi* | [**getUsertourToken**](docs/UserControllerApi.md#getUsertourToken) | **GET** /api/v1/user/usertour-token | Get Usertour identity verification token
 *UserControllerApi* | [**patchCorporateUserProfile**](docs/UserControllerApi.md#patchCorporateUserProfile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile
 *UserControllerApi* | [**patchPreferences**](docs/UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences
 *UserControllerApi* | [**patchProfile**](docs/UserControllerApi.md#patchProfile) | **PATCH** /api/v1/user/profile | Patch user profile
@@ -692,7 +696,7 @@ Class | Method | HTTP request | Description
  - [CorporateUserCreateDTO](docs/CorporateUserCreateDTO.md)
  - [CounterInfoDTO](docs/CounterInfoDTO.md)
  - [CreateAiTokenRequest](docs/CreateAiTokenRequest.md)
- - [CreateAppTokenDTO](docs/CreateAppTokenDTO.md)
+ - [CreateAppToken](docs/CreateAppToken.md)
  - [CreateEnvelopeCallbackDTO](docs/CreateEnvelopeCallbackDTO.md)
  - [CreateRecordsResponseDTO](docs/CreateRecordsResponseDTO.md)
  - [CredentialTypeGet](docs/CredentialTypeGet.md)
@@ -994,6 +998,7 @@ Class | Method | HTTP request | Description
  - [UserProperties](docs/UserProperties.md)
  - [UserStatusInfo](docs/UserStatusInfo.md)
  - [UsersSearchFilterDTO](docs/UsersSearchFilterDTO.md)
+ - [UsertourToken](docs/UsertourToken.md)
  - [ValidationResponseDTO](docs/ValidationResponseDTO.md)
  - [VchasnoConfigurationProperties](docs/VchasnoConfigurationProperties.md)
  - [XadesFile](docs/XadesFile.md)
